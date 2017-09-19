@@ -10,6 +10,7 @@ export const genreDisplayNames = {
   folk: 'Folk tales & Myths',
   city: 'City scenes',
   nature: 'Flora & Fauna',
+  samurai: 'Samurai',
 }
 
 const GenreChooser = ({

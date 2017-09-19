@@ -31,3 +31,4 @@ To remove the example app:
 - the `src/client/main.js` now specifies `components/App` as the root component. Modify that to have it point to your own root component.
 - in `src/client/reducers.js` remove the `gallery` reducer
 - in `src/data`, empty the `test` folder, remove `artists.json`, and remove the contents of `resolvers.js` and `schema.js`
+- in `package.json` remove ` && cp src/data/artists.json dist/data` from the postinstall script.

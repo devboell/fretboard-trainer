@@ -50,14 +50,14 @@
     "path": "hokusai",
     "paintings": [
       {
-        "title": "The Roben Falls at Oyama in Sagami Province",
-        "name": "the_roben_falls_at_oyama_in_sagami_province.jpeg",
+        "title": "A colored version of the Big wave",
+        "name": "a-colored-version-of-the-big-wave.jpg",
         "genre": "landscape"
       },
       {
-        "title": "Squeaking a ground cherry",
-        "name": "squeaking_a_ground_cherry.jpeg",
-        "genre": "portrait"
+        "title": "A woman ghost appeared from a well",
+        "name": "a-woman-ghost-appeared-from-a-well.jpg",
+        "genre": "folk"
       },
       {
         "title": "The great wave off Kanagawa",
@@ -65,16 +65,122 @@
         "genre": "landscape"
       },
       {
-        "title": "The falling mist waterfall at Mount Kurokami",
-        "name": "the_falling_mist_waterfall_at_mount_kurokami.jpg",
+        "title": "Crossbill and Thistle",
+        "name": "crossbill-and-thistle.jpg",
+        "genre": "nature"
+      },
+      {
+        "title": "Drawing of a tengu",
+        "name": "drawing-of-a-tengu.jpg",
+        "genre": "folk"
+      },
+      {
+        "title": "Ejiri in the Suruga province",
+        "name": "ejiri-in-the-suruga-province.jpg",
         "genre": "landscape"
+      },
+      {
+        "title": "Fuji Blue",
+        "name": "fuji-blue.jpg",
+        "genre": "landscape"
+      },
+      {
+        "title": "Minister Toru",
+        "name": "minister-toru.jpg",
+        "genre": "landscape"
+      },
+      {
+        "title": "Mitsui Shop on Suruga Street in Edo",
+        "name": "mitsui-shop-on-suruga-street-in-edo.jpg",
+        "genre": "city"
+      },
+      {
+        "title": "New Year's Days of the Teahouse Ogi-ya",
+        "name": "new-year-s-days-of-the-teahouse-ogi-ya-1812.jpg",
+        "genre": "city"
+      },
+      {
+        "title": "Nihonbashi bridge in Edo",
+        "name": "nihonbashi-bridge-in-edo.jpg",
+        "genre": "city"
+      },
+      {
+        "title": "Portrait of Matsuo Basho",
+        "name": "portrait-of-matsuo-basho.jpg",
+        "genre": "portrait"
+      },
+      {
+        "title": "Rainstorm beneath the Summit",
+        "name": "rainstorm-beneath-the-summit.jpg",
+        "genre": "landscape"
+      },
+      {
+        "title": "Shore of Tago Bay, Ejiri at Tokaido",
+        "name": "shore-of-tago-bay-ejiri-at-tokaido.jpg",
+        "genre": "landscape"
+      },
+      {
+        "title": "Swallow and begonia and strawberry pie",
+        "name": "swallow-and-begonia-and-strawberry-pie.jpg",
+        "genre": "nature"
+      },
+      {
+        "title": "View of Honmoku",
+        "name": "view-of-honmoku.jpg",
+        "genre": "landscape"
+      },
+      {
+        "title": "Woman in an Interior",
+        "name": "woman-in-an-interior.jpg",
+        "genre": "portrait"
       }
     ]
   },
   {
-    "name": "Utamaro",
-    "path": "utamaro",
-    "paintings": []
+    "name": "Kuniyoshi",
+    "path": "kuniyoshi",
+    "paintings": [
+      {
+        "title": "Ambush Iga Jutaro",
+        "name": "Ambush-Iga-Jutaro.jpg",
+        "genre": "samurai"
+      },
+      {
+        "title": "Famous Places at Six Stations between Goyu and Maizaka",
+        "name": "Famous-Places-at-Six-Stations-between-Goyu-and-Maizaka.jpg",
+        "genre": "landscape"
+      },
+      {
+        "title": "Hotoke Gozen",
+        "name": "Hotoke-Gozen.jpg",
+        "genre": "portrait"
+      },
+      {
+        "title": "Ichikawa Danzo as Yuramosuke",
+        "name": "Ichikawa-Danzo-as-Yuramosuke.jpg",
+        "genre": "portrait"
+      },
+      {
+        "title": "Omori",
+        "name": "Omori.jpg",
+        "genre": "landscape"
+      },
+      {
+        "title": "Onmayagashi in Edo",
+        "name": "Onmayagashi-in-Edo.jpg",
+        "genre": "landscape"
+      },
+      {
+        "title": "Portraits of the Loyal Retainers Oboshi Uranosuke Yoshio",
+        "name": "Portraits-of-the-Loyal-Retainers-Oboshi-Uranosuke-Yoshio.jpg",
+        "genre": "portrait"
+      },
+      {
+        "title": "Tsukuda Island",
+        "name": "Tsukuda Island.jpg",
+        "genre": "landscape"
+      }
+    ]
   },
   {
     "name": "Kunisada",
