@@ -26,7 +26,7 @@ const Introduction = () =>
     </P>
     <br />
     <P>
-      Source: <a href="https://en.wikipedia.org/wiki/Ukiyo-e">Ukiyo-e Wikepdia</a>
+      Source: <a href="https://en.wikipedia.org/wiki/Ukiyo-e">Ukiyo-e Wikipedia</a>
     </P>
   </Wrapper>
 
