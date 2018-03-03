@@ -5,5 +5,5 @@ import Ul from '../Ul'
 
 it('Ul, snapshot', () => {
   const wrapper = shallow(<Ul />)
-  expect(wrapper).toMatchStyledComponentsSnapshot()
+  expect(wrapper).toMatchSnapshot()
 })

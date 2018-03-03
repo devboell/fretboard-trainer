@@ -5,5 +5,5 @@ import Title from '../Title'
 
 it('Title, styled component snapshot', () => {
   const wrapper = shallow(<Title />)
-  expect(wrapper).toMatchStyledComponentsSnapshot()
+  expect(wrapper).toMatchSnapshot()
 })

@@ -1,21 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`StyledNavLink, snapshot 1`] = `
-.bCihhC {
+.c0 {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.bCihhC > h2 {
+.c0 > h2 {
   display: inline-block;
   margin: 10px;
   border-bottom: solid transparent 1px;
   color: rgb(222, 81, 11);
 }
 
+.c0.nav-item-active > h2 {
+  border-bottom: solid rgb(145, 144, 144) 1px;
+}
+
 <NavLink
   activeClassName="nav-item-active"
-  className="sc-bdVaJa bCihhC"
+  className="c0"
   to="/testPath"
 />
 `;

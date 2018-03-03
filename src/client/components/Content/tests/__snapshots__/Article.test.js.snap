@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Article, styled component snapshot 1`] = `
-.egQGxY {
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17,6 +17,6 @@ exports[`Article, styled component snapshot 1`] = `
 }
 
 <article
-  className="sc-bdVaJa egQGxY"
+  className="c0"
 />
 `;

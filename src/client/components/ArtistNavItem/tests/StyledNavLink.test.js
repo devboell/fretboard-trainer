@@ -5,5 +5,5 @@ import StyledNavLink from '../StyledNavLink'
 
 it('StyledNavLink, snapshot', () => {
   const wrapper = shallow(<StyledNavLink to="/testPath" />)
-  expect(wrapper).toMatchStyledComponentsSnapshot()
+  expect(wrapper).toMatchSnapshot()
 })

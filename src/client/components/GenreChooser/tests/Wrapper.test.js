@@ -5,5 +5,5 @@ import Wrapper from '../Wrapper'
 
 it('Wrapper, styled component snapshot', () => {
   const wrapper = shallow(<Wrapper />)
-  expect(wrapper).toMatchStyledComponentsSnapshot()
+  expect(wrapper).toMatchSnapshot()
 })

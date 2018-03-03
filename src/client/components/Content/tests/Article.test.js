@@ -5,5 +5,5 @@ import Article from '../Article'
 
 it('Article, styled component snapshot', () => {
   const wrapper = shallow(<Article />)
-  expect(wrapper).toMatchStyledComponentsSnapshot()
+  expect(wrapper).toMatchSnapshot()
 })

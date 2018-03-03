@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ThumbContainer, styled component snapshot 1`] = `
-.btXfyB {
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19,6 +19,6 @@ exports[`ThumbContainer, styled component snapshot 1`] = `
 }
 
 <div
-  className="sc-bdVaJa btXfyB"
+  className="c0"
 />
 `;

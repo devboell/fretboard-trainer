@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Wrapper, styled component snapshot 1`] = `
-.lfDEZX {
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17,6 +17,6 @@ exports[`Wrapper, styled component snapshot 1`] = `
 }
 
 <section
-  className="sc-bdVaJa lfDEZX"
+  className="c0"
 />
 `;

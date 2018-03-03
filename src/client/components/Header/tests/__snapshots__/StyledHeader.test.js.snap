@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`StyledHeader, styled component snapshot 1`] = `
-.bVlZzS {
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11,6 +11,6 @@ exports[`StyledHeader, styled component snapshot 1`] = `
 }
 
 <header
-  className="sc-bdVaJa bVlZzS"
+  className="c0"
 />
 `;

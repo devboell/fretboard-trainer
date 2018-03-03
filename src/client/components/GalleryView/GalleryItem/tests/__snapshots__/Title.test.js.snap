@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Title, styled component snapshot 1`] = `
-.lnvxMS {
+.c0 {
   width: 180px;
   -webkit-text-align: center;
   text-align: center;
@@ -9,6 +9,6 @@ exports[`Title, styled component snapshot 1`] = `
 }
 
 <div
-  className="sc-bdVaJa lnvxMS"
+  className="c0"
 />
 `;

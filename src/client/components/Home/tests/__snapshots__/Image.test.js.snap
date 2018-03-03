@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Image, styled component snapshot 1`] = `
-.OThze {
+.c0 {
   height: 700px;
 }
 
 <img
-  className="sc-bdVaJa OThze"
+  className="c0"
 />
 `;

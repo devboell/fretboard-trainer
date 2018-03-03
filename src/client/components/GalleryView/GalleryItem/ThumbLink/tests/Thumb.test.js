@@ -5,5 +5,5 @@ import Thumb from '../Thumb'
 
 it('Thumb, styled component snapshot', () => {
   const wrapper = shallow(<Thumb />)
-  expect(wrapper).toMatchStyledComponentsSnapshot()
+  expect(wrapper).toMatchSnapshot()
 })

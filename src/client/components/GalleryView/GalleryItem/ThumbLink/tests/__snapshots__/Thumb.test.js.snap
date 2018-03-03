@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Thumb, styled component snapshot 1`] = `
-.jpZvqv {
+.c0 {
   max-width: 200px;
   max-height: 200px;
 }
 
 <img
-  className="sc-bdVaJa jpZvqv"
+  className="c0"
 />
 `;
