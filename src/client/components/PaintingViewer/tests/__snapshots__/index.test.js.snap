@@ -1,8 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PaintingViewer component snapshot 1`] = `
-<styled.img
-  alt=""
-  src="/images/artiststestUrl"
-/>
+<styled.div>
+  <Styled(Link)
+    to="/undefined"
+  >
+    <styled.img
+      alt=""
+      src="../test-file-stub"
+    />
+    <p>
+      back to gallery
+    </p>
+  </Styled(Link)>
+  <styled.div>
+    <styled.img
+      alt=""
+      src="/images/artistsundefined"
+    />
+  </styled.div>
+</styled.div>
 `;

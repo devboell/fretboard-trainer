@@ -30,7 +30,7 @@ exports[`Introduction component snapshot 1`] = `
     <a
       href="https://en.wikipedia.org/wiki/Ukiyo-e"
     >
-      Ukiyo-e Wikepdia
+      Ukiyo-e Wikipedia
     </a>
   </styled.p>
 </styled.div>

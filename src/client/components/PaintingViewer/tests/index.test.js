@@ -3,7 +3,9 @@ import PaintingViewer from '../index'
 
 const props = {
   match: {
-    url: 'testUrl',
+    params: {
+      artisPath: 'testUrl',
+    },
   },
 }
 

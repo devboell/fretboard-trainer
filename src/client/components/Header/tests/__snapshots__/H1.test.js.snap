@@ -1,11 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`H1, styled component snapshot 1`] = `
-.hGdliM {
-  margin: 5px 0px 0px 50px;
+.eQEaXo {
+  margin: 5px 0px 0px 20px;
+  -webkit-flex-basis: 80%;
+  -ms-flex-basis: 80%;
+  flex-basis: 80%;
 }
 
 <h1
-  className="sc-bdVaJa hGdliM"
+  className="sc-bdVaJa eQEaXo"
 />
 `;
