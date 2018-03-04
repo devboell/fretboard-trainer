@@ -12,7 +12,7 @@ exports[`Article, styled component snapshot 1`] = `
   justify-content: flex-start;
   margin: 20px 50px;
   -webkit-flex-basis: 80%;
-  -ms-flex-basis: 80%;
+  -ms-flex-preferred-size: 80%;
   flex-basis: 80%;
 }
 

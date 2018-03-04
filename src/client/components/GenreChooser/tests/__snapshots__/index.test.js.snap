@@ -5,7 +5,9 @@ exports[`GenreChooser component with all genres selected snapshot 1`] = `
   <styled.div>
     Genres:
   </styled.div>
-  <styled.div>
+  <styled.div
+    key="genre-city"
+  >
     <input
       checked={true}
       id="city"
@@ -18,7 +20,9 @@ exports[`GenreChooser component with all genres selected snapshot 1`] = `
       City scenes
     </label>
   </styled.div>
-  <styled.div>
+  <styled.div
+    key="genre-landscape"
+  >
     <input
       checked={true}
       id="landscape"
@@ -39,7 +43,9 @@ exports[`GenreChooser component with some genres selected snapshot 1`] = `
   <styled.div>
     Genres:
   </styled.div>
-  <styled.div>
+  <styled.div
+    key="genre-city"
+  >
     <input
       checked={false}
       id="city"
@@ -52,7 +58,9 @@ exports[`GenreChooser component with some genres selected snapshot 1`] = `
       City scenes
     </label>
   </styled.div>
-  <styled.div>
+  <styled.div
+    key="genre-landscape"
+  >
     <input
       checked={true}
       id="landscape"

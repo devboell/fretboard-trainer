@@ -2,7 +2,6 @@
 
 exports[`P, styled component snapshot 1`] = `
 .c0 {
-  -webkit-text-indent: 50px;
   text-indent: 50px;
 }
 

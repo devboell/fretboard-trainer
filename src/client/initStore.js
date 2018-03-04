@@ -1,4 +1,4 @@
-import { createStore, compose, applyMiddleware } from 'redux'
+import { createStore, compose } from 'redux'
 
 import rootReducer from './reducers'
 
@@ -13,16 +13,16 @@ const composeEnhancers =
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : compose
 /* eslint-enable */
 
-const initStore = (client) => {
+const initStore = () => {
   const store = createStore(
-    rootReducer(client),
+    rootReducer(),
     {},
-    composeEnhancers(applyMiddleware(client.middleware())))
+    composeEnhancers())
 
   if (process.env.NODE_ENV !== 'production') {
     if (module.hot) {
       module.hot.accept('./reducers', () => {
-        store.replaceReducer(rootReducer(client))
+        store.replaceReducer(rootReducer())
       })
     }
   }

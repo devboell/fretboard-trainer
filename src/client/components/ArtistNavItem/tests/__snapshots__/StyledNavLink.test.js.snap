@@ -10,15 +10,16 @@ exports[`StyledNavLink, snapshot 1`] = `
   display: inline-block;
   margin: 10px;
   border-bottom: solid transparent 1px;
-  color: rgb(222, 81, 11);
+  color: rgb(222,81,11);
 }
 
 .c0.nav-item-active > h2 {
-  border-bottom: solid rgb(145, 144, 144) 1px;
+  border-bottom: solid rgb(145,144,144) 1px;
 }
 
 <NavLink
   activeClassName="nav-item-active"
+  ariaCurrent="true"
   className="c0"
   to="/testPath"
 />

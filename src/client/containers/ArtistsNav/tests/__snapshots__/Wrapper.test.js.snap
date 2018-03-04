@@ -12,7 +12,7 @@ exports[`Wrapper, snapshot 1`] = `
   justify-content: center;
   margin: 20px 10px;
   -webkit-flex-basis: 15%;
-  -ms-flex-basis: 15%;
+  -ms-flex-preferred-size: 15%;
   flex-basis: 15%;
 }
 

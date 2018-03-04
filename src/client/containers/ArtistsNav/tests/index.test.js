@@ -1,6 +1,6 @@
 import React from 'react'
 import { print } from 'graphql'
-import { MockedProvider } from 'react-apollo/lib/test-utils'
+import { MockedProvider } from 'react-apollo/test-utils'
 
 import artistsData from 'data/test/artistsQuery.json'
 

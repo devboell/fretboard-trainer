@@ -3,7 +3,6 @@
 exports[`Title, styled component snapshot 1`] = `
 .c0 {
   width: 180px;
-  -webkit-text-align: center;
   text-align: center;
   font-weight: bold;
 }

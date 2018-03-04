@@ -4,6 +4,7 @@ exports[`GalleryView component snapshot 1`] = `
 <styled.div>
   <GalleryItem
     artistPath="testPath"
+    key="painting-painting1.jpg"
     painting={
       Object {
         "name": "painting1.jpg",
@@ -13,6 +14,7 @@ exports[`GalleryView component snapshot 1`] = `
   />
   <GalleryItem
     artistPath="testPath"
+    key="painting-painting2.jpg"
     painting={
       Object {
         "name": "painting2.jpg",

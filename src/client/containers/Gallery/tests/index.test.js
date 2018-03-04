@@ -1,7 +1,8 @@
 import React from 'react'
 import { MemoryRouter, withRouter } from 'react-router-dom'
-import { MockedProvider } from 'react-apollo/lib/test-utils'
-import configureStore from 'redux-mock-store'
+import { MockedProvider } from 'react-apollo/test-utils'
+// import configureStore from 'redux-mock-store'
+import MockProvider, { getMockStore } from 'redux-mock-provider'
 import { print } from 'graphql'
 
 import artistData from 'data/test/artistByPathQuery.json'
@@ -15,8 +16,8 @@ import GalleryWithData, {
 } from '../index'
 
 
-const middlewares = []
-const mockStore = configureStore(middlewares)
+// const middlewares = []
+// const mockStore = configureStore(middlewares)
 
 describe('Gallery component', () => {
   const onSetSelectedGenresSpy = jest.fn()
@@ -143,17 +144,24 @@ describe('Gallery withArtist', () => {
 
 describe('Gallery, enhanced component', () => {
   it('renders without crashing', () => {
+    const store = getMockStore({
+      key: 'gallery',
+      state: { selectedGenres: [] },
+    })
     const wrapper = render(
-      <MockedProvider
-        mocks={[
-          { request: { ARTIST_BY_PATH_QUERY }, result: { data: artistData } },
-        ]}
-        store={mockStore({ gallery: { selectedGenres: [] } })}
-      >
-        <MemoryRouter initialEntries={['/heroshige']}>
-          <GalleryWithData />
-        </MemoryRouter>
-      </MockedProvider>,
+      <MockProvider store={store}>
+
+        <MockedProvider
+          mocks={[
+            { request: { ARTIST_BY_PATH_QUERY }, result: { data: artistData } },
+          ]}
+          // store={mockStore({ gallery: { selectedGenres: [] } })}
+        >
+          <MemoryRouter initialEntries={['/heroshige']}>
+            <GalleryWithData />
+          </MemoryRouter>
+        </MockedProvider>
+      </MockProvider>,
     )
     expect(wrapper).toMatchSnapshot()
   })
