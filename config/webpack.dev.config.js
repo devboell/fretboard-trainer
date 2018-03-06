@@ -1,6 +1,7 @@
 const webpack = require('webpack')
 
 module.exports = {
+  mode: 'development',
   entry: {
     main: [
       'react-hot-loader/patch',
@@ -10,7 +11,6 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
   ],
   devtool: 'eval-source-map',
 }
