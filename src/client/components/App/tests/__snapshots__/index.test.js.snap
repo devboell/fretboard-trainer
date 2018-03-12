@@ -2,10 +2,6 @@
 
 exports[`App component, snapshot 1`] = `
 <div>
-  <Header />
-  <styled.main>
-    <Apollo(ArtistsNav) />
-    <Content />
-  </styled.main>
+  Heloo
 </div>
 `;
