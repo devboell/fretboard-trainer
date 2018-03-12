@@ -1,5 +1,5 @@
 {
-  "name": "apollo-bp",
+  "name": "fretboard-trainer",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -39,7 +39,7 @@
     }
   },
   "scripts": {
-    "postinstall": "bnr build:clean && bnr build:client && bnr build:server && bnr build:data && cp src/data/artists.json dist/data",
+    "postinstall": "bnr build:clean && bnr build:client && bnr build:server && bnr build:data",
     "start": "bnr start",
     "dev": "bnr dev",
     "build:clean": "bnr build:clean",

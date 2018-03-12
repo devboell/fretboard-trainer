@@ -3,21 +3,12 @@ import resolvers from './resolvers'
 
 const typeDefs = `
 
-  type Artist {
+  type Dummy {
     name: String
-    path: String
-    paintings: [Painting]
-  }
-
-  type Painting {
-    title: String!
-    name: String!
-    genre: String!
   }
 
   type Query {
-    artists: [Artist]
-    artistByPath(path: String): Artist
+    dummies: [Dummy]
   }
 
   schema {
