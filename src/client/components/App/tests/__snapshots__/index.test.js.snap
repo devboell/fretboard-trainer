@@ -2,6 +2,37 @@
 
 exports[`App component, snapshot 1`] = `
 <div>
-  Heloo
+  <styled.div>
+    <Fretboard
+      nrOfFrets={12}
+      tuning={
+        Array [
+          "E2",
+          "A2",
+          "D3",
+          "G3",
+          "B3",
+          "E4",
+        ]
+      }
+      type="boxes"
+    />
+  </styled.div>
+  <styled.div>
+    <Fretboard
+      nrOfFrets={12}
+      tuning={
+        Array [
+          "E2",
+          "A2",
+          "D3",
+          "G3",
+          "B3",
+          "E4",
+        ]
+      }
+      type="strings"
+    />
+  </styled.div>
 </div>
 `;

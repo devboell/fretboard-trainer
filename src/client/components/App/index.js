@@ -6,11 +6,20 @@ const tuning = ['E2', 'A2', 'D3', 'G3', 'B3', 'E4']
 const nrOfFrets = 12
 
 const App = () => (
-  <Wrapper>
-    <Fretboard
-      {...{ tuning, nrOfFrets }}
-    />
-  </Wrapper>
+  <div>
+    <Wrapper>
+      <Fretboard
+        {...{ tuning, nrOfFrets }}
+        type="boxes"
+      />
+    </Wrapper>
+    <Wrapper>
+      <Fretboard
+        {...{ tuning, nrOfFrets }}
+        type="strings"
+      />
+    </Wrapper>
+  </div>
 )
 
 export default App
