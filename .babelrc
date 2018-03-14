@@ -1,5 +1,4 @@
 {
-  "plugins": ["transform-object-rest-spread"],
   "env": {
     "production": {
       "presets": [["env", { "modules": false }], "react"]
@@ -9,8 +8,7 @@
       "plugins": ["react-hot-loader/babel"]
     },
     "test": {
-      "presets": ["env", "react"],
-      "plugins": ["transform-es2015-modules-commonjs", "istanbul"]
+      "presets": ["env", "react"]
     }
   }
 }

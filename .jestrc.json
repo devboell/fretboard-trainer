@@ -3,6 +3,9 @@
   "snapshotSerializers": [
     "<rootDir>/node_modules/enzyme-to-json/serializer"
   ],
+  "transform": {
+    "^.+\\.js$": "babel-jest"
+  },
   "collectCoverageFrom": [
     "src/client/**/*.{js,jsx}",
     "!src/client/**/actionTypes.js",
