@@ -19,6 +19,20 @@ const App = () => (
         type="strings"
       />
     </Wrapper>
+    <Wrapper>
+      <Fretboard
+        {...{ tuning, nrOfFrets }}
+        type="boxes"
+        showNotes={false}
+      />
+    </Wrapper>
+    <Wrapper>
+      <Fretboard
+        {...{ tuning, nrOfFrets }}
+        type="strings"
+        showNotes={false}
+      />
+    </Wrapper>
   </div>
 )
 
