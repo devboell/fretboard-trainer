@@ -3,5 +3,6 @@
 exports[`should check fretboard-theme against snapshot 1`] = `
 Object {
   "background": "ivory",
+  "highlight": "orange",
 }
 `;

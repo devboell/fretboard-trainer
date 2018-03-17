@@ -4,6 +4,7 @@ exports[`App component, snapshot 1`] = `
 <div>
   <styled.div>
     <Fretboard
+      isHighlighted={false}
       nrOfFrets={12}
       showNotes={true}
       tuning={
@@ -21,6 +22,7 @@ exports[`App component, snapshot 1`] = `
   </styled.div>
   <styled.div>
     <Fretboard
+      isHighlighted={true}
       nrOfFrets={12}
       showNotes={true}
       tuning={
@@ -38,6 +40,7 @@ exports[`App component, snapshot 1`] = `
   </styled.div>
   <styled.div>
     <Fretboard
+      isHighlighted={true}
       nrOfFrets={12}
       showNotes={false}
       tuning={
@@ -55,6 +58,7 @@ exports[`App component, snapshot 1`] = `
   </styled.div>
   <styled.div>
     <Fretboard
+      isHighlighted={false}
       nrOfFrets={12}
       showNotes={false}
       tuning={

@@ -17,6 +17,7 @@ const App = () => (
       <Fretboard
         {...{ tuning, nrOfFrets }}
         type="strings"
+        isHighlighted
       />
     </Wrapper>
     <Wrapper>
@@ -24,6 +25,7 @@ const App = () => (
         {...{ tuning, nrOfFrets }}
         type="boxes"
         showNotes={false}
+        isHighlighted
       />
     </Wrapper>
     <Wrapper>
