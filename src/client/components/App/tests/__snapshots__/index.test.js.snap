@@ -22,6 +22,78 @@ exports[`App component, snapshot 1`] = `
   </styled.div>
   <styled.div>
     <Fretboard
+      isHighlighted={false}
+      nrOfFrets={12}
+      showNotes={true}
+      tuning={
+        Array [
+          "E2",
+          "A2",
+          "D3",
+          "G3",
+          "B3",
+          "E4",
+        ]
+      }
+      type="strings"
+    />
+  </styled.div>
+  <styled.div>
+    <Fretboard
+      isHighlighted={false}
+      nrOfFrets={12}
+      showNotes={false}
+      tuning={
+        Array [
+          "E2",
+          "A2",
+          "D3",
+          "G3",
+          "B3",
+          "E4",
+        ]
+      }
+      type="boxes"
+    />
+  </styled.div>
+  <styled.div>
+    <Fretboard
+      isHighlighted={false}
+      nrOfFrets={12}
+      showNotes={false}
+      tuning={
+        Array [
+          "E2",
+          "A2",
+          "D3",
+          "G3",
+          "B3",
+          "E4",
+        ]
+      }
+      type="strings"
+    />
+  </styled.div>
+  <styled.div>
+    <Fretboard
+      isHighlighted={true}
+      nrOfFrets={12}
+      showNotes={true}
+      tuning={
+        Array [
+          "E2",
+          "A2",
+          "D3",
+          "G3",
+          "B3",
+          "E4",
+        ]
+      }
+      type="boxes"
+    />
+  </styled.div>
+  <styled.div>
+    <Fretboard
       isHighlighted={true}
       nrOfFrets={12}
       showNotes={true}
@@ -58,7 +130,7 @@ exports[`App component, snapshot 1`] = `
   </styled.div>
   <styled.div>
     <Fretboard
-      isHighlighted={false}
+      isHighlighted={true}
       nrOfFrets={12}
       showNotes={false}
       tuning={
