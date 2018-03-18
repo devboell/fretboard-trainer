@@ -17,6 +17,33 @@ const App = () => (
       <Fretboard
         {...{ tuning, nrOfFrets }}
         type="strings"
+      />
+    </Wrapper>
+    <Wrapper>
+      <Fretboard
+        {...{ tuning, nrOfFrets }}
+        type="boxes"
+        showNotes={false}
+      />
+    </Wrapper>
+    <Wrapper>
+      <Fretboard
+        {...{ tuning, nrOfFrets }}
+        type="strings"
+        showNotes={false}
+      />
+    </Wrapper>
+    <Wrapper>
+      <Fretboard
+        {...{ tuning, nrOfFrets }}
+        type="boxes"
+        isHighlighted
+      />
+    </Wrapper>
+    <Wrapper>
+      <Fretboard
+        {...{ tuning, nrOfFrets }}
+        type="strings"
         isHighlighted
       />
     </Wrapper>
@@ -33,6 +60,7 @@ const App = () => (
         {...{ tuning, nrOfFrets }}
         type="strings"
         showNotes={false}
+        isHighlighted
       />
     </Wrapper>
   </div>
