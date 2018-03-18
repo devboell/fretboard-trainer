@@ -11,12 +11,14 @@ const App = () => (
       <Fretboard
         {...{ tuning, nrOfFrets }}
         type="boxes"
+        selectedNotes={['C4']}
       />
     </Wrapper>
     <Wrapper>
       <Fretboard
         {...{ tuning, nrOfFrets }}
         type="strings"
+        selectedNotes={['C4']}
       />
     </Wrapper>
     <Wrapper>
@@ -24,6 +26,7 @@ const App = () => (
         {...{ tuning, nrOfFrets }}
         type="boxes"
         showNotes={false}
+        selectedNotes={['C']}
       />
     </Wrapper>
     <Wrapper>
@@ -31,20 +34,21 @@ const App = () => (
         {...{ tuning, nrOfFrets }}
         type="strings"
         showNotes={false}
+        selectedNotes={['C']}
       />
     </Wrapper>
     <Wrapper>
       <Fretboard
         {...{ tuning, nrOfFrets }}
         type="boxes"
-        isHighlighted
+        selectedNotes={['C4', 'F4']}
       />
     </Wrapper>
     <Wrapper>
       <Fretboard
         {...{ tuning, nrOfFrets }}
         type="strings"
-        isHighlighted
+        selectedNotes={['C4', 'F4']}
       />
     </Wrapper>
     <Wrapper>
@@ -52,7 +56,7 @@ const App = () => (
         {...{ tuning, nrOfFrets }}
         type="boxes"
         showNotes={false}
-        isHighlighted
+        selectedNotes={['C', 'F']}
       />
     </Wrapper>
     <Wrapper>
@@ -60,7 +64,7 @@ const App = () => (
         {...{ tuning, nrOfFrets }}
         type="strings"
         showNotes={false}
-        isHighlighted
+        selectedNotes={['C', 'F']}
       />
     </Wrapper>
   </div>
