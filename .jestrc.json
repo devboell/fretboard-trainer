@@ -7,7 +7,7 @@
     "^.+\\.js$": "babel-jest"
   },
   "collectCoverageFrom": [
-    "src/client/**/*.{js,jsx}",
+    "src/{client,lib}/**/*.{js,jsx}",
     "!src/client/**/actionTypes.js",
     "!src/client/configureStore.js",
     "!src/client/globalStyles.js",
