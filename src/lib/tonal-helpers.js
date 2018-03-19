@@ -21,3 +21,5 @@ export const isEqual = note1 => note2 => (
     ? comparePc(note1, note2)
     : comparePitch(note1, note2)
 )
+
+export const oct = note => Note.oct(note)

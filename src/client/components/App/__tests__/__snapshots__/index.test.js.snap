@@ -11,7 +11,8 @@ exports[`App component, snapshot 1`] = `
         ]
       }
       showNotes={true}
-      showSelection={true}
+      showOctaves={true}
+      showSelection={false}
       tuning={
         Array [
           "E2",
@@ -34,7 +35,8 @@ exports[`App component, snapshot 1`] = `
         ]
       }
       showNotes={true}
-      showSelection={true}
+      showOctaves={true}
+      showSelection={false}
       tuning={
         Array [
           "E2",
@@ -57,7 +59,8 @@ exports[`App component, snapshot 1`] = `
         ]
       }
       showNotes={false}
-      showSelection={true}
+      showOctaves={true}
+      showSelection={false}
       tuning={
         Array [
           "E2",
@@ -80,7 +83,8 @@ exports[`App component, snapshot 1`] = `
         ]
       }
       showNotes={false}
-      showSelection={true}
+      showOctaves={true}
+      showSelection={false}
       tuning={
         Array [
           "E2",
@@ -104,7 +108,8 @@ exports[`App component, snapshot 1`] = `
         ]
       }
       showNotes={true}
-      showSelection={true}
+      showOctaves={true}
+      showSelection={false}
       tuning={
         Array [
           "E2",
@@ -128,7 +133,8 @@ exports[`App component, snapshot 1`] = `
         ]
       }
       showNotes={true}
-      showSelection={true}
+      showOctaves={true}
+      showSelection={false}
       tuning={
         Array [
           "E2",
@@ -152,7 +158,8 @@ exports[`App component, snapshot 1`] = `
         ]
       }
       showNotes={false}
-      showSelection={true}
+      showOctaves={true}
+      showSelection={false}
       tuning={
         Array [
           "E2",
@@ -176,7 +183,8 @@ exports[`App component, snapshot 1`] = `
         ]
       }
       showNotes={false}
-      showSelection={true}
+      showOctaves={true}
+      showSelection={false}
       tuning={
         Array [
           "E2",
