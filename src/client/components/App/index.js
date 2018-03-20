@@ -11,6 +11,7 @@ const App = () => (
       <Fretboard
         {...{ tuning, nrOfFrets }}
         type="boxes"
+        showOctaves
         selectedNotes={['C4']}
       />
     </Wrapper>
@@ -34,6 +35,7 @@ const App = () => (
         {...{ tuning, nrOfFrets }}
         type="strings"
         showNotes={false}
+        showOctaves
         selectedNotes={['C']}
       />
     </Wrapper>

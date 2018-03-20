@@ -35,7 +35,7 @@ exports[`App component, snapshot 1`] = `
         ]
       }
       showNotes={true}
-      showOctaves={true}
+      showOctaves={false}
       showSelection={false}
       tuning={
         Array [
@@ -59,7 +59,7 @@ exports[`App component, snapshot 1`] = `
         ]
       }
       showNotes={false}
-      showOctaves={true}
+      showOctaves={false}
       showSelection={false}
       tuning={
         Array [
@@ -108,7 +108,7 @@ exports[`App component, snapshot 1`] = `
         ]
       }
       showNotes={true}
-      showOctaves={true}
+      showOctaves={false}
       showSelection={false}
       tuning={
         Array [
@@ -133,7 +133,7 @@ exports[`App component, snapshot 1`] = `
         ]
       }
       showNotes={true}
-      showOctaves={true}
+      showOctaves={false}
       showSelection={false}
       tuning={
         Array [
@@ -158,7 +158,7 @@ exports[`App component, snapshot 1`] = `
         ]
       }
       showNotes={false}
-      showOctaves={true}
+      showOctaves={false}
       showSelection={false}
       tuning={
         Array [
@@ -183,7 +183,7 @@ exports[`App component, snapshot 1`] = `
         ]
       }
       showNotes={false}
-      showOctaves={true}
+      showOctaves={false}
       showSelection={false}
       tuning={
         Array [

@@ -2,14 +2,18 @@
 
 exports[`should check fretboard-theme against snapshot 1`] = `
 Object {
-  "background": "transparent",
+  "background": "white",
+  "dimensions": Object {
+    "nutWidth": 5,
+    "openWidth": 10,
+    "stringHeight": 40,
+  },
   "highlight": Object {
-    "oct2": "darkblue",
-    "oct3": "blue",
+    "oct2": "blue",
+    "oct3": "dodgerblue",
     "oct4": "lightblue",
     "oct5": "lightgray",
     "selected": "orange",
   },
-  "stringHeight": 40,
 }
 `;

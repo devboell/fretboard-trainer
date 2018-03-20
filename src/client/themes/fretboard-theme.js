@@ -1,11 +1,15 @@
 export default {
-  background: 'transparent',
+  background: 'white',
   highlight: {
     selected: 'orange',
-    oct2: 'darkblue',
-    oct3: 'blue',
+    oct2: 'blue',
+    oct3: 'dodgerblue',
     oct4: 'lightblue',
     oct5: 'lightgray',
   },
-  stringHeight: 40,
+  dimensions: {
+    openWidth: 10,
+    nutWidth: 5,
+    stringHeight: 40,
+  },
 }
