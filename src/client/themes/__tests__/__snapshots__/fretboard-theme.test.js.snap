@@ -4,7 +4,7 @@ exports[`should check fretboard-theme against snapshot 1`] = `
 Object {
   "background": "white",
   "dimensions": Object {
-    "nutWidth": 1,
+    "nutWidth": 0.75,
     "openWidth": 10,
     "stringHeight": 30,
   },

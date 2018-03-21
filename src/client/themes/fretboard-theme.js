@@ -9,7 +9,7 @@ export default {
   },
   dimensions: {
     openWidth: 10,
-    nutWidth: 1,
+    nutWidth: 0.75,
     stringHeight: 30,
   },
 }
