@@ -10,7 +10,7 @@ const App = () => (
     <Wrapper>
       <Fretboard
         {...{ tuning, nrOfFrets }}
-        type="boxes"
+        skinType="boxes"
         showOctaves
         selectedNotes={['C4']}
       />
@@ -18,14 +18,14 @@ const App = () => (
     <Wrapper>
       <Fretboard
         {...{ tuning, nrOfFrets }}
-        type="strings"
+        skinType="strings"
         selectedNotes={['C4']}
       />
     </Wrapper>
     <Wrapper>
       <Fretboard
         {...{ tuning, nrOfFrets }}
-        type="boxes"
+        skinType="boxes"
         showNotes={false}
         selectedNotes={['C']}
       />
@@ -33,7 +33,7 @@ const App = () => (
     <Wrapper>
       <Fretboard
         {...{ tuning, nrOfFrets }}
-        type="strings"
+        skinType="strings"
         showNotes={false}
         showOctaves
         selectedNotes={['C']}
@@ -42,21 +42,21 @@ const App = () => (
     <Wrapper>
       <Fretboard
         {...{ tuning, nrOfFrets }}
-        type="boxes"
+        skinType="boxes"
         selectedNotes={['C4', 'F4']}
       />
     </Wrapper>
     <Wrapper>
       <Fretboard
         {...{ tuning, nrOfFrets }}
-        type="strings"
+        skinType="strings"
         selectedNotes={['C4', 'F4']}
       />
     </Wrapper>
     <Wrapper>
       <Fretboard
         {...{ tuning, nrOfFrets }}
-        type="boxes"
+        skinType="boxes"
         showNotes={false}
         selectedNotes={['C', 'F']}
       />
@@ -64,7 +64,7 @@ const App = () => (
     <Wrapper>
       <Fretboard
         {...{ tuning, nrOfFrets }}
-        type="strings"
+        skinType="strings"
         showNotes={false}
         selectedNotes={['C', 'F']}
       />

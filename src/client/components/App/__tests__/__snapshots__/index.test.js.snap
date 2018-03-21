@@ -13,6 +13,7 @@ exports[`App component, snapshot 1`] = `
       showNotes={true}
       showOctaves={true}
       showSelection={false}
+      skinType="boxes"
       tuning={
         Array [
           "E2",
@@ -23,7 +24,6 @@ exports[`App component, snapshot 1`] = `
           "E4",
         ]
       }
-      type="boxes"
     />
   </styled.div>
   <styled.div>
@@ -37,6 +37,7 @@ exports[`App component, snapshot 1`] = `
       showNotes={true}
       showOctaves={false}
       showSelection={false}
+      skinType="strings"
       tuning={
         Array [
           "E2",
@@ -47,7 +48,6 @@ exports[`App component, snapshot 1`] = `
           "E4",
         ]
       }
-      type="strings"
     />
   </styled.div>
   <styled.div>
@@ -61,6 +61,7 @@ exports[`App component, snapshot 1`] = `
       showNotes={false}
       showOctaves={false}
       showSelection={false}
+      skinType="boxes"
       tuning={
         Array [
           "E2",
@@ -71,7 +72,6 @@ exports[`App component, snapshot 1`] = `
           "E4",
         ]
       }
-      type="boxes"
     />
   </styled.div>
   <styled.div>
@@ -85,6 +85,7 @@ exports[`App component, snapshot 1`] = `
       showNotes={false}
       showOctaves={true}
       showSelection={false}
+      skinType="strings"
       tuning={
         Array [
           "E2",
@@ -95,7 +96,6 @@ exports[`App component, snapshot 1`] = `
           "E4",
         ]
       }
-      type="strings"
     />
   </styled.div>
   <styled.div>
@@ -110,6 +110,7 @@ exports[`App component, snapshot 1`] = `
       showNotes={true}
       showOctaves={false}
       showSelection={false}
+      skinType="boxes"
       tuning={
         Array [
           "E2",
@@ -120,7 +121,6 @@ exports[`App component, snapshot 1`] = `
           "E4",
         ]
       }
-      type="boxes"
     />
   </styled.div>
   <styled.div>
@@ -135,6 +135,7 @@ exports[`App component, snapshot 1`] = `
       showNotes={true}
       showOctaves={false}
       showSelection={false}
+      skinType="strings"
       tuning={
         Array [
           "E2",
@@ -145,7 +146,6 @@ exports[`App component, snapshot 1`] = `
           "E4",
         ]
       }
-      type="strings"
     />
   </styled.div>
   <styled.div>
@@ -160,6 +160,7 @@ exports[`App component, snapshot 1`] = `
       showNotes={false}
       showOctaves={false}
       showSelection={false}
+      skinType="boxes"
       tuning={
         Array [
           "E2",
@@ -170,7 +171,6 @@ exports[`App component, snapshot 1`] = `
           "E4",
         ]
       }
-      type="boxes"
     />
   </styled.div>
   <styled.div>
@@ -185,6 +185,7 @@ exports[`App component, snapshot 1`] = `
       showNotes={false}
       showOctaves={false}
       showSelection={false}
+      skinType="strings"
       tuning={
         Array [
           "E2",
@@ -195,7 +196,6 @@ exports[`App component, snapshot 1`] = `
           "E4",
         ]
       }
-      type="strings"
     />
   </styled.div>
 </div>
