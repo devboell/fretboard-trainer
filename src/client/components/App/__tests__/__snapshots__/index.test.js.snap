@@ -4,6 +4,7 @@ exports[`App component, snapshot 1`] = `
 <div>
   <styled.div>
     <Fretboard
+      clickAction={[Function]}
       nrOfFrets={12}
       selectedNotes={
         Array [
@@ -29,6 +30,7 @@ exports[`App component, snapshot 1`] = `
   </styled.div>
   <styled.div>
     <Fretboard
+      clickAction={[Function]}
       nrOfFrets={12}
       selectedNotes={
         Array [
@@ -54,6 +56,7 @@ exports[`App component, snapshot 1`] = `
   </styled.div>
   <styled.div>
     <Fretboard
+      clickAction={[Function]}
       nrOfFrets={12}
       selectedNotes={
         Array [
@@ -79,6 +82,7 @@ exports[`App component, snapshot 1`] = `
   </styled.div>
   <styled.div>
     <Fretboard
+      clickAction={[Function]}
       nrOfFrets={12}
       selectedNotes={
         Array [
@@ -104,6 +108,7 @@ exports[`App component, snapshot 1`] = `
   </styled.div>
   <styled.div>
     <Fretboard
+      clickAction={[Function]}
       nrOfFrets={12}
       selectedNotes={
         Array [
@@ -130,6 +135,7 @@ exports[`App component, snapshot 1`] = `
   </styled.div>
   <styled.div>
     <Fretboard
+      clickAction={[Function]}
       nrOfFrets={12}
       selectedNotes={
         Array [
@@ -156,6 +162,7 @@ exports[`App component, snapshot 1`] = `
   </styled.div>
   <styled.div>
     <Fretboard
+      clickAction={[Function]}
       nrOfFrets={12}
       selectedNotes={
         Array [
@@ -182,6 +189,7 @@ exports[`App component, snapshot 1`] = `
   </styled.div>
   <styled.div>
     <Fretboard
+      clickAction={[Function]}
       nrOfFrets={12}
       selectedNotes={
         Array [
