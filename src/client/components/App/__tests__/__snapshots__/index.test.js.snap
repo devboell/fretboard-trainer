@@ -12,6 +12,7 @@ exports[`App component, snapshot 1`] = `
       }
       showNotes={true}
       showOctaves={true}
+      showPositionLabels={true}
       showSelection={false}
       skinType="boxes"
       tuning={
@@ -36,6 +37,7 @@ exports[`App component, snapshot 1`] = `
       }
       showNotes={true}
       showOctaves={false}
+      showPositionLabels={true}
       showSelection={false}
       skinType="strings"
       tuning={
@@ -60,6 +62,7 @@ exports[`App component, snapshot 1`] = `
       }
       showNotes={false}
       showOctaves={false}
+      showPositionLabels={true}
       showSelection={false}
       skinType="boxes"
       tuning={
@@ -84,6 +87,7 @@ exports[`App component, snapshot 1`] = `
       }
       showNotes={false}
       showOctaves={true}
+      showPositionLabels={true}
       showSelection={false}
       skinType="strings"
       tuning={
@@ -109,6 +113,7 @@ exports[`App component, snapshot 1`] = `
       }
       showNotes={true}
       showOctaves={false}
+      showPositionLabels={true}
       showSelection={false}
       skinType="boxes"
       tuning={
@@ -134,6 +139,7 @@ exports[`App component, snapshot 1`] = `
       }
       showNotes={true}
       showOctaves={false}
+      showPositionLabels={true}
       showSelection={false}
       skinType="strings"
       tuning={
@@ -159,6 +165,7 @@ exports[`App component, snapshot 1`] = `
       }
       showNotes={false}
       showOctaves={false}
+      showPositionLabels={true}
       showSelection={false}
       skinType="boxes"
       tuning={
@@ -184,6 +191,7 @@ exports[`App component, snapshot 1`] = `
       }
       showNotes={false}
       showOctaves={false}
+      showPositionLabels={true}
       showSelection={false}
       skinType="strings"
       tuning={
