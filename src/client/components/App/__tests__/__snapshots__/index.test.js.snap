@@ -6,15 +6,26 @@ exports[`App component, snapshot 1`] = `
     <Fretboard
       clickAction={[Function]}
       nrOfFrets={12}
+      selectedLocations={
+        Array [
+          Object {
+            "pos": 5,
+            "str": 4,
+          },
+        ]
+      }
       selectedNotes={
         Array [
-          "C4",
+          Object {
+            "label": "bla",
+            "note": "C4",
+          },
         ]
       }
       showNotes={true}
       showOctaves={true}
       showPositionLabels={true}
-      showSelection={false}
+      showSelection={true}
       skinType="boxes"
       tuning={
         Array [
@@ -32,6 +43,7 @@ exports[`App component, snapshot 1`] = `
     <Fretboard
       clickAction={[Function]}
       nrOfFrets={12}
+      selectedLocations={Array []}
       selectedNotes={
         Array [
           "C4",
@@ -58,6 +70,7 @@ exports[`App component, snapshot 1`] = `
     <Fretboard
       clickAction={[Function]}
       nrOfFrets={12}
+      selectedLocations={Array []}
       selectedNotes={
         Array [
           "C",
@@ -84,6 +97,7 @@ exports[`App component, snapshot 1`] = `
     <Fretboard
       clickAction={[Function]}
       nrOfFrets={12}
+      selectedLocations={Array []}
       selectedNotes={
         Array [
           "C",
@@ -110,6 +124,7 @@ exports[`App component, snapshot 1`] = `
     <Fretboard
       clickAction={[Function]}
       nrOfFrets={12}
+      selectedLocations={Array []}
       selectedNotes={
         Array [
           "C4",
@@ -137,6 +152,7 @@ exports[`App component, snapshot 1`] = `
     <Fretboard
       clickAction={[Function]}
       nrOfFrets={12}
+      selectedLocations={Array []}
       selectedNotes={
         Array [
           "C4",
@@ -164,6 +180,7 @@ exports[`App component, snapshot 1`] = `
     <Fretboard
       clickAction={[Function]}
       nrOfFrets={12}
+      selectedLocations={Array []}
       selectedNotes={
         Array [
           "C",
@@ -191,6 +208,7 @@ exports[`App component, snapshot 1`] = `
     <Fretboard
       clickAction={[Function]}
       nrOfFrets={12}
+      selectedLocations={Array []}
       selectedNotes={
         Array [
           "C",

@@ -4,20 +4,24 @@ import Wrapper from './Wrapper'
 
 const tuning = ['E2', 'A2', 'D3', 'G3', 'B3', 'E4']
 const nrOfFrets = 12
+/* istanbul ignore next */
+const clickAction = (note, loc) => console.log(note, loc) /* eslint-disable-line */
 
 const App = () => (
   <div>
     <Wrapper>
       <Fretboard
-        {...{ tuning, nrOfFrets }}
+        {...{ tuning, nrOfFrets, clickAction }}
         skinType="boxes"
         showOctaves
-        selectedNotes={['C4']}
+        showSelection
+        selectedNotes={[{ note: 'C4', label: 'bla' }]}
+        selectedLocations={[{ str: 4, pos: 5 }]}
       />
     </Wrapper>
     <Wrapper>
       <Fretboard
-        {...{ tuning, nrOfFrets }}
+        {...{ tuning, nrOfFrets, clickAction }}
         skinType="strings"
         selectedNotes={['C4']}
       />
