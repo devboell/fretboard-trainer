@@ -1,12 +1,12 @@
-import { compose } from 'ramda'
-import { Interval, Distance, Note } from 'tonal'
+import { compose, flip } from 'ramda'
+import { Note } from 'tonal'
 
-/* eslint-disable import/prefer-default-export */
-export const transpose = note => smtns =>
+export const transpose = (note, useSharps = true) => smtns =>
   compose(
-    Distance.transpose(note),
-    Interval.fromSemitones,
-  )(smtns)
+    flip(Note.fromMidi)(useSharps),
+    midi => midi + smtns,
+    Note.midi,
+  )(note)
 
 export const comparePitch = (note1, note2) =>
   Note.midi(note1) === Note.midi(note2)

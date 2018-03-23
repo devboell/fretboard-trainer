@@ -23,7 +23,7 @@ const App = () => (
       <Fretboard
         {...{ tuning, nrOfFrets, clickAction }}
         skinType="strings"
-        selectedNotes={['C4']}
+        selectedNotes={['C4', 'Bb']}
       />
     </Wrapper>
     <Wrapper>
