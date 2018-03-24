@@ -47,6 +47,7 @@ exports[`App component, snapshot 1`] = `
       selectedNotes={
         Array [
           "C4",
+          "Bb",
         ]
       }
       showNotes={true}
