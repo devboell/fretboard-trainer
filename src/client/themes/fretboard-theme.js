@@ -1,7 +1,7 @@
 export default {
   background: 'white',
   statusMap: {
-    selected: 'yellow',
+    selected: 'rgb(255, 252, 127)',
     unselected: 'white',
   },
   octaveMap: {
@@ -10,9 +10,16 @@ export default {
     4: 'rgb(205, 240, 247)',
     5: 'rgb(242, 246, 247)',
   },
+  fontSize: 10,
   dimensions: {
     openWidth: 10,
     nutWidth: 0.75,
     stringHeight: 30,
+  },
+  skins: {
+    strings: {
+      highlightSize: 85,
+      highlightBorder: '1px solid gray',
+    },
   },
 }
