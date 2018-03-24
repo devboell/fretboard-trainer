@@ -10,7 +10,7 @@ export default {
     4: 'rgb(205, 240, 247)',
     5: 'rgb(242, 246, 247)',
   },
-  fontSize: 10,
+  fontSize: 12,
   dimensions: {
     openWidth: 10,
     nutWidth: 0.75,
