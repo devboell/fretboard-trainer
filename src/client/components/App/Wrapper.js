@@ -5,4 +5,5 @@ const Wrapper = styled.div`
   margin: 10px 10%;
 `
 
+/** @component */
 export default Wrapper
