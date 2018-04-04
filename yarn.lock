@@ -44,6 +44,12 @@
   version "0.5.3"
   resolved "https://registry.yarnpkg.com/@types/zen-observable/-/zen-observable-0.5.3.tgz#91b728599544efbb7386d8b6633693a3c2e7ade5"
 
+"@vxna/mini-html-webpack-template@^0.1.6":
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/@vxna/mini-html-webpack-template/-/mini-html-webpack-template-0.1.6.tgz#64225d564da5fe610b6445523c245572923c00b8"
+  dependencies:
+    common-tags "^1.7.2"
+
 abab@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -98,7 +104,7 @@ acorn@^5.0.0, acorn@^5.0.1:
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.0.3.tgz#c460df08491463f028ccb82eab3730bf01087b3d"
 
-acorn@^5.0.3, acorn@^5.3.0, acorn@^5.4.1:
+acorn@^5.0.3, acorn@^5.3.0, acorn@^5.4.1, acorn@^5.5.3:
   version "5.5.3"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.5.3.tgz#f473dd47e0277a08e28e9bec5aeeb04751f0b8c9"
 
@@ -1566,7 +1572,7 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@^3.4.7, bluebird@^3.5.1:
+bluebird@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
 
@@ -2361,6 +2367,12 @@ common-dir@^1.0.1:
 common-sequence@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/common-sequence/-/common-sequence-1.0.2.tgz#30e07f3f8f6f7f9b3dee854f20b2d39eee086de8"
+
+common-tags@^1.7.2:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/common-tags/-/common-tags-1.7.2.tgz#24d9768c63d253a56ecff93845b44b4df1d52771"
+  dependencies:
+    babel-runtime "^6.26.0"
 
 commondir@^1.0.1:
   version "1.0.1"
@@ -5230,17 +5242,6 @@ html-minifier@^3.2.3:
     relateurl "0.2.x"
     uglify-js "3.0.x"
 
-html-webpack-plugin@^2.30.1:
-  version "2.30.1"
-  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-2.30.1.tgz#7f9c421b7ea91ec460f56527d78df484ee7537d5"
-  dependencies:
-    bluebird "^3.4.7"
-    html-minifier "^3.2.3"
-    loader-utils "^0.2.16"
-    lodash "^4.17.3"
-    pretty-error "^2.0.2"
-    toposort "^1.0.0"
-
 html-webpack-plugin@^3.0.6:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-3.0.6.tgz#d35b0452aae129a8a9f3fac44a169a625d8cf3fa"
@@ -7125,6 +7126,10 @@ lowercase-keys@1.0.0, lowercase-keys@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-1.0.0.tgz#4e3366b39e7f5457e35f1324bdf6f88d0bfc7306"
 
+lowercase-keys@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-1.0.1.tgz#6f9e30b47084d971a7c820ff15a6c5167b74c26f"
+
 lpad-align@^1.0.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/lpad-align/-/lpad-align-1.1.2.tgz#21f600ac1c3095c3c6e497ee67271ee08481fe9e"
@@ -7212,9 +7217,9 @@ markdown-table@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/markdown-table/-/markdown-table-1.1.1.tgz#4b3dd3a133d1518b8ef0dbc709bf2a1b4824bc8c"
 
-markdown-to-jsx@^6.5.2:
-  version "6.5.2"
-  resolved "https://registry.yarnpkg.com/markdown-to-jsx/-/markdown-to-jsx-6.5.2.tgz#0a7dbc0524bed5a707d914b61670593a30646f53"
+markdown-to-jsx@^6.6.0:
+  version "6.6.1"
+  resolved "https://registry.yarnpkg.com/markdown-to-jsx/-/markdown-to-jsx-6.6.1.tgz#858b37f8a92526b1f3407593ff77c95927720bef"
   dependencies:
     prop-types "^15.5.10"
     unquote "^1.1.0"
@@ -7403,6 +7408,12 @@ min-document@^2.19.0:
   resolved "https://registry.yarnpkg.com/min-document/-/min-document-2.19.0.tgz#7bd282e3f5842ed295bb748cdd9f1ffa2c824685"
   dependencies:
     dom-walk "^0.1.0"
+
+mini-html-webpack-plugin@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/mini-html-webpack-plugin/-/mini-html-webpack-plugin-0.2.3.tgz#2dfbdc3f35f6ae03864a608808381f8137311ea0"
+  dependencies:
+    webpack-sources "^1.1.0"
 
 minimalistic-assert@^1.0.0:
   version "1.0.0"
@@ -8967,7 +8978,7 @@ react-docgen-displayname-handler@^1.0.1:
   dependencies:
     recast "0.12.6"
 
-react-docgen@^3.0.0-beta9:
+react-docgen@^3.0.0-beta11:
   version "3.0.0-beta9"
   resolved "https://registry.yarnpkg.com/react-docgen/-/react-docgen-3.0.0-beta9.tgz#6be987e640786ecb10ce2dd22157a022c8285e95"
   dependencies:
@@ -9073,11 +9084,12 @@ react-router@^4.2.0:
     prop-types "^15.5.4"
     warning "^3.0.0"
 
-react-styleguidist@^6.5.2:
-  version "6.5.2"
-  resolved "https://registry.yarnpkg.com/react-styleguidist/-/react-styleguidist-6.5.2.tgz#5efee3e173fdea44570442836b0634bc99c5cb2f"
+react-styleguidist@^7.0.1:
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/react-styleguidist/-/react-styleguidist-7.0.3.tgz#11dff4ddc6d035bb582a904e7c6685f346b698e2"
   dependencies:
-    acorn "^5.4.1"
+    "@vxna/mini-html-webpack-template" "^0.1.6"
+    acorn "^5.5.3"
     ast-types "^0.11.3"
     buble "^0.19.3"
     chalk "^2.3.2"
@@ -9098,7 +9110,6 @@ react-styleguidist@^6.5.2:
     glob "^7.1.2"
     glogg "^1.0.1"
     highlight.js "^9.12.0"
-    html-webpack-plugin "^2.30.1"
     is-directory "^0.3.1"
     javascript-stringify "^1.6.0"
     jss "^9.8.1"
@@ -9112,27 +9123,27 @@ react-styleguidist@^6.5.2:
     listify "^1.0.0"
     loader-utils "^1.1.0"
     lodash "^4.17.5"
-    lowercase-keys "^1.0.0"
-    markdown-to-jsx "^6.5.2"
+    lowercase-keys "^1.0.1"
+    markdown-to-jsx "^6.6.0"
+    mini-html-webpack-plugin "^0.2.3"
     minimist "^1.2.0"
     ora "^2.0.0"
     prop-types "^15.6.1"
     q-i "^2.0.1"
     react-codemirror2 "^4.2.1"
     react-dev-utils "^5.0.0"
-    react-docgen "^3.0.0-beta9"
+    react-docgen "^3.0.0-beta11"
     react-docgen-annotation-resolver "^1.0.0"
     react-docgen-displayname-handler "^1.0.1"
     react-group "^1.0.5"
     react-icons "^2.2.7"
     remark "^9.0.0"
-    semver-utils "^1.1.1"
     style-loader "^0.20.3"
     to-ast "^1.0.0"
     type-detect "^4.0.8"
     uglifyjs-webpack-plugin "1.2.4"
     unist-util-visit "^1.3.0"
-    webpack-dev-server "^2.9.7"
+    webpack-dev-server "^2.11.2"
     webpack-merge "^4.1.2"
 
 react-test-renderer@^16.0.0-0, react-test-renderer@^16.2.0:
@@ -9863,10 +9874,6 @@ semver-truncate@^1.0.0:
   resolved "https://registry.yarnpkg.com/semver-truncate/-/semver-truncate-1.1.2.tgz#57f41de69707a62709a7e0104ba2117109ea47e8"
   dependencies:
     semver "^5.3.0"
-
-semver-utils@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/semver-utils/-/semver-utils-1.1.1.tgz#27d92fec34d27cfa42707d3b40d025ae9855f2df"
 
 "semver@2 || 3 || 4 || 5", semver@^5.3.0, semver@^5.4.1, semver@^5.5.0:
   version "5.5.0"
@@ -11590,7 +11597,7 @@ webpack-dev-middleware@^3.0.1:
     url-join "^4.0.0"
     webpack-log "^1.0.1"
 
-webpack-dev-server@^2.9.7:
+webpack-dev-server@^2.11.2:
   version "2.11.2"
   resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-2.11.2.tgz#1f4f4c78bf1895378f376815910812daf79a216f"
   dependencies:

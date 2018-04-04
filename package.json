@@ -36,13 +36,10 @@
       "env": {
         "NODE_ENV": "production"
       }
-    },
-    "styleguidistFix": {
-      "command": "rm -rf node_modules/react-styleguidist/node_modules/html-webpack-plugin/"
     }
   },
   "scripts": {
-    "postinstall": "bnr build:clean && bnr build:client && bnr build:server && bnr build:data && bnr styleguidistFix",
+    "postinstall": "bnr build:clean && bnr build:client && bnr build:server && bnr build:data",
     "start": "bnr start",
     "dev": "bnr dev",
     "build:clean": "bnr build:clean",
@@ -107,7 +104,7 @@
     "mkdirp": "^0.5.1",
     "nodemon": "^1.11.0",
     "react-hot-loader": "4.0.0",
-    "react-styleguidist": "^6.5.2",
+    "react-styleguidist": "^7.0.1",
     "react-test-renderer": "^16.2.0",
     "redux-mock-provider": "^1.0.0",
     "redux-mock-store": "^1.2.3",
