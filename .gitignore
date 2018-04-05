@@ -2,5 +2,6 @@ node_modules
 .DS_Store
 dist
 coverage
+db.sqlite3
 npm-debug.log
 yarn-error.log

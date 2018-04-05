@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`resolver index findAll 1`] = `
+Array [
+  Object {
+    "id": 1,
+    "name": "quiz one",
+  },
+  Object {
+    "id": 2,
+    "name": "quiz two",
+  },
+  Object {
+    "id": 3,
+    "name": "quiz three",
+  },
+  Object {
+    "id": 4,
+    "name": "quiz four",
+  },
+  Object {
+    "id": 5,
+    "name": "quiz five",
+  },
+  Object {
+    "id": 6,
+    "name": "quiz six",
+  },
+]
+`;

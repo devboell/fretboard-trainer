@@ -3,12 +3,12 @@ import resolvers from './resolvers'
 
 const typeDefs = `
 
-  type Dummy {
+  type Quiz {
     name: String
   }
 
   type Query {
-    dummies: [Dummy]
+    quizzes: [Quiz]
   }
 
   schema {
@@ -16,5 +16,4 @@ const typeDefs = `
   }
 `
 
-const schema = makeExecutableSchema({ typeDefs, resolvers })
-module.exports = schema
+export default makeExecutableSchema({ typeDefs, resolvers })
