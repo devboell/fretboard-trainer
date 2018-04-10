@@ -54,7 +54,7 @@
     "styleguide:build": "styleguidist build"
   },
   "dependencies": {
-    "apollo-client-preset": "^1.0.8",
+    "apollo-boost": "^0.1.4",
     "babel-cli": "^6.24.1",
     "babel-polyfill": "^6.26.0",
     "body-parser": "^1.17.2",
@@ -70,9 +70,9 @@
     "prop-types": "^15.5.10",
     "raf": "^3.4.0",
     "ramda": "^0.25.0",
-    "react": "^16.2.0",
+    "react": "^16.3.1",
     "react-apollo": "^2.0.4",
-    "react-dom": "^16.2.0",
+    "react-dom": "^16.3.1",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
@@ -88,6 +88,7 @@
     "babel-core": "^6.24.0",
     "babel-jest": "^22.4.1",
     "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.5.1",
     "babel-preset-react": "^6.23.0",
     "better-npm-run": "^0.0.15",

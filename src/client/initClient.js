@@ -1,11 +1,11 @@
-import { ApolloClient, HttpLink, InMemoryCache } from 'apollo-client-preset'
+import ApolloClient from 'apollo-boost'
 
-const link = new HttpLink({
-  uri: '/graphql',
-  credentials: 'same-origin',
-})
 
 export default new ApolloClient({
-  link,
-  cache: new InMemoryCache().restore({}),
+  clientState: {
+    defaults: {
+      selectedQuizId: 'no_selection',
+      isNew: false,
+    },
+  },
 })
