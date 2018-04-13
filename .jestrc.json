@@ -7,7 +7,7 @@
     "^.+\\.js$": "babel-jest"
   },
   "collectCoverageFrom": [
-    "src/{client,lib}/**/*.{js,jsx}",
+    "src/{client,lib,data}/**/*.{js,jsx}",
     "!src/client/**/actionTypes.js",
     "!src/client/configureStore.js",
     "!src/client/globalStyles.js",
@@ -17,7 +17,10 @@
     "!src/client/reducers.js",
     "!src/client/themes/**",
     "!src/client/styleguide/**",
-    "!src/client/fixtures/**"
+    "!src/client/fixtures/**",
+    "!src/data/connector.js",
+    "!src/data/schema.js",
+    "!src/data/resolvers/index.js"
   ],
   "moduleDirectories": [
     "node_modules",
