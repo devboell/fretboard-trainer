@@ -1,3 +1,4 @@
+import { omit } from 'ramda'
 import knex from '../connector'
 
 export const quizzes = () => knex('Quiz').select('*')
@@ -13,7 +14,7 @@ export const createQuiz = async (_, obj) => {
 export const updateQuiz = async (_, obj) => {
   await knex('Quiz')
     .where({ id: obj.id })
-    .update({ name: obj.name })
+    .update(omit('id', obj))
 
   return obj
 }
