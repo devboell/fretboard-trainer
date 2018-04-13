@@ -2,6 +2,7 @@ import React from 'react'
 import pt from 'prop-types'
 import { isEmpty } from 'ramda'
 
+import quizShape from 'propShapes/quiz'
 import List from 'components/List'
 import QuizEditor from 'components/QuizEditor'
 import Wrapper from './Wrapper'
@@ -9,6 +10,7 @@ import Wrapper from './Wrapper'
 const newQuiz = {
   id: undefined,
   name: '',
+  type: 'pc',
   __typename: 'Quiz',
 }
 
@@ -49,7 +51,7 @@ const QuizEditorPage = ({
 }
 
 QuizEditorPage.propTypes = {
-  quizzes: pt.arrayOf(pt.shape({})).isRequired,
+  quizzes: pt.arrayOf(quizShape).isRequired,
   selectedQuizId: pt.string.isRequired,
   isNew: pt.bool.isRequired,
   createQuiz: pt.func.isRequired,

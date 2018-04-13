@@ -9,6 +9,7 @@ exports[`QuizEditorData loading and error state shows error element 1`] = `
   quizzes {
     id
     name
+    type
   }
 }
 , variables: {}]
@@ -45,31 +46,37 @@ Object {
     Object {
       "id": "1",
       "name": "quiz one",
+      "type": "pc",
       Symbol(id): "Quiz:1",
     },
     Object {
       "id": "2",
       "name": "quiz two",
+      "type": "pc",
       Symbol(id): "Quiz:2",
     },
     Object {
       "id": "3",
       "name": "quiz three",
+      "type": "pc",
       Symbol(id): "Quiz:3",
     },
     Object {
       "id": "4",
       "name": "quiz four",
+      "type": "pc",
       Symbol(id): "Quiz:4",
     },
     Object {
       "id": "5",
       "name": "quiz five",
+      "type": "pc",
       Symbol(id): "Quiz:5",
     },
     Object {
       "id": "6",
       "name": "quiz six",
+      "type": "pc",
       Symbol(id): "Quiz:6",
     },
   ],

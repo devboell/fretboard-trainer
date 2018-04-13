@@ -27,12 +27,12 @@ describe('Quiz resolver', () => {
   })
 
   it('createQuiz', async () => {
-    const received = await createQuiz(null, { name: 'new' })
+    const received = await createQuiz(null, { name: 'new', type: 'pc' })
     expect(received).toMatchSnapshot()
   })
 
   it('updateQuiz', async () => {
-    const received = await updateQuiz(null, { id: 1, name: 'updated' })
+    const received = await updateQuiz(null, { id: 1, name: 'updated', type: 'pc' })
     expect(received).toMatchSnapshot()
   })
 

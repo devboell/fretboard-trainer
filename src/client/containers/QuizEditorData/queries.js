@@ -5,6 +5,7 @@ export const QUIZZES = gql`
     quizzes {
       id
       name
+      type
     }
   }
 `

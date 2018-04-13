@@ -12,31 +12,37 @@ exports[`QuizEditorPage, isNew snapshot 1`] = `
         "__typename": "Quiz",
         "id": "1",
         "name": "quiz one",
+        "type": "pc",
       },
       Object {
         "__typename": "Quiz",
         "id": "2",
         "name": "quiz two",
+        "type": "pc",
       },
       Object {
         "__typename": "Quiz",
         "id": "3",
         "name": "quiz three",
+        "type": "pc",
       },
       Object {
         "__typename": "Quiz",
         "id": "4",
         "name": "quiz four",
+        "type": "pc",
       },
       Object {
         "__typename": "Quiz",
         "id": "5",
         "name": "quiz five",
+        "type": "pc",
       },
       Object {
         "__typename": "Quiz",
         "id": "6",
         "name": "quiz six",
+        "type": "pc",
       },
     ]
   }
@@ -55,31 +61,37 @@ exports[`QuizEditorPage, isNew snapshot 1`] = `
               "__typename": "Quiz",
               "id": "1",
               "name": "quiz one",
+              "type": "pc",
             },
             Object {
               "__typename": "Quiz",
               "id": "2",
               "name": "quiz two",
+              "type": "pc",
             },
             Object {
               "__typename": "Quiz",
               "id": "3",
               "name": "quiz three",
+              "type": "pc",
             },
             Object {
               "__typename": "Quiz",
               "id": "4",
               "name": "quiz four",
+              "type": "pc",
             },
             Object {
               "__typename": "Quiz",
               "id": "5",
               "name": "quiz five",
+              "type": "pc",
             },
             Object {
               "__typename": "Quiz",
               "id": "6",
               "name": "quiz six",
+              "type": "pc",
             },
           ]
         }
@@ -224,6 +236,7 @@ exports[`QuizEditorPage, isNew snapshot 1`] = `
             "__typename": "Quiz",
             "id": undefined,
             "name": "",
+            "type": "pc",
           }
         }
       >
@@ -264,6 +277,7 @@ exports[`QuizEditorPage, isNew snapshot 1`] = `
                       "__typename": "Quiz",
                       "id": undefined,
                       "name": "",
+                      "type": "pc",
                     }
                   }
                 >
@@ -276,7 +290,7 @@ exports[`QuizEditorPage, isNew snapshot 1`] = `
                     >
                       <FieldsWrapper>
                         <div
-                          className="FieldsWrapper-eDhoxC eTezGK"
+                          className="FieldsWrapper-eDhoxC fXMMNv"
                         >
                           <Label
                             htmlFor="name"
@@ -304,6 +318,24 @@ exports[`QuizEditorPage, isNew snapshot 1`] = `
                                   value=""
                                 />
                               </InputText>
+                            </label>
+                          </Label>
+                          <Label
+                            htmlFor="type"
+                          >
+                            <label
+                              className="Label-bxMjsr hSpJCw"
+                              htmlFor="type"
+                            >
+                              type:
+                              <input
+                                checked={true}
+                                id="type"
+                                name="type"
+                                onChange={[Function]}
+                                type="radio"
+                                value="pc"
+                              />
                             </label>
                           </Label>
                         </div>
@@ -363,31 +395,37 @@ exports[`QuizEditorPage, no selection snapshot 1`] = `
         "__typename": "Quiz",
         "id": "1",
         "name": "quiz one",
+        "type": "pc",
       },
       Object {
         "__typename": "Quiz",
         "id": "2",
         "name": "quiz two",
+        "type": "pc",
       },
       Object {
         "__typename": "Quiz",
         "id": "3",
         "name": "quiz three",
+        "type": "pc",
       },
       Object {
         "__typename": "Quiz",
         "id": "4",
         "name": "quiz four",
+        "type": "pc",
       },
       Object {
         "__typename": "Quiz",
         "id": "5",
         "name": "quiz five",
+        "type": "pc",
       },
       Object {
         "__typename": "Quiz",
         "id": "6",
         "name": "quiz six",
+        "type": "pc",
       },
     ]
   }
@@ -406,31 +444,37 @@ exports[`QuizEditorPage, no selection snapshot 1`] = `
               "__typename": "Quiz",
               "id": "1",
               "name": "quiz one",
+              "type": "pc",
             },
             Object {
               "__typename": "Quiz",
               "id": "2",
               "name": "quiz two",
+              "type": "pc",
             },
             Object {
               "__typename": "Quiz",
               "id": "3",
               "name": "quiz three",
+              "type": "pc",
             },
             Object {
               "__typename": "Quiz",
               "id": "4",
               "name": "quiz four",
+              "type": "pc",
             },
             Object {
               "__typename": "Quiz",
               "id": "5",
               "name": "quiz five",
+              "type": "pc",
             },
             Object {
               "__typename": "Quiz",
               "id": "6",
               "name": "quiz six",
+              "type": "pc",
             },
           ]
         }
@@ -626,31 +670,37 @@ exports[`QuizEditorPage, selection = 1 snapshot 1`] = `
         "__typename": "Quiz",
         "id": "1",
         "name": "quiz one",
+        "type": "pc",
       },
       Object {
         "__typename": "Quiz",
         "id": "2",
         "name": "quiz two",
+        "type": "pc",
       },
       Object {
         "__typename": "Quiz",
         "id": "3",
         "name": "quiz three",
+        "type": "pc",
       },
       Object {
         "__typename": "Quiz",
         "id": "4",
         "name": "quiz four",
+        "type": "pc",
       },
       Object {
         "__typename": "Quiz",
         "id": "5",
         "name": "quiz five",
+        "type": "pc",
       },
       Object {
         "__typename": "Quiz",
         "id": "6",
         "name": "quiz six",
+        "type": "pc",
       },
     ]
   }
@@ -669,31 +719,37 @@ exports[`QuizEditorPage, selection = 1 snapshot 1`] = `
               "__typename": "Quiz",
               "id": "1",
               "name": "quiz one",
+              "type": "pc",
             },
             Object {
               "__typename": "Quiz",
               "id": "2",
               "name": "quiz two",
+              "type": "pc",
             },
             Object {
               "__typename": "Quiz",
               "id": "3",
               "name": "quiz three",
+              "type": "pc",
             },
             Object {
               "__typename": "Quiz",
               "id": "4",
               "name": "quiz four",
+              "type": "pc",
             },
             Object {
               "__typename": "Quiz",
               "id": "5",
               "name": "quiz five",
+              "type": "pc",
             },
             Object {
               "__typename": "Quiz",
               "id": "6",
               "name": "quiz six",
+              "type": "pc",
             },
           ]
         }
@@ -838,6 +894,7 @@ exports[`QuizEditorPage, selection = 1 snapshot 1`] = `
             "__typename": "Quiz",
             "id": "1",
             "name": "quiz one",
+            "type": "pc",
           }
         }
       >
@@ -878,6 +935,7 @@ exports[`QuizEditorPage, selection = 1 snapshot 1`] = `
                       "__typename": "Quiz",
                       "id": "1",
                       "name": "quiz one",
+                      "type": "pc",
                     }
                   }
                 >
@@ -890,7 +948,7 @@ exports[`QuizEditorPage, selection = 1 snapshot 1`] = `
                     >
                       <FieldsWrapper>
                         <div
-                          className="FieldsWrapper-eDhoxC eTezGK"
+                          className="FieldsWrapper-eDhoxC fXMMNv"
                         >
                           <Label
                             htmlFor="name"
@@ -918,6 +976,24 @@ exports[`QuizEditorPage, selection = 1 snapshot 1`] = `
                                   value="quiz one"
                                 />
                               </InputText>
+                            </label>
+                          </Label>
+                          <Label
+                            htmlFor="type"
+                          >
+                            <label
+                              className="Label-bxMjsr hSpJCw"
+                              htmlFor="type"
+                            >
+                              type:
+                              <input
+                                checked={true}
+                                id="type"
+                                name="type"
+                                onChange={[Function]}
+                                type="radio"
+                                value="pc"
+                              />
                             </label>
                           </Label>
                         </div>

@@ -40,10 +40,15 @@ describe('QuizEditorPage, selection = 1', () => {
         value: 'updated',
       },
     }
-    const updateQuizArg = { __typename: 'Quiz', id: '1', name: 'updated' }
+    const updateQuizArg = {
+      id: '1',
+      name: 'updated',
+      type: 'pc',
+      __typename: 'Quiz',
+    }
 
     const quizForm = wrapper.find('QuizForm')
-    const input = quizForm.find('input')
+    const input = quizForm.find('input[name="name"]')
     const saveButton = quizForm.find('button').at(0)
 
     input.simulate('change', inputEvent)
@@ -76,10 +81,15 @@ describe('QuizEditorPage, isNew', () => {
         value: 'new',
       },
     }
-    const createQuizArg = { __typename: 'Quiz', id: undefined, name: 'new' }
+    const createQuizArg = {
+      id: undefined,
+      name: 'new',
+      type: 'pc',
+      __typename: 'Quiz',
+    }
 
     const quizForm = wrapper.find('QuizForm')
-    const input = quizForm.find('input')
+    const input = quizForm.find('input[name="name"]')
     const saveButton = quizForm.find('button').at(0)
 
     input.simulate('change', inputEvent)

@@ -2,6 +2,7 @@ import React from 'react'
 import pt from 'prop-types'
 import { isNil } from 'ramda'
 
+import quizShape from 'propShapes/quiz'
 import QuizForm from 'components/QuizForm'
 import EditorButton from 'styled/EditorButton'
 import Wrapper from './Wrapper'
@@ -44,7 +45,7 @@ const QuizEditor = ({
   </Wrapper>
 
 QuizEditor.propTypes = {
-  quiz: pt.shape({ id: pt.string, name: pt.string }),
+  quiz: quizShape,
   isNew: pt.bool.isRequired,
   clearQuizSelection: pt.func.isRequired,
   onCreateQuiz: pt.func.isRequired,

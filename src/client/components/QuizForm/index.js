@@ -2,6 +2,8 @@ import React from 'react'
 import pt from 'prop-types'
 import { equals } from 'ramda'
 
+import quizShape from 'propShapes/quiz'
+
 import EditorButton from 'styled/EditorButton'
 import Form from './Form'
 import FieldsWrapper from './FieldsWrapper'
@@ -73,6 +75,17 @@ class QuizForm extends React.Component {
               onChange={this.handleInputChange}
             />
           </Label>
+          <Label htmlFor="type">
+            type:
+            <input
+              id="type"
+              name="type"
+              type="radio"
+              value="pc"
+              checked={this.state.type === 'pc'}
+              onChange={this.handleInputChange}
+            />
+          </Label>
         </FieldsWrapper>
         <ButtonsWrapper>
           <EditorButton
@@ -95,7 +108,7 @@ class QuizForm extends React.Component {
 
 
 QuizForm.propTypes = {
-  quiz: pt.shape({ id: pt.string, name: pt.string }).isRequired,
+  quiz: quizShape.isRequired,
   isNew: pt.bool.isRequired,
   onCreateQuiz: pt.func.isRequired,
   onUpdateQuiz: pt.func.isRequired,

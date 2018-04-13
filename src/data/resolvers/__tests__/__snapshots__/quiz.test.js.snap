@@ -4,6 +4,7 @@ exports[`Quiz resolver createQuiz 1`] = `
 Object {
   "id": 7,
   "name": "new",
+  "type": "pc",
 }
 `;
 
@@ -16,26 +17,32 @@ Array [
   Object {
     "id": 1,
     "name": "quiz one",
+    "type": "pc",
   },
   Object {
     "id": 2,
     "name": "quiz two",
+    "type": "pc",
   },
   Object {
     "id": 3,
     "name": "quiz three",
+    "type": "pc",
   },
   Object {
     "id": 4,
     "name": "quiz four",
+    "type": "pc",
   },
   Object {
     "id": 5,
     "name": "quiz five",
+    "type": "pc",
   },
   Object {
     "id": 6,
     "name": "quiz six",
+    "type": "pc",
   },
 ]
 `;
@@ -44,5 +51,6 @@ exports[`Quiz resolver updateQuiz 1`] = `
 Object {
   "id": 1,
   "name": "updated",
+  "type": "pc",
 }
 `;

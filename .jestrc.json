@@ -18,6 +18,7 @@
     "!src/client/themes/**",
     "!src/client/styleguide/**",
     "!src/client/fixtures/**",
+    "!src/client/propShapes/**",
     "!src/data/connector.js",
     "!src/data/schema.js",
     "!src/data/resolvers/index.js"

@@ -6,8 +6,14 @@ import QuizEditorData from '../index'
 import { QUIZZES, CLIENT_UI } from '../queries'
 import { CREATE_QUIZ, UPDATE_QUIZ, DELETE_QUIZ } from '../mutations'
 
-const createResult = { id: '7', name: 'new' }
-const updateResult = { id: '1', name: 'updated', __typename: 'Quiz' }
+const createResult = { id: '7', name: 'new', type: 'pc' }
+const updateResult = {
+  id: '1',
+  name: 'updated',
+  type: 'pc',
+  __typename: 'Quiz',
+}
+
 const deleteResult = '1'
 
 const mutationMocks = [
