@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component, snapshot 1`] = `
-<styled.div>
+<Wrapper>
   <h1>
     Fretboard
   </h1>
-</styled.div>
+  <Apollo(Apollo(Apollo(Apollo(Apollo(QuizEditorData))))) />
+</Wrapper>
 `;

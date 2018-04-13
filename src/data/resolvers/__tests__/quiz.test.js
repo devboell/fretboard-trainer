@@ -1,5 +1,5 @@
 import knex from '../../connector'
-import allQuizzes from '../quiz'
+import { quizzes } from '../quiz'
 
 describe('resolver index', () => {
   beforeEach(async () => {
@@ -17,7 +17,7 @@ describe('resolver index', () => {
   })
 
   it('findAll', async () => {
-    const quizzes = await allQuizzes()
-    expect(quizzes).toMatchSnapshot()
+    const received = await quizzes()
+    expect(received).toMatchSnapshot()
   })
 })

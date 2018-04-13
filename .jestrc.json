@@ -16,7 +16,8 @@
     "!src/client/initStore.js",
     "!src/client/reducers.js",
     "!src/client/themes/**",
-    "!src/client/styleguide/**"
+    "!src/client/styleguide/**",
+    "!src/client/fixtures/**"
   ],
   "moduleDirectories": [
     "node_modules",

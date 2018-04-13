@@ -38,8 +38,7 @@ class QuizForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault()
     const { onCreateQuiz, onUpdateQuiz, isNew } = this.props
-    // console.log('submit state', ...this.state)
-    // const variables = { ...this.state }
+
     if (isNew) {
       onCreateQuiz(this.state)
     } else {

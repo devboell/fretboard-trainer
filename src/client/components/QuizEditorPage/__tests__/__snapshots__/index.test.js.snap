@@ -1,0 +1,966 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuizEditorPage, isNew snapshot 1`] = `
+<QuizEditorPage
+  clearQuizSelection={[MockFunction]}
+  createQuiz={[MockFunction]}
+  deleteQuiz={[MockFunction]}
+  isNew={true}
+  quizzes={
+    Array [
+      Object {
+        "__typename": "Quiz",
+        "id": "1",
+        "name": "quiz one",
+      },
+      Object {
+        "__typename": "Quiz",
+        "id": "2",
+        "name": "quiz two",
+      },
+      Object {
+        "__typename": "Quiz",
+        "id": "3",
+        "name": "quiz three",
+      },
+      Object {
+        "__typename": "Quiz",
+        "id": "4",
+        "name": "quiz four",
+      },
+      Object {
+        "__typename": "Quiz",
+        "id": "5",
+        "name": "quiz five",
+      },
+      Object {
+        "__typename": "Quiz",
+        "id": "6",
+        "name": "quiz six",
+      },
+    ]
+  }
+  selectQuiz={[MockFunction]}
+  selectedQuizId="no_selection"
+  updateQuiz={[MockFunction]}
+>
+  <Wrapper>
+    <div
+      className="Wrapper-ThVjl hrxOjE"
+    >
+      <List
+        items={
+          Array [
+            Object {
+              "__typename": "Quiz",
+              "id": "1",
+              "name": "quiz one",
+            },
+            Object {
+              "__typename": "Quiz",
+              "id": "2",
+              "name": "quiz two",
+            },
+            Object {
+              "__typename": "Quiz",
+              "id": "3",
+              "name": "quiz three",
+            },
+            Object {
+              "__typename": "Quiz",
+              "id": "4",
+              "name": "quiz four",
+            },
+            Object {
+              "__typename": "Quiz",
+              "id": "5",
+              "name": "quiz five",
+            },
+            Object {
+              "__typename": "Quiz",
+              "id": "6",
+              "name": "quiz six",
+            },
+          ]
+        }
+        onSelectItem={[MockFunction]}
+        selectedItemId="no_selection"
+      >
+        <Wrapper>
+          <div
+            className="Wrapper-ThVjl iVApgD"
+          >
+            <Ul>
+              <ul
+                className="Ul-bfMUEV cngFat"
+              >
+                <Li
+                  key="1"
+                >
+                  <li
+                    className="Li-koaYzM fIJqDv"
+                  >
+                    <Button
+                      isSelected={false}
+                      onClick={[Function]}
+                    >
+                      <button
+                        className="Button-kDSBcD eZGGar"
+                        onClick={[Function]}
+                      >
+                        quiz one
+                      </button>
+                    </Button>
+                  </li>
+                </Li>
+                <Li
+                  key="2"
+                >
+                  <li
+                    className="Li-koaYzM fIJqDv"
+                  >
+                    <Button
+                      isSelected={false}
+                      onClick={[Function]}
+                    >
+                      <button
+                        className="Button-kDSBcD eZGGar"
+                        onClick={[Function]}
+                      >
+                        quiz two
+                      </button>
+                    </Button>
+                  </li>
+                </Li>
+                <Li
+                  key="3"
+                >
+                  <li
+                    className="Li-koaYzM fIJqDv"
+                  >
+                    <Button
+                      isSelected={false}
+                      onClick={[Function]}
+                    >
+                      <button
+                        className="Button-kDSBcD eZGGar"
+                        onClick={[Function]}
+                      >
+                        quiz three
+                      </button>
+                    </Button>
+                  </li>
+                </Li>
+                <Li
+                  key="4"
+                >
+                  <li
+                    className="Li-koaYzM fIJqDv"
+                  >
+                    <Button
+                      isSelected={false}
+                      onClick={[Function]}
+                    >
+                      <button
+                        className="Button-kDSBcD eZGGar"
+                        onClick={[Function]}
+                      >
+                        quiz four
+                      </button>
+                    </Button>
+                  </li>
+                </Li>
+                <Li
+                  key="5"
+                >
+                  <li
+                    className="Li-koaYzM fIJqDv"
+                  >
+                    <Button
+                      isSelected={false}
+                      onClick={[Function]}
+                    >
+                      <button
+                        className="Button-kDSBcD eZGGar"
+                        onClick={[Function]}
+                      >
+                        quiz five
+                      </button>
+                    </Button>
+                  </li>
+                </Li>
+                <Li
+                  key="6"
+                >
+                  <li
+                    className="Li-koaYzM fIJqDv"
+                  >
+                    <Button
+                      isSelected={false}
+                      onClick={[Function]}
+                    >
+                      <button
+                        className="Button-kDSBcD eZGGar"
+                        onClick={[Function]}
+                      >
+                        quiz six
+                      </button>
+                    </Button>
+                  </li>
+                </Li>
+              </ul>
+            </Ul>
+          </div>
+        </Wrapper>
+      </List>
+      <QuizEditor
+        clearQuizSelection={[MockFunction]}
+        isNew={true}
+        onCreateQuiz={[MockFunction]}
+        onDeleteQuiz={[MockFunction]}
+        onUpdateQuiz={[MockFunction]}
+        quiz={
+          Object {
+            "__typename": "Quiz",
+            "id": undefined,
+            "name": "",
+          }
+        }
+      >
+        <Wrapper>
+          <div
+            className="Wrapper-ThVjl eCjdPG"
+          >
+            <CreateWrapper>
+              <div
+                className="CreateWrapper-kzyVjd gyhNsT"
+              >
+                <EditorButton
+                  disabled={true}
+                  onClick={[Function]}
+                >
+                  <button
+                    className="EditorButton-chDRFm dVoSaf"
+                    disabled={true}
+                    onClick={[Function]}
+                  >
+                    New
+                  </button>
+                </EditorButton>
+              </div>
+            </CreateWrapper>
+            <FormWrapper>
+              <div
+                className="FormWrapper-hxeBuG qScKG"
+              >
+                <QuizForm
+                  clearQuizSelection={[MockFunction]}
+                  isNew={true}
+                  onCreateQuiz={[MockFunction]}
+                  onDeleteQuiz={[MockFunction]}
+                  onUpdateQuiz={[MockFunction]}
+                  quiz={
+                    Object {
+                      "__typename": "Quiz",
+                      "id": undefined,
+                      "name": "",
+                    }
+                  }
+                >
+                  <Form
+                    onSubmit={[Function]}
+                  >
+                    <form
+                      className="Form-dhHGoS fGKlyR"
+                      onSubmit={[Function]}
+                    >
+                      <FieldsWrapper>
+                        <div
+                          className="FieldsWrapper-eDhoxC eTezGK"
+                        >
+                          <Label
+                            htmlFor="name"
+                          >
+                            <label
+                              className="Label-bxMjsr hSpJCw"
+                              htmlFor="name"
+                            >
+                              name:
+                              <InputText
+                                id="name"
+                                name="name"
+                                onChange={[Function]}
+                                placeholder="Enter a name"
+                                type="text"
+                                value=""
+                              >
+                                <input
+                                  className="InputText-ektxEQ kaKplR"
+                                  id="name"
+                                  name="name"
+                                  onChange={[Function]}
+                                  placeholder="Enter a name"
+                                  type="text"
+                                  value=""
+                                />
+                              </InputText>
+                            </label>
+                          </Label>
+                        </div>
+                      </FieldsWrapper>
+                      <ButtonsWrapper>
+                        <div
+                          className="ButtonsWrapper-xBhhP evhcHL"
+                        >
+                          <EditorButton
+                            disabled={true}
+                            type="submit"
+                          >
+                            <button
+                              className="EditorButton-chDRFm dVoSaf"
+                              disabled={true}
+                              type="submit"
+                            >
+                              Save
+                            </button>
+                          </EditorButton>
+                          <EditorButton
+                            disabled={true}
+                            onClick={[Function]}
+                          >
+                            <button
+                              className="EditorButton-chDRFm dVoSaf"
+                              disabled={true}
+                              onClick={[Function]}
+                            >
+                              Delete
+                            </button>
+                          </EditorButton>
+                        </div>
+                      </ButtonsWrapper>
+                    </form>
+                  </Form>
+                </QuizForm>
+              </div>
+            </FormWrapper>
+          </div>
+        </Wrapper>
+      </QuizEditor>
+    </div>
+  </Wrapper>
+</QuizEditorPage>
+`;
+
+exports[`QuizEditorPage, no selection snapshot 1`] = `
+<QuizEditorPage
+  clearQuizSelection={[MockFunction]}
+  createQuiz={[MockFunction]}
+  deleteQuiz={[MockFunction]}
+  isNew={false}
+  quizzes={
+    Array [
+      Object {
+        "__typename": "Quiz",
+        "id": "1",
+        "name": "quiz one",
+      },
+      Object {
+        "__typename": "Quiz",
+        "id": "2",
+        "name": "quiz two",
+      },
+      Object {
+        "__typename": "Quiz",
+        "id": "3",
+        "name": "quiz three",
+      },
+      Object {
+        "__typename": "Quiz",
+        "id": "4",
+        "name": "quiz four",
+      },
+      Object {
+        "__typename": "Quiz",
+        "id": "5",
+        "name": "quiz five",
+      },
+      Object {
+        "__typename": "Quiz",
+        "id": "6",
+        "name": "quiz six",
+      },
+    ]
+  }
+  selectQuiz={[MockFunction]}
+  selectedQuizId="no_selection"
+  updateQuiz={[MockFunction]}
+>
+  <Wrapper>
+    <div
+      className="Wrapper-ThVjl hrxOjE"
+    >
+      <List
+        items={
+          Array [
+            Object {
+              "__typename": "Quiz",
+              "id": "1",
+              "name": "quiz one",
+            },
+            Object {
+              "__typename": "Quiz",
+              "id": "2",
+              "name": "quiz two",
+            },
+            Object {
+              "__typename": "Quiz",
+              "id": "3",
+              "name": "quiz three",
+            },
+            Object {
+              "__typename": "Quiz",
+              "id": "4",
+              "name": "quiz four",
+            },
+            Object {
+              "__typename": "Quiz",
+              "id": "5",
+              "name": "quiz five",
+            },
+            Object {
+              "__typename": "Quiz",
+              "id": "6",
+              "name": "quiz six",
+            },
+          ]
+        }
+        onSelectItem={[MockFunction]}
+        selectedItemId="no_selection"
+      >
+        <Wrapper>
+          <div
+            className="Wrapper-ThVjl iVApgD"
+          >
+            <Ul>
+              <ul
+                className="Ul-bfMUEV cngFat"
+              >
+                <Li
+                  key="1"
+                >
+                  <li
+                    className="Li-koaYzM fIJqDv"
+                  >
+                    <Button
+                      isSelected={false}
+                      onClick={[Function]}
+                    >
+                      <button
+                        className="Button-kDSBcD eZGGar"
+                        onClick={[Function]}
+                      >
+                        quiz one
+                      </button>
+                    </Button>
+                  </li>
+                </Li>
+                <Li
+                  key="2"
+                >
+                  <li
+                    className="Li-koaYzM fIJqDv"
+                  >
+                    <Button
+                      isSelected={false}
+                      onClick={[Function]}
+                    >
+                      <button
+                        className="Button-kDSBcD eZGGar"
+                        onClick={[Function]}
+                      >
+                        quiz two
+                      </button>
+                    </Button>
+                  </li>
+                </Li>
+                <Li
+                  key="3"
+                >
+                  <li
+                    className="Li-koaYzM fIJqDv"
+                  >
+                    <Button
+                      isSelected={false}
+                      onClick={[Function]}
+                    >
+                      <button
+                        className="Button-kDSBcD eZGGar"
+                        onClick={[Function]}
+                      >
+                        quiz three
+                      </button>
+                    </Button>
+                  </li>
+                </Li>
+                <Li
+                  key="4"
+                >
+                  <li
+                    className="Li-koaYzM fIJqDv"
+                  >
+                    <Button
+                      isSelected={false}
+                      onClick={[Function]}
+                    >
+                      <button
+                        className="Button-kDSBcD eZGGar"
+                        onClick={[Function]}
+                      >
+                        quiz four
+                      </button>
+                    </Button>
+                  </li>
+                </Li>
+                <Li
+                  key="5"
+                >
+                  <li
+                    className="Li-koaYzM fIJqDv"
+                  >
+                    <Button
+                      isSelected={false}
+                      onClick={[Function]}
+                    >
+                      <button
+                        className="Button-kDSBcD eZGGar"
+                        onClick={[Function]}
+                      >
+                        quiz five
+                      </button>
+                    </Button>
+                  </li>
+                </Li>
+                <Li
+                  key="6"
+                >
+                  <li
+                    className="Li-koaYzM fIJqDv"
+                  >
+                    <Button
+                      isSelected={false}
+                      onClick={[Function]}
+                    >
+                      <button
+                        className="Button-kDSBcD eZGGar"
+                        onClick={[Function]}
+                      >
+                        quiz six
+                      </button>
+                    </Button>
+                  </li>
+                </Li>
+              </ul>
+            </Ul>
+          </div>
+        </Wrapper>
+      </List>
+      <QuizEditor
+        clearQuizSelection={[MockFunction]}
+        isNew={false}
+        onCreateQuiz={[MockFunction]}
+        onDeleteQuiz={[MockFunction]}
+        onUpdateQuiz={[MockFunction]}
+      >
+        <Wrapper>
+          <div
+            className="Wrapper-ThVjl eCjdPG"
+          >
+            <CreateWrapper>
+              <div
+                className="CreateWrapper-kzyVjd gyhNsT"
+              >
+                <EditorButton
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  <button
+                    className="EditorButton-chDRFm dVoSaf"
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    New
+                  </button>
+                </EditorButton>
+              </div>
+            </CreateWrapper>
+            <FormWrapper>
+              <div
+                className="FormWrapper-hxeBuG qScKG"
+              >
+                <NoSelectionWrapper>
+                  <div
+                    className="NoSelectionWrapper-icgMUi jNtnrW"
+                  >
+                    Select or Create a Quiz
+                  </div>
+                </NoSelectionWrapper>
+              </div>
+            </FormWrapper>
+          </div>
+        </Wrapper>
+      </QuizEditor>
+    </div>
+  </Wrapper>
+</QuizEditorPage>
+`;
+
+exports[`QuizEditorPage, selection = 1 snapshot 1`] = `
+<QuizEditorPage
+  clearQuizSelection={[MockFunction]}
+  createQuiz={[MockFunction]}
+  deleteQuiz={[MockFunction]}
+  isNew={false}
+  quizzes={
+    Array [
+      Object {
+        "__typename": "Quiz",
+        "id": "1",
+        "name": "quiz one",
+      },
+      Object {
+        "__typename": "Quiz",
+        "id": "2",
+        "name": "quiz two",
+      },
+      Object {
+        "__typename": "Quiz",
+        "id": "3",
+        "name": "quiz three",
+      },
+      Object {
+        "__typename": "Quiz",
+        "id": "4",
+        "name": "quiz four",
+      },
+      Object {
+        "__typename": "Quiz",
+        "id": "5",
+        "name": "quiz five",
+      },
+      Object {
+        "__typename": "Quiz",
+        "id": "6",
+        "name": "quiz six",
+      },
+    ]
+  }
+  selectQuiz={[MockFunction]}
+  selectedQuizId="1"
+  updateQuiz={[MockFunction]}
+>
+  <Wrapper>
+    <div
+      className="Wrapper-ThVjl hrxOjE"
+    >
+      <List
+        items={
+          Array [
+            Object {
+              "__typename": "Quiz",
+              "id": "1",
+              "name": "quiz one",
+            },
+            Object {
+              "__typename": "Quiz",
+              "id": "2",
+              "name": "quiz two",
+            },
+            Object {
+              "__typename": "Quiz",
+              "id": "3",
+              "name": "quiz three",
+            },
+            Object {
+              "__typename": "Quiz",
+              "id": "4",
+              "name": "quiz four",
+            },
+            Object {
+              "__typename": "Quiz",
+              "id": "5",
+              "name": "quiz five",
+            },
+            Object {
+              "__typename": "Quiz",
+              "id": "6",
+              "name": "quiz six",
+            },
+          ]
+        }
+        onSelectItem={[MockFunction]}
+        selectedItemId="1"
+      >
+        <Wrapper>
+          <div
+            className="Wrapper-ThVjl iVApgD"
+          >
+            <Ul>
+              <ul
+                className="Ul-bfMUEV cngFat"
+              >
+                <Li
+                  key="1"
+                >
+                  <li
+                    className="Li-koaYzM fIJqDv"
+                  >
+                    <Button
+                      isSelected={true}
+                      onClick={[Function]}
+                    >
+                      <button
+                        className="Button-kDSBcD rxxlO"
+                        onClick={[Function]}
+                      >
+                        quiz one
+                      </button>
+                    </Button>
+                  </li>
+                </Li>
+                <Li
+                  key="2"
+                >
+                  <li
+                    className="Li-koaYzM fIJqDv"
+                  >
+                    <Button
+                      isSelected={false}
+                      onClick={[Function]}
+                    >
+                      <button
+                        className="Button-kDSBcD eZGGar"
+                        onClick={[Function]}
+                      >
+                        quiz two
+                      </button>
+                    </Button>
+                  </li>
+                </Li>
+                <Li
+                  key="3"
+                >
+                  <li
+                    className="Li-koaYzM fIJqDv"
+                  >
+                    <Button
+                      isSelected={false}
+                      onClick={[Function]}
+                    >
+                      <button
+                        className="Button-kDSBcD eZGGar"
+                        onClick={[Function]}
+                      >
+                        quiz three
+                      </button>
+                    </Button>
+                  </li>
+                </Li>
+                <Li
+                  key="4"
+                >
+                  <li
+                    className="Li-koaYzM fIJqDv"
+                  >
+                    <Button
+                      isSelected={false}
+                      onClick={[Function]}
+                    >
+                      <button
+                        className="Button-kDSBcD eZGGar"
+                        onClick={[Function]}
+                      >
+                        quiz four
+                      </button>
+                    </Button>
+                  </li>
+                </Li>
+                <Li
+                  key="5"
+                >
+                  <li
+                    className="Li-koaYzM fIJqDv"
+                  >
+                    <Button
+                      isSelected={false}
+                      onClick={[Function]}
+                    >
+                      <button
+                        className="Button-kDSBcD eZGGar"
+                        onClick={[Function]}
+                      >
+                        quiz five
+                      </button>
+                    </Button>
+                  </li>
+                </Li>
+                <Li
+                  key="6"
+                >
+                  <li
+                    className="Li-koaYzM fIJqDv"
+                  >
+                    <Button
+                      isSelected={false}
+                      onClick={[Function]}
+                    >
+                      <button
+                        className="Button-kDSBcD eZGGar"
+                        onClick={[Function]}
+                      >
+                        quiz six
+                      </button>
+                    </Button>
+                  </li>
+                </Li>
+              </ul>
+            </Ul>
+          </div>
+        </Wrapper>
+      </List>
+      <QuizEditor
+        clearQuizSelection={[MockFunction]}
+        isNew={false}
+        onCreateQuiz={[MockFunction]}
+        onDeleteQuiz={[MockFunction]}
+        onUpdateQuiz={[MockFunction]}
+        quiz={
+          Object {
+            "__typename": "Quiz",
+            "id": "1",
+            "name": "quiz one",
+          }
+        }
+      >
+        <Wrapper>
+          <div
+            className="Wrapper-ThVjl eCjdPG"
+          >
+            <CreateWrapper>
+              <div
+                className="CreateWrapper-kzyVjd gyhNsT"
+              >
+                <EditorButton
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  <button
+                    className="EditorButton-chDRFm dVoSaf"
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    New
+                  </button>
+                </EditorButton>
+              </div>
+            </CreateWrapper>
+            <FormWrapper>
+              <div
+                className="FormWrapper-hxeBuG qScKG"
+              >
+                <QuizForm
+                  clearQuizSelection={[MockFunction]}
+                  isNew={false}
+                  onCreateQuiz={[MockFunction]}
+                  onDeleteQuiz={[MockFunction]}
+                  onUpdateQuiz={[MockFunction]}
+                  quiz={
+                    Object {
+                      "__typename": "Quiz",
+                      "id": "1",
+                      "name": "quiz one",
+                    }
+                  }
+                >
+                  <Form
+                    onSubmit={[Function]}
+                  >
+                    <form
+                      className="Form-dhHGoS fGKlyR"
+                      onSubmit={[Function]}
+                    >
+                      <FieldsWrapper>
+                        <div
+                          className="FieldsWrapper-eDhoxC eTezGK"
+                        >
+                          <Label
+                            htmlFor="name"
+                          >
+                            <label
+                              className="Label-bxMjsr hSpJCw"
+                              htmlFor="name"
+                            >
+                              name:
+                              <InputText
+                                id="name"
+                                name="name"
+                                onChange={[Function]}
+                                placeholder="Enter a name"
+                                type="text"
+                                value="quiz one"
+                              >
+                                <input
+                                  className="InputText-ektxEQ kaKplR"
+                                  id="name"
+                                  name="name"
+                                  onChange={[Function]}
+                                  placeholder="Enter a name"
+                                  type="text"
+                                  value="quiz one"
+                                />
+                              </InputText>
+                            </label>
+                          </Label>
+                        </div>
+                      </FieldsWrapper>
+                      <ButtonsWrapper>
+                        <div
+                          className="ButtonsWrapper-xBhhP evhcHL"
+                        >
+                          <EditorButton
+                            disabled={true}
+                            type="submit"
+                          >
+                            <button
+                              className="EditorButton-chDRFm dVoSaf"
+                              disabled={true}
+                              type="submit"
+                            >
+                              Save
+                            </button>
+                          </EditorButton>
+                          <EditorButton
+                            disabled={false}
+                            onClick={[Function]}
+                          >
+                            <button
+                              className="EditorButton-chDRFm dVoSaf"
+                              disabled={false}
+                              onClick={[Function]}
+                            >
+                              Delete
+                            </button>
+                          </EditorButton>
+                        </div>
+                      </ButtonsWrapper>
+                    </form>
+                  </Form>
+                </QuizForm>
+              </div>
+            </FormWrapper>
+          </div>
+        </Wrapper>
+      </QuizEditor>
+    </div>
+  </Wrapper>
+</QuizEditorPage>
+`;
