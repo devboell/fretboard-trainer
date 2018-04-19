@@ -5,7 +5,10 @@ import { isEmpty } from 'ramda'
 import quizShape from 'propShapes/quiz'
 import List from 'components/List'
 import QuizEditor from 'components/QuizEditor'
+import QuizView from 'components/QuizView'
 import Wrapper from './Wrapper'
+import ListEditorWrapper from './ListEditorWrapper'
+import QuizViewWrapper from './QuizViewWrapper'
 
 const newQuiz = {
   id: undefined,
@@ -31,24 +34,32 @@ const QuizEditorPage = ({
 
   return (
     <Wrapper>
-      <List
-        items={quizzes}
-        selectedItemId={selectedQuizId}
-        onSelectItem={selectQuiz}
-      />
-      <QuizEditor
-        {...{
-          quiz,
-          isNew,
-          clearQuizSelection,
-        }}
-        onCreateQuiz={createQuiz}
-        onUpdateQuiz={updateQuiz}
-        onDeleteQuiz={deleteQuiz}
-      />
+      <ListEditorWrapper>
+        <List
+          items={quizzes}
+          selectedItemId={selectedQuizId}
+          onSelectItem={selectQuiz}
+        />
+        <QuizEditor
+          {...{
+            quiz,
+            isNew,
+            clearQuizSelection,
+          }}
+          onCreateQuiz={createQuiz}
+          onUpdateQuiz={updateQuiz}
+          onDeleteQuiz={deleteQuiz}
+        />
+      </ListEditorWrapper>
+      {selectedQuizId !== 'no_selection' &&
+        <QuizViewWrapper>
+          <QuizView {...{ quiz }} />
+        </QuizViewWrapper>
+      }
     </Wrapper>
   )
 }
+
 
 QuizEditorPage.propTypes = {
   quizzes: pt.arrayOf(quizShape).isRequired,
