@@ -1,41 +1,71 @@
-import React from 'react'
-import pt from 'prop-types'
-import { ApolloConsumer } from 'react-apollo'
+import { connect } from 'react-redux'
+import { compose } from 'ramda'
 
 import QuizEditorPage from 'components/QuizEditorPage'
+import withLoading from 'components/Loading'
 import withData from './enhancers'
+import {
+  setSelectedQuizId,
+  setIsNew,
+  setEditedQuiz,
+  updateEditedQuiz,
+} from './actionCreators'
 
-const QuizEditorData = ({
-  loading,
-  error,
-  ...other
-}) => {
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error</p>
-
-  return (
-    <ApolloConsumer>
-      {(cache) => {
-        const selectQuiz = id => cache.writeData({ data: { isNew: false, selectedQuizId: id } })
-        const clearQuizSelection = isNewFlag => cache.writeData({ data: { isNew: isNewFlag, selectedQuizId: 'no_selection' } })
-
-        return (
-          <QuizEditorPage
-            {...{ ...other, selectQuiz, clearQuizSelection }}
-          />
-      )
-    }}
-    </ApolloConsumer>
-  )
+const newQuiz = {
+  id: undefined,
+  name: '',
+  type: 'pc',
+  __typename: 'Quiz',
 }
 
-QuizEditorData.propTypes = {
-  loading: pt.bool.isRequired,
-  error: pt.shape({}),
+// const findQuiz = (id, quizzes) => quizzes.filter(qz => qz.id === id)[0]
+
+const selectQuiz = dispatch => (quiz) => {
+  dispatch(setSelectedQuizId(quiz.id))
+  dispatch(setIsNew(false))
+  dispatch(setEditedQuiz(quiz))
 }
 
-QuizEditorData.defaultProps = {
-  error: undefined,
+const selectNewQuiz = (dispatch) => {
+  dispatch(setIsNew(true))
+  dispatch(setSelectedQuizId('no_selection'))
+  dispatch(setEditedQuiz(newQuiz))
 }
 
-export default withData(QuizEditorData)
+const deselectQuiz = (dispatch) => {
+  dispatch(setSelectedQuizId('no_selection'))
+  dispatch(setEditedQuiz(undefined))
+}
+
+const selectedQuiz = (state, ownProps) => {
+  const { quizzes } = ownProps
+  const { selectedQuizId, isNew } = state.editor
+
+  return isNew // eslint-disable-line no-nested-ternary
+    ? newQuiz
+    : quizzes
+      ? quizzes.filter(q => q.id === selectedQuizId)[0]
+      : undefined
+}
+
+
+const mapStateToProps = (state, ownProps) => ({
+  selectedQuizId: state.editor.selectedQuizId,
+  isNew: state.editor.isNew,
+  editedQuiz: state.editor.editedQuiz,
+  selectedQuiz: selectedQuiz(state, ownProps),
+})
+
+const mapDispatchToProps = dispatch => ({
+  onSelectQuiz: quiz => selectQuiz(dispatch)(quiz),
+  onSelectNewQuiz: () => selectNewQuiz(dispatch),
+  onDeselectQuiz: () => deselectQuiz(dispatch),
+  onUpdateEditedQuiz: (k, v) => dispatch(updateEditedQuiz(k, v)),
+})
+
+
+export default compose(
+  withData,
+  connect(mapStateToProps, mapDispatchToProps),
+  withLoading,
+)(QuizEditorPage)

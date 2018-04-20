@@ -12,31 +12,38 @@ import NoSelectionWrapper from './NoSelectionWrapper'
 
 
 const QuizEditor = ({
-  quiz,
+  selectedQuiz,
+  editedQuiz,
   isNew,
-  clearQuizSelection,
+  onSelectQuiz,
+  onSelectNewQuiz,
+  onDeselectQuiz,
   onCreateQuiz,
   onUpdateQuiz,
   onDeleteQuiz,
+  onUpdateEditedQuiz,
 }) =>
   <Wrapper>
     <CreateWrapper>
       <EditorButton
-        onClick={() => clearQuizSelection(true)}
+        onClick={onSelectNewQuiz}
         disabled={isNew}
       >
         New
       </EditorButton>
     </CreateWrapper>
     <FormWrapper>
-      {!isNil(quiz)
+      {!isNil(editedQuiz)
         ? <QuizForm {...{
-            quiz,
+            selectedQuiz,
+            editedQuiz,
             isNew,
-            clearQuizSelection,
+            onSelectQuiz,
+            onDeselectQuiz,
             onCreateQuiz,
             onUpdateQuiz,
             onDeleteQuiz,
+            onUpdateEditedQuiz,
           }}
         />
         : <NoSelectionWrapper>Select or Create a Quiz</NoSelectionWrapper>
@@ -45,16 +52,21 @@ const QuizEditor = ({
   </Wrapper>
 
 QuizEditor.propTypes = {
-  quiz: quizShape,
+  selectedQuiz: quizShape,
+  editedQuiz: quizShape,
   isNew: pt.bool.isRequired,
-  clearQuizSelection: pt.func.isRequired,
+  onSelectQuiz: pt.func.isRequired,
+  onSelectNewQuiz: pt.func.isRequired,
+  onDeselectQuiz: pt.func.isRequired,
   onCreateQuiz: pt.func.isRequired,
   onUpdateQuiz: pt.func.isRequired,
   onDeleteQuiz: pt.func.isRequired,
+  onUpdateEditedQuiz: pt.func.isRequired,
 }
 
 QuizEditor.defaultProps = {
-  quiz: undefined,
+  editedQuiz: undefined,
+  selectedQuiz: undefined,
 }
 
 export default QuizEditor

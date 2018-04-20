@@ -1,6 +1,6 @@
 import gql from 'graphql-tag'
 
-export const QUIZZES = gql`
+export default gql`
   {
     quizzes {
       id
@@ -9,9 +9,4 @@ export const QUIZZES = gql`
     }
   }
 `
-export const CLIENT_UI = gql`
-  {
-    selectedQuizId @client
-    isNew @client
-  }
-`
+

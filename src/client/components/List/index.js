@@ -14,15 +14,15 @@ const List = ({
 }) =>
   <Wrapper>
     <Ul>
-      {items.map(({ id, name }) =>
+      {items.map(item =>
         <Li
-          key={id}
+          key={item.id}
         >
           <Button
-            onClick={() => onSelectItem(id)}
-            isSelected={id === selectedItemId}
+            onClick={() => onSelectItem(item)}
+            isSelected={item.id === selectedItemId}
           >
-            {name}
+            {item.name}
           </Button>
         </Li>)}
     </Ul>

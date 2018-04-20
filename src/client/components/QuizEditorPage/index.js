@@ -1,6 +1,6 @@
 import React from 'react'
 import pt from 'prop-types'
-import { isEmpty } from 'ramda'
+// import { isEmpty } from 'ramda'
 
 import quizShape from 'propShapes/quiz'
 import List from 'components/List'
@@ -10,66 +10,69 @@ import Wrapper from './Wrapper'
 import ListEditorWrapper from './ListEditorWrapper'
 import QuizViewWrapper from './QuizViewWrapper'
 
-const newQuiz = {
-  id: undefined,
-  name: '',
-  type: 'pc',
-  __typename: 'Quiz',
-}
 
 const QuizEditorPage = ({
   quizzes,
   selectedQuizId,
   isNew,
+  editedQuiz,
+  selectedQuiz,
   createQuiz,
   updateQuiz,
   deleteQuiz,
-  selectQuiz,
-  clearQuizSelection,
-}) => {
-  const selectedQuiz = selectedQuizId === 'no_selection' || isEmpty(quizzes)
-    ? undefined
-    : quizzes.filter(q => q.id === selectedQuizId)[0]
-  const quiz = isNew ? newQuiz : selectedQuiz
-
-  return (
-    <Wrapper>
-      <ListEditorWrapper>
-        <List
-          items={quizzes}
-          selectedItemId={selectedQuizId}
-          onSelectItem={selectQuiz}
-        />
-        <QuizEditor
-          {...{
-            quiz,
-            isNew,
-            clearQuizSelection,
-          }}
-          onCreateQuiz={createQuiz}
-          onUpdateQuiz={updateQuiz}
-          onDeleteQuiz={deleteQuiz}
-        />
-      </ListEditorWrapper>
-      {selectedQuizId !== 'no_selection' &&
-        <QuizViewWrapper>
-          <QuizView {...{ quiz }} />
-        </QuizViewWrapper>
-      }
-    </Wrapper>
-  )
-}
+  onSelectQuiz,
+  onSelectNewQuiz,
+  onDeselectQuiz,
+  onUpdateEditedQuiz,
+}) =>
+  <Wrapper>
+    <ListEditorWrapper>
+      <List
+        items={quizzes}
+        selectedItemId={selectedQuizId}
+        onSelectItem={onSelectQuiz}
+      />
+      <QuizEditor
+        {...{
+          selectedQuiz,
+          editedQuiz,
+          isNew,
+          onSelectQuiz,
+          onSelectNewQuiz,
+          onDeselectQuiz,
+          onUpdateEditedQuiz,
+        }}
+        onCreateQuiz={createQuiz}
+        onUpdateQuiz={updateQuiz}
+        onDeleteQuiz={deleteQuiz}
+      />
+    </ListEditorWrapper>
+    {editedQuiz &&
+      <QuizViewWrapper>
+        <QuizView quiz={editedQuiz} />
+      </QuizViewWrapper>
+    }
+  </Wrapper>
 
 
 QuizEditorPage.propTypes = {
   quizzes: pt.arrayOf(quizShape).isRequired,
   selectedQuizId: pt.string.isRequired,
   isNew: pt.bool.isRequired,
+  selectedQuiz: quizShape,
+  editedQuiz: quizShape,
   createQuiz: pt.func.isRequired,
   updateQuiz: pt.func.isRequired,
   deleteQuiz: pt.func.isRequired,
-  selectQuiz: pt.func.isRequired,
-  clearQuizSelection: pt.func.isRequired,
+  onSelectQuiz: pt.func.isRequired,
+  onSelectNewQuiz: pt.func.isRequired,
+  onDeselectQuiz: pt.func.isRequired,
+  onUpdateEditedQuiz: pt.func.isRequired,
+}
+
+QuizEditorPage.defaultProps = {
+  editedQuiz: undefined,
+  selectedQuiz: undefined,
 }
 
 export default QuizEditorPage

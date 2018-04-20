@@ -12,15 +12,9 @@ import Label from './Label'
 import InputText from './InputText'
 
 class QuizForm extends React.Component {
-  static getDerivedStateFromProps(nextProps) {
-    return nextProps.quiz
-  }
-
   constructor(props) {
     super(props)
-    this.state = {
-      ...props.quiz,
-    }
+
     this.handleInputChange = this.handleInputChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleDelete = this.handleDelete.bind(this)
@@ -28,39 +22,48 @@ class QuizForm extends React.Component {
   }
 
   handleInputChange(event) {
+    const { onUpdateEditedQuiz } = this.props
     const { target } = event
     const value = target.type === 'checkbox' ? target.checked : target.value
     const { name } = target
 
-    this.setState({
-      [name]: value,
-    })
+    onUpdateEditedQuiz(name, value)
   }
 
   handleSubmit(event) {
     event.preventDefault()
-    const { onCreateQuiz, onUpdateQuiz, isNew } = this.props
+    const {
+      editedQuiz,
+      onSelectQuiz,
+      onCreateQuiz,
+      onUpdateQuiz,
+      isNew,
+    } = this.props
 
     if (isNew) {
-      onCreateQuiz(this.state)
+      onCreateQuiz(editedQuiz)
+        .then(res => onSelectQuiz(res.data.createQuiz))
     } else {
-      onUpdateQuiz(this.state)
+      onUpdateQuiz(editedQuiz)
     }
   }
 
   handleDelete(event) {
-    const { onDeleteQuiz, clearQuizSelection } = this.props
+    const { onDeleteQuiz, onDeselectQuiz, editedQuiz } = this.props
     event.preventDefault()
 
-    clearQuizSelection(false)
-    onDeleteQuiz({ id: this.state.id })
+    onDeselectQuiz()
+    onDeleteQuiz({ id: editedQuiz.id })
   }
 
   hasChanges() {
-    return !equals(this.props.quiz, this.state)
+    const { selectedQuiz, editedQuiz } = this.props
+    return !equals(selectedQuiz, editedQuiz)
   }
 
   render() {
+    const { editedQuiz } = this.props
+
     return (
       <Form onSubmit={this.handleSubmit}>
         <FieldsWrapper>
@@ -71,7 +74,7 @@ class QuizForm extends React.Component {
               name="name"
               type="text"
               placeholder="Enter a name"
-              value={this.state.name}
+              value={editedQuiz.name}
               onChange={this.handleInputChange}
             />
           </Label>
@@ -82,7 +85,7 @@ class QuizForm extends React.Component {
               name="type"
               type="radio"
               value="pc"
-              checked={this.state.type === 'pc'}
+              checked={editedQuiz.type === 'pc'}
               onChange={this.handleInputChange}
             />
           </Label>
@@ -108,12 +111,15 @@ class QuizForm extends React.Component {
 
 
 QuizForm.propTypes = {
-  quiz: quizShape.isRequired,
+  selectedQuiz: quizShape.isRequired,
+  editedQuiz: quizShape.isRequired,
   isNew: pt.bool.isRequired,
   onCreateQuiz: pt.func.isRequired,
   onUpdateQuiz: pt.func.isRequired,
   onDeleteQuiz: pt.func.isRequired,
-  clearQuizSelection: pt.func.isRequired,
+  onSelectQuiz: pt.func.isRequired,
+  onDeselectQuiz: pt.func.isRequired,
+  onUpdateEditedQuiz: pt.func.isRequired,
 }
 
 export default QuizForm

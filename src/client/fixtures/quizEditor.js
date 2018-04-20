@@ -43,22 +43,48 @@ export const loadingState = {
   error: undefined,
 }
 
-export const clientState = {
-  selectedQuizId: 'no_selection',
-  isNew: false,
+const newQuiz = {
+  id: undefined,
+  name: '',
+  type: 'pc',
+  __typename: 'Quiz',
+}
+
+export const newEditedQuiz = {
+  id: undefined,
+  name: 'new',
+  type: 'pc',
+  __typename: 'Quiz',
+}
+
+export const updatedEditedQuiz = {
+  id: '1',
+  name: 'updated',
+  type: 'pc',
+  __typename: 'Quiz',
 }
 
 export const spies = () => ({
   updateQuiz: jest.fn(),
-  createQuiz: jest.fn(),
+  createQuiz: jest.fn().mockResolvedValue(newEditedQuiz),
   deleteQuiz: jest.fn(),
-  selectQuiz: jest.fn(),
-  clearQuizSelection: jest.fn(),
+  onSelectQuiz: jest.fn(),
+  onSelectNewQuiz: jest.fn(),
+  onDeselectQuiz: jest.fn(),
+  onUpdateEditedQuiz: jest.fn(),
 })
+
+const selectedQuiz = (selectedQuizId, isNew) => {
+  if (isNew) return newQuiz
+  if (selectedQuizId === 'no_selection') return undefined
+  return quizzes.filter(qz => qz.id === selectedQuizId)[0]
+}
 
 export default (selectedQuizId, isNew) => ({
   quizzes,
   ...spies(),
   selectedQuizId,
   isNew,
+  editedQuiz: selectedQuiz(selectedQuizId, isNew),
+  selectedQuiz: selectedQuiz(selectedQuizId, isNew),
 })

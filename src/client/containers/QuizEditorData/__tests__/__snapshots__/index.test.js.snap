@@ -1,47 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`QuizEditorData loading and error state shows error element 1`] = `
-<QuizEditorData
-  createQuiz={[Function]}
-  deleteQuiz={[Function]}
-  error={
-    [Error: Network error: No more mocked responses for the query: {
-  quizzes {
-    id
-    name
-    type
-  }
-}
-, variables: {}]
-  }
-  loading={false}
-  updateQuiz={[Function]}
->
-  <p>
-    Error
-  </p>
-</QuizEditorData>
-`;
+exports[`QuizEditorData loading and error state shows error element 1`] = `null`;
 
-exports[`QuizEditorData loading and error state shows loading element 1`] = `
-<QuizEditorData
-  createQuiz={[Function]}
-  deleteQuiz={[Function]}
-  loading={true}
-  updateQuiz={[Function]}
->
-  <p>
-    Loading...
-  </p>
-</QuizEditorData>
-`;
+exports[`QuizEditorData loading and error state shows loading element 1`] = `null`;
 
 exports[`QuizEditorData with default state gives the child component initial loaded props 1`] = `
 Object {
-  "clearQuizSelection": [Function],
   "createQuiz": [Function],
   "deleteQuiz": [Function],
+  "editedQuiz": undefined,
   "isNew": false,
+  "onDeselectQuiz": [Function],
+  "onSelectNewQuiz": [Function],
+  "onSelectQuiz": [Function],
+  "onUpdateEditedQuiz": [Function],
   "quizzes": Array [
     Object {
       "id": "1",
@@ -80,7 +52,7 @@ Object {
       Symbol(id): "Quiz:6",
     },
   ],
-  "selectQuiz": [Function],
+  "selectedQuiz": undefined,
   "selectedQuizId": "no_selection",
   "updateQuiz": [Function],
 }
