@@ -1,8 +1,12 @@
 import React from 'react'
-
+import List from 'components/List'
 
 const QuizEditor = () =>
-  <div>hello</div>
+  <List
+    items={[]}
+    selectedItemId="0"
+    onSelectItem={() => null}
+  />
 
 
 export default QuizEditor
