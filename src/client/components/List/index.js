@@ -19,7 +19,7 @@ const List = ({
           key={item.id}
         >
           <Button
-            onClick={() => onSelectItem(item)}
+            onClick={() => onSelectItem(item.id)}
             isSelected={item.id === selectedItemId}
           >
             {item.name}
@@ -30,8 +30,12 @@ const List = ({
 
 List.propTypes = {
   items: pt.arrayOf(pt.shape({ id: pt.string, name: pt.string })).isRequired,
-  selectedItemId: pt.string.isRequired,
+  selectedItemId: pt.string,
   onSelectItem: pt.func.isRequired,
+}
+
+List.defaultProps = {
+  selectedItemId: undefined,
 }
 
 
