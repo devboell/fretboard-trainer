@@ -6,6 +6,8 @@ import quizShape from 'propShapes/quiz'
 
 import withLoading from 'components/Loading'
 import List from 'components/List'
+import Editor from 'components/Editor'
+import Wrapper from './Wrapper'
 import withData from './enhancers'
 import { selectQuiz } from './reducer'
 
@@ -13,30 +15,37 @@ const QuizEditor = ({
   quizzes,
   selectedQuizId,
   onSelectQuiz,
+  source,
 }) =>
-  <List
-    items={quizzes}
-    selectedItemId={selectedQuizId}
-    onSelectItem={onSelectQuiz}
-  />
+  <Wrapper>
+    <List
+      items={quizzes}
+      selectedItemId={selectedQuizId}
+      onSelectItem={onSelectQuiz}
+    />
+    <Editor {...{ source }} />
+  </Wrapper>
 
 QuizEditor.propTypes = {
   quizzes: pt.arrayOf(quizShape).isRequired,
   selectedQuizId: pt.string,
   onSelectQuiz: pt.func.isRequired,
+  source: quizShape,
 }
 
 QuizEditor.defaultProps = {
   selectedQuizId: undefined,
+  source: undefined,
 }
 
 
 const mapStateToProps = state => ({
   selectedQuizId: state.editor.selectedQuizId,
+  source: state.editor.source,
 })
 
-const mapDispatchToProps = dispatch => ({
-  onSelectQuiz: id => dispatch(selectQuiz(id)),
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  onSelectQuiz: id => dispatch(selectQuiz(ownProps.quizzes)(id)),
 })
 
 
