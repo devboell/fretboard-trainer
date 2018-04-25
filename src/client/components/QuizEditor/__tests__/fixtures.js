@@ -1,3 +1,6 @@
+import { createStore, combineReducers } from 'redux'
+
+import reducer from '../reducer'
 import QUIZZES from '../queries'
 
 export const quizzes = [
@@ -45,3 +48,11 @@ export const quizzesMocks = [
     result: { data: { quizzes } },
   },
 ]
+
+const initialState = {
+  editor: {
+    selectedQuizId: undefined,
+  },
+}
+
+export const store = createStore(combineReducers({ editor: reducer }), initialState)
