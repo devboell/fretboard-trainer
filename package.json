@@ -113,7 +113,6 @@
     "react-hot-loader": "4.0.0",
     "react-styleguidist": "^7.0.1",
     "react-test-renderer": "^16.2.0",
-    "redux-mock-provider": "^1.0.0",
     "redux-mock-store": "^1.2.3",
     "rimraf": "^2.6.1",
     "webpack-bundle-analyzer": "^2.11.1",
