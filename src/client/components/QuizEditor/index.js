@@ -8,14 +8,17 @@ import withLoading from 'components/Loading'
 import List from 'components/List'
 import Editor from 'components/Editor'
 import Wrapper from './Wrapper'
+import UnselectedMessage from './UnselectedMessage'
 import withData from './enhancers'
-import { selectQuiz } from './reducer'
+import { selectQuiz, modes } from './reducer'
 
 const QuizEditor = ({
   quizzes,
   selectedQuizId,
   onSelectQuiz,
-  source,
+  original,
+  buffer,
+  mode,
 }) =>
   <Wrapper>
     <List
@@ -23,25 +26,32 @@ const QuizEditor = ({
       selectedItemId={selectedQuizId}
       onSelectItem={onSelectQuiz}
     />
-    <Editor {...{ source }} />
+    {mode === modes.UNSELECTED
+      ? <UnselectedMessage />
+      : <Editor {...{ original, buffer }} />
+    }
   </Wrapper>
 
 QuizEditor.propTypes = {
   quizzes: pt.arrayOf(quizShape).isRequired,
   selectedQuizId: pt.string,
   onSelectQuiz: pt.func.isRequired,
-  source: quizShape,
+  original: quizShape,
+  buffer: quizShape,
+  mode: pt.string.isRequired,
 }
 
 QuizEditor.defaultProps = {
   selectedQuizId: undefined,
-  source: undefined,
+  original: undefined,
+  buffer: undefined,
 }
-
 
 const mapStateToProps = state => ({
   selectedQuizId: state.editor.selectedQuizId,
-  source: state.editor.source,
+  original: state.editor.original,
+  buffer: state.editor.buffer,
+  mode: state.editor.mode,
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

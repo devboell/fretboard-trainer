@@ -8,10 +8,17 @@ export const selectQuiz = quizzes => id => ({
   id,
 })
 
-const initialState = {
+export const modes = {
+  UNSELECTED: 'UNSELECTED',
+  SELECTED: 'SELECTED',
+  NEW: 'NEW',
+}
+
+export const initialState = {
   selectedQuizId: undefined,
   original: undefined,
   buffer: undefined,
+  mode: modes.UNSELECTED,
 }
 
 
@@ -20,8 +27,9 @@ export default (state = initialState, action) => {
     case QUIZ_SELECTION:
       return compose(
         set(lensProp('selectedQuizId'), action.id),
-        set(lensProp('original'), action.quiz),
         set(lensProp('buffer'), action.quiz),
+        set(lensProp('original'), action.quiz),
+        set(lensProp('mode'), modes.SELECTED),
       )(state)
     default:
       return state

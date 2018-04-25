@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import { pick } from 'ramda'
 import QuizEditor from '../index'
 
-import * as fxtrs from './fixtures'
+import * as fxtrs from '../fixtures'
 
 let wrapper
 
@@ -31,7 +31,10 @@ describe('Default, no action', () => {
 
   it('List contains quiz items', () => {
     expect(wrapper.find('List li').length).toBe(fxtrs.quizzes.length)
-    // expect(wrapper.find('List').props().items).toEqual(fxtrs.quizzes)
+  })
+
+  it('UnselectedMessage is displayed', () => {
+    expect(wrapper.find('UnselectedMessage').exists()).toBe(true)
   })
 })
 
@@ -58,6 +61,7 @@ describe('Select list item', () => {
 
   it('shows selection in Editor', () => {
     const editorProps = wrapper.find('Editor').props()
-    expect(pickData(editorProps.source)).toEqual(pickData(selectedQuiz))
+    expect(pickData(editorProps.original)).toEqual(pickData(selectedQuiz))
+    expect(pickData(editorProps.buffer)).toEqual(pickData(selectedQuiz))
   })
 })
