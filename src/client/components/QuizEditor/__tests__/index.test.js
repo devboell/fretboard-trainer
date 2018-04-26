@@ -59,9 +59,37 @@ describe('Select list item', () => {
     expect(listButtonIsSelected(index, wrapper)).toBe(true)
   })
 
-  it('shows selection in Editor', () => {
+  it('sets the buffer in Editor', () => {
     const editorProps = wrapper.find('Editor').props()
-    expect(pickData(editorProps.original)).toEqual(pickData(selectedQuiz))
     expect(pickData(editorProps.buffer)).toEqual(pickData(selectedQuiz))
+  })
+
+  it('form is pristine', () => {
+    const formProps = wrapper.find('Form').props()
+    expect(formProps.isPristine).toBe(true)
+  })
+})
+
+const changeName = name =>
+  wrapper.find('Form input[name="name"]')
+    .simulate('change', { target: { value: name, name: 'name' } })
+
+describe('Change name input', () => {
+  const index = 2
+
+  beforeEach(() => {
+    clickListButton(index, wrapper)
+    changeName('updated', wrapper)
+  })
+
+  it('buffer is updated', () => {
+    const editorProps = wrapper.find('Editor').props()
+
+    expect(editorProps.buffer.name).toBe('updated')
+  })
+
+  it('form is dirty', () => {
+    const formProps = wrapper.find('Form').props()
+    expect(formProps.isPristine).toBe(false)
   })
 })
