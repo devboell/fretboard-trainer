@@ -6,21 +6,21 @@ import quizShape from 'propShapes/quiz'
 
 import withLoading from 'components/Loading'
 import List from 'components/List'
-import Editor from 'components/Editor'
+import EditorSection from 'components/EditorSection'
 import Wrapper from './Wrapper'
-import UnselectedMessage from './UnselectedMessage'
 import withData from './enhancers'
 import {
   selectQuiz,
+  selectNewQuiz,
   updateQuiz,
   updateBuffer,
-  modes,
 } from './reducer'
 
 const QuizEditor = ({
   quizzes,
   selectedQuizId,
   onSelectQuiz,
+  onSelectNewQuiz,
   original,
   buffer,
   onUpdateBuffer,
@@ -33,23 +33,23 @@ const QuizEditor = ({
       selectedItemId={selectedQuizId}
       onSelectItem={onSelectQuiz}
     />
-    {mode === modes.UNSELECTED
-      ? <UnselectedMessage />
-      : <Editor
-        {...{
-          original,
-          buffer,
-          onUpdateBuffer,
-          onUpdate,
-        }}
-      />
-    }
+    <EditorSection
+      {...{
+        mode,
+        original,
+        buffer,
+        onUpdateBuffer,
+        onSelectNewQuiz,
+        onUpdate,
+      }}
+    />
   </Wrapper>
 
 QuizEditor.propTypes = {
   quizzes: pt.arrayOf(quizShape).isRequired,
   selectedQuizId: pt.string,
   onSelectQuiz: pt.func.isRequired,
+  onSelectNewQuiz: pt.func.isRequired,
   original: quizShape,
   buffer: quizShape,
   onUpdateBuffer: pt.func.isRequired,
@@ -76,6 +76,7 @@ const handleUpdateMutation = (dispatch, mutation, quiz) =>
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   onSelectQuiz: id => dispatch(selectQuiz(ownProps.quizzes)(id)),
+  onSelectNewQuiz: () => dispatch(selectNewQuiz()),
   onUpdate: qz => handleUpdateMutation(dispatch, ownProps.updateMutation, qz),
   onUpdateBuffer: (k, v) => dispatch(updateBuffer(k, v)),
 })

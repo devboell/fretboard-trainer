@@ -2,9 +2,10 @@ import React from 'react'
 import pt from 'prop-types'
 
 import quizShape from 'propShapes/quiz'
+import FormFields from 'components/FormFields'
+import FormControls from 'components/FormControls'
 import StyledForm from './StyledForm'
-import Label from './Label'
-import InputText from './InputText'
+
 
 class Form extends React.Component {
   constructor(props) {
@@ -34,21 +35,15 @@ class Form extends React.Component {
   }
 
   render() {
-    const { buffer } = this.props
+    const { buffer, isPristine } = this.props
 
     return (
       <StyledForm onSubmit={this.handleSubmit}>
-        <Label htmlFor="name">
-          name:
-          <InputText
-            id="name"
-            name="name"
-            type="text"
-            placeholder="Enter a name"
-            value={buffer.name}
-            onChange={this.handleInputChange}
-          />
-        </Label>
+        <FormFields
+          buffer={buffer}
+          handleInputChange={this.handleInputChange}
+        />
+        <FormControls {...{ isPristine }} />
       </StyledForm>
     )
   }

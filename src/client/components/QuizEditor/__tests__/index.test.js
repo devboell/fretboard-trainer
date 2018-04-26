@@ -71,6 +71,11 @@ describe('Select list item', () => {
     const formProps = wrapper.find('Form').props()
     expect(formProps.isPristine).toBe(true)
   })
+
+  it('Save is disabled', () => {
+    const saveButtonProps = wrapper.find('Form button').props()
+    expect(saveButtonProps.disabled).toBe(true)
+  })
 })
 
 const changeName = name =>
@@ -95,6 +100,11 @@ describe('Change name input', () => {
     const formProps = wrapper.find('Form').props()
     expect(formProps.isPristine).toBe(false)
   })
+
+  it('Save is enabled', () => {
+    const saveButtonProps = wrapper.find('Form button').props()
+    expect(saveButtonProps.disabled).toBe(false)
+  })
 })
 
 const saveChanges = wrpr =>
@@ -117,9 +127,6 @@ describe('Update name input', () => {
   })
 
   it('form is pristine', () => {
-    // const editorProps = wrapper.find('Editor').props()
-    // console.log(editorProps)
-    
     const formProps = wrapper.update().find('Form').props()
     expect(formProps.isPristine).toBe(true)
   })
