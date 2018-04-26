@@ -1,12 +1,18 @@
 import { set, lensProp, lensPath, compose, find, propEq } from 'ramda'
 
 const QUIZ_SELECTION = 'QUIZ_SELECTION'
+const UPDATE_QUIZ = 'UPDATE_QUIZ'
 const BUFFER_UPDATE = 'BUFFER_UPDATE'
 
 export const selectQuiz = quizzes => id => ({
   type: QUIZ_SELECTION,
   quiz: find(propEq('id', id), quizzes),
   id,
+})
+
+export const updateQuiz = quiz => ({
+  type: UPDATE_QUIZ,
+  quiz,
 })
 
 export const updateBuffer = (key, value) => ({
@@ -37,6 +43,12 @@ export default (state = initialState, action) => {
         set(lensProp('buffer'), action.quiz),
         set(lensProp('original'), action.quiz),
         set(lensProp('mode'), modes.SELECTED),
+      )(state)
+
+    case UPDATE_QUIZ:
+      return compose(
+        set(lensProp('buffer'), action.quiz),
+        set(lensProp('original'), action.quiz),
       )(state)
 
     case BUFFER_UPDATE: {

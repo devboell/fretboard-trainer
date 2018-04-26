@@ -11,6 +11,7 @@ class Form extends React.Component {
     super(props)
 
     this.handleInputChange = this.handleInputChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleInputChange(event) {
@@ -20,6 +21,16 @@ class Form extends React.Component {
     const { name } = target
 
     onUpdateBuffer(name, value)
+  }
+
+  handleSubmit(event) {
+    event.preventDefault()
+    const {
+      buffer,
+      onUpdate,
+    } = this.props
+
+    onUpdate(buffer)
   }
 
   render() {
@@ -48,6 +59,7 @@ Form.propTypes = {
   buffer: quizShape.isRequired,
   onUpdateBuffer: pt.func.isRequired,
   isPristine: pt.bool.isRequired,
+  onUpdate: pt.func.isRequired,
 }
 
 

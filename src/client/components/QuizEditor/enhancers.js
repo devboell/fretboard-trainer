@@ -1,6 +1,7 @@
-import { graphql } from 'react-apollo'
+import { graphql, compose } from 'react-apollo'
 
 import QUIZZES from './queries'
+import { UPDATE_QUIZ } from './mutations'
 
 
 const quizzesQueryProps = ({ data: { quizzes, loading, error } }) => ({
@@ -12,5 +13,18 @@ export const withQuizzesQuery = graphql(
   { props: quizzesQueryProps },
 )
 
+const updateQuizProps = ({ mutate }) => ({
+  updateMutation: values => mutate({
+    variables: values,
+  }),
+})
 
-export default withQuizzesQuery
+const withUpdateQuizMutation = graphql(
+  UPDATE_QUIZ,
+  { props: updateQuizProps },
+)
+
+export default compose(
+  withQuizzesQuery,
+  withUpdateQuizMutation,
+)

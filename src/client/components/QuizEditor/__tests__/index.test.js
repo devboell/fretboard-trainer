@@ -13,7 +13,10 @@ beforeEach(async () => {
   wrapper = mount((
     <Provider store={fxtrs.store}>
       <MockedProvider
-        mocks={[...fxtrs.quizzesMocks]}
+        mocks={[
+          ...fxtrs.quizzesMocks,
+          ...fxtrs.crudMocks,
+        ]}
       >
         <QuizEditor />
       </MockedProvider>
@@ -91,5 +94,33 @@ describe('Change name input', () => {
   it('form is dirty', () => {
     const formProps = wrapper.find('Form').props()
     expect(formProps.isPristine).toBe(false)
+  })
+})
+
+const saveChanges = wrpr =>
+  wrpr.find('Form').simulate('submit')
+
+describe('Update name input', () => {
+  const index = 2
+
+  beforeEach(async () => {
+    clickListButton(index, wrapper)
+    changeName('updated', wrapper)
+    saveChanges(wrapper)
+    await new Promise(resolve => setTimeout(resolve))
+    // wrapper.update()
+  })
+
+  it('original is updated', () => {
+    const editorProps = wrapper.update().find('Editor').props()
+    expect(editorProps.original.name).toBe('updated')
+  })
+
+  it('form is pristine', () => {
+    // const editorProps = wrapper.find('Editor').props()
+    // console.log(editorProps)
+    
+    const formProps = wrapper.update().find('Form').props()
+    expect(formProps.isPristine).toBe(true)
   })
 })
