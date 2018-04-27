@@ -2,10 +2,18 @@ import React from 'react'
 import { MockedProvider } from 'react-apollo/test-utils'
 import { Provider } from 'react-redux'
 
-import { pick } from 'ramda'
 import QuizEditor from '../index'
 
 import * as fxtrs from '../fixtures'
+import {
+  pickData,
+  listButtonIsSelected,
+  changeName,
+  formIsPristine,
+  saveChanges,
+  clickNew,
+  clickListButton,
+} from '../enzyme-queries'
 
 let wrapper
 
@@ -41,17 +49,6 @@ describe('Default, no action', () => {
   })
 })
 
-const pickData = pick(['id', 'name', 'type'])
-
-const listButton = (index, wrp) =>
-  wrp.find('List Button').at(index)
-
-const clickListButton = (index, wrp) =>
-  listButton(index, wrp).simulate('click')
-
-const listButtonIsSelected = (index, wrp) =>
-  listButton(index, wrp).props().isSelected
-
 describe('Select list item', () => {
   const index = 2
   const selectedQuiz = fxtrs.quizzes[index]
@@ -68,8 +65,7 @@ describe('Select list item', () => {
   })
 
   it('form is pristine', () => {
-    const formProps = wrapper.find('Form').props()
-    expect(formProps.isPristine).toBe(true)
+    expect(formIsPristine(wrapper)).toBe(true)
   })
 
   it('Save is disabled', () => {
@@ -77,10 +73,6 @@ describe('Select list item', () => {
     expect(saveButtonProps.disabled).toBe(true)
   })
 })
-
-const changeName = name =>
-  wrapper.find('Form input[name="name"]')
-    .simulate('change', { target: { value: name, name: 'name' } })
 
 describe('Change name input', () => {
   const index = 2
@@ -97,8 +89,7 @@ describe('Change name input', () => {
   })
 
   it('form is dirty', () => {
-    const formProps = wrapper.find('Form').props()
-    expect(formProps.isPristine).toBe(false)
+    expect(formIsPristine(wrapper)).toBe(false)
   })
 
   it('Save is enabled', () => {
@@ -107,10 +98,7 @@ describe('Change name input', () => {
   })
 })
 
-const saveChanges = wrpr =>
-  wrpr.find('Form').simulate('submit')
-
-describe('Update name input', () => {
+describe('Update quiz', () => {
   const index = 2
 
   beforeEach(async () => {
@@ -118,7 +106,7 @@ describe('Update name input', () => {
     changeName('updated', wrapper)
     saveChanges(wrapper)
     await new Promise(resolve => setTimeout(resolve))
-    // wrapper.update()
+    // wrapper.update()  why does this only work for 1st test
   })
 
   it('original is updated', () => {
@@ -127,7 +115,20 @@ describe('Update name input', () => {
   })
 
   it('form is pristine', () => {
-    const formProps = wrapper.update().find('Form').props()
-    expect(formProps.isPristine).toBe(true)
+    expect(formIsPristine(wrapper.update())).toBe(true)
+  })
+})
+
+describe('Select new quiz', () => {
+  beforeEach(async () => {
+    clickNew(wrapper)
+  })
+
+  it('List selectedQuizid is undefined', () => {
+    expect(wrapper.find('List').props().selectedQuizId).toBeUndefined()
+  })
+
+  it('New button is disabled', () => {
+    expect(wrapper.find('EditorControls button').props().disabled).toBe(true)
   })
 })
