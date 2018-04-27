@@ -2,7 +2,7 @@ import { createStore, combineReducers } from 'redux'
 
 import reducer, { initialState as initialEditorState } from './reducer'
 import QUIZZES from './queries'
-import { UPDATE_QUIZ } from './mutations'
+import { CREATE_QUIZ, UPDATE_QUIZ } from './mutations'
 
 export const quizzes = [
   {
@@ -57,6 +57,13 @@ export const updatedQuiz = {
   __typename: 'Quiz',
 }
 
+export const createdQuiz = {
+  id: '7',
+  name: 'new',
+  type: 'pc',
+  __typename: 'Quiz',
+}
+
 export const quizzesMocks = [
   {
     request: { query: QUIZZES },
@@ -65,6 +72,15 @@ export const quizzesMocks = [
 ]
 
 export const crudMocks = [
+  {
+    request: {
+      query: CREATE_QUIZ,
+      variables: {
+        name: 'new', type: 'pc', __typename: 'Quiz',
+      },
+    },
+    result: { data: { createQuiz: createdQuiz } },
+  },
   {
     request: {
       query: UPDATE_QUIZ,

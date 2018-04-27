@@ -27,11 +27,15 @@ class Form extends React.Component {
   handleSubmit(event) {
     event.preventDefault()
     const {
+      isNew,
       buffer,
+      onCreate,
       onUpdate,
     } = this.props
 
-    onUpdate(buffer)
+    isNew
+      ? onCreate(buffer)
+      : onUpdate(buffer)
   }
 
   render() {
@@ -51,9 +55,11 @@ class Form extends React.Component {
 
 
 Form.propTypes = {
+  isNew: pt.bool.isRequired,
   buffer: quizShape.isRequired,
   onUpdateBuffer: pt.func.isRequired,
   isPristine: pt.bool.isRequired,
+  onCreate: pt.func.isRequired,
   onUpdate: pt.func.isRequired,
 }
 

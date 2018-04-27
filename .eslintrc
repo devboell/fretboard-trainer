@@ -21,6 +21,9 @@
   "rules": {
     "no-console": 1,
     "semi": ["error", "never"],
+    "no-unused-expressions": [
+      "error", { "allowShortCircuit": true, "allowTernary": true }
+    ],
     "import/no-unresolved": 2,
     "import/no-named-as-default": 0,
     "react/jsx-uses-react": 2,

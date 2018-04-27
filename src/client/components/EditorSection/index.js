@@ -14,6 +14,7 @@ const EditorSection = ({
   buffer,
   onUpdateBuffer,
   onSelectNewQuiz,
+  onCreate,
   onUpdate,
 }) =>
   <Wrapper>
@@ -25,9 +26,11 @@ const EditorSection = ({
       ? <UnselectedMessage />
       : <Editor
         {...{
+          mode,
           original,
           buffer,
           onUpdateBuffer,
+          onCreate,
           onUpdate,
         }}
       />
@@ -40,6 +43,7 @@ EditorSection.propTypes = {
   buffer: quizShape,
   onUpdateBuffer: pt.func.isRequired,
   onSelectNewQuiz: pt.func.isRequired,
+  onCreate: pt.func.isRequired,
   onUpdate: pt.func.isRequired,
 }
 

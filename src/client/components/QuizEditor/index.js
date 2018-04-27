@@ -25,6 +25,7 @@ const QuizEditor = ({
   buffer,
   onUpdateBuffer,
   mode,
+  onCreate,
   onUpdate,
 }) =>
   <Wrapper>
@@ -40,6 +41,7 @@ const QuizEditor = ({
         buffer,
         onUpdateBuffer,
         onSelectNewQuiz,
+        onCreate,
         onUpdate,
       }}
     />
@@ -54,6 +56,7 @@ QuizEditor.propTypes = {
   buffer: quizShape,
   onUpdateBuffer: pt.func.isRequired,
   mode: pt.string.isRequired,
+  onCreate: pt.func.isRequired,
   onUpdate: pt.func.isRequired,
 }
 
@@ -70,16 +73,25 @@ const mapStateToProps = state => ({
   mode: state.editor.mode,
 })
 
+const handleCreateMutation = (dispatch, mutation, quiz) =>
+  mutation(quiz).then(res =>
+    dispatch(selectQuiz(res.data.createQuiz)))
+
 const handleUpdateMutation = (dispatch, mutation, quiz) =>
   mutation(quiz).then(res =>
     dispatch(updateQuiz(res.data.updateQuiz)))
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
-  onSelectQuiz: id => dispatch(selectQuiz(ownProps.quizzes)(id)),
-  onSelectNewQuiz: () => dispatch(selectNewQuiz()),
-  onUpdate: qz => handleUpdateMutation(dispatch, ownProps.updateMutation, qz),
-  onUpdateBuffer: (k, v) => dispatch(updateBuffer(k, v)),
-})
+const mapDispatchToProps = (dispatch, ownProps) => {
+  const { createMutation, updateMutation } = ownProps
+
+  return {
+    onSelectQuiz: qz => dispatch(selectQuiz(qz)),
+    onSelectNewQuiz: () => dispatch(selectNewQuiz()),
+    onCreate: qz => handleCreateMutation(dispatch, createMutation, qz),
+    onUpdate: qz => handleUpdateMutation(dispatch, updateMutation, qz),
+    onUpdateBuffer: (k, v) => dispatch(updateBuffer(k, v)),
+  }
+}
 
 
 export default compose(

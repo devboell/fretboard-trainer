@@ -132,3 +132,20 @@ describe('Select new quiz', () => {
     expect(wrapper.find('EditorControls button').props().disabled).toBe(true)
   })
 })
+
+describe('Create quiz', () => {
+  beforeEach(async () => {
+    clickNew(wrapper)
+    changeName('new', wrapper)
+    saveChanges(wrapper)
+    await new Promise(resolve => setTimeout(resolve))
+  })
+
+  it('List contains and selects new item', () => {
+    expect(listButtonIsSelected(6, wrapper.update())).toBe(true)
+  })
+
+  it('form is pristine', () => {
+    expect(formIsPristine(wrapper.update())).toBe(true)
+  })
+})

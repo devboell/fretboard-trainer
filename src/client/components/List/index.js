@@ -19,7 +19,7 @@ const List = ({
           key={item.id}
         >
           <Button
-            onClick={() => onSelectItem(item.id)}
+            onClick={() => onSelectItem(item)}
             isSelected={item.id === selectedItemId}
           >
             {item.name}
