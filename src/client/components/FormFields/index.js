@@ -19,6 +19,17 @@ const FormFields = ({ buffer, handleInputChange }) =>
         onChange={handleInputChange}
       />
     </Label>
+    <Label htmlFor="type">
+      type:
+      <input
+        id="type"
+        name="type"
+        type="radio"
+        value="pc"
+        checked={buffer.type === 'pc'}
+        onChange={handleInputChange}
+      />
+    </Label>
   </Wrapper>
 
 FormFields.propTypes = {
