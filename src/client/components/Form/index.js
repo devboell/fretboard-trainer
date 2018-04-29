@@ -13,6 +13,7 @@ class Form extends React.Component {
 
     this.handleInputChange = this.handleInputChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleDelete = this.handleDelete.bind(this)
   }
 
   handleInputChange(event) {
@@ -38,8 +39,15 @@ class Form extends React.Component {
       : onUpdate(buffer)
   }
 
+  handleDelete(event) {
+    const { onDelete, buffer } = this.props
+    event.preventDefault()
+
+    onDelete({ id: buffer.id })
+  }
+
   render() {
-    const { buffer, isPristine } = this.props
+    const { buffer, isPristine, isNew } = this.props
 
     return (
       <StyledForm onSubmit={this.handleSubmit}>
@@ -47,7 +55,13 @@ class Form extends React.Component {
           buffer={buffer}
           handleInputChange={this.handleInputChange}
         />
-        <FormControls {...{ isPristine }} />
+        <FormControls
+          {...{
+            isPristine,
+            isNew,
+          }}
+          handleDelete={this.handleDelete}
+        />
       </StyledForm>
     )
   }
@@ -61,6 +75,7 @@ Form.propTypes = {
   isPristine: pt.bool.isRequired,
   onCreate: pt.func.isRequired,
   onUpdate: pt.func.isRequired,
+  onDelete: pt.func.isRequired,
 }
 
 

@@ -16,6 +16,8 @@ const EditorSection = ({
   onSelectNewQuiz,
   onCreate,
   onUpdate,
+  onDelete,
+
 }) =>
   <Wrapper>
     <EditorControls
@@ -32,6 +34,7 @@ const EditorSection = ({
           onUpdateBuffer,
           onCreate,
           onUpdate,
+          onDelete,
         }}
       />
     }
@@ -45,6 +48,7 @@ EditorSection.propTypes = {
   onSelectNewQuiz: pt.func.isRequired,
   onCreate: pt.func.isRequired,
   onUpdate: pt.func.isRequired,
+  onDelete: pt.func.isRequired,
 }
 
 EditorSection.defaultProps = {

@@ -13,6 +13,7 @@ const Editor = ({
   onUpdateBuffer,
   onCreate,
   onUpdate,
+  onDelete,
 }) =>
   <Form
     {...{
@@ -20,6 +21,7 @@ const Editor = ({
       onUpdateBuffer,
       onCreate,
       onUpdate,
+      onDelete,
       }}
     isNew={mode === modes.NEW}
     isPristine={equals(original, buffer)}
@@ -32,6 +34,7 @@ Editor.propTypes = {
   onUpdateBuffer: pt.func.isRequired,
   onCreate: pt.func.isRequired,
   onUpdate: pt.func.isRequired,
+  onDelete: pt.func.isRequired,
 }
 
 export default Editor

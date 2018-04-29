@@ -12,6 +12,7 @@ import withData from './enhancers'
 import {
   selectQuiz,
   selectNewQuiz,
+  unselectQuiz,
   updateQuiz,
   updateBuffer,
 } from './reducer'
@@ -27,6 +28,7 @@ const QuizEditor = ({
   mode,
   onCreate,
   onUpdate,
+  onDelete,
 }) =>
   <Wrapper>
     <List
@@ -43,6 +45,7 @@ const QuizEditor = ({
         onSelectNewQuiz,
         onCreate,
         onUpdate,
+        onDelete,
       }}
     />
   </Wrapper>
@@ -58,6 +61,7 @@ QuizEditor.propTypes = {
   mode: pt.string.isRequired,
   onCreate: pt.func.isRequired,
   onUpdate: pt.func.isRequired,
+  onDelete: pt.func.isRequired,
 }
 
 QuizEditor.defaultProps = {
@@ -81,14 +85,19 @@ const handleUpdateMutation = (dispatch, mutation, quiz) =>
   mutation(quiz).then(res =>
     dispatch(updateQuiz(res.data.updateQuiz)))
 
+const handleDeleteMutation = (dispatch, mutation, id) =>
+  mutation(id).then(() =>
+    dispatch(unselectQuiz()))
+
 const mapDispatchToProps = (dispatch, ownProps) => {
-  const { createMutation, updateMutation } = ownProps
+  const { createMutation, updateMutation, deleteMutation } = ownProps
 
   return {
     onSelectQuiz: qz => dispatch(selectQuiz(qz)),
     onSelectNewQuiz: () => dispatch(selectNewQuiz()),
     onCreate: qz => handleCreateMutation(dispatch, createMutation, qz),
     onUpdate: qz => handleUpdateMutation(dispatch, updateMutation, qz),
+    onDelete: id => handleDeleteMutation(dispatch, deleteMutation, id),
     onUpdateBuffer: (k, v) => dispatch(updateBuffer(k, v)),
   }
 }

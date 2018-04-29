@@ -11,7 +11,9 @@ import {
   changeName,
   formIsPristine,
   saveChanges,
+  saveButtonIsDisabled,
   clickNew,
+  clickDelete,
   clickListButton,
 } from '../enzyme-queries'
 
@@ -69,8 +71,7 @@ describe('Select list item', () => {
   })
 
   it('Save is disabled', () => {
-    const saveButtonProps = wrapper.find('Form button').props()
-    expect(saveButtonProps.disabled).toBe(true)
+    expect(saveButtonIsDisabled(wrapper)).toBe(true)
   })
 })
 
@@ -93,8 +94,7 @@ describe('Change name input', () => {
   })
 
   it('Save is enabled', () => {
-    const saveButtonProps = wrapper.find('Form button').props()
-    expect(saveButtonProps.disabled).toBe(false)
+    expect(saveButtonIsDisabled(wrapper)).toBe(false)
   })
 })
 
@@ -147,5 +147,21 @@ describe('Create quiz', () => {
 
   it('form is pristine', () => {
     expect(formIsPristine(wrapper.update())).toBe(true)
+  })
+})
+
+describe('Delete quiz', () => {
+  beforeEach(async () => {
+    clickListButton(2, wrapper)
+    clickDelete(wrapper)
+    await new Promise(resolve => setTimeout(resolve))
+  })
+
+  it('UnselectedMessage is displayed', () => {
+    expect(wrapper.update().find('UnselectedMessage').exists()).toBe(true)
+  })
+
+  it('List item was removed', () => {
+    expect(wrapper.update().find('List li').length).toBe(fxtrs.quizzes.length - 1)
   })
 })

@@ -1,9 +1,10 @@
-import styled from 'styled-components'
+import { css } from 'styled-components'
 
-const EditorButton = styled.button`
+/* eslint-disable import/prefer-default-export */
+export const button = css`
   width: 80px;
   height: 30px;
-  
+
   text-align: center;
   vertical-align: middle;
 
@@ -19,5 +20,3 @@ const EditorButton = styled.button`
     background-color: gray;
   }
 `
-
-export default EditorButton

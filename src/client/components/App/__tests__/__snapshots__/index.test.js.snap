@@ -5,6 +5,6 @@ exports[`App component, snapshot 1`] = `
   <h1>
     Fretboard
   </h1>
-  <Apollo(Apollo(Apollo(Apollo(Connect(WrappingComponent))))) />
+  <EditorPage />
 </Wrapper>
 `;

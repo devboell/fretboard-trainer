@@ -2,7 +2,8 @@ import { set, lensProp, lensPath, compose } from 'ramda'
 
 const QUIZ_SELECTION = 'QUIZ_SELECTION'
 const NEW_QUIZ_SELECTION = 'NEW_QUIZ_SELECTION'
-const UPDATE_QUIZ = 'UPDATE_QUIZ'
+const QUIZ_UNSELECTION = 'QUIZ_UNSELECTION'
+const QUIZ_UPDATE = 'QUIZ_UPDATE'
 const BUFFER_UPDATE = 'BUFFER_UPDATE'
 
 export const selectQuiz = quiz => ({
@@ -14,8 +15,12 @@ export const selectNewQuiz = () => ({
   type: NEW_QUIZ_SELECTION,
 })
 
+export const unselectQuiz = () => ({
+  type: QUIZ_UNSELECTION,
+})
+
 export const updateQuiz = quiz => ({
-  type: UPDATE_QUIZ,
+  type: QUIZ_UPDATE,
   quiz,
 })
 
@@ -45,8 +50,8 @@ export const initialState = {
   mode: modes.UNSELECTED,
 }
 
-const handleSelection = (quiz, mode, state) => compose(
-  set(lensProp('selectedQuizId'), quiz.id),
+const handleSelection = (id, quiz, mode, state) => compose(
+  set(lensProp('selectedQuizId'), id),
   set(lensProp('buffer'), quiz),
   set(lensProp('original'), quiz),
   set(lensProp('mode'), mode),
@@ -55,12 +60,15 @@ const handleSelection = (quiz, mode, state) => compose(
 export default (state = initialState, action) => {
   switch (action.type) {
     case QUIZ_SELECTION:
-      return handleSelection(action.quiz, modes.SELECTED, state)
+      return handleSelection(action.quiz.id, action.quiz, modes.SELECTED, state)
 
     case NEW_QUIZ_SELECTION:
-      return handleSelection(NEW_QUIZ, modes.NEW, state)
+      return handleSelection(undefined, NEW_QUIZ, modes.NEW, state)
 
-    case UPDATE_QUIZ:
+    case QUIZ_UNSELECTION:
+      return handleSelection(undefined, undefined, modes.UNSELECTED, state)
+
+    case QUIZ_UPDATE:
       return compose(
         set(lensProp('buffer'), action.quiz),
         set(lensProp('original'), action.quiz),

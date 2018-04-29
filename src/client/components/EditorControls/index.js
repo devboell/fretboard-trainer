@@ -1,17 +1,17 @@
 import React from 'react'
 import pt from 'prop-types'
 
-import EditorButton from 'styled/EditorButton'
+import NewButton from './NewButton'
 import Wrapper from './Wrapper'
 
 const EditorControls = ({ onSelectNewQuiz, isNew }) =>
   <Wrapper>
-    <EditorButton
+    <NewButton
       onClick={onSelectNewQuiz}
       disabled={isNew}
     >
       New
-    </EditorButton>
+    </NewButton>
   </Wrapper>
 
 EditorControls.propTypes = {

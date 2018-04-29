@@ -1,7 +1,7 @@
 import { graphql, compose } from 'react-apollo'
 
 import QUIZZES from './queries'
-import { CREATE_QUIZ, UPDATE_QUIZ } from './mutations'
+import { CREATE_QUIZ, UPDATE_QUIZ, DELETE_QUIZ } from './mutations'
 
 
 const quizzesQueryProps = ({ data: { quizzes, loading, error } }) => ({
@@ -47,8 +47,32 @@ const withUpdateQuizMutation = graphql(
   { props: updateQuizProps },
 )
 
+const deleteQuizProps = ({ mutate }) => ({
+  deleteMutation: values => mutate({
+    variables: values,
+  }),
+})
+
+const deleteQuizQueryUpdate = (proxy, { data: { deleteQuiz } }) => {
+  const { quizzes } = proxy.readQuery({ query: QUIZZES })
+  const result = quizzes.filter(q => q.id !== deleteQuiz)
+
+  proxy.writeQuery({ query: QUIZZES, data: { quizzes: result } })
+}
+
+const withDeleteQuizMutation = graphql(
+  DELETE_QUIZ,
+  {
+    props: deleteQuizProps,
+    options: {
+      update: deleteQuizQueryUpdate,
+    },
+  },
+)
+
 export default compose(
   withQuizzesQuery,
   withCreateQuizMutation,
   withUpdateQuizMutation,
+  withDeleteQuizMutation,
 )

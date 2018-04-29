@@ -2,7 +2,7 @@ import { createStore, combineReducers } from 'redux'
 
 import reducer, { initialState as initialEditorState } from './reducer'
 import QUIZZES from './queries'
-import { CREATE_QUIZ, UPDATE_QUIZ } from './mutations'
+import { CREATE_QUIZ, UPDATE_QUIZ, DELETE_QUIZ } from './mutations'
 
 export const quizzes = [
   {
@@ -89,6 +89,13 @@ export const crudMocks = [
       },
     },
     result: { data: { updateQuiz: updatedQuiz } },
+  },
+  {
+    request: {
+      query: DELETE_QUIZ,
+      variables: { id: '3' },
+    },
+    result: { data: { deleteQuiz: '3' } },
   },
 ]
 
