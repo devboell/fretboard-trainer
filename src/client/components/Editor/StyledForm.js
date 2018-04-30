@@ -1,6 +1,8 @@
 import styled from 'styled-components'
+import Form from 'components/Form'
 
-const StyledForm = styled.form` 
+
+const StyledForm = styled(Form)` 
   height: 90%;
 `
 

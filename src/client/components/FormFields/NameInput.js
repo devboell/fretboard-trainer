@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import InputText from 'components/Form/InputText'
 
-const InputText = styled.input`
+const NameInput = styled(InputText)`
   margin-left: 10px;
   outline: none;
   outline-style: none;
@@ -16,4 +17,4 @@ const InputText = styled.input`
   }
 `
 
-export default InputText
+export default NameInput

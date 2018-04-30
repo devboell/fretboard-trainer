@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditorPage component, snapshot 1`] = `
+<div>
+  Editor Page
+  <Apollo(Apollo(Apollo(Apollo(Connect(WrappingComponent))))) />
+</div>
+`;

@@ -23,7 +23,7 @@ export const saveChanges = wrapper =>
   wrapper.find('Form').simulate('submit')
 
 export const saveButtonIsDisabled = wrapper =>
-  wrapper.find('SaveButton').props().disabled
+  wrapper.find('SaveButton button').props().disabled
 
 export const clickNew = wrapper =>
   wrapper.find('EditorControls button').simulate('click')

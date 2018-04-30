@@ -4,7 +4,9 @@ import { equals } from 'ramda'
 import quizShape from 'propShapes/quiz'
 import { modes } from 'components/QuizEditor/reducer'
 
-import Form from 'components/Form'
+import FormFields from 'components/FormFields'
+import FormControls from 'components/FormControls'
+import StyledForm from './StyledForm'
 
 const Editor = ({
   mode,
@@ -15,7 +17,7 @@ const Editor = ({
   onUpdate,
   onDelete,
 }) =>
-  <Form
+  <StyledForm
     {...{
       buffer,
       onUpdateBuffer,
@@ -25,7 +27,10 @@ const Editor = ({
       }}
     isNew={mode === modes.NEW}
     isPristine={equals(original, buffer)}
-  />
+  >
+    <FormFields />
+    <FormControls />
+  </StyledForm>
 
 Editor.propTypes = {
   mode: pt.string.isRequired,

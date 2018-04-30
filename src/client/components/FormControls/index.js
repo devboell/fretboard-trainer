@@ -1,32 +1,19 @@
 import React from 'react'
-import pt from 'prop-types'
 
 import Wrapper from './Wrapper'
 
-import SaveButton from './SaveButton'
-import DeleteButton from './DeleteButton'
+import StyledSaveButton from './StyledSaveButton'
+import StyledDeleteButton from './StyledDeleteButton'
 
-const FormControls = ({ isPristine, isNew, handleDelete }) =>
+const FormControls = () =>
   <Wrapper>
-    <SaveButton
-      type="submit"
-      disabled={isPristine}
-    >
+    <StyledSaveButton>
       Save
-    </SaveButton>
-    <DeleteButton
-      onClick={handleDelete}
-      disabled={isNew}
-    >
+    </StyledSaveButton>
+    <StyledDeleteButton>
       Delete
-    </DeleteButton>
+    </StyledDeleteButton>
   </Wrapper>
-
-FormControls.propTypes = {
-  isPristine: pt.bool.isRequired,
-  isNew: pt.bool.isRequired,
-  handleDelete: pt.func.isRequired,
-}
 
 
 export default FormControls

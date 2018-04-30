@@ -165,3 +165,9 @@ describe('Delete quiz', () => {
     expect(wrapper.update().find('List li').length).toBe(fxtrs.quizzes.length - 1)
   })
 })
+
+describe('Loading & Error state', () => {
+  it('displays loading msg', () => {
+
+  })
+})

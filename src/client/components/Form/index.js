@@ -2,10 +2,8 @@ import React from 'react'
 import pt from 'prop-types'
 
 import quizShape from 'propShapes/quiz'
-import FormFields from 'components/FormFields'
-import FormControls from 'components/FormControls'
-import StyledForm from './StyledForm'
 
+export const FormContext = React.createContext()
 
 class Form extends React.Component {
   constructor(props) {
@@ -47,22 +45,28 @@ class Form extends React.Component {
   }
 
   render() {
-    const { buffer, isPristine, isNew } = this.props
-
+    const {
+      buffer,
+      isPristine,
+      isNew,
+      className,
+    } = this.props
+    const context = {
+      buffer,
+      isPristine,
+      isNew,
+      handleInputChange: this.handleInputChange,
+      handleDelete: this.handleDelete,
+    }
     return (
-      <StyledForm onSubmit={this.handleSubmit}>
-        <FormFields
-          buffer={buffer}
-          handleInputChange={this.handleInputChange}
-        />
-        <FormControls
-          {...{
-            isPristine,
-            isNew,
-          }}
-          handleDelete={this.handleDelete}
-        />
-      </StyledForm>
+      <form
+        className={className}
+        onSubmit={this.handleSubmit}
+      >
+        <FormContext.Provider value={context}>
+          {this.props.children}
+        </FormContext.Provider>
+      </form>
     )
   }
 }
@@ -76,6 +80,8 @@ Form.propTypes = {
   onCreate: pt.func.isRequired,
   onUpdate: pt.func.isRequired,
   onDelete: pt.func.isRequired,
+  className: pt.string.isRequired,
+  children: pt.node.isRequired,
 }
 
 

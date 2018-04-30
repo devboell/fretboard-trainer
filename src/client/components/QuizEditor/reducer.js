@@ -1,10 +1,11 @@
-import { set, lensProp, lensPath, compose } from 'ramda'
+import { set, prop, lensProp, lensPath, compose } from 'ramda'
 
 const QUIZ_SELECTION = 'QUIZ_SELECTION'
 const NEW_QUIZ_SELECTION = 'NEW_QUIZ_SELECTION'
 const QUIZ_UNSELECTION = 'QUIZ_UNSELECTION'
 const QUIZ_UPDATE = 'QUIZ_UPDATE'
 const BUFFER_UPDATE = 'BUFFER_UPDATE'
+const PREVIEW_TOGGLE = 'PREVIEW_TOGGLE'
 
 export const selectQuiz = quiz => ({
   type: QUIZ_SELECTION,
@@ -30,6 +31,10 @@ export const updateBuffer = (key, value) => ({
   value,
 })
 
+export const togglePreview = () => ({
+  type: PREVIEW_TOGGLE,
+})
+
 export const modes = {
   UNSELECTED: 'UNSELECTED',
   SELECTED: 'SELECTED',
@@ -48,6 +53,7 @@ export const initialState = {
   original: undefined,
   buffer: undefined,
   mode: modes.UNSELECTED,
+  showPreview: false,
 }
 
 const handleSelection = (id, quiz, mode, state) => compose(
@@ -80,6 +86,9 @@ export default (state = initialState, action) => {
 
       return set(lensKey, value, state)
     }
+
+    case PREVIEW_TOGGLE:
+      return set(lensProp('showPreview'), !prop('showPreview', state), state)
 
     default:
       return state

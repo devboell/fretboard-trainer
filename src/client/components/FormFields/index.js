@@ -1,25 +1,29 @@
 import React from 'react'
-import pt from 'prop-types'
+// import pt from 'prop-types'
 
-import quizShape from 'propShapes/quiz'
+// import quizShape from 'propShapes/quiz'
 import Label from './Label'
-import InputText from './InputText'
+import NameInput from './NameInput'
 import Wrapper from './Wrapper'
 
-const FormFields = ({ buffer, handleInputChange }) =>
+const FormFields = () =>
   <Wrapper>
     <Label htmlFor="name">
       name:
-      <InputText
-        id="name"
+      <NameInput
         name="name"
-        type="text"
         placeholder="Enter a name"
-        value={buffer.name}
-        onChange={handleInputChange}
       />
     </Label>
-    <Label htmlFor="type">
+
+  </Wrapper>
+
+FormFields.propTypes = {
+  // buffer: quizShape.isRequired,
+  // handleInputChange: pt.func.isRequired,
+}
+/**
+ *     <Label htmlFor="type">
       type:
       <input
         id="type"
@@ -30,12 +34,6 @@ const FormFields = ({ buffer, handleInputChange }) =>
         onChange={handleInputChange}
       />
     </Label>
-  </Wrapper>
-
-FormFields.propTypes = {
-  buffer: quizShape.isRequired,
-  handleInputChange: pt.func.isRequired,
-}
-
+ */
 
 export default FormFields
