@@ -4,10 +4,10 @@ import pt from 'prop-types'
 import NewButton from './NewButton'
 import Wrapper from './Wrapper'
 
-const EditorControls = ({ onSelectNewQuiz, isNew }) =>
+const EditorControls = ({ onSelectNewItem, isNew }) =>
   <Wrapper>
     <NewButton
-      onClick={onSelectNewQuiz}
+      onClick={onSelectNewItem}
       disabled={isNew}
     >
       New
@@ -15,7 +15,7 @@ const EditorControls = ({ onSelectNewQuiz, isNew }) =>
   </Wrapper>
 
 EditorControls.propTypes = {
-  onSelectNewQuiz: pt.func.isRequired,
+  onSelectNewItem: pt.func.isRequired,
   isNew: pt.bool.isRequired,
 }
 

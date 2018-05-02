@@ -2,44 +2,64 @@ import React from 'react'
 import pt from 'prop-types'
 import { equals } from 'ramda'
 import quizShape from 'propShapes/quiz'
-import { modes } from 'components/QuizEditor/reducer'
+import { modes } from 'components/ListEditor/EditorContainer/reducer'
 
 import FormFields from 'components/FormFields'
 import FormControls from 'components/FormControls'
+import EditorControls from 'components/EditorControls'
+
+import UnselectedMessage from './UnselectedMessage'
+
+import Wrapper from './Wrapper'
 import StyledForm from './StyledForm'
 
 const Editor = ({
   mode,
   original,
   buffer,
-  onUpdateBuffer,
-  onCreate,
-  onUpdate,
-  onDelete,
-}) =>
-  <StyledForm
-    {...{
-      buffer,
-      onUpdateBuffer,
-      onCreate,
-      onUpdate,
-      onDelete,
-      }}
-    isNew={mode === modes.NEW}
-    isPristine={equals(original, buffer)}
-  >
-    <FormFields />
-    <FormControls />
-  </StyledForm>
+  onSelectNewItem,
+  ...rest
+}) => {
+  const isNew = mode === modes.NEW
+  const isPristine = equals(original, buffer)
+
+  return (
+    <Wrapper>
+      <EditorControls {...{ onSelectNewItem, isNew }} />
+      {mode === modes.UNSELECTED
+        ? <UnselectedMessage />
+        :
+        <StyledForm
+          {...{
+            buffer,
+            isNew,
+            isPristine,
+            ...rest,
+          }}
+        >
+          <FormFields />
+          <FormControls />
+        </StyledForm>
+      }
+    </Wrapper>
+  )
+}
+
 
 Editor.propTypes = {
   mode: pt.string.isRequired,
-  original: quizShape.isRequired,
-  buffer: quizShape.isRequired,
+  original: quizShape,
+  buffer: quizShape,
   onUpdateBuffer: pt.func.isRequired,
+  onSelectNewItem: pt.func.isRequired,
   onCreate: pt.func.isRequired,
   onUpdate: pt.func.isRequired,
   onDelete: pt.func.isRequired,
+}
+
+Editor.defaultProps = {
+  original: undefined,
+  buffer: undefined,
 }
 
 export default Editor

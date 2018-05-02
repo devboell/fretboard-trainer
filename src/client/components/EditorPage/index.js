@@ -1,12 +1,12 @@
 import React from 'react'
 
-import QuizEditor from 'components/QuizEditor'
+import ListEditor from 'components/ListEditor'
 
 
 const EditorPage = () =>
   <div>
     Editor Page
-    <QuizEditor />
+    <ListEditor />
   </div>
 
 EditorPage.propTypes = {}

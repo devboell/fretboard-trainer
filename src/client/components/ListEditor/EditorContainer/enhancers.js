@@ -1,17 +1,8 @@
 import { graphql, compose } from 'react-apollo'
 
-import QUIZZES from './queries'
+import QUIZZES from 'components/ListEditor/ListContainer/queries'
 import { CREATE_QUIZ, UPDATE_QUIZ, DELETE_QUIZ } from './mutations'
 
-
-const quizzesQueryProps = ({ data: { quizzes, loading, error } }) => ({
-  quizzes, loading, error,
-})
-
-export const withQuizzesQuery = graphql(
-  QUIZZES,
-  { props: quizzesQueryProps },
-)
 
 const createQuizProps = ({ mutate }) => ({
   createMutation: values => mutate({
@@ -71,7 +62,6 @@ const withDeleteQuizMutation = graphql(
 )
 
 export default compose(
-  withQuizzesQuery,
   withCreateQuizMutation,
   withUpdateQuizMutation,
   withDeleteQuizMutation,

@@ -1,10 +1,6 @@
 import React from 'react'
 import { MockedProvider } from 'react-apollo/test-utils'
 import { Provider } from 'react-redux'
-
-import QuizEditor from '../index'
-
-import * as fxtrs from '../fixtures'
 import {
   pickData,
   listButtonIsSelected,
@@ -15,7 +11,9 @@ import {
   clickNew,
   clickDelete,
   clickListButton,
-} from '../enzyme-queries'
+} from 'test-utils/enzyme-queries'
+import QuizEditor from '../index'
+import * as fxtrs from '../fixtures'
 
 let wrapper
 
