@@ -49,6 +49,7 @@ export const initialState = {
   original: undefined,
   buffer: undefined,
   mode: modes.UNSELECTED,
+  showPreview: false,
 }
 
 const handleSelection = (quiz, mode, state) => compose(

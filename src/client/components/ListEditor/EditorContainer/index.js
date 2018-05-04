@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 import { compose } from 'ramda'
 import { selectItem } from 'components/ListEditor/ListContainer/reducer'
+import { initRunner } from 'components/Runner/reducer'
 
 import Editor from 'components/Editor'
 import withData from './enhancers'
@@ -9,6 +10,7 @@ import {
   unselectItem,
   updateItem,
   updateBuffer,
+  togglePreview,
 } from './reducer'
 
 
@@ -30,6 +32,11 @@ const handleDeleteMutation = (dispatch, mutation, id) =>
   mutation(id).then(() =>
     dispatch(unselectItem()))
 
+const openPreview = (dispatch, buffer) => {
+  dispatch(initRunner(buffer))
+  dispatch(togglePreview())
+}
+
 const mapDispatchToProps = (dispatch, ownProps) => {
   const { createMutation, updateMutation, deleteMutation } = ownProps
 
@@ -39,10 +46,17 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     onUpdate: qz => handleUpdateMutation(dispatch, updateMutation, qz),
     onDelete: id => handleDeleteMutation(dispatch, deleteMutation, id),
     onUpdateBuffer: (k, v) => dispatch(updateBuffer(k, v)),
+    onOpenPreview: buffer => openPreview(dispatch, buffer),
   }
 }
 
+const mergeProps = (stateProps, dispatchProps) => ({
+  ...stateProps,
+  ...dispatchProps,
+  onOpenPreview: () => dispatchProps.onOpenPreview(stateProps.buffer),
+})
+
 export default compose(
   withData,
-  connect(mapStateToProps, mapDispatchToProps),
+  connect(mapStateToProps, mapDispatchToProps, mergeProps),
 )(Editor)

@@ -18,14 +18,20 @@ const Editor = ({
   original,
   buffer,
   onSelectNewItem,
+  onOpenPreview,
   ...rest
 }) => {
   const isNew = mode === modes.NEW
   const isPristine = equals(original, buffer)
+  const hasSelection = mode !== modes.UNSELECTED
 
   return (
     <Wrapper>
-      <EditorControls {...{ onSelectNewItem, isNew }} />
+      <EditorControls
+        {...{
+          onSelectNewItem, onOpenPreview, isNew, hasSelection,
+        }}
+      />
       {mode === modes.UNSELECTED
         ? <UnselectedMessage />
         :
@@ -52,6 +58,7 @@ Editor.propTypes = {
   buffer: quizShape,
   onUpdateBuffer: pt.func.isRequired,
   onSelectNewItem: pt.func.isRequired,
+  onOpenPreview: pt.func.isRequired,
   onCreate: pt.func.isRequired,
   onUpdate: pt.func.isRequired,
   onDelete: pt.func.isRequired,
