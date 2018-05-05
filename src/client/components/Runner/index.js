@@ -9,7 +9,9 @@ import { startRunner } from './reducer'
 const Runner = ({ quiz, question, onStartRunner }) =>
   <div>
     <p>{quiz.name}</p>
-    <p>{question}</p>
+    {question &&
+      <p>{question.entity.name}</p>
+    }
     <button onClick={onStartRunner}>
       Start
     </button>
