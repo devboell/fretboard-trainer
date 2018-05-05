@@ -42,6 +42,8 @@ const NEW_QUIZ = {
   id: undefined,
   name: '',
   type: 'pc',
+  tuning: 'standard',
+  width: 13,
   __typename: 'Quiz',
 }
 

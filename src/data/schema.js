@@ -6,10 +6,16 @@ const typeDefs = `
     pc
   }
 
+  enum TuningEnum {
+    standard
+  }
+
   type Quiz {
     id: ID
     name: String
     type: QuizTypeEnum
+    tuning: TuningEnum
+    width: Int
   }
 
   type Query {
@@ -20,12 +26,16 @@ const typeDefs = `
     createQuiz(
       name: String
       type: QuizTypeEnum
+      tuning: TuningEnum
+      width: Int
     ): Quiz
 
     updateQuiz(
       id: ID
       name: String
       type: QuizTypeEnum
+      tuning: TuningEnum
+      width: Int
     ): Quiz
 
     deleteQuiz(

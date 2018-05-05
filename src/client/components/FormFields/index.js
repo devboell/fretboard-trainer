@@ -1,9 +1,8 @@
 import React from 'react'
-// import pt from 'prop-types'
 
-// import quizShape from 'propShapes/quiz'
 import Label from './Label'
 import NameInput from './NameInput'
+import TypeInput from './TypeInput'
 import Wrapper from './Wrapper'
 
 const FormFields = () =>
@@ -15,25 +14,14 @@ const FormFields = () =>
         placeholder="Enter a name"
       />
     </Label>
-
-  </Wrapper>
-
-FormFields.propTypes = {
-  // buffer: quizShape.isRequired,
-  // handleInputChange: pt.func.isRequired,
-}
-/**
- *     <Label htmlFor="type">
+    <Label htmlFor="type">
       type:
-      <input
-        id="type"
+      <TypeInput
         name="type"
-        type="radio"
         value="pc"
-        checked={buffer.type === 'pc'}
-        onChange={handleInputChange}
       />
     </Label>
- */
+
+  </Wrapper>
 
 export default FormFields

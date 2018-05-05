@@ -4,6 +4,8 @@ export function up(knex, Promise) {
       table.increments('id').notNullable()
       table.string('name').notNullable()
       table.enum('type', ['pc']).notNullable()
+      table.enum('tuning', ['standard']).notNullable()
+      table.integer('width').notNullable()
     }),
   ])
 }

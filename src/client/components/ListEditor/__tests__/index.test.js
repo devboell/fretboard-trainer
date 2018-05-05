@@ -1,6 +1,5 @@
 import React from 'react'
-import { MockedProvider } from 'react-apollo/test-utils'
-import { Provider } from 'react-redux'
+import TestProvider from 'test-utils'
 import {
   pickData,
   listButtonIsSelected,
@@ -8,6 +7,7 @@ import {
   formIsPristine,
   saveChanges,
   saveButtonIsDisabled,
+  newButtonIsDisabled,
   clickNew,
   clickDelete,
   clickListButton,
@@ -19,16 +19,15 @@ let wrapper
 
 beforeEach(async () => {
   wrapper = mount((
-    <Provider store={fxtrs.store}>
-      <MockedProvider
-        mocks={[
-          ...fxtrs.quizzesMocks,
-          ...fxtrs.crudMocks,
-        ]}
-      >
-        <QuizEditor />
-      </MockedProvider>
-    </Provider>
+    <TestProvider
+      store={fxtrs.store}
+      mocks={[
+        ...fxtrs.quizzesMocks,
+        ...fxtrs.crudMocks,
+      ]}
+    >
+      <QuizEditor />
+    </TestProvider>
   ))
   // makes sure the loading is done
   await new Promise(resolve => setTimeout(resolve))
@@ -127,7 +126,7 @@ describe('Select new quiz', () => {
   })
 
   it('New button is disabled', () => {
-    expect(wrapper.find('EditorControls button').props().disabled).toBe(true)
+    expect(newButtonIsDisabled(wrapper)).toBe(true)
   })
 })
 

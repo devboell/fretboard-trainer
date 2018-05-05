@@ -6,6 +6,8 @@ export default gql`
       id
       name
       type
+      tuning
+      width
     }
   }
 `

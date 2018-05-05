@@ -4,7 +4,9 @@ exports[`Quiz resolver createQuiz 1`] = `
 Object {
   "id": 7,
   "name": "new",
+  "tuning": "standard",
   "type": "pc",
+  "width": 13,
 }
 `;
 
@@ -17,40 +19,54 @@ Array [
   Object {
     "id": 1,
     "name": "quiz one",
+    "tuning": "standard",
     "type": "pc",
+    "width": 13,
   },
   Object {
     "id": 2,
     "name": "quiz two",
+    "tuning": "standard",
     "type": "pc",
+    "width": 13,
   },
   Object {
     "id": 3,
     "name": "quiz three",
+    "tuning": "standard",
     "type": "pc",
+    "width": 13,
   },
   Object {
     "id": 4,
     "name": "quiz four",
+    "tuning": "standard",
     "type": "pc",
+    "width": 13,
   },
   Object {
     "id": 5,
     "name": "quiz five",
+    "tuning": "standard",
     "type": "pc",
+    "width": 13,
   },
   Object {
     "id": 6,
     "name": "quiz six",
+    "tuning": "standard",
     "type": "pc",
+    "width": 13,
   },
 ]
 `;
 
 exports[`Quiz resolver updateQuiz 1`] = `
 Object {
-  "id": 1,
+  "id": "1",
   "name": "updated",
+  "tuning": "standard",
   "type": "pc",
+  "width": 13,
 }
 `;

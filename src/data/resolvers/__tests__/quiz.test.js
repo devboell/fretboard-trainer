@@ -6,6 +6,24 @@ import {
   deleteQuiz,
 } from '../quiz'
 
+const tuning = 'standard'
+const width = 13
+
+const newQuiz = {
+  name: 'new',
+  type: 'pc',
+  tuning,
+  width,
+}
+
+const updatedQuiz = {
+  id: '1',
+  name: 'updated',
+  type: 'pc',
+  tuning,
+  width,
+}
+
 describe('Quiz resolver', () => {
   beforeEach(async () => {
     await knex.migrate.rollback()
@@ -27,12 +45,12 @@ describe('Quiz resolver', () => {
   })
 
   it('createQuiz', async () => {
-    const received = await createQuiz(null, { name: 'new', type: 'pc' })
+    const received = await createQuiz(null, newQuiz)
     expect(received).toMatchSnapshot()
   })
 
   it('updateQuiz', async () => {
-    const received = await updateQuiz(null, { id: 1, name: 'updated', type: 'pc' })
+    const received = await updateQuiz(null, updatedQuiz)
     expect(received).toMatchSnapshot()
   })
 
