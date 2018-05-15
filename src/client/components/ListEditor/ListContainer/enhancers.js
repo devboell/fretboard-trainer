@@ -1,6 +1,6 @@
 import { graphql } from 'react-apollo'
 
-import QUIZZES from './queries'
+import QUIZZES from 'graphql/Quizzes'
 
 
 const quizzesQueryProps = ({ data: { quizzes, loading, error } }) => ({

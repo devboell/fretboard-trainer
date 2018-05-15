@@ -12,18 +12,19 @@ import {
   clickDelete,
   clickListButton,
 } from 'test-utils/enzyme-queries'
+import * as fxt from 'fixtures/graphql/quiz'
 import QuizEditor from '../index'
-import * as fxtrs from '../fixtures'
+import { store, quizzesMocks, crudMocks } from '../mocks'
 
 let wrapper
 
 beforeEach(async () => {
   wrapper = mount((
     <TestProvider
-      store={fxtrs.store}
+      store={store}
       mocks={[
-        ...fxtrs.quizzesMocks,
-        ...fxtrs.crudMocks,
+        ...quizzesMocks,
+        ...crudMocks,
       ]}
     >
       <QuizEditor />
@@ -40,7 +41,7 @@ describe('Default, no action', () => {
   })
 
   it('List contains quiz items', () => {
-    expect(wrapper.find('List li').length).toBe(fxtrs.quizzes.length)
+    expect(wrapper.find('List li').length).toBe(fxt.quizzes.length)
   })
 
   it('UnselectedMessage is displayed', () => {
@@ -50,7 +51,7 @@ describe('Default, no action', () => {
 
 describe('Select list item', () => {
   const index = 2
-  const selectedQuiz = fxtrs.quizzes[index]
+  const selectedQuiz = fxt.quizzes[index]
 
   beforeEach(() => clickListButton(index, wrapper))
 
@@ -159,7 +160,7 @@ describe('Delete quiz', () => {
   })
 
   it('List item was removed', () => {
-    expect(wrapper.update().find('List li').length).toBe(fxtrs.quizzes.length - 1)
+    expect(wrapper.update().find('List li').length).toBe(fxt.quizzes.length - 1)
   })
 })
 

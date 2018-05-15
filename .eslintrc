@@ -15,7 +15,8 @@
   "globals": {
     "shallow": false,
     "mount": false,
-    "render": false
+    "render": false,
+    "setUpData": false
   },
   "plugins": ["react", "import"],
   "rules": {

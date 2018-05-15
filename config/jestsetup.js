@@ -10,3 +10,19 @@ configure({ adapter: new Adapter() })
 global.shallow = shallow
 global.render = render
 global.mount = mount
+
+global.setUpData = (knex) => {
+  beforeEach(async () => {
+    await knex.migrate.rollback()
+    await knex.migrate.latest()
+    await knex.seed.run()
+  })
+
+  afterEach(async () => {
+    await knex.migrate.rollback()
+  })
+
+  afterAll(() => {
+    knex.destroy()
+  })
+}

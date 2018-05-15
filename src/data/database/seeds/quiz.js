@@ -1,5 +1,5 @@
 const quizzes = `
-  INSERT INTO 'Quiz' VALUES
+  INSERT INTO 'quiz' VALUES
   (1,'quiz one', 'pc', 'standard', 13),
   (2,'quiz two', 'pc', 'standard', 13),
   (3,'quiz three', 'pc', 'standard', 13),
@@ -9,7 +9,7 @@ const quizzes = `
 `
 
 export function seed(knex) { // eslint-disable-line import/prefer-default-export
-  return knex('Quiz').truncate()
+  return knex('quiz').truncate()
     .then(() =>
       knex.raw(quizzes))
 }

@@ -8,7 +8,6 @@ import { createStore } from 'redux'
 const TestPovider = ({ store, mocks, children }) =>
   <Provider store={store}>
     <MockedProvider
-      removeTypename
       mocks={mocks}
     >
       {children}

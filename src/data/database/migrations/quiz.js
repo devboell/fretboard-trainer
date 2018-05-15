@@ -1,6 +1,6 @@
 export function up(knex, Promise) {
   return Promise.all([
-    knex.schema.createTable('Quiz', (table) => {
+    knex.schema.createTable('quiz', (table) => {
       table.increments('id').notNullable()
       table.string('name').notNullable()
       table.enum('type', ['pc']).notNullable()
@@ -12,6 +12,6 @@ export function up(knex, Promise) {
 
 export function down(knex, Promise) {
   return Promise.all([
-    knex.schema.dropTable('Quiz'),
+    knex.schema.dropTable('quiz'),
   ])
 }

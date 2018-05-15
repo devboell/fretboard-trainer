@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { compose } from 'ramda'
+import { compose, omit } from 'ramda'
 import { selectItem } from 'components/ListEditor/ListContainer/reducer'
 import { initRunner } from 'components/Runner/reducer'
 
@@ -20,13 +20,29 @@ const mapStateToProps = state => ({
   mode: state.editor.mode,
 })
 
-const handleCreateMutation = (dispatch, mutation, item) =>
-  mutation(item).then(res =>
+const handleCreateMutation = (dispatch, mutation, item) => {
+  console.log('item', omit(['__typename', 'id'], item))
+  const createInput = {
+    input: {
+      quiz: omit(['__typename', 'id'], item),
+      panelIds: [1, 2],
+    },
+  }
+  return mutation(createInput).then(res =>
     dispatch(selectItem(res.data.createQuiz)))
-
-const handleUpdateMutation = (dispatch, mutation, item) =>
-  mutation(item).then(res =>
+}
+const handleUpdateMutation = (dispatch, mutation, item) => {
+  const updateInput = {
+    input: {
+      id: item.id,
+      quiz: omit(['__typename', 'id', 'panels'], item),
+      panelIds: [1, 2, 3],
+    },
+  }
+  return mutation(updateInput).then(res =>
     dispatch(updateItem(res.data.updateQuiz)))
+}
+
 
 const handleDeleteMutation = (dispatch, mutation, id) =>
   mutation(id).then(() =>

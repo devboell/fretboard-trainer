@@ -1,5 +1,6 @@
 import {
   quizzes,
+  panels,
   createQuiz,
   updateQuiz,
   deleteQuiz,
@@ -8,6 +9,9 @@ import {
 const resolvers = {
   Query: {
     quizzes,
+  },
+  Quiz: {
+    panels,
   },
   Mutation: {
     createQuiz,

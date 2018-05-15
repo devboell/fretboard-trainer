@@ -1,27 +1,31 @@
-import { omit } from 'ramda'
-import knex from '../connector'
+import * as Quiz from 'data/models/quiz'
+import * as QPM from 'data/models/quizPanelMode'
 
-export const quizzes = () => knex('Quiz').select('*')
 
-export const createQuiz = async (_, obj) => {
-  const newId = await knex('Quiz').insert(obj)
-  const result = await knex('Quiz')
-    .where({ id: newId[0] })
-    .select('*')
-  return result[0]
+export const quizzes = async () =>
+  Quiz.findAll()
+
+export const panels = async obj =>
+  Quiz.panelsByQuizId(obj.id)
+
+export const createQuiz = async (_, args) => {
+  const { quiz, panelIds } = args.input
+  const newId = await Quiz.create(quiz)
+  await QPM.create(newId, panelIds)
+  return Quiz.findById(newId)
 }
 
-export const updateQuiz = async (_, obj) => {
-  await knex('Quiz')
-    .where({ id: obj.id })
-    .update(omit('id', obj))
+export const updateQuiz = async (_, args) => {
+  const { id, quiz, panelIds } = args.input
+  await Quiz.update(id, quiz)
+  await QPM.removeByQuizId(id)
+  await QPM.create(id, panelIds)
 
-  return obj
+  return Quiz.findById(id)
 }
-export const deleteQuiz = async (_, obj) => {
-  const nrOfRows = await knex('Quiz')
-    .where({ id: obj.id })
-    .del()
 
-  return nrOfRows === 1 ? obj.id : 'ERROR' // TODO: unhandled error
+export const deleteQuiz = async (_, args) => {
+  const nrOfRows = await Quiz.remove(args.id)
+
+  return nrOfRows === 1 ? args.id : 'ERROR' // TODO: unhandled error
 }
