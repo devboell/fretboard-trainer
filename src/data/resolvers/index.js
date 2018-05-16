@@ -1,6 +1,6 @@
 import {
   quizzes,
-  panels,
+  panelModes,
   createQuiz,
   updateQuiz,
   deleteQuiz,
@@ -11,7 +11,7 @@ const resolvers = {
     quizzes,
   },
   Quiz: {
-    panels,
+    panelModes,
   },
   Mutation: {
     createQuiz,

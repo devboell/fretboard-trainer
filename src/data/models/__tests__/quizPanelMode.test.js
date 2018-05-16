@@ -10,9 +10,9 @@ describe('models, quizPanelMode', () => {
 
   it('findByQuizId', async () => {
     const expected = [
-      { panel_id: 1, quiz_id: 1 },
-      { panel_id: 2, quiz_id: 1 },
-      { panel_id: 3, quiz_id: 1 },
+      { panelModeId: 1, quizId: 1 },
+      { panelModeId: 2, quizId: 1 },
+      { panelModeId: 3, quizId: 1 },
     ]
     const result = await findByQuizId(1)
     expect(result).toEqual(expected)
@@ -24,7 +24,7 @@ describe('models, quizPanelMode', () => {
   })
 
 
-  it('remove', async () => {
+  it('removeByQuizId', async () => {
     const result = await removeByQuizId(3)
     expect(result).toBe(1)
   })

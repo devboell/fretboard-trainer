@@ -16,13 +16,13 @@ const typeDefs = `
     type: QuizTypeEnum
     tuning: TuningEnum
     width: Int
-    panels: [Panel]
+    panelModes: [PanelMode]
   }
 
-  type Panel {
+  type PanelMode {
     id: ID!
-    q: String
-    a: String
+    question: String
+    answer: String
   }
 
   type Query {
@@ -38,13 +38,13 @@ const typeDefs = `
 
   input CreateQuizInput {
     quiz: QuizInput
-    panelIds: [Int]
+    panelModeIds: [Int]
   }
 
   input UpdateQuizInput {
     id: ID!
     quiz: QuizInput
-    panelIds: [Int]
+    panelModeIds: [Int]
   }
 
   type Mutation {

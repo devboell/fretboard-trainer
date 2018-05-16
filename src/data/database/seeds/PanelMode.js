@@ -1,5 +1,5 @@
-const panels = `
-  INSERT INTO 'panel_mode' VALUES
+const panelModes = `
+  INSERT INTO 'PanelMode' VALUES
   (1,'fretboard', 'name'),
   (2,'fretboard', 'staff'),
   (3,'fretboard', 'sound'),
@@ -15,7 +15,7 @@ const panels = `
 `
 
 export function seed(knex) { // eslint-disable-line import/prefer-default-export
-  return knex('panel_mode').truncate()
+  return knex('PanelMode').truncate()
     .then(() =>
-      knex.raw(panels))
+      knex.raw(panelModes))
 }

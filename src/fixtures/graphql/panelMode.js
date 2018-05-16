@@ -1,17 +1,17 @@
 export const panel1 = {
   id: '1',
-  q: 'fretboard',
-  a: 'name',
+  question: 'fretboard',
+  answer: 'name',
 }
 
 export const panel2 = {
   id: '2',
-  q: 'fretboard',
-  a: 'staff',
+  question: 'fretboard',
+  answer: 'staff',
 }
 
 export const panel3 = {
   id: '3',
-  q: 'fretboard',
-  a: 'sound',
+  question: 'fretboard',
+  answer: 'sound',
 }

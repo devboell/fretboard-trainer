@@ -3,7 +3,7 @@ import * as fxt from 'fixtures/db/quiz'
 import {
   findAll,
   findById,
-  panelsByQuizId,
+  panelModesByQuizId,
   create,
   update,
   remove,
@@ -21,8 +21,8 @@ describe('models, quiz', () => {
     expect(result).toEqual(fxt.quiz3)
   })
 
-  it('panelsByQuizId', async () => {
-    const result = await panelsByQuizId(1)
+  it('panelModesByQuizId', async () => {
+    const result = await panelModesByQuizId(1)
     expect(result).toEqual([fxt.panel1, fxt.panel2, fxt.panel3])
   })
 

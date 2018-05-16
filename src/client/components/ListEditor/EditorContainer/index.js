@@ -25,7 +25,7 @@ const handleCreateMutation = (dispatch, mutation, item) => {
   const createInput = {
     input: {
       quiz: omit(['__typename', 'id'], item),
-      panelIds: [1, 2],
+      panelModeIds: [1, 2],
     },
   }
   return mutation(createInput).then(res =>
@@ -35,8 +35,8 @@ const handleUpdateMutation = (dispatch, mutation, item) => {
   const updateInput = {
     input: {
       id: item.id,
-      quiz: omit(['__typename', 'id', 'panels'], item),
-      panelIds: [1, 2, 3],
+      quiz: omit(['__typename', 'id', 'panelModes'], item),
+      panelModeIds: [1, 2, 3],
     },
   }
   return mutation(updateInput).then(res =>

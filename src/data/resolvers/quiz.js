@@ -5,21 +5,21 @@ import * as QPM from 'data/models/quizPanelMode'
 export const quizzes = async () =>
   Quiz.findAll()
 
-export const panels = async obj =>
-  Quiz.panelsByQuizId(obj.id)
+export const panelModes = async obj =>
+  Quiz.panelModesByQuizId(obj.id)
 
 export const createQuiz = async (_, args) => {
-  const { quiz, panelIds } = args.input
+  const { quiz, panelModeIds } = args.input
   const newId = await Quiz.create(quiz)
-  await QPM.create(newId, panelIds)
+  await QPM.create(newId, panelModeIds)
   return Quiz.findById(newId)
 }
 
 export const updateQuiz = async (_, args) => {
-  const { id, quiz, panelIds } = args.input
+  const { id, quiz, panelModeIds } = args.input
   await Quiz.update(id, quiz)
   await QPM.removeByQuizId(id)
-  await QPM.create(id, panelIds)
+  await QPM.create(id, panelModeIds)
 
   return Quiz.findById(id)
 }

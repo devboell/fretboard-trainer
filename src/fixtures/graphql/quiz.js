@@ -15,37 +15,37 @@ export const quizzes = [
     id: '1',
     ...quizValues1,
     __typename: 'Quiz',
-    panels: [panel1, panel2, panel3],
+    panelModes: [panel1, panel2, panel3],
   },
   {
     id: '2',
     ...quizValues2,
     __typename: 'Quiz',
-    panels: [panel1, panel2],
+    panelModes: [panel1, panel2],
   },
   {
     id: '3',
     ...quizValues3,
     __typename: 'Quiz',
-    panels: [panel1],
+    panelModes: [panel1],
   },
   {
     id: '4',
     ...quizValues4,
     __typename: 'Quiz',
-    panels: [panel1],
+    panelModes: [panel1],
   },
   {
     id: '5',
     ...quizValues5,
     __typename: 'Quiz',
-    panels: [panel1],
+    panelModes: [panel1],
   },
   {
     id: '6',
     ...quizValues6,
     __typename: 'Quiz',
-    panels: [panel1],
+    panelModes: [panel1],
   },
 ]
 
@@ -55,7 +55,7 @@ export const createQuizInputValues = {
       ...createValues,
       // __typename: 'Quiz',
     },
-    panelIds: [1, 2],
+    panelModeIds: [1, 2],
   },
 }
 
@@ -63,14 +63,14 @@ export const createdQuiz = {
   id: '7',
   ...createValues,
   __typename: 'Quiz',
-  panels: [panel1, panel2],
+  panelModes: [panel1, panel2],
 }
 
 export const updateQuizInputValues = {
   input: {
     id: '3',
     quiz: updateValues,
-    panelIds: [1, 2, 3],
+    panelModeIds: [1, 2, 3],
   },
 }
 
@@ -78,6 +78,6 @@ export const updatedQuiz = {
   id: '3',
   ...updateValues,
   __typename: 'Quiz',
-  panels: [panel1, panel2, panel3],
+  panelModes: [panel1, panel2, panel3],
 }
 
