@@ -14,7 +14,7 @@ import {
 } from 'test-utils/enzyme-queries'
 import * as fxt from 'fixtures/graphql/quiz'
 import QuizEditor from '../index'
-import { store, quizzesMocks, crudMocks } from '../mocks'
+import { store, apolloMocks } from '../mocks'
 
 let wrapper
 
@@ -22,10 +22,7 @@ beforeEach(async () => {
   wrapper = mount((
     <TestProvider
       store={store}
-      mocks={[
-        ...quizzesMocks,
-        ...crudMocks,
-      ]}
+      mocks={apolloMocks}
     >
       <QuizEditor />
     </TestProvider>

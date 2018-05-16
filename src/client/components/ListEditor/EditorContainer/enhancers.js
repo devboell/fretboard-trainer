@@ -1,10 +1,22 @@
 import { graphql, compose } from 'react-apollo'
 
 import QUIZZES from 'graphql/Quizzes'
+import PANEL_MODES from 'graphql/PanelModes'
 import CREATE_QUIZ from 'graphql/CreateQuiz'
 import UPDATE_QUIZ from 'graphql/UpdateQuiz'
 import DELETE_QUIZ from 'graphql/DeleteQuiz'
 
+
+const panelModesQueryProps = ({ data: { panelModes, loading, error } }) => ({
+  panelModes,
+  loading,
+  error,
+})
+
+const withPanelModes = graphql(
+  PANEL_MODES,
+  { props: panelModesQueryProps },
+)
 const createQuizProps = ({ mutate }) => ({
   createMutation: values => mutate({
     variables: values,
@@ -66,4 +78,5 @@ export default compose(
   withCreateQuizMutation,
   withUpdateQuizMutation,
   withDeleteQuizMutation,
+  withPanelModes,
 )

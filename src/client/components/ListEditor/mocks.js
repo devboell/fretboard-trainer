@@ -1,45 +1,57 @@
 import { createStore, combineReducers } from 'redux'
 
 import QUIZZES from 'graphql/Quizzes'
+import PANEL_MODES from 'graphql/PanelModes'
 import CREATE_QUIZ from 'graphql/CreateQuiz'
 import UPDATE_QUIZ from 'graphql/UpdateQuiz'
 import DELETE_QUIZ from 'graphql/DeleteQuiz'
 
-import * as fxt from 'fixtures/graphql/quiz'
+import * as quizFxt from 'fixtures/graphql/quiz'
+import * as panelFxt from 'fixtures/graphql/panelMode'
 
 import listReducer, { initialState as initialListState } from './ListContainer/reducer'
 import editorReducer, { initialState as initialEditorState } from './EditorContainer/reducer'
 
+export const quizzes = {
+  request: { query: QUIZZES },
+  result: { data: { quizzes: quizFxt.quizzes } },
+}
 
-export const quizzesMocks = [
-  {
-    request: { query: QUIZZES },
-    result: { data: { quizzes: fxt.quizzes } },
-  },
-]
+export const panelModes = {
+  request: { query: PANEL_MODES },
+  result: { data: { panelModes: panelFxt.panelModes } },
+}
 
-export const crudMocks = [
-  {
-    request: {
-      query: CREATE_QUIZ,
-      variables: fxt.createQuizInputValues,
-    },
-    result: { data: { createQuiz: fxt.createdQuiz } },
+export const createQuiz = {
+  request: {
+    query: CREATE_QUIZ,
+    variables: quizFxt.createQuizInputValues,
   },
-  {
-    request: {
-      query: UPDATE_QUIZ,
-      variables: fxt.updateQuizInputValues,
-    },
-    result: { data: { updateQuiz: fxt.updatedQuiz } },
+  result: { data: { createQuiz: quizFxt.createdQuiz } },
+}
+
+export const updateQuiz = {
+  request: {
+    query: UPDATE_QUIZ,
+    variables: quizFxt.updateQuizInputValues,
   },
-  {
-    request: {
-      query: DELETE_QUIZ,
-      variables: { id: '3' },
-    },
-    result: { data: { deleteQuiz: '3' } },
+  result: { data: { updateQuiz: quizFxt.updatedQuiz } },
+}
+
+export const deleteQuiz = {
+  request: {
+    query: DELETE_QUIZ,
+    variables: { id: '3' },
   },
+  result: { data: { deleteQuiz: '3' } },
+}
+
+export const apolloMocks = [
+  quizzes,
+  panelModes,
+  createQuiz,
+  updateQuiz,
+  deleteQuiz,
 ]
 
 const initialState = {

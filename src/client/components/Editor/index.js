@@ -17,6 +17,7 @@ const Editor = ({
   mode,
   original,
   buffer,
+  panelModes,
   onSelectNewItem,
   onOpenPreview,
   ...rest
@@ -43,7 +44,7 @@ const Editor = ({
             ...rest,
           }}
         >
-          <FormFields />
+          <FormFields {...{ panelModes }} />
           <FormControls />
         </StyledForm>
       }
@@ -56,6 +57,7 @@ Editor.propTypes = {
   mode: pt.string.isRequired,
   original: quizShape,
   buffer: quizShape,
+  panelModes: pt.arrayOf(pt.shape({})).isRequired,
   onUpdateBuffer: pt.func.isRequired,
   onSelectNewItem: pt.func.isRequired,
   onOpenPreview: pt.func.isRequired,

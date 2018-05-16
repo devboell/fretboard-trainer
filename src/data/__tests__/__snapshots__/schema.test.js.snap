@@ -1,3 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`schema should return panelModes 1`] = `null`;
+exports[`schema should return panelModes 1`] = `
+Array [
+  Object {
+    "answer": "name",
+    "id": "1",
+    "question": "fretboard",
+  },
+  Object {
+    "answer": "staff",
+    "id": "2",
+    "question": "fretboard",
+  },
+  Object {
+    "answer": "sound",
+    "id": "3",
+    "question": "fretboard",
+  },
+  Object {
+    "answer": "fretboard",
+    "id": "4",
+    "question": "name",
+  },
+  Object {
+    "answer": "staff",
+    "id": "5",
+    "question": "name",
+  },
+  Object {
+    "answer": "sound",
+    "id": "6",
+    "question": "name",
+  },
+  Object {
+    "answer": "fretboard",
+    "id": "7",
+    "question": "staff",
+  },
+  Object {
+    "answer": "name",
+    "id": "8",
+    "question": "staff",
+  },
+  Object {
+    "answer": "sound",
+    "id": "9",
+    "question": "staff",
+  },
+  Object {
+    "answer": "fretboard",
+    "id": "10",
+    "question": "sound",
+  },
+  Object {
+    "answer": "name",
+    "id": "11",
+    "question": "sound",
+  },
+  Object {
+    "answer": "staff",
+    "id": "12",
+    "question": "sound",
+  },
+]
+`;

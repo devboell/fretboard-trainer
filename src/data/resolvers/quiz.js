@@ -1,5 +1,5 @@
-import * as Quiz from 'data/models/quiz'
-import * as QPM from 'data/models/quizPanelMode'
+import * as Quiz from '../models/quiz'
+import * as QPM from '../models/quizPanelMode'
 
 
 export const quizzes = async () =>

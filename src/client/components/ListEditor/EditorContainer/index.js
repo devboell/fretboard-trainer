@@ -2,6 +2,7 @@ import { connect } from 'react-redux'
 import { compose, omit } from 'ramda'
 import { selectItem } from 'components/ListEditor/ListContainer/reducer'
 import { initRunner } from 'components/Runner/reducer'
+import withLoading from 'components/Loading'
 
 import Editor from 'components/Editor'
 import withData from './enhancers'
@@ -66,13 +67,15 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }
 }
 
-const mergeProps = (stateProps, dispatchProps) => ({
+const mergeProps = (stateProps, dispatchProps, ownProps) => ({
   ...stateProps,
   ...dispatchProps,
+  ...ownProps,
   onOpenPreview: () => dispatchProps.onOpenPreview(stateProps.buffer),
 })
 
 export default compose(
   withData,
   connect(mapStateToProps, mapDispatchToProps, mergeProps),
+  withLoading,
 )(Editor)
