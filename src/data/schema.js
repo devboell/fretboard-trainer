@@ -27,6 +27,7 @@ const typeDefs = `
 
   type Query {
     quizzes: [Quiz]
+    panelModes: [PanelMode]
   }
 
   input QuizInput {
