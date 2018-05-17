@@ -25,8 +25,8 @@ const handleCreateMutation = (dispatch, mutation, item) => {
   console.log('item', omit(['__typename', 'id'], item))
   const createInput = {
     input: {
-      quiz: omit(['__typename', 'id'], item),
-      panelModeIds: [1, 2],
+      quiz: omit(['__typename', 'id', 'panelModeIds'], item),
+      panelModeIds: item.panelModeIds,
     },
   }
   return mutation(createInput).then(res =>
@@ -36,8 +36,8 @@ const handleUpdateMutation = (dispatch, mutation, item) => {
   const updateInput = {
     input: {
       id: item.id,
-      quiz: omit(['__typename', 'id', 'panelModes'], item),
-      panelModeIds: [1, 2, 3],
+      quiz: omit(['__typename', 'id', 'panelModeIds'], item),
+      panelModeIds: item.panelModeIds,
     },
   }
   return mutation(updateInput).then(res =>
@@ -62,7 +62,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     onCreate: qz => handleCreateMutation(dispatch, createMutation, qz),
     onUpdate: qz => handleUpdateMutation(dispatch, updateMutation, qz),
     onDelete: id => handleDeleteMutation(dispatch, deleteMutation, id),
-    onUpdateBuffer: (k, v) => dispatch(updateBuffer(k, v)),
+    onUpdateBuffer: (k, v, t) => dispatch(updateBuffer(k, v, t)),
     onOpenPreview: buffer => openPreview(dispatch, buffer),
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import pt from 'prop-types'
 
+import InputCheckboxGroup from 'components/Form/InputCheckboxGroup'
 import Label from './Label'
 import NameInput from './NameInput'
 import TypeInput from './TypeInput'
@@ -23,9 +24,18 @@ const FormFields = ({ panelModes }) =>
       />
     </Label>
     {panelModes.map(pm =>
-      <div key={`pm=${pm.id}`}>{pm.question}</div>)
+      <Label
+        key={`panelMode-${pm.id}`}
+        htmlFor={`panelMode-${pm.id}`}
+      >
+        <InputCheckboxGroup
+          id={`panelMode-${pm.id}`}
+          name="panelModeIds"
+          value={pm.id}
+        />
+        {pm.question} - {pm.answer}
+      </Label>)
     }
-
   </Wrapper>
 
 FormFields.propTypes = {

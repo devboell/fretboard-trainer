@@ -1,4 +1,15 @@
-import { set, prop, lensProp, lensPath, compose } from 'ramda'
+import {
+  set,
+  prop,
+  lensProp,
+  lensPath,
+  compose,
+  pluck,
+  assoc,
+  dissoc,
+  append,
+  without,
+} from 'ramda'
 
 import { ITEM_SELECTION } from 'components/ListEditor/ListContainer/reducer'
 
@@ -22,10 +33,11 @@ export const updateItem = quiz => ({
   quiz,
 })
 
-export const updateBuffer = (key, value) => ({
+export const updateBuffer = (key, value, updateType) => ({
   type: BUFFER_UPDATE,
   key,
   value,
+  updateType,
 })
 
 export const togglePreview = () => ({
@@ -38,12 +50,19 @@ export const modes = {
   NEW: 'NEW',
 }
 
+export const updateTypes = {
+  SET: 'SET',
+  ADD: 'ADD',
+  REMOVE: 'REMOVE',
+}
+
 const NEW_QUIZ = {
   id: undefined,
   name: '',
   type: 'pc',
   tuning: 'standard',
   width: 13,
+  panelModeIds: ['1'],
   __typename: 'Quiz',
 }
 
@@ -62,8 +81,14 @@ const handleSelection = (quiz, mode, state) => compose(
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case ITEM_SELECTION:
-      return handleSelection(action.item, modes.SELECTED, state)
+    case ITEM_SELECTION: {
+      const panelModeIds = pluck('id', action.item.panelModes)
+      const formItem = compose(
+        dissoc('panelModes'),
+        assoc('panelModeIds', panelModeIds),
+      )(action.item)
+      return handleSelection(formItem, modes.SELECTED, state)
+    }
 
     case NEW_ITEM_SELECTION:
       return handleSelection(NEW_QUIZ, modes.NEW, state)
@@ -78,10 +103,26 @@ export default (state = initialState, action) => {
       )(state)
 
     case BUFFER_UPDATE: {
-      const { key, value } = action
+      const { key, value, updateType } = action
       const lensKey = lensPath(['buffer', key])
 
-      return set(lensKey, value, state)
+      switch (updateType) {
+        case updateTypes.SET: {
+          return set(lensKey, value, state)
+        }
+        case updateTypes.ADD: {
+          const added = append(value, state.buffer[key])
+          return set(lensKey, added, state)
+        }
+
+        case updateTypes.REMOVE: {
+          const removed = without(value, state.buffer[key])
+          return set(lensKey, removed, state)
+        }
+
+        default:
+          return state
+      }
     }
 
     case PREVIEW_TOGGLE:

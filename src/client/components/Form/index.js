@@ -10,6 +10,7 @@ class Form extends React.Component {
     super(props)
 
     this.handleInputChange = this.handleInputChange.bind(this)
+    this.handleCheckBoxGroupChange = this.handleCheckBoxGroupChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleDelete = this.handleDelete.bind(this)
   }
@@ -20,7 +21,16 @@ class Form extends React.Component {
     const value = target.type === 'checkbox' ? target.checked : target.value
     const { name } = target
 
-    onUpdateBuffer(name, value)
+    onUpdateBuffer(name, value, 'SET')
+  }
+
+  handleCheckBoxGroupChange(event) {
+    const { onUpdateBuffer } = this.props
+    const { target } = event
+    const { name, value, checked } = target
+    const updateType = checked ? 'ADD' : 'REMOVE'
+
+    onUpdateBuffer(name, value, updateType)
   }
 
   handleSubmit(event) {
@@ -56,6 +66,7 @@ class Form extends React.Component {
       isPristine,
       isNew,
       handleInputChange: this.handleInputChange,
+      handleCheckBoxGroupChange: this.handleCheckBoxGroupChange,
       handleDelete: this.handleDelete,
     }
     return (
