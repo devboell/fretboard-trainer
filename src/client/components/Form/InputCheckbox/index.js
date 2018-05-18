@@ -10,18 +10,15 @@ const InputCheckbox = ({
   ...rest
 }) =>
   <FormContext.Consumer>
-    {(context) => {
-      console.log('context.buffer[name]', context.buffer[name])
-      return (
-        <input
-          {...{ name, ...rest }}
-          type="checkbox"
-          onChange={context.handleInputChange}
-          value={value}
-          checked={contains(value, context.buffer[name])}
-        />
-      )
-    }
+    {context =>
+      <input
+        {...{ name, ...rest }}
+        type="checkbox"
+        onChange={context.handleInputChange}
+        value={value}
+        checked={contains(value, context.buffer[name])}
+      />
+
     }
   </FormContext.Consumer>
 

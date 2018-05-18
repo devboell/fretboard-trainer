@@ -62,7 +62,7 @@ const NEW_QUIZ = {
   type: 'pc',
   tuning: 'standard',
   width: 13,
-  panelModeIds: ['1'],
+  panelModes: [{ id: '1', question: 'fretboard', answer: 'name' }],
   __typename: 'Quiz',
 }
 
@@ -73,34 +73,46 @@ export const initialState = {
   showPreview: false,
 }
 
+const initEditor = item => (state) => {
+  const panelModeIds = pluck('id', item.panelModes)
+  const formItem = compose(
+    dissoc('panelModes'),
+    assoc('panelModeIds', panelModeIds),
+  )(item)
+
+  return compose(
+    set(lensProp('buffer'), formItem),
+    set(lensProp('original'), formItem),
+  )(state)
+}
+
+/*
 const handleSelection = (quiz, mode, state) => compose(
   set(lensProp('buffer'), quiz),
   set(lensProp('original'), quiz),
   set(lensProp('mode'), mode),
 )(state)
+*/
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case ITEM_SELECTION: {
-      const panelModeIds = pluck('id', action.item.panelModes)
-      const formItem = compose(
-        dissoc('panelModes'),
-        assoc('panelModeIds', panelModeIds),
-      )(action.item)
-      return handleSelection(formItem, modes.SELECTED, state)
-    }
+    case ITEM_SELECTION:
+      return compose(
+        initEditor(action.item),
+        set(lensProp('mode'), modes.SELECTED),
+      )(state)
 
     case NEW_ITEM_SELECTION:
-      return handleSelection(NEW_QUIZ, modes.NEW, state)
+      return compose(
+        initEditor(NEW_QUIZ),
+        set(lensProp('mode'), modes.NEW),
+      )(state)
 
     case ITEM_UNSELECTION:
-      return handleSelection(undefined, modes.UNSELECTED, state)
+      return set(lensProp('mode'), modes.UNSELECTED, state)
 
     case ITEM_UPDATE:
-      return compose(
-        set(lensProp('buffer'), action.quiz),
-        set(lensProp('original'), action.quiz),
-      )(state)
+      return initEditor(action.quiz)(state)
 
     case BUFFER_UPDATE: {
       const { key, value, updateType } = action
