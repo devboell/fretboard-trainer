@@ -22,7 +22,6 @@ const mapStateToProps = state => ({
 })
 
 const handleCreateMutation = (dispatch, mutation, item) => {
-  console.log('item', omit(['__typename', 'id'], item))
   const createInput = {
     input: {
       quiz: omit(['__typename', 'id', 'panelModeIds'], item),
