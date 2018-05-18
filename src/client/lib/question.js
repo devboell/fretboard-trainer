@@ -1,37 +1,51 @@
 
 // only use sample &  shuffle from lodash
-import { sample, sampleSize, shuffle } from 'lodash/fp'
-import { compose, filter, eqProps, append, uniqWith, flatten } from 'ramda'
-import { midiFretboard } from './fretboard'
+import { sample, sampleSize, shuffle, pluck, without, uniq } from 'lodash/fp'
+import { compose, append, flatten } from 'ramda'
+import { fromChroma } from 'lib/tonal-helpers'
+import { chromaFretboard } from './fretboard'
 
-const choices = (midiLoc, midiLocs) => compose(
-  shuffle,
-  append(midiLoc),
+const useSharps = () => sample([true, false])
+
+export const availableChromaChoices = chroma => chromaLocs => compose(
+  uniq,
+  without([chroma]),
+  pluck('chroma'),
+)(chromaLocs)
+
+const chromaChoices = (chroma, chromaLocs) => compose(
   sampleSize(3),
-  uniqWith(eqProps('midi')),
-  filter(ml => !eqProps('midi', midiLoc, ml)),
-)(midiLocs)
+  availableChromaChoices(chroma),
+)(chromaLocs)
 
-const pcQuestion = (midiLocs) => {
-  const midiLoc = sample(midiLocs)
+
+const pcQuestion = (chromaLocs) => {
+  const chromaLoc = sample(chromaLocs)
+  const incorrect = chromaChoices(chromaLoc.chroma, chromaLocs)
+
+  const pcName = fromChroma(chromaLoc.chroma, useSharps())
+  const incorrectPcNames = incorrect.map(chroma =>
+    fromChroma(chroma, useSharps()))
 
   const entity = {
-    name: midiLoc.midi,
-    rootLoc: midiLoc.loc,
+    name: pcName,
+    rootLoc: chromaLoc.loc,
     otherLocs: [],
   }
   return {
     entity,
-    choices: choices(midiLoc, midiLocs),
+    choices: shuffle(append(pcName, incorrectPcNames)),
   }
 }
 
 export default (quiz) => {
   const { tuning, width } = quiz
-  const midiLocs = flatten(midiFretboard(tuning, width))
 
   switch (quiz.type) {
-    case 'pc': return pcQuestion(midiLocs)
+    case 'pc': {
+      const chromaLocs = flatten(chromaFretboard(tuning, width))
+      return pcQuestion(chromaLocs)
+    }
     // case 'pitch': return pitchQuestion(fb)
     default: return null
   }
@@ -53,6 +67,16 @@ export default (quiz) => {
  *
  *
  * example Pc:
+ *  - get all available pclocs from the fretboard
+ *     the fretboard is always the basis of question selection
+ *  - select one
+ *     this is the main Question
+ *  - get all equivalent pclocs (same pc)
+ *      these locs are the fretboard answers.
+ *  - remove selected pc and equivalent pclocs from available pclocs
+ *       these are the basis for the three multiple choice wrong answers
+ *  - make them unique by name, and sample three
+ *  - assign random enharm. where needed
  *
  *
  */

@@ -10,6 +10,11 @@ export const midiLocFn = (open, str, pos) => ({
   loc: { str, pos },
 })
 
+export const chromaLocFn = (open, str, pos) => ({
+  chroma: (Note.chroma(open) + pos) % 12,
+  loc: { str, pos },
+})
+
 
 const position = (tuning, fretFn) => pos =>
   tuning.map((open, str) => fretFn(open, str, pos))
@@ -19,3 +24,6 @@ export const fretboard = (tuning, width, fretFn) =>
 
 export const midiFretboard = (tuning, width) =>
   fretboard(tuningsMap[tuning], width, midiLocFn)
+
+export const chromaFretboard = (tuning, width) =>
+  fretboard(tuningsMap[tuning], width, chromaLocFn)
