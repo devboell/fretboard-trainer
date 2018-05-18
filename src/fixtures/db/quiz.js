@@ -1,3 +1,4 @@
+import { panel1, panel2, panel3 } from './panelMode'
 import {
   quizValues1,
   quizValues2,
@@ -23,7 +24,7 @@ export const quiz3 = { id: 3, ...quizValues3 }
 export const createQuizInputValues = {
   input: {
     quiz: createValues,
-    panelModeIds: [1, 2],
+    panelModes: [panel1, panel2],
   },
 }
 
@@ -36,7 +37,7 @@ export const updateQuizInputValues = {
   input: {
     id: 3,
     quiz: updateValues,
-    panelModeIds: [1, 2],
+    panelModes: [panel1, panel2],
   },
 }
 
@@ -45,22 +46,5 @@ export const updatedQuiz = {
   ...updateValues,
 }
 
-export { createValues, updateValues }
+export { createValues, updateValues, panel1, panel2, panel3 }
 
-export const panel1 = {
-  id: 1,
-  question: 'fretboard',
-  answer: 'name',
-}
-
-export const panel2 = {
-  id: 2,
-  question: 'fretboard',
-  answer: 'staff',
-}
-
-export const panel3 = {
-  id: 3,
-  question: 'fretboard',
-  answer: 'sound',
-}

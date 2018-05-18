@@ -37,15 +37,21 @@ const typeDefs = `
     width: Int
   }
 
+  input PanelModeInput {
+    id: ID!
+    question: String
+    answer: String
+  }
+
   input CreateQuizInput {
     quiz: QuizInput
-    panelModeIds: [Int]
+    panelModes: [PanelModeInput]
   }
 
   input UpdateQuizInput {
     id: ID!
     quiz: QuizInput
-    panelModeIds: [Int]
+    panelModes: [PanelModeInput]
   }
 
   type Mutation {
