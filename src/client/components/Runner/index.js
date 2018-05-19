@@ -9,6 +9,11 @@ import { startRunner } from './reducer'
 const Runner = ({ quiz, question, onStartRunner }) =>
   <div>
     <p>{quiz.name}</p>
+    {quiz.panelModes.map(pm =>
+      <button>
+        {`${pm.question}-${pm.answer}`}
+      </button>
+    )}
     {question &&
       <p>{question.entity.name}</p>
     }

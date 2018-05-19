@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { compose, omit } from 'ramda'
+import { compose, omit, assoc, dissoc, find, propEq } from 'ramda'
 import { selectItem } from 'components/ListEditor/ListContainer/reducer'
 import { initRunner } from 'components/Runner/reducer'
 import withLoading from 'components/Loading'
@@ -28,9 +28,12 @@ const handleCreateMutation = (dispatch, mutation, item) => {
       panelModeIds: item.panelModeIds,
     },
   }
+
   return mutation(createInput).then(res =>
     dispatch(selectItem(res.data.createQuiz)))
 }
+
+
 const handleUpdateMutation = (dispatch, mutation, item) => {
   const updateInput = {
     input: {
@@ -39,17 +42,27 @@ const handleUpdateMutation = (dispatch, mutation, item) => {
       panelModeIds: item.panelModeIds,
     },
   }
+
   return mutation(updateInput).then(res =>
     dispatch(updateItem(res.data.updateQuiz)))
 }
-
 
 const handleDeleteMutation = (dispatch, mutation, id) =>
   mutation(id).then(() =>
     dispatch(unselectItem()))
 
-const openPreview = (dispatch, buffer) => {
-  dispatch(initRunner(buffer))
+const convertPanelModeIds = (buffer, allPanelModes) => {
+  const panelModes = buffer.panelModeIds.map(id =>
+    find(propEq('id', id), allPanelModes))
+
+  return compose(
+    assoc('panelModes', panelModes),
+    dissoc('panelModeIds'),
+  )(buffer)
+}
+
+const openPreview = (dispatch, buffer, panelModes) => {
+  dispatch(initRunner(convertPanelModeIds(buffer, panelModes)))
   dispatch(togglePreview())
 }
 
@@ -62,7 +75,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     onUpdate: qz => handleUpdateMutation(dispatch, updateMutation, qz),
     onDelete: id => handleDeleteMutation(dispatch, deleteMutation, id),
     onUpdateBuffer: (k, v, t) => dispatch(updateBuffer(k, v, t)),
-    onOpenPreview: buffer => openPreview(dispatch, buffer),
+    onOpenPreview: (buffer, panelModes) => openPreview(dispatch, buffer, panelModes),
   }
 }
 
@@ -70,7 +83,7 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => ({
   ...stateProps,
   ...dispatchProps,
   ...ownProps,
-  onOpenPreview: () => dispatchProps.onOpenPreview(stateProps.buffer),
+  onOpenPreview: () => dispatchProps.onOpenPreview(stateProps.buffer, ownProps.panelModes),
 })
 
 export default compose(

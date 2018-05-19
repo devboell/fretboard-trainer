@@ -28,8 +28,15 @@ export const saveButtonIsDisabled = wrapper =>
 export const newButtonIsDisabled = wrapper =>
   wrapper.find('NewButton').props().disabled
 
+export const previewButtonIsDisabled = wrapper =>
+  wrapper.find('PreviewButton').props().disabled
+
 export const clickNew = wrapper =>
   wrapper.find('NewButton').simulate('click')
 
 export const clickDelete = wrapper =>
   wrapper.find('DeleteButton').simulate('click')
+
+export const checkPanelModeId = (id, wrapper) =>
+  wrapper.find('Form input[name="panelModeIds"]').at(0)
+    .simulate('change', { target: { value: id, name: 'panelModeIds', checked: true } })

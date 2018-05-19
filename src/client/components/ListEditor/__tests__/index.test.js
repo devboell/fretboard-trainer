@@ -11,6 +11,7 @@ import {
   clickNew,
   clickDelete,
   clickListButton,
+  checkPanelModeId,
 } from 'test-utils/enzyme-queries'
 import * as fxt from 'fixtures/graphql/quiz'
 import QuizEditor from '../index'
@@ -99,6 +100,8 @@ describe('Update quiz', () => {
   beforeEach(async () => {
     clickListButton(index, wrapper)
     changeName('updated', wrapper)
+    checkPanelModeId('2', wrapper)
+    checkPanelModeId('3', wrapper)
     saveChanges(wrapper)
     await new Promise(resolve => setTimeout(resolve))
     // wrapper.update()  why does this only work for 1st test
@@ -132,6 +135,7 @@ describe('Create quiz', () => {
   beforeEach(async () => {
     clickNew(wrapper)
     changeName('new', wrapper)
+    checkPanelModeId('2', wrapper)
     saveChanges(wrapper)
     await new Promise(resolve => setTimeout(resolve))
   })

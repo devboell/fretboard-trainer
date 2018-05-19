@@ -24,7 +24,7 @@ export const quiz3 = { id: 3, ...quizValues3 }
 export const createQuizInputValues = {
   input: {
     quiz: createValues,
-    panelModes: [panel1, panel2],
+    panelModeIds: [1, 2],
   },
 }
 
@@ -37,7 +37,7 @@ export const updateQuizInputValues = {
   input: {
     id: 3,
     quiz: updateValues,
-    panelModes: [panel1, panel2],
+    panelModeIds: [1, 2, 3],
   },
 }
 

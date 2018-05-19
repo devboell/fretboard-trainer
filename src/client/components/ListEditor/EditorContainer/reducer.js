@@ -4,11 +4,11 @@ import {
   lensProp,
   lensPath,
   compose,
+  append,
+  without,
   pluck,
   assoc,
   dissoc,
-  append,
-  without,
 } from 'ramda'
 
 import { ITEM_SELECTION } from 'components/ListEditor/ListContainer/reducer'
@@ -62,7 +62,7 @@ const NEW_QUIZ = {
   type: 'pc',
   tuning: 'standard',
   width: 13,
-  panelModes: [{ id: '1', question: 'fretboard', answer: 'name' }],
+  panelModeIds: ['1'],
   __typename: 'Quiz',
 }
 
@@ -73,46 +73,42 @@ export const initialState = {
   showPreview: false,
 }
 
-const initEditor = item => (state) => {
-  const panelModeIds = pluck('id', item.panelModes)
-  const formItem = compose(
-    dissoc('panelModes'),
-    assoc('panelModeIds', panelModeIds),
-  )(item)
-
+const convertPanelModes = (quiz) => {
+  const panelModeIds = pluck('id', quiz.panelModes)
   return compose(
-    set(lensProp('buffer'), formItem),
-    set(lensProp('original'), formItem),
-  )(state)
+    assoc('panelModeIds', panelModeIds),
+    dissoc('panelModes'),
+  )(quiz)
 }
 
-/*
-const handleSelection = (quiz, mode, state) => compose(
+const initBuffer = quiz => state => compose(
   set(lensProp('buffer'), quiz),
   set(lensProp('original'), quiz),
+)(state)
+
+
+const handleSelection = (quiz, mode, state) => compose(
+  initBuffer(quiz),
   set(lensProp('mode'), mode),
 )(state)
-*/
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case ITEM_SELECTION:
-      return compose(
-        initEditor(action.item),
-        set(lensProp('mode'), modes.SELECTED),
-      )(state)
+    case ITEM_SELECTION: {
+      const editableQuiz = convertPanelModes(action.item)
+      return handleSelection(editableQuiz, modes.SELECTED, state)
+    }
 
     case NEW_ITEM_SELECTION:
-      return compose(
-        initEditor(NEW_QUIZ),
-        set(lensProp('mode'), modes.NEW),
-      )(state)
+      return handleSelection(NEW_QUIZ, modes.NEW, state)
 
     case ITEM_UNSELECTION:
-      return set(lensProp('mode'), modes.UNSELECTED, state)
+      return handleSelection(undefined, modes.UNSELECTED, state)
 
-    case ITEM_UPDATE:
-      return initEditor(action.quiz)(state)
+    case ITEM_UPDATE: {
+      const editableQuiz = convertPanelModes(action.quiz)
+      return initBuffer(editableQuiz)(state)
+    }
 
     case BUFFER_UPDATE: {
       const { key, value, updateType } = action
@@ -128,7 +124,7 @@ export default (state = initialState, action) => {
         }
 
         case updateTypes.REMOVE: {
-          const removed = without(value, state.buffer[key])
+          const removed = without([value], state.buffer[key])
           return set(lensKey, removed, state)
         }
 
