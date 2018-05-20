@@ -4,6 +4,8 @@ import pt from 'prop-types'
 import { connect } from 'react-redux'
 import quizShape from 'propShapes/quiz'
 import getQuestion from 'lib/question'
+
+import PanelMode from 'components/PanelMode'
 import { startRunner } from './reducer'
 
 const Runner = ({ quiz, question, onStartRunner }) =>
@@ -11,9 +13,9 @@ const Runner = ({ quiz, question, onStartRunner }) =>
     <p>{quiz.name}</p>
     {quiz.panelModes.map(pm =>
       <button>
-        {`${pm.question}-${pm.answer}`}
-      </button>
-    )}
+        <PanelMode panelMode={pm} />
+      </button>)
+    }
     {question &&
       <p>{question.entity.name}</p>
     }

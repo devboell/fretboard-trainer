@@ -6,10 +6,12 @@ import { FormContext } from 'components/Form'
 const InputCheckboxGroup = ({
   name,
   value,
+  ...rest
 }) =>
   <FormContext.Consumer>
     {context =>
       <input
+        {...{ ...rest }}
         name={name}
         type="checkbox"
         value={value}

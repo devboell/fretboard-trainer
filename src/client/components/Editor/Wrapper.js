@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  width: 80%;
+  width: 75%;
   height: 100%;
-  padding-left: 20px;
+  padding-left: 5%;
 `
 
 export default Wrapper

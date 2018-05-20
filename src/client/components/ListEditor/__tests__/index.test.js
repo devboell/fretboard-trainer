@@ -8,6 +8,7 @@ import {
   saveChanges,
   saveButtonIsDisabled,
   newButtonIsDisabled,
+  previewButtonIsDisabled,
   clickNew,
   clickDelete,
   clickListButton,
@@ -45,6 +46,10 @@ describe('Default, no action', () => {
   it('UnselectedMessage is displayed', () => {
     expect(wrapper.find('UnselectedMessage').exists()).toBe(true)
   })
+
+  it('Preview button is disabled', () => {
+    expect(previewButtonIsDisabled(wrapper)).toBe(true)
+  })
 })
 
 describe('Select list item', () => {
@@ -68,6 +73,10 @@ describe('Select list item', () => {
 
   it('Save is disabled', () => {
     expect(saveButtonIsDisabled(wrapper)).toBe(true)
+  })
+
+  it('Preview button is enabled', () => {
+    expect(previewButtonIsDisabled(wrapper)).toBe(false)
   })
 })
 

@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import InputText from 'components/Form/InputText'
 
 const NameInput = styled(InputText)`
-  margin-left: 10px;
   outline: none;
   outline-style: none;
   border-top: none;
