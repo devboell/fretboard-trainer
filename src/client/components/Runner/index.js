@@ -6,22 +6,26 @@ import quizShape from 'propShapes/quiz'
 import getQuestion from 'lib/question'
 
 import PanelMode from 'components/PanelMode'
+import PanelModeButton from './PanelModeButton'
+import StartButton from './StartButton'
 import { startRunner } from './reducer'
 
 const Runner = ({ quiz, question, onStartRunner }) =>
   <div>
     <p>{quiz.name}</p>
-    {quiz.panelModes.map(pm =>
-      <button>
-        <PanelMode panelMode={pm} />
-      </button>)
-    }
+    <div>
+      {quiz.panelModes.map(pm =>
+        <PanelModeButton>
+          <PanelMode panelMode={pm} />
+        </PanelModeButton>)
+      }
+    </div>
     {question &&
       <p>{question.entity.name}</p>
     }
-    <button onClick={onStartRunner}>
+    <StartButton onClick={onStartRunner}>
       Start
-    </button>
+    </StartButton>
   </div>
 
 Runner.propTypes = {
