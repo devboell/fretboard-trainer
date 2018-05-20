@@ -1,4 +1,4 @@
-import { times } from 'ramda'
+import { times, reverse } from 'ramda'
 import { Note } from 'tonal'
 
 const tuningsMap = {
@@ -17,7 +17,7 @@ export const chromaLocFn = (open, str, pos) => ({
 
 
 const position = (tuning, fretFn) => pos =>
-  tuning.map((open, str) => fretFn(open, str, pos))
+  reverse(tuning).map((open, str) => fretFn(open, str, pos))
 
 export const fretboard = (tuning, width, fretFn) =>
   times(position(tuning, fretFn), width)
