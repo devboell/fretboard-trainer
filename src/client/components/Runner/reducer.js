@@ -18,7 +18,7 @@ export const startRunner = question => ({
   question,
 })
 
-const initialState = {
+export const initialState = {
   quiz: undefined,
   question: undefined,
 }

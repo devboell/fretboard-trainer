@@ -1,6 +1,6 @@
 import React from 'react'
 import pt from 'prop-types'
-
+import Fretboard from 'react-fretboard'
 import { connect } from 'react-redux'
 import quizShape from 'propShapes/quiz'
 import getQuestion from 'lib/question'
@@ -15,13 +15,20 @@ const Runner = ({ quiz, question, onStartRunner }) =>
     <p>{quiz.name}</p>
     <div>
       {quiz.panelModes.map(pm =>
-        <PanelModeButton>
+        <PanelModeButton key={`panelModeButton=${pm.id}`}>
           <PanelMode panelMode={pm} />
         </PanelModeButton>)
       }
     </div>
     {question &&
-      <p>{question.entity.name}</p>
+      <div>
+        <p>{question.entity.name}</p>
+        <Fretboard
+          skinType="strings"
+          showNotes
+          selectedLocations={[question.entity.rootLoc]}
+        />
+      </div>
     }
     <StartButton onClick={onStartRunner}>
       Start

@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should behave... 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(Symbol.observable): [Function],
+    }
+  }
+>
+  <Connect(Runner)>
+    <Runner
+      onStartRunner={[Function]}
+      question={
+        Object {
+          "choices": Array [
+            "G#",
+            "E",
+            "D",
+            "G",
+          ],
+          "entity": Object {
+            "name": "D",
+            "otherLocs": Array [],
+            "rootLoc": Object {
+              "pos": 5,
+              "str": 1,
+            },
+          },
+        }
+      }
+      quiz={
+        Object {
+          "__typename": "Quiz",
+          "id": "1",
+          "name": "quiz one",
+          "panelModes": Array [
+            Object {
+              "answer": "name",
+              "id": "1",
+              "question": "fretboard",
+            },
+            Object {
+              "answer": "staff",
+              "id": "2",
+              "question": "fretboard",
+            },
+            Object {
+              "answer": "sound",
+              "id": "3",
+              "question": "fretboard",
+            },
+          ],
+          "tuning": "standard",
+          "type": "pc",
+          "width": 13,
+        }
+      }
+    >
+      <div>
+        <p>
+          quiz one
+        </p>
+        <div>
+          <PanelModeButton
+            key="panelModeButton=1"
+          >
+            <button
+              className="PanelModeButton-ceptcP kdnJCL"
+            >
+              <PanelMode
+                panelMode={
+                  Object {
+                    "answer": "name",
+                    "id": "1",
+                    "question": "fretboard",
+                  }
+                }
+              >
+                <Wrapper>
+                  <div
+                    className="Wrapper-ThVjl daBGdj"
+                  >
+                    <p>
+                      fretboard
+                    </p>
+                    <hr />
+                    <p>
+                      name
+                    </p>
+                  </div>
+                </Wrapper>
+              </PanelMode>
+            </button>
+          </PanelModeButton>
+          <PanelModeButton
+            key="panelModeButton=2"
+          >
+            <button
+              className="PanelModeButton-ceptcP kdnJCL"
+            >
+              <PanelMode
+                panelMode={
+                  Object {
+                    "answer": "staff",
+                    "id": "2",
+                    "question": "fretboard",
+                  }
+                }
+              >
+                <Wrapper>
+                  <div
+                    className="Wrapper-ThVjl daBGdj"
+                  >
+                    <p>
+                      fretboard
+                    </p>
+                    <hr />
+                    <p>
+                      staff
+                    </p>
+                  </div>
+                </Wrapper>
+              </PanelMode>
+            </button>
+          </PanelModeButton>
+          <PanelModeButton
+            key="panelModeButton=3"
+          >
+            <button
+              className="PanelModeButton-ceptcP kdnJCL"
+            >
+              <PanelMode
+                panelMode={
+                  Object {
+                    "answer": "sound",
+                    "id": "3",
+                    "question": "fretboard",
+                  }
+                }
+              >
+                <Wrapper>
+                  <div
+                    className="Wrapper-ThVjl daBGdj"
+                  >
+                    <p>
+                      fretboard
+                    </p>
+                    <hr />
+                    <p>
+                      sound
+                    </p>
+                  </div>
+                </Wrapper>
+              </PanelMode>
+            </button>
+          </PanelModeButton>
+        </div>
+        <p>
+          D
+        </p>
+        <StartButton
+          onClick={[Function]}
+        >
+          <button
+            className="StartButton-bXgdxw iuifDU"
+            onClick={[Function]}
+          >
+            Start
+          </button>
+        </StartButton>
+      </div>
+    </Runner>
+  </Connect(Runner)>
+</Provider>
+`;
