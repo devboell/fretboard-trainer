@@ -3,6 +3,7 @@ import { compose, set, lensProp } from 'ramda'
 const INIT_RUNNER = 'INIT_RUNNER'
 const RESET_RUNNER = 'RESET_RUNNER'
 const RUNNER_START = 'RUNNER_START'
+const PANEL_MODE_SELECTION = 'PANEL_MODE_SELECTION'
 
 export const initRunner = quiz => ({
   type: INIT_RUNNER,
@@ -21,6 +22,7 @@ export const startRunner = question => ({
 export const initialState = {
   quiz: undefined,
   question: undefined,
+  selectedPanelModeId: undefined,
 }
 
 export default (state = initialState, action) => {

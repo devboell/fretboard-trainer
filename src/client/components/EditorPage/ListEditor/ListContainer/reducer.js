@@ -2,7 +2,7 @@ import { set, lensProp } from 'ramda'
 import {
   NEW_ITEM_SELECTION,
   ITEM_UNSELECTION,
-} from 'components/ListEditor/EditorContainer/reducer'
+} from 'components/EditorPage/ListEditor/EditorContainer/reducer'
 
 export const ITEM_SELECTION = 'ITEM_SELECTION'
 

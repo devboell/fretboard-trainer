@@ -1,7 +1,7 @@
 import React from 'react'
 import pt from 'prop-types'
 
-import { FormContext } from 'components/Form'
+import { FormContext } from 'components/EditorPage/Form'
 
 const InputText = ({
   name,

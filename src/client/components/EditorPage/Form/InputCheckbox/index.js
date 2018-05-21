@@ -2,7 +2,7 @@ import React from 'react'
 import pt from 'prop-types'
 import { contains } from 'ramda'
 
-import { FormContext } from 'components/Form'
+import { FormContext } from 'components/EditorPage/Form'
 
 const InputCheckbox = ({
   name,
