@@ -15,7 +15,7 @@ import {
   checkPanelModeId,
 } from 'test-utils/enzyme-queries'
 import * as fxt from 'fixtures/graphql/quiz'
-import QuizEditor from '../index'
+import ListEditor from '../index'
 import { store, apolloMocks } from '../mocks'
 
 let wrapper
@@ -26,7 +26,7 @@ beforeEach(async () => {
       store={store}
       mocks={apolloMocks}
     >
-      <QuizEditor />
+      <ListEditor />
     </TestProvider>
   ))
   // makes sure the loading is done

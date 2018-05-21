@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import InputText from 'components/Form/InputText'
+import InputText from 'components/EditorPage/Form/InputText'
 
 const NameInput = styled(InputText)`
   outline: none;

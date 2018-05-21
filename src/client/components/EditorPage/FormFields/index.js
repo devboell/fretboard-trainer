@@ -1,7 +1,7 @@
 import React from 'react'
 import pt from 'prop-types'
 
-import InputCheckboxGroup from 'components/Form/InputCheckboxGroup'
+import InputCheckboxGroup from 'components/EditorPage/Form/InputCheckboxGroup'
 import PanelMode from 'components/PanelMode'
 import FieldTitle from './FieldTitle'
 import FieldInput from './FieldInput'

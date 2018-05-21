@@ -3,7 +3,7 @@ import pt from 'prop-types'
 import { connect } from 'react-redux'
 import { resetRunner } from 'components/Runner/reducer'
 
-import Preview from 'components/Preview'
+import Preview from 'components/EditorPage/Preview'
 
 import { togglePreview } from './EditorContainer/reducer'
 import Wrapper from './Wrapper'

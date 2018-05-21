@@ -2,11 +2,11 @@ import React from 'react'
 import pt from 'prop-types'
 import { equals } from 'ramda'
 import quizShape from 'propShapes/quiz'
-import { modes } from 'components/ListEditor/EditorContainer/reducer'
+import { modes } from 'components/EditorPage/ListEditor/EditorContainer/reducer'
 
-import FormFields from 'components/FormFields'
-import FormControls from 'components/FormControls'
-import EditorControls from 'components/EditorControls'
+import FormFields from 'components/EditorPage/FormFields'
+import FormControls from 'components/EditorPage/FormControls'
+import EditorControls from 'components/EditorPage/EditorControls'
 
 import UnselectedMessage from './UnselectedMessage'
 

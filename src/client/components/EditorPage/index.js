@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ListEditor from 'components/ListEditor'
+import ListEditor from 'components/EditorPage/ListEditor'
 
 
 const EditorPage = () =>
