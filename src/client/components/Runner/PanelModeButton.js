@@ -11,7 +11,9 @@ const PanelModeButton = styled.button`
   cursor: pointer;
 
   border-radius: 5px;
-  border: 1px solid gray;
+  border: ${props => (props.isSelected
+    ? '1px solid orange'
+    : '1px solid gray')};
   outline: 0;
 `
 

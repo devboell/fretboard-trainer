@@ -19,10 +19,15 @@ export const startRunner = question => ({
   question,
 })
 
+export const selectPanelModeIdx = idx => ({
+  type: PANEL_MODE_SELECTION,
+  idx,
+})
+
 export const initialState = {
   quiz: undefined,
   question: undefined,
-  selectedPanelModeId: undefined,
+  selectedPanelModeIdx: 0,
 }
 
 export default (state = initialState, action) => {
@@ -31,6 +36,7 @@ export default (state = initialState, action) => {
       return compose(
         set(lensProp('quiz'), action.quiz),
         set(lensProp('question'), undefined),
+        set(lensProp('selectedPanelModeIdx'), 0),
       )(state)
 
     case RESET_RUNNER:
@@ -38,6 +44,9 @@ export default (state = initialState, action) => {
 
     case RUNNER_START:
       return set(lensProp('question'), action.question, state)
+
+    case PANEL_MODE_SELECTION:
+      return set(lensProp('selectedPanelModeIdx'), action.idx, state)
 
     default:
       return state

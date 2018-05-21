@@ -8,14 +8,27 @@ import getQuestion from 'lib/question'
 import PanelMode from 'components/PanelMode'
 import PanelModeButton from './PanelModeButton'
 import StartButton from './StartButton'
-import { startRunner } from './reducer'
+import {
+  startRunner,
+  selectPanelModeIdx,
+} from './reducer'
 
-const Runner = ({ quiz, question, onStartRunner }) =>
+const Runner = ({
+  quiz,
+  question,
+  onStartRunner,
+  selectedPanelModeIdx,
+  onSelectPanelModeIdx,
+}) =>
   <div>
     <p>{quiz.name}</p>
     <div>
-      {quiz.panelModes.map(pm =>
-        <PanelModeButton key={`panelModeButton=${pm.id}`}>
+      {quiz.panelModes.map((pm, i) =>
+        <PanelModeButton
+          isSelected={i === selectedPanelModeIdx}
+          onClick={() => onSelectPanelModeIdx(i)}
+          key={`panelModeButton=${pm.id}`}
+        >
           <PanelMode panelMode={pm} />
         </PanelModeButton>)
       }
@@ -39,6 +52,8 @@ Runner.propTypes = {
   quiz: quizShape.isRequired,
   question: pt.shape({}),
   onStartRunner: pt.func.isRequired,
+  selectedPanelModeIdx: pt.number.isRequired,
+  onSelectPanelModeIdx: pt.func.isRequired,
 }
 
 Runner.defaultProps = {
@@ -48,10 +63,12 @@ Runner.defaultProps = {
 const mapStateToProps = state => ({
   quiz: state.runner.quiz,
   question: state.runner.question,
+  selectedPanelModeIdx: state.runner.selectedPanelModeIdx,
 })
 
 const mapDispatchToProps = dispatch => ({
   onStartRunner: question => dispatch(startRunner(question)),
+  onSelectPanelModeIdx: idx => dispatch(selectPanelModeIdx(idx)),
 })
 
 const mergeProps = (stateProps, dispatchProps) => ({
