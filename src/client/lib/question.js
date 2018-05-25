@@ -1,42 +1,67 @@
 
 // only use sample &  shuffle from lodash
-import { sample, sampleSize, shuffle, pluck, without, uniq } from 'lodash/fp'
-import { compose, append, flatten } from 'ramda'
+import { sample, sampleSize, shuffle } from 'lodash/fp'
+import {
+  compose,
+  append,
+  flatten,
+  pluck,
+  without,
+  uniq,
+  filter,
+  map,
+} from 'ramda'
 import { fromChroma } from 'lib/tonal-helpers'
 import { chromaFretboard } from './fretboard'
 
 const useSharps = () => sample([true, false])
 
-export const availableChromaChoices = chroma => chromaLocs => compose(
+export const availableChromas = chroma => chromaLocs => compose(
   uniq,
   without([chroma]),
   pluck('chroma'),
 )(chromaLocs)
 
-const chromaChoices = (chroma, chromaLocs) => compose(
+const pcEntity = chroma => ({
+  name: fromChroma(chroma, useSharps()),
+  notes: null,
+})
+
+const choices = (entity, chroma, chromaLocs) => compose(
+  shuffle,
+  append(entity),
+  map(pcEntity),
   sampleSize(3),
-  availableChromaChoices(chroma),
+  availableChromas(chroma),
 )(chromaLocs)
 
+const locsForChroma = (chroma, chromaLocs) => compose(
+  map(cl => cl.loc),
+  filter(cl => chroma === cl.chroma),
+)(chromaLocs)
 
 const pcQuestion = (chromaLocs) => {
   const chromaLoc = sample(chromaLocs)
-  const incorrect = chromaChoices(chromaLoc.chroma, chromaLocs)
+  const entity = pcEntity(chromaLoc.chroma)
 
-  const pcName = fromChroma(chromaLoc.chroma, useSharps())
-  const incorrectPcNames = incorrect.map(chroma =>
-    fromChroma(chroma, useSharps()))
-
-  const entity = {
-    name: pcName,
-    rootLoc: chromaLoc.loc,
-    otherLocs: [],
-  }
   return {
-    entity,
-    choices: shuffle(append(pcName, incorrectPcNames)),
+    panels: {
+      question: {
+        locs: [chromaLoc.loc],
+        entity,
+      },
+      answer: {
+        locs: [],
+        choices: choices(entity, chromaLoc.chroma, chromaLocs),
+      },
+    },
+    evaluation: {
+      locs: locsForChroma(chromaLoc.chroma, chromaLocs),
+      entity,
+    },
   }
 }
+
 
 export default (quiz) => {
   const { tuning, width } = quiz
@@ -50,6 +75,61 @@ export default (quiz) => {
     default: return null
   }
 }
+
+/* NOTES
+  entity: {
+    name,
+    displayName,
+    notes,
+  }
+  question: {
+    panels: {
+      question: {
+        locs,
+        entity,
+      }
+      answer: {
+        locs,
+        choices,  // entities
+      }
+    evaluation: {
+      locs,
+      entity, // correct choice
+    }
+  }
+
+  fretboardQuestion: {
+    panels: {
+      question: {
+        locs,
+      }
+      answer: {
+        choices,  // entities
+      }
+    evaluation: {
+      entity, // correct choice
+    }
+  }
+
+  entityPanelQuestion: {
+    panels: {
+      question: {
+        entity,
+      }
+      answer: {
+        locs,
+      }
+    evaluation: {
+      locs, // shapes
+    }
+  }
+
+  question: {
+    questionPanel: locs | entity
+    answerPanel: locs | choices
+    evaluation: locs | entity
+  }
+*/
 /**
  * Musical entities are pcs, pitches, ivls, chords and scales
  * all have a name, and are comprised of one or more notes (pitches)

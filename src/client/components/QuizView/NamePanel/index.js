@@ -1,15 +1,15 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import pt from 'prop-types'
 
 import Wrapper from './Wrapper'
 
 const NamePanel = ({ entity }) =>
   <Wrapper>
-    {entity}
+    {entity.name}
   </Wrapper>
 
 NamePanel.propTypes = {
-  entity: PropTypes.string.isRequired,
+  entity: pt.shape({}).isRequired,
 }
 
 export default NamePanel
