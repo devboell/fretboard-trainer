@@ -15,7 +15,7 @@ const statusColors = {
 const statusSymbol = {
   correct: '\u2714',
   incorrect: '\u2718',
-  unselected: '',
+  unselected: '\u00A0',
 }
 
 const MultipleChoice = ({
@@ -24,19 +24,16 @@ const MultipleChoice = ({
   clickAction,
   answers,
 }) => {
-  console.log('choices', choices)
-  console.log('answers', answers)
   const getStatus = cond([
     [contains(__, answers.correct), always('correct')],
     [contains(__, answers.incorrect), always('incorrect')],
     [T, always('unselected')],
   ])
+
   return (
     <Wrapper>
       {choices.map((choice) => {
         const status = getStatus(choice)
-        console.log('status', status)
-
         return (
           <Choice
             key={choice.name}

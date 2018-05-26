@@ -5,7 +5,8 @@ export default styled.div`
   justify-content: center;
   align-items: center;
   background-color: lightgray;
-  padding: 20px;
+  height: 40px;
+  width: 70px;
   border-radius: 5px;
-  font-size: 35px;
+  font-size: 30px;
 `

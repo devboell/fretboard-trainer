@@ -7,5 +7,4 @@ export default styled.div`
   
   min-height: inherit;
   width: 200px;
-
 `
