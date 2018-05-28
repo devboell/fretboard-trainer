@@ -9,6 +9,7 @@ import DELETE_QUIZ from 'graphql/DeleteQuiz'
 import * as quizFxt from 'fixtures/graphql/quiz'
 import * as panelFxt from 'fixtures/graphql/panelMode'
 
+import runnerReducer, { initialState as initialRunnerState } from 'components/Runner/reducer'
 import listReducer, { initialState as initialListState } from './ListContainer/reducer'
 import editorReducer, { initialState as initialEditorState } from './EditorContainer/reducer'
 
@@ -57,9 +58,11 @@ export const apolloMocks = [
 const initialState = {
   list: initialListState,
   editor: initialEditorState,
+  runner: initialRunnerState,
 }
 
 export const store = createStore(combineReducers({
   list: listReducer,
   editor: editorReducer,
+  runner: runnerReducer,
 }), initialState)

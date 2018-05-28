@@ -40,7 +40,7 @@ const locsForChroma = (chroma, chromaLocs) => compose(
   filter(cl => chroma === cl.chroma),
 )(chromaLocs)
 
-const pcQuestion = (chromaLocs) => {
+export const pcQuestion = (chromaLocs) => {
   const chromaLoc = sample(chromaLocs)
   const entity = pcEntity(chromaLoc.chroma)
 

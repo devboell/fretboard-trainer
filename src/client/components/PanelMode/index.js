@@ -1,6 +1,5 @@
 import React from 'react'
-import pt from 'prop-types'
-
+import { panelModeShape } from 'propShapes/quiz'
 import Wrapper from './Wrapper'
 
 const PanelMode = ({ panelMode }) =>
@@ -15,10 +14,7 @@ const PanelMode = ({ panelMode }) =>
   </Wrapper>
 
 PanelMode.propTypes = {
-  panelMode: pt.shape({
-    question: pt.string,
-    answer: pt.string,
-  }).isRequired,
+  panelMode: panelModeShape.isRequired,
 }
 
 export default PanelMode

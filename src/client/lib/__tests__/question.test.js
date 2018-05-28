@@ -1,11 +1,20 @@
-/* eslint-disable camelcase */
-// import { flatten } from 'ramda'
-// import { small, midi48Loc4_3 } from 'fixtures/fretboard'
+import { take } from 'ramda'
+import { quizValues1 as pcQuiz } from 'fixtures/quiz'
+import getQuestion from '../question'
 
-// import { availableChromaChoices } from '../question'
+const mockTake = take
 
-it('availableChromaChoices', () => {
-  // const midiLocs = flatten(small)
+jest.mock('lodash/fp', () => ({
+  shuffle: jest.fn(arr => arr),
+  sample: jest.fn(arr => mockTake(1, arr)[0]),
+  sampleSize: jest.fn(size => arr => mockTake(size, arr)),
+}))
 
-  // expect(availableChromaChoices(midi48Loc4_3.midi)(midiLocs)).toMatchSnapshot()
+it('pcQuestion', () => {
+  expect(getQuestion(pcQuiz)).toMatchSnapshot()
+})
+
+it('invalid question', () => {
+  const invalidQuiz = { ...pcQuiz, type: 'invalid' }
+  expect(getQuestion(invalidQuiz)).toBeNull()
 })

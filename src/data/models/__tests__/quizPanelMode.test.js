@@ -13,6 +13,7 @@ describe('models, quizPanelMode', () => {
       { panelModeId: 1, quizId: 1 },
       { panelModeId: 2, quizId: 1 },
       { panelModeId: 3, quizId: 1 },
+      { panelModeId: 4, quizId: 1 },
     ]
     const result = await findByQuizId(1)
     expect(result).toEqual(expected)
@@ -20,7 +21,7 @@ describe('models, quizPanelMode', () => {
 
   it('create', async () => {
     const result = await create(1, [98, 99])
-    expect(result).toEqual([11])
+    expect(result).toEqual([12])
   })
 
 

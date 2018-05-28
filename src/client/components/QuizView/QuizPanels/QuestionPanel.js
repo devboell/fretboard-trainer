@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export default styled.div`
+const QuestionPanel = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,3 +8,5 @@ export default styled.div`
   min-height: inherit;
   width: 200px;
 `
+
+export default QuestionPanel

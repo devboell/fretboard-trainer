@@ -1,7 +1,7 @@
 import React from 'react'
 import pt from 'prop-types'
 
-import quizShape from 'propShapes/quiz'
+import { quizShape } from 'propShapes/quiz'
 
 export const FormContext = React.createContext()
 

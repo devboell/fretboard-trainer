@@ -15,3 +15,16 @@ export const panel3 = {
   question: 'fretboard',
   answer: 'sound',
 }
+
+export const panel4 = {
+  id: 4,
+  question: 'name',
+  answer: 'fretboard',
+}
+
+export const quiz1PanelModes = [
+  panel1,
+  panel2,
+  panel3,
+  panel4,
+]

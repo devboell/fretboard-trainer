@@ -1,7 +1,7 @@
 import React from 'react'
 import pt from 'prop-types'
 import { equals } from 'ramda'
-import quizShape from 'propShapes/quiz'
+import { quizShape } from 'propShapes/quiz'
 import { modes } from 'components/EditorPage/ListEditor/EditorContainer/reducer'
 
 import FormFields from 'components/EditorPage/FormFields'

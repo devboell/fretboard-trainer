@@ -91,3 +91,9 @@ export const panel3 = {
   question: 'fretboard',
   answer: 'sound',
 }
+
+export const panel4 = {
+  id: '4',
+  question: 'name',
+  answer: 'fretboard',
+}

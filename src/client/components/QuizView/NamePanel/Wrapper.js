@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export default styled.div`
+const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,3 +10,5 @@ export default styled.div`
   border-radius: 5px;
   font-size: 30px;
 `
+
+export default Wrapper

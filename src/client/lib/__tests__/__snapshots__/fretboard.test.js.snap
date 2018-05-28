@@ -1,0 +1,539 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`returns a matrix of chromas and locs 1`] = `
+Array [
+  Array [
+    Object {
+      "chroma": 4,
+      "loc": Object {
+        "pos": 0,
+        "str": 0,
+      },
+    },
+    Object {
+      "chroma": 11,
+      "loc": Object {
+        "pos": 0,
+        "str": 1,
+      },
+    },
+    Object {
+      "chroma": 7,
+      "loc": Object {
+        "pos": 0,
+        "str": 2,
+      },
+    },
+    Object {
+      "chroma": 2,
+      "loc": Object {
+        "pos": 0,
+        "str": 3,
+      },
+    },
+    Object {
+      "chroma": 9,
+      "loc": Object {
+        "pos": 0,
+        "str": 4,
+      },
+    },
+    Object {
+      "chroma": 4,
+      "loc": Object {
+        "pos": 0,
+        "str": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "chroma": 5,
+      "loc": Object {
+        "pos": 1,
+        "str": 0,
+      },
+    },
+    Object {
+      "chroma": 0,
+      "loc": Object {
+        "pos": 1,
+        "str": 1,
+      },
+    },
+    Object {
+      "chroma": 8,
+      "loc": Object {
+        "pos": 1,
+        "str": 2,
+      },
+    },
+    Object {
+      "chroma": 3,
+      "loc": Object {
+        "pos": 1,
+        "str": 3,
+      },
+    },
+    Object {
+      "chroma": 10,
+      "loc": Object {
+        "pos": 1,
+        "str": 4,
+      },
+    },
+    Object {
+      "chroma": 5,
+      "loc": Object {
+        "pos": 1,
+        "str": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "chroma": 6,
+      "loc": Object {
+        "pos": 2,
+        "str": 0,
+      },
+    },
+    Object {
+      "chroma": 1,
+      "loc": Object {
+        "pos": 2,
+        "str": 1,
+      },
+    },
+    Object {
+      "chroma": 9,
+      "loc": Object {
+        "pos": 2,
+        "str": 2,
+      },
+    },
+    Object {
+      "chroma": 4,
+      "loc": Object {
+        "pos": 2,
+        "str": 3,
+      },
+    },
+    Object {
+      "chroma": 11,
+      "loc": Object {
+        "pos": 2,
+        "str": 4,
+      },
+    },
+    Object {
+      "chroma": 6,
+      "loc": Object {
+        "pos": 2,
+        "str": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "chroma": 7,
+      "loc": Object {
+        "pos": 3,
+        "str": 0,
+      },
+    },
+    Object {
+      "chroma": 2,
+      "loc": Object {
+        "pos": 3,
+        "str": 1,
+      },
+    },
+    Object {
+      "chroma": 10,
+      "loc": Object {
+        "pos": 3,
+        "str": 2,
+      },
+    },
+    Object {
+      "chroma": 5,
+      "loc": Object {
+        "pos": 3,
+        "str": 3,
+      },
+    },
+    Object {
+      "chroma": 0,
+      "loc": Object {
+        "pos": 3,
+        "str": 4,
+      },
+    },
+    Object {
+      "chroma": 7,
+      "loc": Object {
+        "pos": 3,
+        "str": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "chroma": 8,
+      "loc": Object {
+        "pos": 4,
+        "str": 0,
+      },
+    },
+    Object {
+      "chroma": 3,
+      "loc": Object {
+        "pos": 4,
+        "str": 1,
+      },
+    },
+    Object {
+      "chroma": 11,
+      "loc": Object {
+        "pos": 4,
+        "str": 2,
+      },
+    },
+    Object {
+      "chroma": 6,
+      "loc": Object {
+        "pos": 4,
+        "str": 3,
+      },
+    },
+    Object {
+      "chroma": 1,
+      "loc": Object {
+        "pos": 4,
+        "str": 4,
+      },
+    },
+    Object {
+      "chroma": 8,
+      "loc": Object {
+        "pos": 4,
+        "str": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "chroma": 9,
+      "loc": Object {
+        "pos": 5,
+        "str": 0,
+      },
+    },
+    Object {
+      "chroma": 4,
+      "loc": Object {
+        "pos": 5,
+        "str": 1,
+      },
+    },
+    Object {
+      "chroma": 0,
+      "loc": Object {
+        "pos": 5,
+        "str": 2,
+      },
+    },
+    Object {
+      "chroma": 7,
+      "loc": Object {
+        "pos": 5,
+        "str": 3,
+      },
+    },
+    Object {
+      "chroma": 2,
+      "loc": Object {
+        "pos": 5,
+        "str": 4,
+      },
+    },
+    Object {
+      "chroma": 9,
+      "loc": Object {
+        "pos": 5,
+        "str": 5,
+      },
+    },
+  ],
+]
+`;
+
+exports[`returns a matrix of midis and locs 1`] = `
+Array [
+  Array [
+    Object {
+      "loc": Object {
+        "pos": 0,
+        "str": 0,
+      },
+      "midi": 64,
+    },
+    Object {
+      "loc": Object {
+        "pos": 0,
+        "str": 1,
+      },
+      "midi": 59,
+    },
+    Object {
+      "loc": Object {
+        "pos": 0,
+        "str": 2,
+      },
+      "midi": 55,
+    },
+    Object {
+      "loc": Object {
+        "pos": 0,
+        "str": 3,
+      },
+      "midi": 50,
+    },
+    Object {
+      "loc": Object {
+        "pos": 0,
+        "str": 4,
+      },
+      "midi": 45,
+    },
+    Object {
+      "loc": Object {
+        "pos": 0,
+        "str": 5,
+      },
+      "midi": 40,
+    },
+  ],
+  Array [
+    Object {
+      "loc": Object {
+        "pos": 1,
+        "str": 0,
+      },
+      "midi": 65,
+    },
+    Object {
+      "loc": Object {
+        "pos": 1,
+        "str": 1,
+      },
+      "midi": 60,
+    },
+    Object {
+      "loc": Object {
+        "pos": 1,
+        "str": 2,
+      },
+      "midi": 56,
+    },
+    Object {
+      "loc": Object {
+        "pos": 1,
+        "str": 3,
+      },
+      "midi": 51,
+    },
+    Object {
+      "loc": Object {
+        "pos": 1,
+        "str": 4,
+      },
+      "midi": 46,
+    },
+    Object {
+      "loc": Object {
+        "pos": 1,
+        "str": 5,
+      },
+      "midi": 41,
+    },
+  ],
+  Array [
+    Object {
+      "loc": Object {
+        "pos": 2,
+        "str": 0,
+      },
+      "midi": 66,
+    },
+    Object {
+      "loc": Object {
+        "pos": 2,
+        "str": 1,
+      },
+      "midi": 61,
+    },
+    Object {
+      "loc": Object {
+        "pos": 2,
+        "str": 2,
+      },
+      "midi": 57,
+    },
+    Object {
+      "loc": Object {
+        "pos": 2,
+        "str": 3,
+      },
+      "midi": 52,
+    },
+    Object {
+      "loc": Object {
+        "pos": 2,
+        "str": 4,
+      },
+      "midi": 47,
+    },
+    Object {
+      "loc": Object {
+        "pos": 2,
+        "str": 5,
+      },
+      "midi": 42,
+    },
+  ],
+  Array [
+    Object {
+      "loc": Object {
+        "pos": 3,
+        "str": 0,
+      },
+      "midi": 67,
+    },
+    Object {
+      "loc": Object {
+        "pos": 3,
+        "str": 1,
+      },
+      "midi": 62,
+    },
+    Object {
+      "loc": Object {
+        "pos": 3,
+        "str": 2,
+      },
+      "midi": 58,
+    },
+    Object {
+      "loc": Object {
+        "pos": 3,
+        "str": 3,
+      },
+      "midi": 53,
+    },
+    Object {
+      "loc": Object {
+        "pos": 3,
+        "str": 4,
+      },
+      "midi": 48,
+    },
+    Object {
+      "loc": Object {
+        "pos": 3,
+        "str": 5,
+      },
+      "midi": 43,
+    },
+  ],
+  Array [
+    Object {
+      "loc": Object {
+        "pos": 4,
+        "str": 0,
+      },
+      "midi": 68,
+    },
+    Object {
+      "loc": Object {
+        "pos": 4,
+        "str": 1,
+      },
+      "midi": 63,
+    },
+    Object {
+      "loc": Object {
+        "pos": 4,
+        "str": 2,
+      },
+      "midi": 59,
+    },
+    Object {
+      "loc": Object {
+        "pos": 4,
+        "str": 3,
+      },
+      "midi": 54,
+    },
+    Object {
+      "loc": Object {
+        "pos": 4,
+        "str": 4,
+      },
+      "midi": 49,
+    },
+    Object {
+      "loc": Object {
+        "pos": 4,
+        "str": 5,
+      },
+      "midi": 44,
+    },
+  ],
+  Array [
+    Object {
+      "loc": Object {
+        "pos": 5,
+        "str": 0,
+      },
+      "midi": 69,
+    },
+    Object {
+      "loc": Object {
+        "pos": 5,
+        "str": 1,
+      },
+      "midi": 64,
+    },
+    Object {
+      "loc": Object {
+        "pos": 5,
+        "str": 2,
+      },
+      "midi": 60,
+    },
+    Object {
+      "loc": Object {
+        "pos": 5,
+        "str": 3,
+      },
+      "midi": 55,
+    },
+    Object {
+      "loc": Object {
+        "pos": 5,
+        "str": 4,
+      },
+      "midi": 50,
+    },
+    Object {
+      "loc": Object {
+        "pos": 5,
+        "str": 5,
+      },
+      "midi": 45,
+    },
+  ],
+]
+`;

@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
-export default styled.div`
+const Button = styled.div`
   cursor: pointer;
 `
+
+export default Button

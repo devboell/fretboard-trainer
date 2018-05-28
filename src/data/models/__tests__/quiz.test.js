@@ -23,7 +23,7 @@ describe('models, quiz', () => {
 
   it('panelModesByQuizId', async () => {
     const result = await panelModesByQuizId(1)
-    expect(result).toEqual([fxt.panel1, fxt.panel2, fxt.panel3])
+    expect(result).toEqual(fxt.quiz1PanelModes)
   })
 
   it('create', async () => {

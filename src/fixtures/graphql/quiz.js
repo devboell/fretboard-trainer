@@ -1,4 +1,4 @@
-import { panel1, panel2, panel3 } from './panelMode'
+import { panel1, panel2, panel3, panel4 } from './panelMode'
 import {
   quizValues1,
   quizValues2,
@@ -15,7 +15,7 @@ export const quizzes = [
     id: '1',
     ...quizValues1,
     __typename: 'Quiz',
-    panelModes: [panel1, panel2, panel3],
+    panelModes: [panel1, panel2, panel3, panel4],
   },
   {
     id: '2',

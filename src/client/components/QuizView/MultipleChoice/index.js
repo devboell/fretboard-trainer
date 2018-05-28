@@ -6,11 +6,6 @@ import ChoiceStatus from './ChoiceStatus'
 import Wrapper from './Wrapper'
 import Button from './Button'
 
-const statusColors = {
-  correct: 'green',
-  incorrect: 'red',
-  unselected: 'white',
-}
 
 const statusSymbol = {
   correct: '\u2714',
@@ -35,17 +30,11 @@ const MultipleChoice = ({
       {choices.map((choice) => {
         const status = getStatus(choice)
         return (
-          <Choice
-            key={choice.name}
-          >
-            <Button
-              onClick={() => clickAction(choice)}
-            >
-              <Component
-                entity={choice}
-              />
+          <Choice key={choice.name}>
+            <Button onClick={() => clickAction(choice)}>
+              <Component entity={choice} />
             </Button>
-            <ChoiceStatus color={statusColors[status]}>
+            <ChoiceStatus status={status}>
               {statusSymbol[status]}
             </ChoiceStatus>
           </Choice>

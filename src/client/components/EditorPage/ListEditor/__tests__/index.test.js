@@ -13,7 +13,9 @@ import {
   clickDelete,
   clickListButton,
   checkPanelModeId,
-} from 'test-utils/enzyme-queries'
+  clickPreview,
+  clickClosePreview,
+} from 'test-utils/enzyme-queries/listEditor'
 import * as fxt from 'fixtures/graphql/quiz'
 import ListEditor from '../index'
 import { store, apolloMocks } from '../mocks'
@@ -171,6 +173,22 @@ describe('Delete quiz', () => {
 
   it('List item was removed', () => {
     expect(wrapper.update().find('List li').length).toBe(fxt.quizzes.length - 1)
+  })
+})
+
+describe('Preview quiz', () => {
+  beforeAll(async () => {
+    clickListButton(2, wrapper)
+    clickPreview(wrapper)
+  })
+
+  it('Preview component is displayed', () => {
+    expect(wrapper.find('Preview').exists()).toBe(true)
+  })
+
+  it('Close preview unmounts Preview component', () => {
+    clickClosePreview(wrapper)
+    expect(wrapper.find('Preview').exists()).toBe(false)
   })
 })
 

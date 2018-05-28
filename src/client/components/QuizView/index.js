@@ -1,11 +1,10 @@
 import React from 'react'
 import pt from 'prop-types'
 
-import quizShape from 'propShapes/quiz'
+import { quizShape } from 'propShapes/quiz'
 
-import PanelMode from 'components/PanelMode'
 import QuizPanels from 'components/QuizView/QuizPanels'
-import PanelModeButton from './PanelModeButton'
+import PanelModeSelector from './PanelModeSelector'
 import StartButton from './StartButton'
 import Wrapper from './Wrapper'
 
@@ -21,17 +20,10 @@ const QuizView = ({
 }) =>
   <Wrapper>
     <p>{quiz.name}</p>
-    <div>
-      {quiz.panelModes.map((pm, i) =>
-        <PanelModeButton
-          isSelected={i === selectedPanelModeIdx}
-          onClick={() => onSelectPanelModeIdx(i)}
-          key={`panelModeButton=${pm.id}`}
-        >
-          <PanelMode panelMode={pm} />
-        </PanelModeButton>)
-      }
-    </div>
+    <PanelModeSelector
+      {...{ selectedPanelModeIdx, onSelectPanelModeIdx }}
+      panelModes={quiz.panelModes}
+    />
     {question &&
       <QuizPanels
         questionInfo={question.panels}

@@ -4,7 +4,7 @@ import { Note } from 'tonal'
 const tuningsMap = {
   standard: ['E2', 'A2', 'D3', 'G3', 'B3', 'E4'],
 }
-// showEnharmonics in r-fb is also purely visual
+
 export const midiLocFn = (open, str, pos) => ({
   midi: Note.midi(open) + pos,
   loc: { str, pos },
@@ -14,7 +14,6 @@ export const chromaLocFn = (open, str, pos) => ({
   chroma: (Note.chroma(open) + pos) % 12,
   loc: { str, pos },
 })
-
 
 const position = (tuning, fretFn) => pos =>
   reverse(tuning).map((open, str) => fretFn(open, str, pos))
