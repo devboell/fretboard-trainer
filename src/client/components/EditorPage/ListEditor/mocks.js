@@ -1,3 +1,5 @@
+import React from 'react'
+import TestProvider from 'test-utils'
 import { createStore, combineReducers } from 'redux'
 
 import QUIZZES from 'graphql/Quizzes'
@@ -12,6 +14,9 @@ import * as panelFxt from 'fixtures/graphql/panelMode'
 import runnerReducer, { initialState as initialRunnerState } from 'components/Runner/reducer'
 import listReducer, { initialState as initialListState } from './ListContainer/reducer'
 import editorReducer, { initialState as initialEditorState } from './EditorContainer/reducer'
+
+import ListEditor from './index'
+
 
 export const quizzes = {
   request: { query: QUIZZES },
@@ -47,7 +52,7 @@ export const deleteQuiz = {
   result: { data: { deleteQuiz: '3' } },
 }
 
-export const apolloMocks = [
+export const dataMocks = [
   quizzes,
   panelModes,
   createQuiz,
@@ -66,3 +71,19 @@ export const store = createStore(combineReducers({
   editor: editorReducer,
   runner: runnerReducer,
 }), initialState)
+
+export const getWrapper = async () => {
+  const wrapper = mount((
+    <TestProvider
+      store={store}
+      mocks={dataMocks}
+    >
+      <ListEditor />
+    </TestProvider>
+  ))
+  // makes sure the loading is done
+  await new Promise(resolve => setTimeout(resolve))
+  wrapper.update()
+
+  return wrapper
+}
