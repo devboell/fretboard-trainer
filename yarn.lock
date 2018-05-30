@@ -11013,6 +11013,10 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
+vexflow@^1.2.84:
+  version "1.2.84"
+  resolved "https://registry.yarnpkg.com/vexflow/-/vexflow-1.2.84.tgz#a163496b4a59074ecfe1ef373ed09aaab4aa2722"
+
 vfile-location@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/vfile-location/-/vfile-location-2.0.2.tgz#d3675c59c877498e492b4756ff65e4af1a752255"
