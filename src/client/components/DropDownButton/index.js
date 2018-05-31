@@ -13,26 +13,34 @@ const DropDownButton = class extends React.Component {
       isOpen: false,
     }
     this.toggleOpen = this.toggleOpen.bind(this)
-    // this.handleMouseLeave = this.handleMouseLeave.bind(this)
+    this.handleSelection = this.handleSelection.bind(this)
   }
 
   toggleOpen() {
     this.setState(prevState => ({ isOpen: !prevState.isOpen }))
   }
 
+  handleSelection(item) {
+    const { clickAction } = this.props
+    this.setState({ isOpen: false })
+    clickAction(item)
+  }
+
   render() {
-    const { items, clickAction } = this.props
+    const { items, children } = this.props
 
     return (
       <Wrapper
         onMouseEnter={() => this.toggleOpen()}
         onMouseLeave={() => this.toggleOpen()}
       >
+        {children}
         {this.state.isOpen &&
           <DropDown>
             {items.map(item =>
               <DropDownItem
-                onClick={() => clickAction(item)}
+                key={`drop-${item}`}
+                onClick={() => this.handleSelection(item)}
               >
                 {item}
               </DropDownItem>)
@@ -46,6 +54,7 @@ const DropDownButton = class extends React.Component {
 
 
 DropDownButton.propTypes = {
+  children: pt.node.isRequired,
   items: pt.arrayOf(pt.string).isRequired,
   clickAction: pt.func.isRequired,
 }

@@ -1,9 +1,12 @@
 import React from 'react'
 import pt from 'prop-types'
 
-import NewButton from './NewButton'
+// import NewButton from './NewButton'
+import NewButton from 'components/DropDownButton'
 import PreviewButton from './PreviewButton'
 import Wrapper from './Wrapper'
+
+const quizTypes = ['pc', 'pitch']
 
 const EditorControls = ({
   onSelectNewItem,
@@ -13,7 +16,8 @@ const EditorControls = ({
 }) =>
   <Wrapper>
     <NewButton
-      onClick={onSelectNewItem}
+      clickAction={onSelectNewItem}
+      items={quizTypes}
       disabled={isNew}
     >
       New

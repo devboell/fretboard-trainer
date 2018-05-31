@@ -18,5 +18,6 @@ export const button = css`
 
   :disabled {
     background-color: gray;
+    cursor: default;
   }
 `

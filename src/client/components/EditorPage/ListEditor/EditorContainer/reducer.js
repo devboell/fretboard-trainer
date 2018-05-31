@@ -20,8 +20,9 @@ const BUFFER_UPDATE = 'BUFFER_UPDATE'
 const PREVIEW_TOGGLE = 'PREVIEW_TOGGLE'
 
 
-export const selectNewItem = () => ({
+export const selectNewItem = quizType => ({
   type: NEW_ITEM_SELECTION,
+  quizType,
 })
 
 export const unselectItem = () => ({
@@ -56,15 +57,15 @@ export const updateTypes = {
   REMOVE: 'REMOVE',
 }
 
-const NEW_QUIZ = {
+const newQuiz = type => ({
   id: undefined,
   name: '',
-  type: 'pc',
+  type,
   tuning: 'standard',
   width: 13,
   panelModeIds: ['1'],
   __typename: 'Quiz',
-}
+})
 
 export const initialState = {
   original: undefined,
@@ -100,7 +101,7 @@ export default (state = initialState, action) => {
     }
 
     case NEW_ITEM_SELECTION:
-      return handleSelection(NEW_QUIZ, modes.NEW, state)
+      return handleSelection(newQuiz(action.quizType), modes.NEW, state)
 
     case ITEM_UNSELECTION:
       return handleSelection(undefined, modes.UNSELECTED, state)

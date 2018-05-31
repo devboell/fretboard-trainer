@@ -70,7 +70,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   const { createMutation, updateMutation, deleteMutation } = ownProps
 
   return {
-    onSelectNewItem: () => dispatch(selectNewItem()),
+    onSelectNewItem: type => dispatch(selectNewItem(type)),
     onCreate: qz => handleCreateMutation(dispatch, createMutation, qz),
     onUpdate: qz => handleUpdateMutation(dispatch, updateMutation, qz),
     onDelete: id => handleDeleteMutation(dispatch, deleteMutation, id),
