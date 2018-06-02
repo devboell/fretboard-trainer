@@ -1,12 +1,11 @@
 import React from 'react'
 import pt from 'prop-types'
 
-// import NewButton from './NewButton'
-import NewButton from 'components/DropDownButton'
+import { quizTypes } from 'components/EditorPage/ListEditor/EditorContainer/constants'
+import NewButton from './NewButton'
 import PreviewButton from './PreviewButton'
 import Wrapper from './Wrapper'
 
-const quizTypes = ['pc', 'pitch']
 
 const EditorControls = ({
   onSelectNewItem,

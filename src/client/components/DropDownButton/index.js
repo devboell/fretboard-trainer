@@ -27,12 +27,13 @@ const DropDownButton = class extends React.Component {
   }
 
   render() {
-    const { items, children } = this.props
+    const { items, children, className } = this.props
 
     return (
       <Wrapper
         onMouseEnter={() => this.toggleOpen()}
         onMouseLeave={() => this.toggleOpen()}
+        className={className}
       >
         {children}
         {this.state.isOpen &&
@@ -57,6 +58,7 @@ DropDownButton.propTypes = {
   children: pt.node.isRequired,
   items: pt.arrayOf(pt.string).isRequired,
   clickAction: pt.func.isRequired,
+  className: pt.string.isRequired,
 }
 
 export default DropDownButton

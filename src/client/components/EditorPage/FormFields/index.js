@@ -2,12 +2,13 @@ import React from 'react'
 import pt from 'prop-types'
 
 import InputCheckboxGroup from 'components/EditorPage/Form/InputCheckboxGroup'
+import StaticString from 'components/EditorPage/Form/StaticString'
 import PanelMode from 'components/PanelMode'
 import FieldTitle from './FieldTitle'
 import FieldInput from './FieldInput'
-import Label from './Label'
+// import Label from './Label'
 import NameInput from './NameInput'
-import TypeInput from './TypeInput'
+// import TypeInput from './TypeInput'
 import Wrapper from './Wrapper'
 import FieldWrapper from './FieldWrapper'
 import PanelModeWrapper from './PanelModeWrapper'
@@ -31,13 +32,7 @@ const FormFields = ({ panelModes }) =>
         type:
       </FieldTitle>
       <FieldInput>
-        <Label htmlFor="type">
-          pc
-          <TypeInput
-            name="type"
-            value="pc"
-          />
-        </Label>
+        <StaticString name="type" />
       </FieldInput>
     </FieldWrapper>
     <FieldWrapper>
