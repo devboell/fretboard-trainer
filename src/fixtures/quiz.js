@@ -11,35 +11,35 @@ export const quizValues1 = {
 
 export const quizValues2 = {
   name: 'quiz two',
-  type: 'pc',
+  type: 'pitch',
   tuning,
   width,
 }
 
 export const quizValues3 = {
   name: 'quiz three',
-  type: 'pc',
+  type: 'pitch',
   tuning,
   width,
 }
 
 export const quizValues4 = {
   name: 'quiz four',
-  type: 'pc',
+  type: 'pitch',
   tuning,
   width,
 }
 
 export const quizValues5 = {
   name: 'quiz five',
-  type: 'pc',
+  type: 'pitch',
   tuning,
   width,
 }
 
 export const quizValues6 = {
   name: 'quiz six',
-  type: 'pc',
+  type: 'pitch',
   tuning,
   width,
 }
@@ -53,7 +53,7 @@ export const createValues = {
 
 export const updateValues = {
   name: 'updated',
-  type: 'pc',
+  type: 'pitch',
   tuning,
   width,
 }

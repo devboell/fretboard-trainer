@@ -4,6 +4,7 @@ import resolvers from './resolvers'
 const typeDefs = `
   enum QuizTypeEnum {
     pc
+    pitch
   }
 
   enum TuningEnum {

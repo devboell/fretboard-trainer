@@ -1,4 +1,4 @@
-import { quiz1PanelModes } from './panelMode'
+import { quiz2PanelModes } from './panelMode'
 import {
   quizValues1,
   quizValues2,
@@ -46,5 +46,5 @@ export const updatedQuiz = {
   ...updateValues,
 }
 
-export { createValues, updateValues, quiz1PanelModes }
+export { createValues, updateValues, quiz2PanelModes }
 

@@ -15,13 +15,13 @@ export const quizzes = [
     id: '1',
     ...quizValues1,
     __typename: 'Quiz',
-    panelModes: [panel1, panel2, panel3, panel4],
+    panelModes: [panel1],
   },
   {
     id: '2',
     ...quizValues2,
     __typename: 'Quiz',
-    panelModes: [panel1, panel2],
+    panelModes: [panel1, panel2, panel3, panel4],
   },
   {
     id: '3',

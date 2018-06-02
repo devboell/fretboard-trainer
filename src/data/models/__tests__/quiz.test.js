@@ -22,8 +22,8 @@ describe('models, quiz', () => {
   })
 
   it('panelModesByQuizId', async () => {
-    const result = await panelModesByQuizId(1)
-    expect(result).toEqual(fxt.quiz1PanelModes)
+    const result = await panelModesByQuizId(2)
+    expect(result).toEqual(fxt.quiz2PanelModes)
   })
 
   it('create', async () => {

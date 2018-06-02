@@ -22,7 +22,7 @@ export const panel4 = {
   answer: 'fretboard',
 }
 
-export const quiz1PanelModes = [
+export const quiz2PanelModes = [
   panel1,
   panel2,
   panel3,
