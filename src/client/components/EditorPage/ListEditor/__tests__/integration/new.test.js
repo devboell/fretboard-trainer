@@ -6,7 +6,7 @@ let wrapper
 
 beforeAll(async () => {
   wrapper = await getWrapper()
-  clickNew(wrapper)
+  clickNew(0, wrapper)
 })
 
 describe('Select new quiz', () => {

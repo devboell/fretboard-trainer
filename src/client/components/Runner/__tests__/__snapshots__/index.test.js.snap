@@ -105,8 +105,8 @@ exports[`Runner start, quiz one, panelModeIndex 0 matches snapshot 1`] = `
       quiz={
         Object {
           "__typename": "Quiz",
-          "id": "1",
-          "name": "quiz one",
+          "id": "2",
+          "name": "quiz two",
           "panelModes": Array [
             Object {
               "answer": "name",
@@ -130,7 +130,7 @@ exports[`Runner start, quiz one, panelModeIndex 0 matches snapshot 1`] = `
             },
           ],
           "tuning": "standard",
-          "type": "pc",
+          "type": "pitch",
           "width": 13,
         }
       }
@@ -141,7 +141,7 @@ exports[`Runner start, quiz one, panelModeIndex 0 matches snapshot 1`] = `
           className="Wrapper-ThVjl jBqHeY"
         >
           <p>
-            quiz one
+            quiz two
           </p>
           <PanelModeSelector
             onSelectPanelModeIdx={[Function]}
@@ -7378,7 +7378,7 @@ exports[`Runner start, quiz one, panelModeIndex 0 matches snapshot 1`] = `
             onClick={[Function]}
           >
             <button
-              className="StartButton-bXgdxw iuifDU"
+              className="StartButton-bXgdxw fSjzuT"
               onClick={[Function]}
             >
               Start
@@ -7496,8 +7496,8 @@ exports[`Runner start, quiz one, panelModeIndex 1 matches snapshot 1`] = `
       quiz={
         Object {
           "__typename": "Quiz",
-          "id": "1",
-          "name": "quiz one",
+          "id": "2",
+          "name": "quiz two",
           "panelModes": Array [
             Object {
               "answer": "name",
@@ -7521,7 +7521,7 @@ exports[`Runner start, quiz one, panelModeIndex 1 matches snapshot 1`] = `
             },
           ],
           "tuning": "standard",
-          "type": "pc",
+          "type": "pitch",
           "width": 13,
         }
       }
@@ -7532,7 +7532,7 @@ exports[`Runner start, quiz one, panelModeIndex 1 matches snapshot 1`] = `
           className="Wrapper-ThVjl jBqHeY"
         >
           <p>
-            quiz one
+            quiz two
           </p>
           <PanelModeSelector
             onSelectPanelModeIdx={[Function]}
@@ -14753,7 +14753,7 @@ exports[`Runner start, quiz one, panelModeIndex 1 matches snapshot 1`] = `
             onClick={[Function]}
           >
             <button
-              className="StartButton-bXgdxw iuifDU"
+              className="StartButton-bXgdxw fSjzuT"
               onClick={[Function]}
             >
               Start
@@ -14871,8 +14871,8 @@ exports[`Runner start, quiz one, panelModeIndex 2 matches snapshot 1`] = `
       quiz={
         Object {
           "__typename": "Quiz",
-          "id": "1",
-          "name": "quiz one",
+          "id": "2",
+          "name": "quiz two",
           "panelModes": Array [
             Object {
               "answer": "name",
@@ -14896,7 +14896,7 @@ exports[`Runner start, quiz one, panelModeIndex 2 matches snapshot 1`] = `
             },
           ],
           "tuning": "standard",
-          "type": "pc",
+          "type": "pitch",
           "width": 13,
         }
       }
@@ -14907,7 +14907,7 @@ exports[`Runner start, quiz one, panelModeIndex 2 matches snapshot 1`] = `
           className="Wrapper-ThVjl jBqHeY"
         >
           <p>
-            quiz one
+            quiz two
           </p>
           <PanelModeSelector
             onSelectPanelModeIdx={[Function]}
@@ -22128,7 +22128,7 @@ exports[`Runner start, quiz one, panelModeIndex 2 matches snapshot 1`] = `
             onClick={[Function]}
           >
             <button
-              className="StartButton-bXgdxw iuifDU"
+              className="StartButton-bXgdxw fSjzuT"
               onClick={[Function]}
             >
               Start
@@ -22246,8 +22246,8 @@ exports[`Runner start, quiz one, panelModeIndex 3 matches snapshot 1`] = `
       quiz={
         Object {
           "__typename": "Quiz",
-          "id": "1",
-          "name": "quiz one",
+          "id": "2",
+          "name": "quiz two",
           "panelModes": Array [
             Object {
               "answer": "name",
@@ -22271,7 +22271,7 @@ exports[`Runner start, quiz one, panelModeIndex 3 matches snapshot 1`] = `
             },
           ],
           "tuning": "standard",
-          "type": "pc",
+          "type": "pitch",
           "width": 13,
         }
       }
@@ -22282,7 +22282,7 @@ exports[`Runner start, quiz one, panelModeIndex 3 matches snapshot 1`] = `
           className="Wrapper-ThVjl jBqHeY"
         >
           <p>
-            quiz one
+            quiz two
           </p>
           <PanelModeSelector
             onSelectPanelModeIdx={[Function]}
@@ -29484,7 +29484,7 @@ exports[`Runner start, quiz one, panelModeIndex 3 matches snapshot 1`] = `
             onClick={[Function]}
           >
             <button
-              className="StartButton-bXgdxw iuifDU"
+              className="StartButton-bXgdxw fSjzuT"
               onClick={[Function]}
             >
               Start

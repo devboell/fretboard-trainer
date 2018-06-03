@@ -31,8 +31,10 @@ export const newButtonIsDisabled = wrapper =>
 export const previewButtonIsDisabled = wrapper =>
   wrapper.find('PreviewButton').props().disabled
 
-export const clickNew = wrapper =>
-  wrapper.find('NewButton').simulate('click')
+export const clickNew = (typeIdx, wrapper) => {
+  wrapper.find('NewButton').simulate('mouseenter')
+  wrapper.find('NewButton DropDownItem').at(typeIdx).simulate('click')
+}
 
 export const clickDelete = wrapper =>
   wrapper.find('DeleteButton').simulate('click')

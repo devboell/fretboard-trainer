@@ -17,7 +17,7 @@ beforeAll(async () => {
   checkPanelModeId('2', wrapper)
   checkPanelModeId('3', wrapper)
   saveChanges(wrapper)
-  await new Promise(resolve => setTimeout(resolve))
+  await new Promise(resolve => setTimeout(resolve, 10))
 
   wrapper.update()
 })

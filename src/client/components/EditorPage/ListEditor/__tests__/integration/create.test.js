@@ -11,17 +11,17 @@ import { getWrapper } from '../../mocks'
 
 let wrapper
 
-beforeAll(async () => {
-  wrapper = await getWrapper()
-  clickNew(wrapper)
-  changeName('new', wrapper)
-  checkPanelModeId('2', wrapper)
-  saveChanges(wrapper)
-  await new Promise(resolve => setTimeout(resolve))
-  wrapper.update()
-})
 
-describe('Create quiz', () => {
+describe('Create pc quiz', () => {
+  beforeAll(async () => {
+    wrapper = await getWrapper()
+    clickNew(0, wrapper)
+    changeName('new', wrapper)
+    checkPanelModeId('2', wrapper)
+    saveChanges(wrapper)
+    await new Promise(resolve => setTimeout(resolve, 10))
+    wrapper.update()
+  })
   it('List contains and selects new item', () => {
     expect(listButtonIsSelected(6, wrapper)).toBe(true)
   })

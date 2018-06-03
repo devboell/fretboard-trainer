@@ -11,7 +11,7 @@ beforeAll(async () => {
   wrapper = await getWrapper()
   clickListButton(2, wrapper)
   clickDelete(wrapper)
-  await new Promise(resolve => setTimeout(resolve))
+  await new Promise(resolve => setTimeout(resolve, 10))
   wrapper.update()
 })
 

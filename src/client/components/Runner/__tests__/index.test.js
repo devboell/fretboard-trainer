@@ -25,7 +25,7 @@ describe('Runner', () => {
   let wrapper
   beforeEach(() => {
     store = createMockStore()
-    store.dispatch(initRunner(quizzes[0]))
+    store.dispatch(initRunner(quizzes[1]))
     wrapper = mount((
       <Provider store={store}>
         <Runner />
