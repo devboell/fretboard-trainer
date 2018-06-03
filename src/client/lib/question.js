@@ -11,8 +11,9 @@ import {
   filter,
   map,
 } from 'ramda'
+import { Note } from 'tonal'
 import { fromChroma } from 'lib/tonal-helpers'
-import { chromaFretboard } from './fretboard'
+import { chromaFretboard, midiFretboard } from './fretboard'
 
 const useSharps = () => sample([true, false])
 
@@ -22,12 +23,26 @@ export const availableChromas = chroma => chromaLocs => compose(
   pluck('chroma'),
 )(chromaLocs)
 
+export const availableMidis = midi => midiLocs => compose(
+  uniq,
+  without([midi]),
+  pluck('midi'),
+)(midiLocs)
+
 const pcEntity = chroma => ({
   name: fromChroma(chroma, useSharps()),
   notes: null,
 })
 
-const choices = (entity, chroma, chromaLocs) => compose(
+const pitchEntity = (midi) => {
+  const pitch = Note.fromMidi(midi, useSharps())
+  return {
+    name: pitch,
+    notes: [pitch],
+  }
+}
+
+const pcChoices = (entity, chroma, chromaLocs) => compose(
   shuffle,
   append(entity),
   map(pcEntity),
@@ -35,10 +50,23 @@ const choices = (entity, chroma, chromaLocs) => compose(
   availableChromas(chroma),
 )(chromaLocs)
 
+const pitchChoices = (entity, midi, midiLocs) => compose(
+  shuffle,
+  append(entity),
+  map(pitchEntity),
+  sampleSize(3),
+  availableMidis(midi),
+)(midiLocs)
+
 const locsForChroma = (chroma, chromaLocs) => compose(
   map(cl => cl.loc),
   filter(cl => chroma === cl.chroma),
 )(chromaLocs)
+
+const locsForMidi = (midi, midiLocs) => compose(
+  map(ml => ml.loc),
+  filter(ml => midi === ml.midi),
+)(midiLocs)
 
 export const pcQuestion = (chromaLocs) => {
   const chromaLoc = sample(chromaLocs)
@@ -52,11 +80,33 @@ export const pcQuestion = (chromaLocs) => {
       },
       answer: {
         locs: [],
-        choices: choices(entity, chromaLoc.chroma, chromaLocs),
+        choices: pcChoices(entity, chromaLoc.chroma, chromaLocs),
       },
     },
     evaluation: {
       locs: locsForChroma(chromaLoc.chroma, chromaLocs),
+      entity,
+    },
+  }
+}
+
+export const pitchQuestion = (midiLocs) => {
+  const midiLoc = sample(midiLocs)
+  const entity = pitchEntity(midiLoc.midi)
+
+  return {
+    panels: {
+      question: {
+        locs: [midiLoc.loc],
+        entity,
+      },
+      answer: {
+        locs: [],
+        choices: pitchChoices(entity, midiLoc.midi, midiLocs),
+      },
+    },
+    evaluation: {
+      locs: locsForMidi(midiLoc.midi, midiLocs),
       entity,
     },
   }
@@ -71,7 +121,11 @@ export default (quiz) => {
       const chromaLocs = flatten(chromaFretboard(tuning, width))
       return pcQuestion(chromaLocs)
     }
-    // case 'pitch': return pitchQuestion(fb)
+    case 'pitch': {
+      const midiLocs = flatten(midiFretboard(tuning, width))
+      return pitchQuestion(midiLocs)
+    }
+
     default: return null
   }
 }

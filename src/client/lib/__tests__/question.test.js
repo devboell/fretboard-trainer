@@ -1,5 +1,8 @@
 import { take } from 'ramda'
-import { quizValues1 as pcQuiz } from 'fixtures/quiz'
+import {
+  quizValues1 as pcQuiz,
+  quizValues2 as pitchQuiz,
+} from 'fixtures/quiz'
 import getQuestion from '../question'
 
 const mockTake = take
@@ -10,8 +13,12 @@ jest.mock('lodash/fp', () => ({
   sampleSize: jest.fn(size => arr => mockTake(size, arr)),
 }))
 
-it('pcQuestion', () => {
+it('pc question', () => {
   expect(getQuestion(pcQuiz)).toMatchSnapshot()
+})
+
+it('pitch question', () => {
+  expect(getQuestion(pitchQuiz)).toMatchSnapshot()
 })
 
 it('invalid question', () => {

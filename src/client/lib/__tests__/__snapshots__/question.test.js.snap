@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`pcQuestion 1`] = `
+exports[`pc question 1`] = `
 Object {
   "evaluation": Object {
     "entity": Object {
@@ -68,6 +68,78 @@ Object {
       "entity": Object {
         "name": "E",
         "notes": null,
+      },
+      "locs": Array [
+        Object {
+          "pos": 0,
+          "str": 0,
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`pitch question 1`] = `
+Object {
+  "evaluation": Object {
+    "entity": Object {
+      "name": "E4",
+      "notes": Array [
+        "E4",
+      ],
+    },
+    "locs": Array [
+      Object {
+        "pos": 0,
+        "str": 0,
+      },
+      Object {
+        "pos": 5,
+        "str": 1,
+      },
+      Object {
+        "pos": 9,
+        "str": 2,
+      },
+    ],
+  },
+  "panels": Object {
+    "answer": Object {
+      "choices": Array [
+        Object {
+          "name": "B3",
+          "notes": Array [
+            "B3",
+          ],
+        },
+        Object {
+          "name": "G3",
+          "notes": Array [
+            "G3",
+          ],
+        },
+        Object {
+          "name": "D3",
+          "notes": Array [
+            "D3",
+          ],
+        },
+        Object {
+          "name": "E4",
+          "notes": Array [
+            "E4",
+          ],
+        },
+      ],
+      "locs": Array [],
+    },
+    "question": Object {
+      "entity": Object {
+        "name": "E4",
+        "notes": Array [
+          "E4",
+        ],
       },
       "locs": Array [
         Object {
