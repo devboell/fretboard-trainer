@@ -2,9 +2,14 @@ import React, { Component } from 'react'
 import pt from 'prop-types'
 import vexflow from 'vexflow'
 import { equals } from 'ramda'
+import { transposeForGuitar } from 'lib/tonal-helpers'
 import Wrapper from './Wrapper'
 
 const VF = vexflow.Flow
+const addNote = score => (note) => {
+  const transposed = transposeForGuitar(note)
+  return score.voice(score.notes(`${transposed}/w`))
+}
 
 class StaffPanel extends Component {
   componentDidMount() {
@@ -28,14 +33,14 @@ class StaffPanel extends Component {
     }
   }
 
+
   renderNote() {
     const score = this.vf.EasyScore()
     const system = this.vf.System()
     const { entity: { notes } } = this.props
 
     system.addStave({
-      voices: notes.map(note =>
-        score.voice(score.notes(`${note}/w`))),
+      voices: notes.map(addNote(score)),
     }).addClef('treble')
 
     this.vf.draw()
