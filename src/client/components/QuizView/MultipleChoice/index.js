@@ -32,7 +32,7 @@ const MultipleChoice = ({
         return (
           <Choice key={choice.name}>
             <Button onClick={() => clickAction(choice)}>
-              <Component entity={choice} />
+              <Component entity={choice} isChoice />
             </Button>
             <ChoiceStatus status={status}>
               {statusSymbol[status]}
