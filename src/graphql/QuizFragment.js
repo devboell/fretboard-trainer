@@ -8,6 +8,11 @@ export default gql`
     tuning
     width
     __typename
+    timer {
+      type
+      pause
+      time
+    }
     panelModes {
       id
       question

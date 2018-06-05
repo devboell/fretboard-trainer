@@ -11,13 +11,26 @@ const typeDefs = `
     standard
   }
 
+  enum TimerTypeEnum {
+    none
+    normal
+    strict
+  }
+
   type Quiz {
     id: ID!
     name: String
     type: QuizTypeEnum
+    timer: Timer
     tuning: TuningEnum
     width: Int
     panelModes: [PanelMode]
+  }
+
+  type Timer {
+    type: TimerTypeEnum
+    pause: Int
+    time: Int
   }
 
   type PanelMode {
@@ -38,14 +51,22 @@ const typeDefs = `
     width: Int
   }
 
+  input TimerInput {
+    type: TimerTypeEnum
+    pause: Int
+    time: Int
+  }
+
   input CreateQuizInput {
     quiz: QuizInput
+    timer: TimerInput
     panelModeIds: [Int]
   }
 
   input UpdateQuizInput {
     id: ID!
     quiz: QuizInput
+    timer: TimerInput
     panelModeIds: [Int]
   }
 

@@ -1,5 +1,6 @@
 import {
   quizzes,
+  timer,
   panelModes as panels,
   createQuiz,
   updateQuiz,
@@ -13,6 +14,7 @@ const resolvers = {
     panelModes,
   },
   Quiz: {
+    timer,
     panelModes: panels,
   },
   Mutation: {
