@@ -1,5 +1,6 @@
 import {
   set,
+  over,
   prop,
   lensProp,
   lensPath,
@@ -120,13 +121,11 @@ export default (state = initialState, action) => {
           return set(lensKey, value, state)
         }
         case updateTypes.ADD: {
-          const added = append(value, state.buffer[key])
-          return set(lensKey, added, state)
+          return over(lensKey, append(value), state)
         }
 
         case updateTypes.REMOVE: {
-          const removed = without([value], state.buffer[key])
-          return set(lensKey, removed, state)
+          return over(lensKey, without([value]), state)
         }
 
         default:
