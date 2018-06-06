@@ -29,7 +29,12 @@ const setAnswer = answer =>
       ? !isEmpty(intersection(answers.correct, question.evaluation.locs))
       : equals(answers.correct[0], question.evaluation.entity)
 
-    completed && dispatch(startRunner(getQuestion(quiz)))
+    if (completed) {
+      setTimeout(
+        () => dispatch(startRunner(getQuestion(quiz))),
+        500,
+      )
+    }
   }
 
 const mapStateToProps = state => ({
