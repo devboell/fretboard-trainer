@@ -12,7 +12,7 @@ const theme = {
 }
 
 const locObj = status => answer => ({
-  loc: answer.loc, status,
+  loc: answer, status,
 })
 
 const FretboardPanel = ({ locs, answers, clickAction }) => {
@@ -22,11 +22,13 @@ const FretboardPanel = ({ locs, answers, clickAction }) => {
       ...answers.incorrect.map(locObj('incorrect')),
     ]
     : locs
+
+  const fretboardClick = ({ loc }) => clickAction(loc)
   return (
     <Wrapper>
       <Fretboard
         selectedLocations={selectedLocations}
-        clickAction={clickAction}
+        clickAction={fretboardClick}
         theme={theme}
       />
     </Wrapper>
