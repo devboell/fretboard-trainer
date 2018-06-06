@@ -76,3 +76,73 @@ export const pcQuestion = {
     },
   },
 }
+
+export const pitchQuestion = {
+  evaluation: {
+    entity: {
+      name: 'E4',
+      notes: [
+        'E4',
+      ],
+    },
+    locs: [
+      {
+        pos: 0,
+        str: 0,
+      },
+      {
+        pos: 5,
+        str: 1,
+      },
+      {
+        pos: 9,
+        str: 2,
+      },
+    ],
+  },
+  panels: {
+    answer: {
+      choices: [
+        {
+          name: 'B3',
+          notes: [
+            'B3',
+          ],
+        },
+        {
+          name: 'G3',
+          notes: [
+            'G3',
+          ],
+        },
+        {
+          name: 'D3',
+          notes: [
+            'D3',
+          ],
+        },
+        {
+          name: 'E4',
+          notes: [
+            'E4',
+          ],
+        },
+      ],
+      locs: [],
+    },
+    question: {
+      entity: {
+        name: 'E4',
+        notes: [
+          'E4',
+        ],
+      },
+      locs: [
+        {
+          pos: 0,
+          str: 0,
+        },
+      ],
+    },
+  },
+}

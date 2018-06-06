@@ -153,7 +153,7 @@ describe('Runner', () => {
     })
 
     it('handle fretboard fret answers', () => {
-      const correctLoc = { loc: { str: 5, pos: 0 } }
+      const correctLoc = { loc: { str: 0, pos: 0 } }
       const incorrectLoc1 = { loc: { str: 5, pos: 1 } }
       const incorrectLoc2 = { loc: { str: 5, pos: 2 } }
       const expected = {

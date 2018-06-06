@@ -11,4 +11,4 @@ export const createMockStore = () =>
   )
 
 
-export { pcQuestion as mockQuestion } from 'fixtures/question'
+export { pitchQuestion as mockQuestion } from 'fixtures/question'

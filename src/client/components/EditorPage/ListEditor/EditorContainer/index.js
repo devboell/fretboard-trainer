@@ -24,8 +24,7 @@ const mapStateToProps = state => ({
 const handleCreateMutation = (dispatch, mutation, item) => {
   const createInput = {
     input: {
-      quiz: omit(['__typename', 'id', 'panelModeIds', 'timer'], item),
-      timer: omit(['__typename'], item.timer),
+      quiz: omit(['__typename', 'id', 'panelModeIds'], item),
       panelModeIds: item.panelModeIds,
     },
   }
@@ -39,8 +38,7 @@ const handleUpdateMutation = (dispatch, mutation, item) => {
   const updateInput = {
     input: {
       id: item.id,
-      quiz: omit(['__typename', 'id', 'panelModeIds', 'timer'], item),
-      timer: omit(['__typename'], item.timer),
+      quiz: omit(['__typename', 'id', 'panelModeIds'], item),
       panelModeIds: item.panelModeIds,
     },
   }

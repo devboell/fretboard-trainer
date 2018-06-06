@@ -1,9 +1,5 @@
 import { quiz2PanelModes } from './panelMode'
 import {
-  timer1,
-  timer3,
-} from './timer'
-import {
   quizValues1,
   quizValues2,
   quizValues3,
@@ -28,7 +24,6 @@ export const quiz3 = { id: 3, ...quizValues3 }
 export const createQuizInputValues = {
   input: {
     quiz: createValues,
-    timer: timer1,
     panelModeIds: [1, 2],
   },
 }
@@ -42,7 +37,6 @@ export const updateQuizInputValues = {
   input: {
     id: 3,
     quiz: updateValues,
-    timer: timer3,
     panelModeIds: [1, 2, 3],
   },
 }

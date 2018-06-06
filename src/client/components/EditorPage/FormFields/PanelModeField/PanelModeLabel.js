@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Label from './Label'
+import Label from '../Label'
 
 const PanelModeLabel = styled(Label)`
   display: flex;

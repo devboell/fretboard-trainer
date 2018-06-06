@@ -27,8 +27,10 @@ exports[`Runner start, quiz one, panelModeIndex 0 matches snapshot 1`] = `
         Object {
           "evaluation": Object {
             "entity": Object {
-              "name": "E",
-              "notes": null,
+              "name": "E4",
+              "notes": Array [
+                "E4",
+              ],
             },
             "locs": Array [
               Object {
@@ -36,32 +38,12 @@ exports[`Runner start, quiz one, panelModeIndex 0 matches snapshot 1`] = `
                 "str": 0,
               },
               Object {
-                "pos": 0,
-                "str": 5,
-              },
-              Object {
-                "pos": 2,
-                "str": 3,
-              },
-              Object {
                 "pos": 5,
                 "str": 1,
               },
               Object {
-                "pos": 7,
-                "str": 4,
-              },
-              Object {
                 "pos": 9,
                 "str": 2,
-              },
-              Object {
-                "pos": 12,
-                "str": 0,
-              },
-              Object {
-                "pos": 12,
-                "str": 5,
               },
             ],
           },
@@ -69,28 +51,38 @@ exports[`Runner start, quiz one, panelModeIndex 0 matches snapshot 1`] = `
             "answer": Object {
               "choices": Array [
                 Object {
-                  "name": "B",
-                  "notes": null,
+                  "name": "B3",
+                  "notes": Array [
+                    "B3",
+                  ],
                 },
                 Object {
-                  "name": "G",
-                  "notes": null,
+                  "name": "G3",
+                  "notes": Array [
+                    "G3",
+                  ],
                 },
                 Object {
-                  "name": "D",
-                  "notes": null,
+                  "name": "D3",
+                  "notes": Array [
+                    "D3",
+                  ],
                 },
                 Object {
-                  "name": "E",
-                  "notes": null,
+                  "name": "E4",
+                  "notes": Array [
+                    "E4",
+                  ],
                 },
               ],
               "locs": Array [],
             },
             "question": Object {
               "entity": Object {
-                "name": "E",
-                "notes": null,
+                "name": "E4",
+                "notes": Array [
+                  "E4",
+                ],
               },
               "locs": Array [
                 Object {
@@ -334,28 +326,38 @@ exports[`Runner start, quiz one, panelModeIndex 0 matches snapshot 1`] = `
                 "answer": Object {
                   "choices": Array [
                     Object {
-                      "name": "B",
-                      "notes": null,
+                      "name": "B3",
+                      "notes": Array [
+                        "B3",
+                      ],
                     },
                     Object {
-                      "name": "G",
-                      "notes": null,
+                      "name": "G3",
+                      "notes": Array [
+                        "G3",
+                      ],
                     },
                     Object {
-                      "name": "D",
-                      "notes": null,
+                      "name": "D3",
+                      "notes": Array [
+                        "D3",
+                      ],
                     },
                     Object {
-                      "name": "E",
-                      "notes": null,
+                      "name": "E4",
+                      "notes": Array [
+                        "E4",
+                      ],
                     },
                   ],
                   "locs": Array [],
                 },
                 "question": Object {
                   "entity": Object {
-                    "name": "E",
-                    "notes": null,
+                    "name": "E4",
+                    "notes": Array [
+                      "E4",
+                    ],
                   },
                   "locs": Array [
                     Object {
@@ -7175,20 +7177,28 @@ exports[`Runner start, quiz one, panelModeIndex 0 matches snapshot 1`] = `
                       choices={
                         Array [
                           Object {
-                            "name": "B",
-                            "notes": null,
+                            "name": "B3",
+                            "notes": Array [
+                              "B3",
+                            ],
                           },
                           Object {
-                            "name": "G",
-                            "notes": null,
+                            "name": "G3",
+                            "notes": Array [
+                              "G3",
+                            ],
                           },
                           Object {
-                            "name": "D",
-                            "notes": null,
+                            "name": "D3",
+                            "notes": Array [
+                              "D3",
+                            ],
                           },
                           Object {
-                            "name": "E",
-                            "notes": null,
+                            "name": "E4",
+                            "notes": Array [
+                              "E4",
+                            ],
                           },
                         ]
                       }
@@ -7199,7 +7209,7 @@ exports[`Runner start, quiz one, panelModeIndex 0 matches snapshot 1`] = `
                           className="Wrapper-ThVjl kDyRez"
                         >
                           <Choice
-                            key="B"
+                            key="B3"
                           >
                             <div
                               className="Choice-jqnpMa hbHrmU"
@@ -7214,16 +7224,19 @@ exports[`Runner start, quiz one, panelModeIndex 0 matches snapshot 1`] = `
                                   <NamePanel
                                     entity={
                                       Object {
-                                        "name": "B",
-                                        "notes": null,
+                                        "name": "B3",
+                                        "notes": Array [
+                                          "B3",
+                                        ],
                                       }
                                     }
+                                    isChoice={true}
                                   >
                                     <Wrapper>
                                       <div
-                                        className="Wrapper-ThVjl cldtoP"
+                                        className="Wrapper-ThVjl hUwzcc"
                                       >
-                                        B
+                                        B3
                                       </div>
                                     </Wrapper>
                                   </NamePanel>
@@ -7241,7 +7254,7 @@ exports[`Runner start, quiz one, panelModeIndex 0 matches snapshot 1`] = `
                             </div>
                           </Choice>
                           <Choice
-                            key="G"
+                            key="G3"
                           >
                             <div
                               className="Choice-jqnpMa hbHrmU"
@@ -7256,16 +7269,19 @@ exports[`Runner start, quiz one, panelModeIndex 0 matches snapshot 1`] = `
                                   <NamePanel
                                     entity={
                                       Object {
-                                        "name": "G",
-                                        "notes": null,
+                                        "name": "G3",
+                                        "notes": Array [
+                                          "G3",
+                                        ],
                                       }
                                     }
+                                    isChoice={true}
                                   >
                                     <Wrapper>
                                       <div
-                                        className="Wrapper-ThVjl cldtoP"
+                                        className="Wrapper-ThVjl hUwzcc"
                                       >
-                                        G
+                                        G3
                                       </div>
                                     </Wrapper>
                                   </NamePanel>
@@ -7283,7 +7299,7 @@ exports[`Runner start, quiz one, panelModeIndex 0 matches snapshot 1`] = `
                             </div>
                           </Choice>
                           <Choice
-                            key="D"
+                            key="D3"
                           >
                             <div
                               className="Choice-jqnpMa hbHrmU"
@@ -7298,16 +7314,19 @@ exports[`Runner start, quiz one, panelModeIndex 0 matches snapshot 1`] = `
                                   <NamePanel
                                     entity={
                                       Object {
-                                        "name": "D",
-                                        "notes": null,
+                                        "name": "D3",
+                                        "notes": Array [
+                                          "D3",
+                                        ],
                                       }
                                     }
+                                    isChoice={true}
                                   >
                                     <Wrapper>
                                       <div
-                                        className="Wrapper-ThVjl cldtoP"
+                                        className="Wrapper-ThVjl hUwzcc"
                                       >
-                                        D
+                                        D3
                                       </div>
                                     </Wrapper>
                                   </NamePanel>
@@ -7325,7 +7344,7 @@ exports[`Runner start, quiz one, panelModeIndex 0 matches snapshot 1`] = `
                             </div>
                           </Choice>
                           <Choice
-                            key="E"
+                            key="E4"
                           >
                             <div
                               className="Choice-jqnpMa hbHrmU"
@@ -7340,16 +7359,19 @@ exports[`Runner start, quiz one, panelModeIndex 0 matches snapshot 1`] = `
                                   <NamePanel
                                     entity={
                                       Object {
-                                        "name": "E",
-                                        "notes": null,
+                                        "name": "E4",
+                                        "notes": Array [
+                                          "E4",
+                                        ],
                                       }
                                     }
+                                    isChoice={true}
                                   >
                                     <Wrapper>
                                       <div
-                                        className="Wrapper-ThVjl cldtoP"
+                                        className="Wrapper-ThVjl hUwzcc"
                                       >
-                                        E
+                                        E4
                                       </div>
                                     </Wrapper>
                                   </NamePanel>
@@ -7418,8 +7440,10 @@ exports[`Runner start, quiz one, panelModeIndex 1 matches snapshot 1`] = `
         Object {
           "evaluation": Object {
             "entity": Object {
-              "name": "E",
-              "notes": null,
+              "name": "E4",
+              "notes": Array [
+                "E4",
+              ],
             },
             "locs": Array [
               Object {
@@ -7427,32 +7451,12 @@ exports[`Runner start, quiz one, panelModeIndex 1 matches snapshot 1`] = `
                 "str": 0,
               },
               Object {
-                "pos": 0,
-                "str": 5,
-              },
-              Object {
-                "pos": 2,
-                "str": 3,
-              },
-              Object {
                 "pos": 5,
                 "str": 1,
               },
               Object {
-                "pos": 7,
-                "str": 4,
-              },
-              Object {
                 "pos": 9,
                 "str": 2,
-              },
-              Object {
-                "pos": 12,
-                "str": 0,
-              },
-              Object {
-                "pos": 12,
-                "str": 5,
               },
             ],
           },
@@ -7460,28 +7464,38 @@ exports[`Runner start, quiz one, panelModeIndex 1 matches snapshot 1`] = `
             "answer": Object {
               "choices": Array [
                 Object {
-                  "name": "B",
-                  "notes": null,
+                  "name": "B3",
+                  "notes": Array [
+                    "B3",
+                  ],
                 },
                 Object {
-                  "name": "G",
-                  "notes": null,
+                  "name": "G3",
+                  "notes": Array [
+                    "G3",
+                  ],
                 },
                 Object {
-                  "name": "D",
-                  "notes": null,
+                  "name": "D3",
+                  "notes": Array [
+                    "D3",
+                  ],
                 },
                 Object {
-                  "name": "E",
-                  "notes": null,
+                  "name": "E4",
+                  "notes": Array [
+                    "E4",
+                  ],
                 },
               ],
               "locs": Array [],
             },
             "question": Object {
               "entity": Object {
-                "name": "E",
-                "notes": null,
+                "name": "E4",
+                "notes": Array [
+                  "E4",
+                ],
               },
               "locs": Array [
                 Object {
@@ -7725,28 +7739,38 @@ exports[`Runner start, quiz one, panelModeIndex 1 matches snapshot 1`] = `
                 "answer": Object {
                   "choices": Array [
                     Object {
-                      "name": "B",
-                      "notes": null,
+                      "name": "B3",
+                      "notes": Array [
+                        "B3",
+                      ],
                     },
                     Object {
-                      "name": "G",
-                      "notes": null,
+                      "name": "G3",
+                      "notes": Array [
+                        "G3",
+                      ],
                     },
                     Object {
-                      "name": "D",
-                      "notes": null,
+                      "name": "D3",
+                      "notes": Array [
+                        "D3",
+                      ],
                     },
                     Object {
-                      "name": "E",
-                      "notes": null,
+                      "name": "E4",
+                      "notes": Array [
+                        "E4",
+                      ],
                     },
                   ],
                   "locs": Array [],
                 },
                 "question": Object {
                   "entity": Object {
-                    "name": "E",
-                    "notes": null,
+                    "name": "E4",
+                    "notes": Array [
+                      "E4",
+                    ],
                   },
                   "locs": Array [
                     Object {
@@ -14566,20 +14590,28 @@ exports[`Runner start, quiz one, panelModeIndex 1 matches snapshot 1`] = `
                       choices={
                         Array [
                           Object {
-                            "name": "B",
-                            "notes": null,
+                            "name": "B3",
+                            "notes": Array [
+                              "B3",
+                            ],
                           },
                           Object {
-                            "name": "G",
-                            "notes": null,
+                            "name": "G3",
+                            "notes": Array [
+                              "G3",
+                            ],
                           },
                           Object {
-                            "name": "D",
-                            "notes": null,
+                            "name": "D3",
+                            "notes": Array [
+                              "D3",
+                            ],
                           },
                           Object {
-                            "name": "E",
-                            "notes": null,
+                            "name": "E4",
+                            "notes": Array [
+                              "E4",
+                            ],
                           },
                         ]
                       }
@@ -14590,7 +14622,7 @@ exports[`Runner start, quiz one, panelModeIndex 1 matches snapshot 1`] = `
                           className="Wrapper-ThVjl kDyRez"
                         >
                           <Choice
-                            key="B"
+                            key="B3"
                           >
                             <div
                               className="Choice-jqnpMa hbHrmU"
@@ -14605,14 +14637,21 @@ exports[`Runner start, quiz one, panelModeIndex 1 matches snapshot 1`] = `
                                   <StaffPanel
                                     entity={
                                       Object {
-                                        "name": "B",
-                                        "notes": null,
+                                        "name": "B3",
+                                        "notes": Array [
+                                          "B3",
+                                        ],
                                       }
                                     }
+                                    isChoice={true}
                                   >
-                                    <div>
-                                      Staff Panel
-                                    </div>
+                                    <Wrapper>
+                                      <div
+                                        className="Wrapper-ThVjl jYyzMk"
+                                      >
+                                        <div />
+                                      </div>
+                                    </Wrapper>
                                   </StaffPanel>
                                 </div>
                               </Button>
@@ -14628,7 +14667,7 @@ exports[`Runner start, quiz one, panelModeIndex 1 matches snapshot 1`] = `
                             </div>
                           </Choice>
                           <Choice
-                            key="G"
+                            key="G3"
                           >
                             <div
                               className="Choice-jqnpMa hbHrmU"
@@ -14643,14 +14682,21 @@ exports[`Runner start, quiz one, panelModeIndex 1 matches snapshot 1`] = `
                                   <StaffPanel
                                     entity={
                                       Object {
-                                        "name": "G",
-                                        "notes": null,
+                                        "name": "G3",
+                                        "notes": Array [
+                                          "G3",
+                                        ],
                                       }
                                     }
+                                    isChoice={true}
                                   >
-                                    <div>
-                                      Staff Panel
-                                    </div>
+                                    <Wrapper>
+                                      <div
+                                        className="Wrapper-ThVjl jYyzMk"
+                                      >
+                                        <div />
+                                      </div>
+                                    </Wrapper>
                                   </StaffPanel>
                                 </div>
                               </Button>
@@ -14666,7 +14712,7 @@ exports[`Runner start, quiz one, panelModeIndex 1 matches snapshot 1`] = `
                             </div>
                           </Choice>
                           <Choice
-                            key="D"
+                            key="D3"
                           >
                             <div
                               className="Choice-jqnpMa hbHrmU"
@@ -14681,14 +14727,21 @@ exports[`Runner start, quiz one, panelModeIndex 1 matches snapshot 1`] = `
                                   <StaffPanel
                                     entity={
                                       Object {
-                                        "name": "D",
-                                        "notes": null,
+                                        "name": "D3",
+                                        "notes": Array [
+                                          "D3",
+                                        ],
                                       }
                                     }
+                                    isChoice={true}
                                   >
-                                    <div>
-                                      Staff Panel
-                                    </div>
+                                    <Wrapper>
+                                      <div
+                                        className="Wrapper-ThVjl jYyzMk"
+                                      >
+                                        <div />
+                                      </div>
+                                    </Wrapper>
                                   </StaffPanel>
                                 </div>
                               </Button>
@@ -14704,7 +14757,7 @@ exports[`Runner start, quiz one, panelModeIndex 1 matches snapshot 1`] = `
                             </div>
                           </Choice>
                           <Choice
-                            key="E"
+                            key="E4"
                           >
                             <div
                               className="Choice-jqnpMa hbHrmU"
@@ -14719,14 +14772,21 @@ exports[`Runner start, quiz one, panelModeIndex 1 matches snapshot 1`] = `
                                   <StaffPanel
                                     entity={
                                       Object {
-                                        "name": "E",
-                                        "notes": null,
+                                        "name": "E4",
+                                        "notes": Array [
+                                          "E4",
+                                        ],
                                       }
                                     }
+                                    isChoice={true}
                                   >
-                                    <div>
-                                      Staff Panel
-                                    </div>
+                                    <Wrapper>
+                                      <div
+                                        className="Wrapper-ThVjl jYyzMk"
+                                      >
+                                        <div />
+                                      </div>
+                                    </Wrapper>
                                   </StaffPanel>
                                 </div>
                               </Button>
@@ -14793,8 +14853,10 @@ exports[`Runner start, quiz one, panelModeIndex 2 matches snapshot 1`] = `
         Object {
           "evaluation": Object {
             "entity": Object {
-              "name": "E",
-              "notes": null,
+              "name": "E4",
+              "notes": Array [
+                "E4",
+              ],
             },
             "locs": Array [
               Object {
@@ -14802,32 +14864,12 @@ exports[`Runner start, quiz one, panelModeIndex 2 matches snapshot 1`] = `
                 "str": 0,
               },
               Object {
-                "pos": 0,
-                "str": 5,
-              },
-              Object {
-                "pos": 2,
-                "str": 3,
-              },
-              Object {
                 "pos": 5,
                 "str": 1,
               },
               Object {
-                "pos": 7,
-                "str": 4,
-              },
-              Object {
                 "pos": 9,
                 "str": 2,
-              },
-              Object {
-                "pos": 12,
-                "str": 0,
-              },
-              Object {
-                "pos": 12,
-                "str": 5,
               },
             ],
           },
@@ -14835,28 +14877,38 @@ exports[`Runner start, quiz one, panelModeIndex 2 matches snapshot 1`] = `
             "answer": Object {
               "choices": Array [
                 Object {
-                  "name": "B",
-                  "notes": null,
+                  "name": "B3",
+                  "notes": Array [
+                    "B3",
+                  ],
                 },
                 Object {
-                  "name": "G",
-                  "notes": null,
+                  "name": "G3",
+                  "notes": Array [
+                    "G3",
+                  ],
                 },
                 Object {
-                  "name": "D",
-                  "notes": null,
+                  "name": "D3",
+                  "notes": Array [
+                    "D3",
+                  ],
                 },
                 Object {
-                  "name": "E",
-                  "notes": null,
+                  "name": "E4",
+                  "notes": Array [
+                    "E4",
+                  ],
                 },
               ],
               "locs": Array [],
             },
             "question": Object {
               "entity": Object {
-                "name": "E",
-                "notes": null,
+                "name": "E4",
+                "notes": Array [
+                  "E4",
+                ],
               },
               "locs": Array [
                 Object {
@@ -15100,28 +15152,38 @@ exports[`Runner start, quiz one, panelModeIndex 2 matches snapshot 1`] = `
                 "answer": Object {
                   "choices": Array [
                     Object {
-                      "name": "B",
-                      "notes": null,
+                      "name": "B3",
+                      "notes": Array [
+                        "B3",
+                      ],
                     },
                     Object {
-                      "name": "G",
-                      "notes": null,
+                      "name": "G3",
+                      "notes": Array [
+                        "G3",
+                      ],
                     },
                     Object {
-                      "name": "D",
-                      "notes": null,
+                      "name": "D3",
+                      "notes": Array [
+                        "D3",
+                      ],
                     },
                     Object {
-                      "name": "E",
-                      "notes": null,
+                      "name": "E4",
+                      "notes": Array [
+                        "E4",
+                      ],
                     },
                   ],
                   "locs": Array [],
                 },
                 "question": Object {
                   "entity": Object {
-                    "name": "E",
-                    "notes": null,
+                    "name": "E4",
+                    "notes": Array [
+                      "E4",
+                    ],
                   },
                   "locs": Array [
                     Object {
@@ -21941,20 +22003,28 @@ exports[`Runner start, quiz one, panelModeIndex 2 matches snapshot 1`] = `
                       choices={
                         Array [
                           Object {
-                            "name": "B",
-                            "notes": null,
+                            "name": "B3",
+                            "notes": Array [
+                              "B3",
+                            ],
                           },
                           Object {
-                            "name": "G",
-                            "notes": null,
+                            "name": "G3",
+                            "notes": Array [
+                              "G3",
+                            ],
                           },
                           Object {
-                            "name": "D",
-                            "notes": null,
+                            "name": "D3",
+                            "notes": Array [
+                              "D3",
+                            ],
                           },
                           Object {
-                            "name": "E",
-                            "notes": null,
+                            "name": "E4",
+                            "notes": Array [
+                              "E4",
+                            ],
                           },
                         ]
                       }
@@ -21965,7 +22035,7 @@ exports[`Runner start, quiz one, panelModeIndex 2 matches snapshot 1`] = `
                           className="Wrapper-ThVjl kDyRez"
                         >
                           <Choice
-                            key="B"
+                            key="B3"
                           >
                             <div
                               className="Choice-jqnpMa hbHrmU"
@@ -21980,14 +22050,38 @@ exports[`Runner start, quiz one, panelModeIndex 2 matches snapshot 1`] = `
                                   <SoundPanel
                                     entity={
                                       Object {
-                                        "name": "B",
-                                        "notes": null,
+                                        "name": "B3",
+                                        "notes": Array [
+                                          "B3",
+                                        ],
                                       }
                                     }
+                                    isChoice={true}
                                   >
-                                    <div>
-                                      Sound Panel
-                                    </div>
+                                    <Wrapper>
+                                      <div
+                                        className="Wrapper-ThVjl kkzAKI"
+                                      >
+                                        <ChoiceWrapper>
+                                          <div
+                                            className="ChoiceWrapper-jRXDDf euvYAD"
+                                          >
+                                            <ChoiceClickArea>
+                                              <div
+                                                className="ChoiceClickArea-ikXSga hAqISA"
+                                              >
+                                                click here
+                                              </div>
+                                            </ChoiceClickArea>
+                                            <img
+                                              alt=""
+                                              onClick={[Function]}
+                                              src="test-file-stub"
+                                            />
+                                          </div>
+                                        </ChoiceWrapper>
+                                      </div>
+                                    </Wrapper>
                                   </SoundPanel>
                                 </div>
                               </Button>
@@ -22003,7 +22097,7 @@ exports[`Runner start, quiz one, panelModeIndex 2 matches snapshot 1`] = `
                             </div>
                           </Choice>
                           <Choice
-                            key="G"
+                            key="G3"
                           >
                             <div
                               className="Choice-jqnpMa hbHrmU"
@@ -22018,14 +22112,38 @@ exports[`Runner start, quiz one, panelModeIndex 2 matches snapshot 1`] = `
                                   <SoundPanel
                                     entity={
                                       Object {
-                                        "name": "G",
-                                        "notes": null,
+                                        "name": "G3",
+                                        "notes": Array [
+                                          "G3",
+                                        ],
                                       }
                                     }
+                                    isChoice={true}
                                   >
-                                    <div>
-                                      Sound Panel
-                                    </div>
+                                    <Wrapper>
+                                      <div
+                                        className="Wrapper-ThVjl kkzAKI"
+                                      >
+                                        <ChoiceWrapper>
+                                          <div
+                                            className="ChoiceWrapper-jRXDDf euvYAD"
+                                          >
+                                            <ChoiceClickArea>
+                                              <div
+                                                className="ChoiceClickArea-ikXSga hAqISA"
+                                              >
+                                                click here
+                                              </div>
+                                            </ChoiceClickArea>
+                                            <img
+                                              alt=""
+                                              onClick={[Function]}
+                                              src="test-file-stub"
+                                            />
+                                          </div>
+                                        </ChoiceWrapper>
+                                      </div>
+                                    </Wrapper>
                                   </SoundPanel>
                                 </div>
                               </Button>
@@ -22041,7 +22159,7 @@ exports[`Runner start, quiz one, panelModeIndex 2 matches snapshot 1`] = `
                             </div>
                           </Choice>
                           <Choice
-                            key="D"
+                            key="D3"
                           >
                             <div
                               className="Choice-jqnpMa hbHrmU"
@@ -22056,14 +22174,38 @@ exports[`Runner start, quiz one, panelModeIndex 2 matches snapshot 1`] = `
                                   <SoundPanel
                                     entity={
                                       Object {
-                                        "name": "D",
-                                        "notes": null,
+                                        "name": "D3",
+                                        "notes": Array [
+                                          "D3",
+                                        ],
                                       }
                                     }
+                                    isChoice={true}
                                   >
-                                    <div>
-                                      Sound Panel
-                                    </div>
+                                    <Wrapper>
+                                      <div
+                                        className="Wrapper-ThVjl kkzAKI"
+                                      >
+                                        <ChoiceWrapper>
+                                          <div
+                                            className="ChoiceWrapper-jRXDDf euvYAD"
+                                          >
+                                            <ChoiceClickArea>
+                                              <div
+                                                className="ChoiceClickArea-ikXSga hAqISA"
+                                              >
+                                                click here
+                                              </div>
+                                            </ChoiceClickArea>
+                                            <img
+                                              alt=""
+                                              onClick={[Function]}
+                                              src="test-file-stub"
+                                            />
+                                          </div>
+                                        </ChoiceWrapper>
+                                      </div>
+                                    </Wrapper>
                                   </SoundPanel>
                                 </div>
                               </Button>
@@ -22079,7 +22221,7 @@ exports[`Runner start, quiz one, panelModeIndex 2 matches snapshot 1`] = `
                             </div>
                           </Choice>
                           <Choice
-                            key="E"
+                            key="E4"
                           >
                             <div
                               className="Choice-jqnpMa hbHrmU"
@@ -22094,14 +22236,38 @@ exports[`Runner start, quiz one, panelModeIndex 2 matches snapshot 1`] = `
                                   <SoundPanel
                                     entity={
                                       Object {
-                                        "name": "E",
-                                        "notes": null,
+                                        "name": "E4",
+                                        "notes": Array [
+                                          "E4",
+                                        ],
                                       }
                                     }
+                                    isChoice={true}
                                   >
-                                    <div>
-                                      Sound Panel
-                                    </div>
+                                    <Wrapper>
+                                      <div
+                                        className="Wrapper-ThVjl kkzAKI"
+                                      >
+                                        <ChoiceWrapper>
+                                          <div
+                                            className="ChoiceWrapper-jRXDDf euvYAD"
+                                          >
+                                            <ChoiceClickArea>
+                                              <div
+                                                className="ChoiceClickArea-ikXSga hAqISA"
+                                              >
+                                                click here
+                                              </div>
+                                            </ChoiceClickArea>
+                                            <img
+                                              alt=""
+                                              onClick={[Function]}
+                                              src="test-file-stub"
+                                            />
+                                          </div>
+                                        </ChoiceWrapper>
+                                      </div>
+                                    </Wrapper>
                                   </SoundPanel>
                                 </div>
                               </Button>
@@ -22168,8 +22334,10 @@ exports[`Runner start, quiz one, panelModeIndex 3 matches snapshot 1`] = `
         Object {
           "evaluation": Object {
             "entity": Object {
-              "name": "E",
-              "notes": null,
+              "name": "E4",
+              "notes": Array [
+                "E4",
+              ],
             },
             "locs": Array [
               Object {
@@ -22177,32 +22345,12 @@ exports[`Runner start, quiz one, panelModeIndex 3 matches snapshot 1`] = `
                 "str": 0,
               },
               Object {
-                "pos": 0,
-                "str": 5,
-              },
-              Object {
-                "pos": 2,
-                "str": 3,
-              },
-              Object {
                 "pos": 5,
                 "str": 1,
               },
               Object {
-                "pos": 7,
-                "str": 4,
-              },
-              Object {
                 "pos": 9,
                 "str": 2,
-              },
-              Object {
-                "pos": 12,
-                "str": 0,
-              },
-              Object {
-                "pos": 12,
-                "str": 5,
               },
             ],
           },
@@ -22210,28 +22358,38 @@ exports[`Runner start, quiz one, panelModeIndex 3 matches snapshot 1`] = `
             "answer": Object {
               "choices": Array [
                 Object {
-                  "name": "B",
-                  "notes": null,
+                  "name": "B3",
+                  "notes": Array [
+                    "B3",
+                  ],
                 },
                 Object {
-                  "name": "G",
-                  "notes": null,
+                  "name": "G3",
+                  "notes": Array [
+                    "G3",
+                  ],
                 },
                 Object {
-                  "name": "D",
-                  "notes": null,
+                  "name": "D3",
+                  "notes": Array [
+                    "D3",
+                  ],
                 },
                 Object {
-                  "name": "E",
-                  "notes": null,
+                  "name": "E4",
+                  "notes": Array [
+                    "E4",
+                  ],
                 },
               ],
               "locs": Array [],
             },
             "question": Object {
               "entity": Object {
-                "name": "E",
-                "notes": null,
+                "name": "E4",
+                "notes": Array [
+                  "E4",
+                ],
               },
               "locs": Array [
                 Object {
@@ -22475,28 +22633,38 @@ exports[`Runner start, quiz one, panelModeIndex 3 matches snapshot 1`] = `
                 "answer": Object {
                   "choices": Array [
                     Object {
-                      "name": "B",
-                      "notes": null,
+                      "name": "B3",
+                      "notes": Array [
+                        "B3",
+                      ],
                     },
                     Object {
-                      "name": "G",
-                      "notes": null,
+                      "name": "G3",
+                      "notes": Array [
+                        "G3",
+                      ],
                     },
                     Object {
-                      "name": "D",
-                      "notes": null,
+                      "name": "D3",
+                      "notes": Array [
+                        "D3",
+                      ],
                     },
                     Object {
-                      "name": "E",
-                      "notes": null,
+                      "name": "E4",
+                      "notes": Array [
+                        "E4",
+                      ],
                     },
                   ],
                   "locs": Array [],
                 },
                 "question": Object {
                   "entity": Object {
-                    "name": "E",
-                    "notes": null,
+                    "name": "E4",
+                    "notes": Array [
+                      "E4",
+                    ],
                   },
                   "locs": Array [
                     Object {
@@ -22523,16 +22691,18 @@ exports[`Runner start, quiz one, panelModeIndex 3 matches snapshot 1`] = `
                         <NamePanel
                           entity={
                             Object {
-                              "name": "E",
-                              "notes": null,
+                              "name": "E4",
+                              "notes": Array [
+                                "E4",
+                              ],
                             }
                           }
                         >
                           <Wrapper>
                             <div
-                              className="Wrapper-ThVjl cldtoP"
+                              className="Wrapper-ThVjl hUwzcc"
                             >
-                              E
+                              E4
                             </div>
                           </Wrapper>
                         </NamePanel>

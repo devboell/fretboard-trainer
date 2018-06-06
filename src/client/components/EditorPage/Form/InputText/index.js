@@ -11,6 +11,7 @@ const InputText = ({
     {context =>
       <input
         {...{ name, ...rest }}
+        path={['bla', 'blabla']}
         id={name}
         type="text"
         onChange={context.handleInputChange}

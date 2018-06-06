@@ -1,62 +1,18 @@
 import React from 'react'
 import pt from 'prop-types'
 
-import InputCheckboxGroup from 'components/EditorPage/Form/InputCheckboxGroup'
-import StaticString from 'components/EditorPage/Form/StaticString'
-import PanelMode from 'components/PanelMode'
-import FieldTitle from './FieldTitle'
-import FieldInput from './FieldInput'
-// import Label from './Label'
-import NameInput from './NameInput'
-// import TypeInput from './TypeInput'
+
+import NameField from './NameField'
+import TypeField from './TypeField'
+import PanelModeField from './PanelModeField'
+
 import Wrapper from './Wrapper'
-import FieldWrapper from './FieldWrapper'
-import PanelModeWrapper from './PanelModeWrapper'
-import PanelModeLabel from './PanelModeLabel'
 
 const FormFields = ({ panelModes }) =>
   <Wrapper>
-    <FieldWrapper>
-      <FieldTitle>
-        name:
-      </FieldTitle>
-      <FieldInput>
-        <NameInput
-          name="name"
-          placeholder="Enter a name"
-        />
-      </FieldInput>
-    </FieldWrapper>
-    <FieldWrapper>
-      <FieldTitle>
-        type:
-      </FieldTitle>
-      <FieldInput>
-        <StaticString name="type" />
-      </FieldInput>
-    </FieldWrapper>
-    <FieldWrapper>
-      <FieldTitle>
-        panel modes:
-      </FieldTitle>
-      <FieldInput>
-        <PanelModeWrapper>
-          {panelModes.map(pm =>
-            <PanelModeLabel
-              key={`panelMode-${pm.id}`}
-              htmlFor={`panelMode-${pm.id}`}
-            >
-              <InputCheckboxGroup
-                id={`panelMode-${pm.id}`}
-                name="panelModeIds"
-                value={pm.id}
-              />
-              <PanelMode panelMode={pm} />
-            </PanelModeLabel>)
-          }
-        </PanelModeWrapper>
-      </FieldInput>
-    </FieldWrapper>
+    <NameField />
+    <TypeField />
+    <PanelModeField panelModes={panelModes} />
   </Wrapper>
 
 FormFields.propTypes = {

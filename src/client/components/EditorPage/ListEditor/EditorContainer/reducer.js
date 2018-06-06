@@ -64,11 +64,6 @@ const newQuiz = type => ({
   type,
   tuning: 'standard',
   width: 13,
-  timer: {
-    type: 'none',
-    pause: null,
-    time: null,
-  },
   panelModeIds: ['1'],
   __typename: 'Quiz',
 })
