@@ -1,4 +1,4 @@
-import { times, reverse } from 'ramda'
+import { times, reverse, compose, map, filter } from 'ramda'
 import { Note } from 'tonal'
 
 const tuningsMap = {
@@ -26,3 +26,9 @@ export const midiFretboard = (tuning, width) =>
 
 export const chromaFretboard = (tuning, width) =>
   fretboard(tuningsMap[tuning], width, chromaLocFn)
+
+
+export const locsForMidi = (midi, midiLocs) => compose(
+  map(ml => ml.loc),
+  filter(ml => midi === ml.midi),
+)(midiLocs)
