@@ -16,14 +16,15 @@ const locObj = status => answer => ({
 })
 
 const FretboardPanel = ({ locs, answers, clickAction }) => {
-  const selectedLocations = answers
+  const answerLocs = answers
     ? [
       ...answers.correct.map(locObj('correct')),
       ...answers.incorrect.map(locObj('incorrect')),
     ]
-    : locs
-
+    : []
+  const selectedLocations = [...locs, ...answerLocs]
   const fretboardClick = ({ loc }) => clickAction(loc)
+
   return (
     <Wrapper>
       <Fretboard

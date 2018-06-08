@@ -4,6 +4,7 @@ import { sample } from 'lodash/fp'
 import { flatten } from 'ramda'
 import pcQuestion from './pc'
 import pitchQuestion from './pitch'
+import intervalQuestion from './interval'
 import { chromaFretboard, midiFretboard } from '../fretboard'
 
 export const useSharps = () => sample([true, false])
@@ -19,6 +20,10 @@ export default (quiz) => {
     case 'pitch': {
       const midiLocs = flatten(midiFretboard(tuning, width))
       return pitchQuestion(midiLocs)
+    }
+    case 'interval': {
+      const midiLocs = flatten(midiFretboard(tuning, width))
+      return intervalQuestion(midiLocs)
     }
 
     default: return null

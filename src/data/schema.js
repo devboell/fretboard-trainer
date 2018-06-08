@@ -5,6 +5,7 @@ const typeDefs = `
   enum QuizTypeEnum {
     pc
     pitch
+    interval
   }
 
   enum TuningEnum {
