@@ -1,5 +1,5 @@
 import knex from 'data/connector'
-import * as fxt from 'fixtures/db/quiz'
+import * as fxt from 'fixtures/db/models/quiz'
 import {
   findAll,
   findById,

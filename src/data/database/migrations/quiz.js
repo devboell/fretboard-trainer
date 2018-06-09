@@ -6,6 +6,7 @@ export function up(knex, Promise) {
       table.enum('type', ['pc', 'pitch', 'interval']).notNullable()
       table.enum('tuning', ['standard']).notNullable()
       table.integer('width').notNullable()
+      table.integer('allAnswers').notNullable()
     }),
   ])
 }

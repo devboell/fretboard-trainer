@@ -1,4 +1,4 @@
-import * as fxt from 'fixtures/db/quiz'
+import * as fxt from 'fixtures/db/resolvers/quiz'
 import knex from '../../connector'
 import {
   quizzes,
@@ -17,12 +17,12 @@ describe('resolvers, quiz', () => {
   })
 
   it('createQuiz', async () => {
-    const received = await createQuiz(null, fxt.createQuizInputValues)
+    const received = await createQuiz(null, fxt.createQuizInput)
     expect(received).toEqual(fxt.createdQuiz)
   })
 
   it('updateQuiz', async () => {
-    const received = await updateQuiz(null, fxt.updateQuizInputValues)
+    const received = await updateQuiz(null, fxt.updateQuizInput)
     expect(received).toEqual(fxt.updatedQuiz)
   })
 

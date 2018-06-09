@@ -1,72 +1,58 @@
-import { panel1, panel2, panel3, panel4 } from './panelMode'
-
 const tuning = 'standard'
 const width = 13
 
 export const quiz1 = {
-  id: '1',
+  id: 1,
   name: 'quiz one',
   type: 'pc',
   tuning,
   width,
-  allAnswers: false,
-  __typename: 'Quiz',
-  panelModes: [panel1],
+  allAnswers: 0,
 }
 
 export const quiz2 = {
-  id: '2',
+  id: 2,
   name: 'quiz two',
   type: 'pitch',
   tuning,
   width,
-  allAnswers: true,
-  __typename: 'Quiz',
-  panelModes: [panel1, panel2, panel3, panel4],
+  allAnswers: 1,
 }
 
 export const quiz3 = {
-  id: '3',
+  id: 3,
   name: 'quiz three',
   type: 'pitch',
   tuning,
   width,
-  allAnswers: true,
-  __typename: 'Quiz',
-  panelModes: [panel1],
+  allAnswers: 1,
 }
 
 export const quiz4 = {
-  id: '4',
+  id: 4,
   name: 'quiz four',
   type: 'pitch',
   tuning,
   width,
-  allAnswers: true,
-  __typename: 'Quiz',
-  panelModes: [panel1],
+  allAnswers: 1,
 }
 
 export const quiz5 = {
-  id: '5',
+  id: 5,
   name: 'quiz five',
   type: 'pitch',
   tuning,
   width,
-  allAnswers: true,
-  __typename: 'Quiz',
-  panelModes: [panel1],
+  allAnswers: 1,
 }
 
 export const quiz6 = {
-  id: '6',
+  id: 6,
   name: 'quiz six',
   type: 'pitch',
   tuning,
   width,
-  allAnswers: true,
-  __typename: 'Quiz',
-  panelModes: [panel1],
+  allAnswers: 1,
 }
 
 export const quizzes = [
@@ -83,22 +69,19 @@ export const createValues = {
   type: 'pc',
   tuning,
   width,
-  allAnswers: true,
+  allAnswers: 1,
 }
 
-
-export const createQuizInputValues = {
+export const createQuizInput = {
   input: {
     quiz: createValues,
-    panelModeIds: ['1', '2'],
+    panelModeIds: [1, 2],
   },
 }
 
 export const createdQuiz = {
-  id: '7',
+  id: 7,
   ...createValues,
-  __typename: 'Quiz',
-  panelModes: [panel1, panel2],
 }
 
 export const updateValues = {
@@ -106,21 +89,20 @@ export const updateValues = {
   type: 'pitch',
   tuning,
   width,
-  allAnswers: true,
+  allAnswers: 1,
 }
 
-export const updateQuizInputValues = {
+export const updateQuizInput = {
   input: {
-    id: '3',
+    id: 3,
     quiz: updateValues,
-    panelModeIds: ['1', '2', '3'],
+    panelModeIds: [1, 2, 3],
   },
 }
 
 export const updatedQuiz = {
-  id: '3',
+  id: 3,
   ...updateValues,
-  __typename: 'Quiz',
-  panelModes: [panel1, panel2, panel3],
 }
 
+export { quiz2PanelModes } from './panelMode'

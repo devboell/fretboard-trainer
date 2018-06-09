@@ -7,6 +7,7 @@ export default gql`
     type
     tuning
     width
+    allAnswers
     __typename
     panelModes {
       id
