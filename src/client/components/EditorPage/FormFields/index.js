@@ -5,6 +5,7 @@ import pt from 'prop-types'
 import NameField from './NameField'
 import TypeField from './TypeField'
 import PanelModeField from './PanelModeField'
+import AllAnswersField from './AllAnswersField'
 
 import Wrapper from './Wrapper'
 
@@ -13,6 +14,7 @@ const FormFields = ({ panelModes }) =>
     <NameField />
     <TypeField />
     <PanelModeField panelModes={panelModes} />
+    <AllAnswersField />
   </Wrapper>
 
 FormFields.propTypes = {

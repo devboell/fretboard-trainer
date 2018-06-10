@@ -1,12 +1,10 @@
 import React from 'react'
 import pt from 'prop-types'
-import { contains } from 'ramda'
 
 import { FormContext } from 'components/EditorPage/Form'
 
 const InputCheckbox = ({
   name,
-  value,
   ...rest
 }) =>
   <FormContext.Consumer>
@@ -15,8 +13,7 @@ const InputCheckbox = ({
         {...{ name, ...rest }}
         type="checkbox"
         onChange={context.handleInputChange}
-        value={value}
-        checked={contains(value, context.buffer[name])}
+        checked={context.buffer[name]}
       />
 
     }
