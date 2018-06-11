@@ -43,6 +43,10 @@ export const checkPanelModeId = (id, wrapper) =>
   wrapper.find('Form input[name="panelModeIds"]').at(0)
     .simulate('change', { target: { value: id, name: 'panelModeIds', checked: true } })
 
+export const checkAllAnswers = wrapper =>
+  wrapper.find('Form input[name="allAnswers"]')
+    .simulate('change', { target: { value: true, name: 'allAnswers', checked: true } })
+
 export const clickPreview = wrapper =>
   wrapper.find('PreviewButton').simulate('click')
 

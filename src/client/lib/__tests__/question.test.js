@@ -1,8 +1,8 @@
 import { take } from 'ramda'
 import {
-  quizValues1 as pcQuiz,
-  quizValues2 as pitchQuiz,
-} from 'fixtures/quiz'
+  quiz1 as pcQuiz,
+  quiz2 as pitchQuiz,
+} from 'fixtures/graphql/quiz'
 import getQuestion from '../question'
 
 const mockTake = take

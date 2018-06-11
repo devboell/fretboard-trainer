@@ -38,7 +38,7 @@ describe('Runner', () => {
     })
   })
 
-  describe('start, quiz one, panelModeIndex 0', () => {
+  describe('start, quiz two, panelModeIndex 0', () => {
     beforeEach(() => clickStart(wrapper))
 
     it('matches snapshot', () => {
@@ -68,7 +68,7 @@ describe('Runner', () => {
     })
   })
 
-  describe('start, quiz one, panelModeIndex 1', () => {
+  describe('start, quiz two, panelModeIndex 1', () => {
     beforeEach(() => {
       clickStart(wrapper)
       selectPanelMode(1, wrapper)
@@ -101,7 +101,7 @@ describe('Runner', () => {
     })
   })
 
-  describe('start, quiz one, panelModeIndex 2', () => {
+  describe('start, quiz two, panelModeIndex 2', () => {
     beforeEach(() => {
       clickStart(wrapper)
       selectPanelMode(2, wrapper)
@@ -134,7 +134,7 @@ describe('Runner', () => {
     })
   })
 
-  describe('start, quiz one, panelModeIndex 3', () => {
+  describe('start, quiz two, panelModeIndex 3', () => {
     beforeEach(() => {
       clickStart(wrapper)
       selectPanelMode(3, wrapper)
@@ -153,9 +153,9 @@ describe('Runner', () => {
     })
 
     it('handle fretboard fret answers', () => {
-      const correctLoc = { loc: { str: 0, pos: 0 } }
-      const incorrectLoc1 = { loc: { str: 5, pos: 1 } }
-      const incorrectLoc2 = { loc: { str: 5, pos: 2 } }
+      const correctLoc = { str: 0, pos: 0 }
+      const incorrectLoc1 = { str: 5, pos: 1 }
+      const incorrectLoc2 = { str: 5, pos: 2 }
       const expected = {
         correct: [correctLoc],
         incorrect: [incorrectLoc1, incorrectLoc2],

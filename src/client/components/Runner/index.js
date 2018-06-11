@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { contains, equals, intersection, isEmpty } from 'ramda'
 import getQuestion from 'lib/question'
-
+import { equalsIgnoreOrder } from 'lib/runner'
 import QuizView from 'components/QuizView'
 import {
   startRunner,
@@ -11,6 +11,10 @@ import {
 } from './reducer'
 import { isFretboardAnswer } from './selectors'
 
+const fretboardCompletion = (quiz, question, answers) => (
+  quiz.allAnswers
+    ? equalsIgnoreOrder(answers.correct, question.evaluation.locs)
+    : !isEmpty(intersection(answers.correct, question.evaluation.locs)))
 
 const setAnswer = answer =>
   (dispatch, getState) => {
@@ -25,8 +29,9 @@ const setAnswer = answer =>
       : dispatch(addIncorrectAnswer(answer))
 
     const { runner: { answers } } = getState()
+
     const completed = isFretboardAnswer(state)
-      ? !isEmpty(intersection(answers.correct, question.evaluation.locs))
+      ? fretboardCompletion(quiz, question, answers)
       : equals(answers.correct[0], question.evaluation.entity)
 
     if (completed) {

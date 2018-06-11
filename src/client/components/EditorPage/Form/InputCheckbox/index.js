@@ -13,6 +13,7 @@ const InputCheckbox = ({
         {...{ name, ...rest }}
         type="checkbox"
         onChange={context.handleInputChange}
+        value={context.buffer[name]}
         checked={context.buffer[name]}
       />
 
@@ -21,7 +22,6 @@ const InputCheckbox = ({
 
 InputCheckbox.propTypes = {
   name: pt.string.isRequired,
-  value: pt.oneOfType([pt.string, pt.number]).isRequired,
 }
 
 export default InputCheckbox
