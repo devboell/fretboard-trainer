@@ -7,6 +7,7 @@ export function up(knex, Promise) {
       table.enum('tuning', ['standard']).notNullable()
       table.integer('width').notNullable()
       table.integer('allAnswers').notNullable()
+      table.integer('allowIncorrect').notNullable()
     }),
   ])
 }

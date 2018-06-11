@@ -20,6 +20,7 @@ const typeDefs = `
     width: Int
     panelModes: [PanelMode]
     allAnswers: Boolean
+    allowIncorrect: Boolean
   }
 
   type PanelMode {
@@ -39,6 +40,7 @@ const typeDefs = `
     tuning: TuningEnum
     width: Int
     allAnswers: Boolean
+    allowIncorrect: Boolean
   }
 
   input CreateQuizInput {

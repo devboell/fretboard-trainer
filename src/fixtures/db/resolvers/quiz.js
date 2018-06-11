@@ -8,6 +8,7 @@ export const quiz1 = {
   tuning,
   width,
   allAnswers: 0,
+  allowIncorrect: 1,
 }
 
 export const quiz2 = {
@@ -17,6 +18,7 @@ export const quiz2 = {
   tuning,
   width,
   allAnswers: 1,
+  allowIncorrect: 1,
 }
 
 export const quiz3 = {
@@ -26,6 +28,7 @@ export const quiz3 = {
   tuning,
   width,
   allAnswers: 1,
+  allowIncorrect: 1,
 }
 
 export const quiz4 = {
@@ -35,6 +38,7 @@ export const quiz4 = {
   tuning,
   width,
   allAnswers: 1,
+  allowIncorrect: 1,
 }
 
 export const quiz5 = {
@@ -44,6 +48,7 @@ export const quiz5 = {
   tuning,
   width,
   allAnswers: 1,
+  allowIncorrect: 1,
 }
 
 export const quiz6 = {
@@ -53,6 +58,7 @@ export const quiz6 = {
   tuning,
   width,
   allAnswers: 1,
+  allowIncorrect: 1,
 }
 
 export const quizzes = [
@@ -70,6 +76,7 @@ export const createValues = {
   tuning,
   width,
   allAnswers: 1,
+  allowIncorrect: 1,
 }
 
 export const createQuizInput = {
@@ -90,6 +97,7 @@ export const updateValues = {
   tuning,
   width,
   allAnswers: 1,
+  allowIncorrect: 1,
 }
 
 export const updateQuizInput = {

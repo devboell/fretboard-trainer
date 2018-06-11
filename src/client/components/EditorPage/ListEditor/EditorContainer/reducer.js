@@ -66,6 +66,7 @@ const newQuiz = type => ({
   width: 13,
   panelModeIds: ['1'],
   allAnswers: false,
+  allowIncorrect: false,
   __typename: 'Quiz',
 })
 

@@ -8,6 +8,7 @@ export default gql`
     tuning
     width
     allAnswers
+    allowIncorrect
     __typename
     panelModes {
       id

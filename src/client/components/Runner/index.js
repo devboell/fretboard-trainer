@@ -16,6 +16,14 @@ const fretboardCompletion = (quiz, question, answers) => (
     ? equalsIgnoreOrder(answers.correct, question.evaluation.locs)
     : !isEmpty(intersection(answers.correct, question.evaluation.locs)))
 
+/* eslint-disable no-nested-ternary */
+const handleCompletion = (quiz, evaluation, state, question, answers) => (
+  !quiz.allowIncorrect && !evaluation
+    ? true
+    : isFretboardAnswer(state)
+      ? fretboardCompletion(quiz, question, answers)
+      : equals(answers.correct[0], question.evaluation.entity))
+
 const setAnswer = answer =>
   (dispatch, getState) => {
     const state = getState()
@@ -30,9 +38,7 @@ const setAnswer = answer =>
 
     const { runner: { answers } } = getState()
 
-    const completed = isFretboardAnswer(state)
-      ? fretboardCompletion(quiz, question, answers)
-      : equals(answers.correct[0], question.evaluation.entity)
+    const completed = handleCompletion(quiz, evaluation, state, question, answers)
 
     if (completed) {
       setTimeout(

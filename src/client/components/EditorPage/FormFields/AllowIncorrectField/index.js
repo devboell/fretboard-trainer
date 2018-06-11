@@ -6,14 +6,14 @@ import FieldTitle from '../FieldTitle'
 import FieldInput from '../FieldInput'
 import FieldWrapper from '../FieldWrapper'
 
-const AllAnswersField = () =>
+const AllowIncorrectField = () =>
   <FieldWrapper>
     <FieldTitle>
-      all answers:
+      allow incorrect:
     </FieldTitle>
     <FieldInput>
-      <InputCheckbox name="allAnswers" />
+      <InputCheckbox name="allowIncorrect" />
     </FieldInput>
   </FieldWrapper>
 
-export default AllAnswersField
+export default AllowIncorrectField

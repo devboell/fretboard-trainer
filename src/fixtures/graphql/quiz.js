@@ -10,6 +10,7 @@ export const quiz1 = {
   tuning,
   width,
   allAnswers: false,
+  allowIncorrect: true,
   __typename: 'Quiz',
   panelModes: [panel1],
 }
@@ -21,6 +22,7 @@ export const quiz2 = {
   tuning,
   width,
   allAnswers: true,
+  allowIncorrect: true,
   __typename: 'Quiz',
   panelModes: [panel1, panel2, panel3, panel4],
 }
@@ -32,6 +34,7 @@ export const quiz3 = {
   tuning,
   width,
   allAnswers: true,
+  allowIncorrect: true,
   __typename: 'Quiz',
   panelModes: [panel1],
 }
@@ -43,6 +46,7 @@ export const quiz4 = {
   tuning,
   width,
   allAnswers: true,
+  allowIncorrect: true,
   __typename: 'Quiz',
   panelModes: [panel1],
 }
@@ -54,6 +58,7 @@ export const quiz5 = {
   tuning,
   width,
   allAnswers: true,
+  allowIncorrect: true,
   __typename: 'Quiz',
   panelModes: [panel1],
 }
@@ -65,6 +70,7 @@ export const quiz6 = {
   tuning,
   width,
   allAnswers: true,
+  allowIncorrect: true,
   __typename: 'Quiz',
   panelModes: [panel1],
 }
@@ -84,6 +90,7 @@ export const createValues = {
   tuning,
   width,
   allAnswers: true,
+  allowIncorrect: true,
 }
 
 
@@ -107,6 +114,7 @@ export const updateValues = {
   tuning,
   width,
   allAnswers: true,
+  allowIncorrect: true,
 }
 
 export const updateQuizInputValues = {
