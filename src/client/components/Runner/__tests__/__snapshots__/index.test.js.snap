@@ -22,7 +22,8 @@ exports[`Runner start, quiz two, panelModeIndex 0 matches snapshot 1`] = `
       }
       onSelectPanelModeIdx={[Function]}
       onSetAnswer={[Function]}
-      onStartRunner={[Function]}
+      onStartQuiz={[Function]}
+      onStopQuiz={[Function]}
       question={
         Object {
           "evaluation": Object {
@@ -98,6 +99,7 @@ exports[`Runner start, quiz two, panelModeIndex 0 matches snapshot 1`] = `
         Object {
           "__typename": "Quiz",
           "allAnswers": true,
+          "allowIncorrect": true,
           "id": "2",
           "name": "quiz two",
           "panelModes": Array [
@@ -122,12 +124,15 @@ exports[`Runner start, quiz two, panelModeIndex 0 matches snapshot 1`] = `
               "question": "name",
             },
           ],
+          "time": 5000,
           "tuning": "standard",
           "type": "pitch",
+          "useTimer": true,
           "width": 13,
         }
       }
       selectedPanelModeIdx={0}
+      status="RUNNING"
     >
       <Wrapper>
         <div
@@ -7552,16 +7557,28 @@ exports[`Runner start, quiz two, panelModeIndex 0 matches snapshot 1`] = `
               </div>
             </Wrapper>
           </QuizPanels>
-          <StartButton
-            onClick={[Function]}
+          <QuizControls
+            onStartQuiz={[Function]}
+            onStopQuiz={[Function]}
+            status="RUNNING"
           >
-            <button
-              className="StartButton-bXgdxw fSjzuT"
-              onClick={[Function]}
-            >
-              Start
-            </button>
-          </StartButton>
+            <Wrapper>
+              <div
+                className="Wrapper-ThVjl elisep"
+              >
+                <StopButton
+                  onClick={[Function]}
+                >
+                  <button
+                    className="StopButton-kAzXki jUosrQ"
+                    onClick={[Function]}
+                  >
+                    Stop
+                  </button>
+                </StopButton>
+              </div>
+            </Wrapper>
+          </QuizControls>
         </div>
       </Wrapper>
     </QuizView>
@@ -7591,7 +7608,8 @@ exports[`Runner start, quiz two, panelModeIndex 1 matches snapshot 1`] = `
       }
       onSelectPanelModeIdx={[Function]}
       onSetAnswer={[Function]}
-      onStartRunner={[Function]}
+      onStartQuiz={[Function]}
+      onStopQuiz={[Function]}
       question={
         Object {
           "evaluation": Object {
@@ -7667,6 +7685,7 @@ exports[`Runner start, quiz two, panelModeIndex 1 matches snapshot 1`] = `
         Object {
           "__typename": "Quiz",
           "allAnswers": true,
+          "allowIncorrect": true,
           "id": "2",
           "name": "quiz two",
           "panelModes": Array [
@@ -7691,12 +7710,15 @@ exports[`Runner start, quiz two, panelModeIndex 1 matches snapshot 1`] = `
               "question": "name",
             },
           ],
+          "time": 5000,
           "tuning": "standard",
           "type": "pitch",
+          "useTimer": true,
           "width": 13,
         }
       }
       selectedPanelModeIdx={1}
+      status="RUNNING"
     >
       <Wrapper>
         <div
@@ -15121,16 +15143,28 @@ exports[`Runner start, quiz two, panelModeIndex 1 matches snapshot 1`] = `
               </div>
             </Wrapper>
           </QuizPanels>
-          <StartButton
-            onClick={[Function]}
+          <QuizControls
+            onStartQuiz={[Function]}
+            onStopQuiz={[Function]}
+            status="RUNNING"
           >
-            <button
-              className="StartButton-bXgdxw fSjzuT"
-              onClick={[Function]}
-            >
-              Start
-            </button>
-          </StartButton>
+            <Wrapper>
+              <div
+                className="Wrapper-ThVjl elisep"
+              >
+                <StopButton
+                  onClick={[Function]}
+                >
+                  <button
+                    className="StopButton-kAzXki jUosrQ"
+                    onClick={[Function]}
+                  >
+                    Stop
+                  </button>
+                </StopButton>
+              </div>
+            </Wrapper>
+          </QuizControls>
         </div>
       </Wrapper>
     </QuizView>
@@ -15160,7 +15194,8 @@ exports[`Runner start, quiz two, panelModeIndex 2 matches snapshot 1`] = `
       }
       onSelectPanelModeIdx={[Function]}
       onSetAnswer={[Function]}
-      onStartRunner={[Function]}
+      onStartQuiz={[Function]}
+      onStopQuiz={[Function]}
       question={
         Object {
           "evaluation": Object {
@@ -15236,6 +15271,7 @@ exports[`Runner start, quiz two, panelModeIndex 2 matches snapshot 1`] = `
         Object {
           "__typename": "Quiz",
           "allAnswers": true,
+          "allowIncorrect": true,
           "id": "2",
           "name": "quiz two",
           "panelModes": Array [
@@ -15260,12 +15296,15 @@ exports[`Runner start, quiz two, panelModeIndex 2 matches snapshot 1`] = `
               "question": "name",
             },
           ],
+          "time": 5000,
           "tuning": "standard",
           "type": "pitch",
+          "useTimer": true,
           "width": 13,
         }
       }
       selectedPanelModeIdx={2}
+      status="RUNNING"
     >
       <Wrapper>
         <div
@@ -22758,16 +22797,28 @@ exports[`Runner start, quiz two, panelModeIndex 2 matches snapshot 1`] = `
               </div>
             </Wrapper>
           </QuizPanels>
-          <StartButton
-            onClick={[Function]}
+          <QuizControls
+            onStartQuiz={[Function]}
+            onStopQuiz={[Function]}
+            status="RUNNING"
           >
-            <button
-              className="StartButton-bXgdxw fSjzuT"
-              onClick={[Function]}
-            >
-              Start
-            </button>
-          </StartButton>
+            <Wrapper>
+              <div
+                className="Wrapper-ThVjl elisep"
+              >
+                <StopButton
+                  onClick={[Function]}
+                >
+                  <button
+                    className="StopButton-kAzXki jUosrQ"
+                    onClick={[Function]}
+                  >
+                    Stop
+                  </button>
+                </StopButton>
+              </div>
+            </Wrapper>
+          </QuizControls>
         </div>
       </Wrapper>
     </QuizView>
@@ -22797,7 +22848,8 @@ exports[`Runner start, quiz two, panelModeIndex 3 matches snapshot 1`] = `
       }
       onSelectPanelModeIdx={[Function]}
       onSetAnswer={[Function]}
-      onStartRunner={[Function]}
+      onStartQuiz={[Function]}
+      onStopQuiz={[Function]}
       question={
         Object {
           "evaluation": Object {
@@ -22873,6 +22925,7 @@ exports[`Runner start, quiz two, panelModeIndex 3 matches snapshot 1`] = `
         Object {
           "__typename": "Quiz",
           "allAnswers": true,
+          "allowIncorrect": true,
           "id": "2",
           "name": "quiz two",
           "panelModes": Array [
@@ -22897,12 +22950,15 @@ exports[`Runner start, quiz two, panelModeIndex 3 matches snapshot 1`] = `
               "question": "name",
             },
           ],
+          "time": 5000,
           "tuning": "standard",
           "type": "pitch",
+          "useTimer": true,
           "width": 13,
         }
       }
       selectedPanelModeIdx={3}
+      status="RUNNING"
     >
       <Wrapper>
         <div
@@ -30119,16 +30175,28 @@ exports[`Runner start, quiz two, panelModeIndex 3 matches snapshot 1`] = `
               </div>
             </Wrapper>
           </QuizPanels>
-          <StartButton
-            onClick={[Function]}
+          <QuizControls
+            onStartQuiz={[Function]}
+            onStopQuiz={[Function]}
+            status="RUNNING"
           >
-            <button
-              className="StartButton-bXgdxw fSjzuT"
-              onClick={[Function]}
-            >
-              Start
-            </button>
-          </StartButton>
+            <Wrapper>
+              <div
+                className="Wrapper-ThVjl elisep"
+              >
+                <StopButton
+                  onClick={[Function]}
+                >
+                  <button
+                    className="StopButton-kAzXki jUosrQ"
+                    onClick={[Function]}
+                  >
+                    Stop
+                  </button>
+                </StopButton>
+              </div>
+            </Wrapper>
+          </QuizControls>
         </div>
       </Wrapper>
     </QuizView>

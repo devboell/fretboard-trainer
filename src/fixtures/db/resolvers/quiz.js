@@ -9,6 +9,8 @@ export const quiz1 = {
   width,
   allAnswers: 0,
   allowIncorrect: 1,
+  useTimer: 0,
+  time: 0,
 }
 
 export const quiz2 = {
@@ -19,6 +21,8 @@ export const quiz2 = {
   width,
   allAnswers: 1,
   allowIncorrect: 1,
+  useTimer: 1,
+  time: 5000,
 }
 
 export const quiz3 = {
@@ -29,6 +33,8 @@ export const quiz3 = {
   width,
   allAnswers: 1,
   allowIncorrect: 1,
+  useTimer: 1,
+  time: 5000,
 }
 
 export const quiz4 = {
@@ -39,6 +45,8 @@ export const quiz4 = {
   width,
   allAnswers: 1,
   allowIncorrect: 1,
+  useTimer: 1,
+  time: 5000,
 }
 
 export const quiz5 = {
@@ -49,6 +57,8 @@ export const quiz5 = {
   width,
   allAnswers: 1,
   allowIncorrect: 1,
+  useTimer: 1,
+  time: 5000,
 }
 
 export const quiz6 = {
@@ -59,6 +69,8 @@ export const quiz6 = {
   width,
   allAnswers: 1,
   allowIncorrect: 1,
+  useTimer: 1,
+  time: 5000,
 }
 
 export const quizzes = [
@@ -77,6 +89,8 @@ export const createValues = {
   width,
   allAnswers: 1,
   allowIncorrect: 1,
+  useTimer: 1,
+  time: 5000,
 }
 
 export const createQuizInput = {
@@ -98,6 +112,8 @@ export const updateValues = {
   width,
   allAnswers: 1,
   allowIncorrect: 1,
+  useTimer: 1,
+  time: 5000,
 }
 
 export const updateQuizInput = {

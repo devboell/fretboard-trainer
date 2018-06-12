@@ -3,6 +3,7 @@ import {
   changeName,
   checkPanelModeId,
   checkAllAnswers,
+  checkAllowIncorrect,
   saveChanges,
   listButtonIsSelected,
   formIsPristine,
@@ -20,6 +21,7 @@ describe('Create pc quiz', () => {
     changeName('new', wrapper)
     checkPanelModeId('2', wrapper)
     checkAllAnswers(wrapper)
+    checkAllowIncorrect(wrapper)
     saveChanges(wrapper)
     await new Promise(resolve => setTimeout(resolve, 10))
     wrapper.update()

@@ -1,6 +1,7 @@
 import React from 'react'
 import TestProvider from 'test-utils'
-import { createStore, combineReducers } from 'redux'
+import { createStore, combineReducers, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
 
 import QUIZZES from 'graphql/Quizzes'
 import PANEL_MODES from 'graphql/PanelModes'
@@ -66,11 +67,15 @@ const initialState = {
   runner: initialRunnerState,
 }
 
-export const store = createStore(combineReducers({
-  list: listReducer,
-  editor: editorReducer,
-  runner: runnerReducer,
-}), initialState)
+export const store = createStore(
+  combineReducers({
+    list: listReducer,
+    editor: editorReducer,
+    runner: runnerReducer,
+  }),
+  initialState,
+  applyMiddleware(thunk),
+)
 
 export const getWrapper = async () => {
   const wrapper = mount((

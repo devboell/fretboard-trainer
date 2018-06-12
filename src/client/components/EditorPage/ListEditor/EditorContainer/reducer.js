@@ -67,6 +67,8 @@ const newQuiz = type => ({
   panelModeIds: ['1'],
   allAnswers: false,
   allowIncorrect: false,
+  useTimer: true,
+  time: 5000,
   __typename: 'Quiz',
 })
 

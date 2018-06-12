@@ -9,6 +9,8 @@ export default gql`
     width
     allAnswers
     allowIncorrect
+    useTimer,
+    time,
     __typename
     panelModes {
       id

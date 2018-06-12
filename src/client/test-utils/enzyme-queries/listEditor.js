@@ -47,6 +47,10 @@ export const checkAllAnswers = wrapper =>
   wrapper.find('Form input[name="allAnswers"]')
     .simulate('change', { target: { value: true, name: 'allAnswers', checked: true } })
 
+export const checkAllowIncorrect = wrapper =>
+  wrapper.find('Form input[name="allowIncorrect"]')
+    .simulate('change', { target: { value: true, name: 'allowIncorrect', checked: true } })
+
 export const clickPreview = wrapper =>
   wrapper.find('PreviewButton').simulate('click')
 

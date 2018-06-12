@@ -7,25 +7,25 @@ import {
   append,
 } from 'ramda'
 
-const INIT_RUNNER = 'INIT_RUNNER'
-const RESET_RUNNER = 'RESET_RUNNER'
+const RUNNER_INIT = 'RUNNER_INIT'
+const RUNNER_STOP = 'RUNNER_STOP'
 const RUNNER_START = 'RUNNER_START'
 const PANEL_MODE_SELECTION = 'PANEL_MODE_SELECTION'
 const CORRECT_ANSWER = 'CORRECT_ANSWER'
 const INCORRECT_ANSWER = 'INCORRECT_ANSWER'
+const SET_QUESTION = 'SET_QUESTION'
 
 export const initRunner = quiz => ({
-  type: INIT_RUNNER,
+  type: RUNNER_INIT,
   quiz,
 })
 
-export const resetRunner = () => ({
-  type: RESET_RUNNER,
+export const stopRunner = () => ({
+  type: RUNNER_STOP,
 })
 
-export const startRunner = question => ({
+export const startRunner = () => ({
   type: RUNNER_START,
-  question,
 })
 
 export const selectPanelModeIdx = idx => ({
@@ -43,6 +43,16 @@ export const addIncorrectAnswer = answer => ({
   answer,
 })
 
+export const setQuestion = question => ({
+  type: SET_QUESTION,
+  question,
+})
+
+export const statusMap = {
+  READY: 'READY',
+  RUNNING: 'RUNNING',
+}
+
 const initialAnswers = {
   correct: [],
   incorrect: [],
@@ -53,22 +63,30 @@ export const initialState = {
   question: undefined,
   selectedPanelModeIdx: 0,
   answers: initialAnswers,
+  status: undefined,
 }
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case INIT_RUNNER:
+    case RUNNER_INIT:
       return compose(
         set(lensProp('quiz'), action.quiz),
         set(lensProp('question'), undefined),
         set(lensProp('selectedPanelModeIdx'), 0),
         set(lensProp('answers'), initialAnswers),
+        set(lensProp('status'), statusMap.READY),
       )(state)
 
-    case RESET_RUNNER:
-      return set(lensProp('quiz'), undefined, state)
+    case RUNNER_STOP:
+      return compose(
+        set(lensProp('status'), statusMap.READY),
+        set(lensProp('question'), undefined),
+      )(state)
 
     case RUNNER_START:
+      return set(lensProp('status'), statusMap.RUNNING, state)
+
+    case SET_QUESTION:
       return compose(
         set(lensProp('answers'), initialAnswers),
         set(lensProp('question'), action.question),

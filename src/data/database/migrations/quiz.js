@@ -8,6 +8,8 @@ export function up(knex, Promise) {
       table.integer('width').notNullable()
       table.integer('allAnswers').notNullable()
       table.integer('allowIncorrect').notNullable()
+      table.integer('useTimer').notNullable()
+      table.integer('time').notNullable()
     }),
   ])
 }

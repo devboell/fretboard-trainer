@@ -1,7 +1,7 @@
 import React from 'react'
 import pt from 'prop-types'
 import { connect } from 'react-redux'
-import { resetRunner } from 'components/Runner/reducer'
+import { stopQuiz } from 'components/Runner'
 
 import Preview from 'components/EditorPage/Preview'
 
@@ -34,7 +34,7 @@ const mapStateToProps = state => ({
 })
 
 const closePreview = (dispatch) => {
-  dispatch(resetRunner())
+  dispatch(stopQuiz())
   dispatch(togglePreview())
 }
 

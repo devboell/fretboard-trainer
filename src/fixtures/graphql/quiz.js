@@ -11,6 +11,8 @@ export const quiz1 = {
   width,
   allAnswers: false,
   allowIncorrect: true,
+  useTimer: false,
+  time: 0,
   __typename: 'Quiz',
   panelModes: [panel1],
 }
@@ -23,6 +25,8 @@ export const quiz2 = {
   width,
   allAnswers: true,
   allowIncorrect: true,
+  useTimer: true,
+  time: 5000,
   __typename: 'Quiz',
   panelModes: [panel1, panel2, panel3, panel4],
 }
@@ -35,6 +39,8 @@ export const quiz3 = {
   width,
   allAnswers: true,
   allowIncorrect: true,
+  useTimer: true,
+  time: 5000,
   __typename: 'Quiz',
   panelModes: [panel1],
 }
@@ -47,6 +53,8 @@ export const quiz4 = {
   width,
   allAnswers: true,
   allowIncorrect: true,
+  useTimer: true,
+  time: 5000,
   __typename: 'Quiz',
   panelModes: [panel1],
 }
@@ -59,6 +67,8 @@ export const quiz5 = {
   width,
   allAnswers: true,
   allowIncorrect: true,
+  useTimer: true,
+  time: 5000,
   __typename: 'Quiz',
   panelModes: [panel1],
 }
@@ -71,6 +81,8 @@ export const quiz6 = {
   width,
   allAnswers: true,
   allowIncorrect: true,
+  useTimer: true,
+  time: 5000,
   __typename: 'Quiz',
   panelModes: [panel1],
 }
@@ -91,6 +103,8 @@ export const createValues = {
   width,
   allAnswers: true,
   allowIncorrect: true,
+  useTimer: true,
+  time: 5000,
 }
 
 
@@ -115,6 +129,8 @@ export const updateValues = {
   width,
   allAnswers: true,
   allowIncorrect: true,
+  useTimer: true,
+  time: 5000,
 }
 
 export const updateQuizInputValues = {

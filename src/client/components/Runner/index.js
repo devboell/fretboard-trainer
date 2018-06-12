@@ -5,11 +5,40 @@ import { equalsIgnoreOrder } from 'lib/runner'
 import QuizView from 'components/QuizView'
 import {
   startRunner,
+  stopRunner,
+  setQuestion,
   selectPanelModeIdx,
   addCorrectAnswer,
   addIncorrectAnswer,
 } from './reducer'
 import { isFretboardAnswer } from './selectors'
+
+let timer
+
+const nextQuestion = () =>
+  (dispatch, getState) => {
+    const { runner: { quiz } } = getState()
+    dispatch(setQuestion(getQuestion(quiz)))
+    if (quiz.useTimer) {
+      clearTimeout(timer)
+      timer = setTimeout(
+        () => dispatch(nextQuestion()),
+        quiz.time,
+      )
+    }
+  }
+
+const startQuiz = () =>
+  (dispatch) => {
+    dispatch(nextQuestion())
+    dispatch(startRunner())
+  }
+
+export const stopQuiz = () =>
+  (dispatch) => {
+    clearTimeout(timer)
+    dispatch(stopRunner())
+  }
 
 const fretboardCompletion = (quiz, question, answers) => (
   quiz.allAnswers
@@ -42,7 +71,7 @@ const setAnswer = answer =>
 
     if (completed) {
       setTimeout(
-        () => dispatch(startRunner(getQuestion(quiz))),
+        () => dispatch(nextQuestion()),
         500,
       )
     }
@@ -53,18 +82,14 @@ const mapStateToProps = state => ({
   question: state.runner.question,
   selectedPanelModeIdx: state.runner.selectedPanelModeIdx,
   answers: state.runner.answers,
+  status: state.runner.status,
 })
 
 const mapDispatchToProps = dispatch => ({
-  onStartRunner: question => dispatch(startRunner(question)),
+  onStartQuiz: () => dispatch(startQuiz()),
+  onStopQuiz: () => dispatch(stopQuiz()),
   onSelectPanelModeIdx: idx => dispatch(selectPanelModeIdx(idx)),
   onSetAnswer: answer => dispatch(setAnswer(answer)),
 })
 
-const mergeProps = (stateProps, dispatchProps) => ({
-  ...stateProps,
-  ...dispatchProps,
-  onStartRunner: () => dispatchProps.onStartRunner(getQuestion(stateProps.quiz)),
-})
-
-export default connect(mapStateToProps, mapDispatchToProps, mergeProps)(QuizView)
+export default connect(mapStateToProps, mapDispatchToProps)(QuizView)

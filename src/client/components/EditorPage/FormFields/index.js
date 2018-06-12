@@ -7,6 +7,7 @@ import TypeField from './TypeField'
 import PanelModeField from './PanelModeField'
 import AllAnswersField from './AllAnswersField'
 import AllowIncorrectField from './AllowIncorrectField'
+import TimerField from './TimerField'
 
 import Wrapper from './Wrapper'
 
@@ -17,6 +18,7 @@ const FormFields = ({ panelModes }) =>
     <PanelModeField panelModes={panelModes} />
     <AllAnswersField />
     <AllowIncorrectField />
+    <TimerField />
   </Wrapper>
 
 FormFields.propTypes = {

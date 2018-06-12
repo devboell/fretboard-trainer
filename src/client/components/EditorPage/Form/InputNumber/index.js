@@ -3,7 +3,7 @@ import pt from 'prop-types'
 
 import { FormContext } from 'components/EditorPage/Form'
 
-const InputText = ({
+const InputNumber = ({
   name,
   ...rest
 }) =>
@@ -12,15 +12,15 @@ const InputText = ({
       <input
         {...{ name, ...rest }}
         id={name}
-        type="text"
+        type="number"
         onChange={context.handleInputChange}
         value={context.buffer[name]}
       />
     }
   </FormContext.Consumer>
 
-InputText.propTypes = {
+InputNumber.propTypes = {
   name: pt.string.isRequired,
 }
 
-export default InputText
+export default InputNumber
