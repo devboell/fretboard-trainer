@@ -26,11 +26,11 @@ const nextQuestion = () =>
       clearInterval(ticker)
       timer = setTimeout(
         () => dispatch(nextQuestion()),
-        quiz.time,
+        quiz.time * 1000,
       )
       ticker = setInterval(
-        () => dispatch(incrementElapsedTime(100)),
-        100,
+        () => dispatch(incrementElapsedTime(1000)),
+        1000,
       )
     }
   }
