@@ -1,14 +1,22 @@
-/*
+import React from 'react'
+import pt from 'prop-types'
 
-useTimer: {
-  normalTimer: {
-    afterContinuation: secs,
-  }
+import Wrapper from './Wrapper'
+import ElapseBar from './ElapseBar'
 
-  strictTimer: {
-    availableTime: secs
-  }
+const Timer = ({
+  time,
+  elapsedTime,
+}) =>
+  <Wrapper>
+    <ElapseBar widthPerc={(elapsedTime / (time * 1000)) * 100} />
+  </Wrapper>
+
+
+Timer.propTypes = {
+  time: pt.number.isRequired,
+  elapsedTime: pt.number.isRequired,
 }
-*/
 
-const timerEnum = ['none', 'normal', 'strict']
+export default Timer
+
