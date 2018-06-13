@@ -1,11 +1,13 @@
 import React from 'react'
 import pt from 'prop-types'
+import { quizShape } from 'propShapes/quiz'
 
 import MultipleChoice from 'components/QuizView/MultipleChoice'
 import FretboardPanel from 'components/QuizView/FretboardPanel'
 import NamePanel from 'components/QuizView/NamePanel'
 import StaffPanel from 'components/QuizView/StaffPanel'
 import SoundPanel from 'components/QuizView/SoundPanel'
+import Timer from 'components/QuizView/Timer'
 
 import QuestionPanel from './QuestionPanel'
 import PanelWrapper from './PanelWrapper'
@@ -55,15 +57,23 @@ const answerPanel = (info, panelMode, onSetAnswer, answers) => {
 }
 
 const QuizPanels = ({
+  quiz,
   questionInfo,
   panelMode,
   onSetAnswer,
   answers,
+  elapsedTime,
 }) =>
   <Wrapper>
     <PanelWrapper>
       {questionPanel(questionInfo.question, panelMode)}
     </PanelWrapper>
+    {quiz.useTimer &&
+      <Timer
+        time={quiz.time}
+        elapsedTime={elapsedTime}
+      />
+    }
     <PanelWrapper>
       {answerPanel(questionInfo.answer, panelMode, onSetAnswer, answers)}
     </PanelWrapper>
@@ -71,10 +81,12 @@ const QuizPanels = ({
 
 
 QuizPanels.propTypes = {
+  quiz: quizShape.isRequired,
   questionInfo: pt.shape({}).isRequired,
   panelMode: pt.shape({}).isRequired,
   onSetAnswer: pt.func.isRequired,
   answers: pt.shape({}).isRequired,
+  elapsedTime: pt.number.isRequired,
 }
 
 
