@@ -22,7 +22,7 @@ export const quiz2 = {
   allAnswers: 1,
   allowIncorrect: 1,
   useTimer: 1,
-  time: 5000,
+  time: 5,
 }
 
 export const quiz3 = {
@@ -34,7 +34,7 @@ export const quiz3 = {
   allAnswers: 1,
   allowIncorrect: 1,
   useTimer: 1,
-  time: 5000,
+  time: 5,
 }
 
 export const quiz4 = {
@@ -46,7 +46,7 @@ export const quiz4 = {
   allAnswers: 1,
   allowIncorrect: 1,
   useTimer: 1,
-  time: 5000,
+  time: 5,
 }
 
 export const quiz5 = {
@@ -58,7 +58,7 @@ export const quiz5 = {
   allAnswers: 1,
   allowIncorrect: 1,
   useTimer: 1,
-  time: 5000,
+  time: 5,
 }
 
 export const quiz6 = {
@@ -70,7 +70,7 @@ export const quiz6 = {
   allAnswers: 1,
   allowIncorrect: 1,
   useTimer: 1,
-  time: 5000,
+  time: 5,
 }
 
 export const quizzes = [
@@ -90,7 +90,7 @@ export const createValues = {
   allAnswers: 1,
   allowIncorrect: 1,
   useTimer: 1,
-  time: 5000,
+  time: 5,
 }
 
 export const createQuizInput = {
@@ -113,7 +113,7 @@ export const updateValues = {
   allAnswers: 1,
   allowIncorrect: 1,
   useTimer: 1,
-  time: 5000,
+  time: 5,
 }
 
 export const updateQuizInput = {
