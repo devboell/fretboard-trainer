@@ -19,6 +19,7 @@ const QuizView = ({
   onSetAnswer,
   answers,
   status,
+  elapsedTime,
 }) =>
   <Wrapper>
     <p>{quiz.name}</p>
@@ -29,9 +30,11 @@ const QuizView = ({
     {question &&
       <QuizPanels
         questionInfo={question.panels}
+        quiz={quiz}
         panelMode={quiz.panelModes[selectedPanelModeIdx]}
         onSetAnswer={onSetAnswer}
         answers={answers}
+        elapsedTime={elapsedTime}
       />
     }
     <QuizControls
@@ -49,6 +52,7 @@ QuizView.propTypes = {
   onSetAnswer: pt.func.isRequired,
   answers: pt.shape({}).isRequired,
   status: pt.string,
+  elapsedTime: pt.number.isRequired,
 }
 
 QuizView.defaultProps = {
