@@ -10,10 +10,12 @@ import {
   selectPanelModeIdx,
   addCorrectAnswer,
   addIncorrectAnswer,
+  incrementElapsedTime,
 } from './reducer'
 import { isFretboardAnswer } from './selectors'
 
 let timer
+let ticker
 
 const nextQuestion = () =>
   (dispatch, getState) => {
@@ -21,9 +23,14 @@ const nextQuestion = () =>
     dispatch(setQuestion(getQuestion(quiz)))
     if (quiz.useTimer) {
       clearTimeout(timer)
+      clearInterval(ticker)
       timer = setTimeout(
         () => dispatch(nextQuestion()),
         quiz.time,
+      )
+      ticker = setInterval(
+        () => dispatch(incrementElapsedTime(100)),
+        100,
       )
     }
   }
@@ -37,6 +44,7 @@ const startQuiz = () =>
 export const stopQuiz = () =>
   (dispatch) => {
     clearTimeout(timer)
+    clearInterval(ticker)
     dispatch(stopRunner())
   }
 
@@ -83,6 +91,7 @@ const mapStateToProps = state => ({
   selectedPanelModeIdx: state.runner.selectedPanelModeIdx,
   answers: state.runner.answers,
   status: state.runner.status,
+  elapsedTime: state.runner.elapsedTime,
 })
 
 const mapDispatchToProps = dispatch => ({
