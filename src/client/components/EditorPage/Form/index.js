@@ -1,7 +1,9 @@
 import React from 'react'
 import pt from 'prop-types'
-
+import { compose, partialRight, propEq, prop, cond, T } from 'ramda'
 import { quizShape } from 'propShapes/quiz'
+
+const parseInteger = partialRight(parseInt, [10])
 
 export const FormContext = React.createContext()
 
@@ -17,9 +19,13 @@ class Form extends React.Component {
 
   handleInputChange(event) {
     const { onUpdateBuffer } = this.props
-    const { target } = event
-    const value = target.type === 'checkbox' ? target.checked : target.value
-    const { name } = target
+    const { target, target: { name } } = event
+    const typeEquals = propEq('type')
+    const value = cond([
+      [typeEquals('checkbox'), prop('checked')],
+      [typeEquals('number'), compose(parseInteger, prop('value'))],
+      [T, prop('value')],
+    ])(target)
 
     onUpdateBuffer(name, value, 'SET')
   }
