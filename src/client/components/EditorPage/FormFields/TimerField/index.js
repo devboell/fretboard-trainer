@@ -1,12 +1,14 @@
 import React from 'react'
 import { FormContext } from 'components/EditorPage/Form'
-import InputCheckbox from 'components/EditorPage/Form/InputCheckbox'
-import InputNumber from 'components/EditorPage/Form/InputNumber'
+import TimeInput from './TimeInput'
 import Label from '../Label'
 
 import FieldTitle from '../FieldTitle'
 import FieldInput from '../FieldInput'
 import FieldWrapper from '../FieldWrapper'
+import UseTimerInput from './UseTimerInput'
+import FieldInputWrapper from './FieldInputWrapper'
+
 
 const NameField = () =>
   <FieldWrapper>
@@ -16,18 +18,18 @@ const NameField = () =>
     <FieldInput>
       <FormContext.Consumer>
         {context =>
-          <div>
+          <FieldInputWrapper>
             <Label>
               use timer
-              <InputCheckbox name="useTimer" />
+              <UseTimerInput name="useTimer" />
             </Label>
             {context.buffer.useTimer &&
               <Label>
-                <InputNumber name="time" />
-                ms
+                <TimeInput name="time" min="0" />
+                seconds
               </Label>
             }
-          </div>
+          </FieldInputWrapper>
         }
       </FormContext.Consumer>
     </FieldInput>
