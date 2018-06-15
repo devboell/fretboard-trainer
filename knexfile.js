@@ -1,4 +1,4 @@
-export const development = {
+const development = {
   client: 'sqlite3',
   connection: {
     filename: './db.sqlite3',
@@ -40,4 +40,4 @@ const test = {
   useNullAsDefault: true,
 }
 
-export default { development, production, test }
+module.exports = { development, production, test }
