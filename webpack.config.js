@@ -47,7 +47,7 @@ const commonConfig = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'index.html',
-      favicon: 'src/client/images/favicon.ico',
+      favicon: 'images/favicon.ico',
     }),
   ],
 
