@@ -20,7 +20,7 @@ const commonConfig = {
         use: 'babel-loader',
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|png|gif|svg|ico)$/i,
         loaders: ['file-loader?context=src/images&name=images/[path][name].[ext]', {
           loader: 'image-webpack-loader',
           query: {
@@ -56,6 +56,7 @@ const commonConfig = {
     extensions: [
       '.js',
       '.jsx',
+      '.ico',
     ],
   },
 }
