@@ -46,7 +46,7 @@
   },
   "scripts": {
     "postinstall": "bnr build:clean && bnr build:client && bnr build:server && bnr build:data && bnr build:db",
-    "start": "bnr start",
+    "start": "NODE_ENV=production node dist/server",
     "dev": "bnr dev",
     "build:clean": "bnr build:clean",
     "build:client": "bnr build:client",
