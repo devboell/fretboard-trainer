@@ -39,7 +39,7 @@
     }
   },
   "scripts": {
-    "postinstall": "bnr build:clean && bnr build:client && bnr build:server && bnr build:data && cp favicon.ico dist",
+    "postinstall": "bnr build:clean && bnr build:client && bnr build:server && bnr build:data",
     "start": "bnr start",
     "dev": "bnr dev",
     "build:clean": "bnr build:clean",
