@@ -2,6 +2,7 @@ import React from 'react'
 import pt from 'prop-types'
 
 import { quizShape } from 'propShapes/quiz'
+import { statusMap } from 'components/Runner/reducer'
 
 import QuizInfo from 'components/QuizView/QuizInfo'
 import QuizPanels from 'components/QuizView/QuizPanels'
@@ -22,7 +23,7 @@ const QuizView = ({
   elapsedTime,
 }) =>
   <Wrapper>
-    {!question
+    {status === statusMap.READY
       ? <QuizInfo
         {...{ quiz, selectedPanelModeIdx, onSelectPanelModeIdx }}
       />
