@@ -1,11 +1,11 @@
 import React from 'react'
-
+import H3 from 'styled/H3'
 import StyledNavLink from './StyledNavLink'
 
 const Nav = () =>
   <div>
-    <StyledNavLink exact to="/"><h3>Training</h3></StyledNavLink>
-    <StyledNavLink to="/editor"><h3>Editor</h3></StyledNavLink>
+    <StyledNavLink exact to="/"><H3>Training</H3></StyledNavLink>
+    <StyledNavLink to="/editor"><H3>Editor</H3></StyledNavLink>
   </div>
 
 
