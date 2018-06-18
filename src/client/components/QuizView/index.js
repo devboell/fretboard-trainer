@@ -3,9 +3,9 @@ import pt from 'prop-types'
 
 import { quizShape } from 'propShapes/quiz'
 
+import QuizInfo from 'components/QuizView/QuizInfo'
 import QuizPanels from 'components/QuizView/QuizPanels'
 import QuizControls from 'components/QuizView/QuizControls'
-import PanelModeSelector from 'components/QuizView/PanelModeSelector'
 import Wrapper from './Wrapper'
 
 
@@ -22,13 +22,11 @@ const QuizView = ({
   elapsedTime,
 }) =>
   <Wrapper>
-    <p>{quiz.name}</p>
-    <PanelModeSelector
-      {...{ selectedPanelModeIdx, onSelectPanelModeIdx }}
-      panelModes={quiz.panelModes}
-    />
-    {question &&
-      <QuizPanels
+    {!question
+      ? <QuizInfo
+        {...{ quiz, selectedPanelModeIdx, onSelectPanelModeIdx }}
+      />
+      : <QuizPanels
         questionInfo={question.panels}
         quiz={quiz}
         panelMode={quiz.panelModes[selectedPanelModeIdx]}
