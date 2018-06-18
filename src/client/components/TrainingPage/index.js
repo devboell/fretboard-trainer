@@ -2,7 +2,6 @@ import React from 'react'
 import pt from 'prop-types'
 import { compose } from 'ramda'
 import { connect } from 'react-redux'
-import ReactModal from 'react-modal'
 import { quizShape } from 'propShapes/quiz'
 
 import Runner from 'components/Runner'
@@ -10,6 +9,9 @@ import { initRunner } from 'components/Runner/reducer' // resetRunner
 import withLoading from 'components/Loading'
 import withData from './enhancers'
 import { toggleModal } from './reducer'
+import StyledModal from './StyledModal'
+import CloseButton from './CloseButton'
+import closeImage from './images/close.png'
 
 const selectQuiz = quiz =>
   (dispatch) => {
@@ -37,12 +39,14 @@ const TrainingPage = ({
         {quiz.name}
       </li>)
     }
-    <ReactModal
+    <StyledModal
       isOpen={showModal}
     >
-      <button onClick={() => onExitQuiz()}>close</button>
+      <CloseButton onClick={() => onExitQuiz()}>
+        <img src={closeImage} alt="Close quiz" />
+      </CloseButton>
       <Runner />
-    </ReactModal>
+    </StyledModal>
   </ul>
 
 TrainingPage.propTypes = {
