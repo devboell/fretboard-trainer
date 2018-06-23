@@ -9,26 +9,45 @@ import StopButton from './StopButton'
 const QuizControls = ({
   onStartQuiz,
   onStopQuiz,
+  onResetRunner,
   status,
-}) =>
-  <Wrapper>
-    {status === statusMap.READY
-      ?
-        <StartButton onClick={onStartQuiz}>
-          Start
-        </StartButton>
-      :
-        <StopButton onClick={onStopQuiz}>
-          Stop
+  handleExitFullscreen,
+  isFullscreenEnabled,
+}) => {
+  const exitQuiz = () => {
+    onResetRunner()
+    handleExitFullscreen()
+  }
+
+  return (
+    <Wrapper>
+      {status === statusMap.READY
+        ?
+          <StartButton onClick={onStartQuiz}>
+            Start
+          </StartButton>
+        :
+          <StopButton onClick={onStopQuiz}>
+            Stop
+          </StopButton>
+      }
+      {isFullscreenEnabled &&
+        <StopButton onClick={exitQuiz}>
+            Exit
         </StopButton>
-    }
-  </Wrapper>
+      }
+    </Wrapper>
+  )
+}
 
 
 QuizControls.propTypes = {
   onStartQuiz: pt.func.isRequired,
   onStopQuiz: pt.func.isRequired,
+  onResetRunner: pt.func.isRequired,
   status: pt.string.isRequired,
+  handleExitFullscreen: pt.func.isRequired,
+  isFullscreenEnabled: pt.bool.isRequired,
 }
 
 

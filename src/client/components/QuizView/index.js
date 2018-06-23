@@ -15,14 +15,27 @@ const QuizView = ({
   question,
   onStartQuiz,
   onStopQuiz,
+  onResetRunner,
   selectedPanelModeIdx,
   onSelectPanelModeIdx,
   onSetAnswer,
   answers,
   status,
   elapsedTime,
+  handleExitFullscreen,
+  isFullscreenEnabled,
 }) =>
   <Wrapper>
+    <QuizControls
+      {...{
+        onStartQuiz,
+        onStopQuiz,
+        onResetRunner,
+        status,
+        handleExitFullscreen,
+        isFullscreenEnabled,
+      }}
+    />
     {status === statusMap.READY
       ? <QuizInfo
         {...{ quiz, selectedPanelModeIdx, onSelectPanelModeIdx }}
@@ -36,9 +49,6 @@ const QuizView = ({
         elapsedTime={elapsedTime}
       />
     }
-    <QuizControls
-      {...{ onStartQuiz, onStopQuiz, status }}
-    />
   </Wrapper>
 
 QuizView.propTypes = {
@@ -46,17 +56,21 @@ QuizView.propTypes = {
   question: pt.shape({}),
   onStartQuiz: pt.func.isRequired,
   onStopQuiz: pt.func.isRequired,
+  onResetRunner: pt.func.isRequired,
   selectedPanelModeIdx: pt.number.isRequired,
   onSelectPanelModeIdx: pt.func.isRequired,
   onSetAnswer: pt.func.isRequired,
   answers: pt.shape({}).isRequired,
   status: pt.string,
   elapsedTime: pt.number.isRequired,
+  handleExitFullscreen: pt.func.isRequired,
+  isFullscreenEnabled: pt.bool,
 }
 
 QuizView.defaultProps = {
   question: undefined,
   status: undefined,
+  isFullscreenEnabled: false,
 }
 
 
