@@ -1,19 +1,18 @@
 import { css } from 'styled-components'
 
 
-const sizes = {
+export const deviceSizes = {
   desktop: 992,
   tablet: 768,
   phone: 500,
 }
 
 // Iterate through the sizes and create a media template
-export default Object.keys(sizes).reduce((acc, label) => {
+export default Object.keys(deviceSizes).reduce((acc, label) => {
   acc[label] = (...args) => css`
-    @media (max-width: ${sizes[label] / 16}em) {
+    @media (max-width: ${deviceSizes[label] / 16}em) {
       ${css(...args)}
     }
   `
-  console.log('whaaa')
   return acc
 }, {})
