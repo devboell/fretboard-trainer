@@ -11,6 +11,7 @@ import {
 const RUNNER_INIT = 'RUNNER_INIT'
 const RUNNER_STOP = 'RUNNER_STOP'
 const RUNNER_START = 'RUNNER_START'
+const RUNNER_RESET = 'RUNNER_RESET'
 const PANEL_MODE_SELECTION = 'PANEL_MODE_SELECTION'
 const CORRECT_ANSWER = 'CORRECT_ANSWER'
 const INCORRECT_ANSWER = 'INCORRECT_ANSWER'
@@ -28,6 +29,10 @@ export const stopRunner = () => ({
 
 export const startRunner = () => ({
   type: RUNNER_START,
+})
+
+export const resetRunner = () => ({
+  type: RUNNER_RESET,
 })
 
 export const selectPanelModeIdx = idx => ({
@@ -56,6 +61,7 @@ export const incrementElapsedTime = tick => ({
 })
 
 export const statusMap = {
+  EMPTY: 'EMPTY',
   READY: 'READY',
   RUNNING: 'RUNNING',
 }
@@ -72,7 +78,7 @@ export const initialState = {
   question: undefined,
   selectedPanelModeIdx: 0,
   answers: initialAnswers,
-  status: undefined,
+  status: statusMap.EMPTY,
   elapsedTime: initialElapsedTime,
 }
 
@@ -97,6 +103,9 @@ export default (state = initialState, action) => {
 
     case RUNNER_START:
       return set(lensProp('status'), statusMap.RUNNING, state)
+
+    case RUNNER_RESET:
+      return initialState
 
     case SET_QUESTION:
       return compose(

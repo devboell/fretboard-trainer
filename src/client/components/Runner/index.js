@@ -1,11 +1,13 @@
 import { connect } from 'react-redux'
-import { contains, equals, intersection, isEmpty } from 'ramda'
+import { compose, contains, equals, intersection, isEmpty } from 'ramda'
 import getQuestion from 'lib/question'
 import { equalsIgnoreOrder } from 'lib/runner'
 import QuizView from 'components/QuizView'
+import QuizViewFullscreen from 'components/QuizViewFullscreen'
 import {
   startRunner,
   stopRunner,
+  resetRunner,
   setQuestion,
   selectPanelModeIdx,
   addCorrectAnswer,
@@ -97,8 +99,12 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   onStartQuiz: () => dispatch(startQuiz()),
   onStopQuiz: () => dispatch(stopQuiz()),
+  onResetRunner: () => dispatch(resetRunner()),
   onSelectPanelModeIdx: idx => dispatch(selectPanelModeIdx(idx)),
   onSetAnswer: answer => dispatch(setAnswer(answer)),
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(QuizView)
+export default compose(
+  QuizViewFullscreen,
+  connect(mapStateToProps, mapDispatchToProps),
+)(QuizView)
