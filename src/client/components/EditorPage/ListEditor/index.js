@@ -4,11 +4,11 @@ import { connect } from 'react-redux'
 import { stopQuiz } from 'components/Runner'
 
 import Preview from 'components/EditorPage/Preview'
+import QuizList from 'components/QuizList'
 
 import { togglePreview } from './EditorContainer/reducer'
 import Wrapper from './Wrapper'
 import ListEditorWrapper from './ListEditorWrapper'
-import ListContainer from './ListContainer'
 import EditorContainer from './EditorContainer'
 
 
@@ -18,7 +18,7 @@ const ListEditor = ({ showPreview, onClosePreview }) =>
       ? <Preview {...{ onClosePreview }} />
       :
       <ListEditorWrapper>
-        <ListContainer />
+        <QuizList />
         <EditorContainer />
       </ListEditorWrapper>
     }

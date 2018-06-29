@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import { compose, omit, assoc, dissoc, find, propEq } from 'ramda'
-import { selectItem } from 'components/EditorPage/ListEditor/ListContainer/reducer'
+import { selectItem } from 'components/QuizList/reducer'
 import { initRunner } from 'components/Runner/reducer'
 import withLoading from 'components/Loading'
 

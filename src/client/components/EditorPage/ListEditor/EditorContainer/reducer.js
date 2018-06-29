@@ -12,7 +12,7 @@ import {
   dissoc,
 } from 'ramda'
 
-import { ITEM_SELECTION } from 'components/EditorPage/ListEditor/ListContainer/reducer'
+import { ITEM_SELECTION } from 'components/QuizList/reducer'
 
 export const NEW_ITEM_SELECTION = 'NEW_ITEM_SELECTION'
 export const ITEM_UNSELECTION = 'ITEM_UNSELECTION'

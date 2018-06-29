@@ -13,7 +13,7 @@ import * as quizFxt from 'fixtures/graphql/quiz'
 import * as panelFxt from 'fixtures/graphql/panelMode'
 
 import runnerReducer, { initialState as initialRunnerState } from 'components/Runner/reducer'
-import listReducer, { initialState as initialListState } from './ListContainer/reducer'
+import listReducer, { initialState as initialListState } from 'components/QuizList/reducer'
 import editorReducer, { initialState as initialEditorState } from './EditorContainer/reducer'
 
 import ListEditor from './index'
