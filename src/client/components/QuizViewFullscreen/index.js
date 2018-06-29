@@ -2,7 +2,7 @@ import React from 'react'
 // import pt from 'prop-types'
 import 'matchmedia-polyfill'
 import Fullscreen from 'react-fullscreen-crossbrowser'
-
+import StyledModal from './StyledModal'
 
 export default (Component) => {
   class WrappingComponent extends React.Component {
@@ -26,17 +26,20 @@ export default (Component) => {
     }
 
     render() {
+      const { isFullscreenEnabled } = this.state
       return (
         <div>
           <Fullscreen
-            enabled={this.state.isFullscreenEnabled}
-            onChange={isFullscreenEnabled => this.setState({ isFullscreenEnabled })}
+            enabled={isFullscreenEnabled}
+            onChange={flag => this.setState({ isFullscreenEnabled: flag })}
           >
-            <Component
-              {...{ ...this.props }}
-              handleExitFullscreen={this.handleExitFullscreen}
-              isFullscreenEnabled={this.state.isFullscreenEnabled}
-            />
+            <StyledModal isOpen={!isFullscreenEnabled}>
+              <Component
+                {...{ ...this.props }}
+                handleExitFullscreen={this.handleExitFullscreen}
+                isFullscreenEnabled={isFullscreenEnabled}
+              />
+            </StyledModal>
           </Fullscreen>
         </div>
       )
