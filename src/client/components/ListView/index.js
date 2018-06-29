@@ -4,10 +4,11 @@ import { connect } from 'react-redux'
 import { quizShape } from 'propShapes/quiz'
 import QuizList from 'components/QuizList'
 import QuizView from './QuizView'
+import Wrapper from './Wrapper'
 import { selectItem } from './reducer'
 
 const ListView = ({ quiz, onSelectItem }) =>
-  <div>
+  <Wrapper>
     <QuizList
       selectedItem={quiz}
       {...{ onSelectItem }}
@@ -15,7 +16,7 @@ const ListView = ({ quiz, onSelectItem }) =>
     {quiz &&
       <QuizView {...{ quiz }} />
     }
-  </div>
+  </Wrapper>
 
 ListView.propTypes = {
   quiz: quizShape,
