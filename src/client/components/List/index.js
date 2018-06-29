@@ -9,7 +9,7 @@ import Wrapper from './Wrapper'
 
 const List = ({
   items,
-  selectedItemId,
+  selectedItem,
   onSelectItem,
 }) =>
   <Wrapper>
@@ -20,7 +20,7 @@ const List = ({
         >
           <Button
             onClick={() => onSelectItem(item)}
-            isSelected={item.id === selectedItemId}
+            isSelected={item.id === selectedItem.id}
           >
             {item.name}
           </Button>
@@ -30,12 +30,12 @@ const List = ({
 
 List.propTypes = {
   items: pt.arrayOf(pt.shape({ id: pt.string, name: pt.string })).isRequired,
-  selectedItemId: pt.string,
+  selectedItem: pt.shape({ id: pt.string, name: pt.string }),
   onSelectItem: pt.func.isRequired,
 }
 
 List.defaultProps = {
-  selectedItemId: undefined,
+  selectedItem: {},
 }
 
 
