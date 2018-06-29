@@ -1,10 +1,10 @@
 import React from 'react'
-import ListView from 'components/ListView'
+import ListViewer from 'components/ListViewer'
 
 const TrainingPage = () =>
   <div>
     Training Page
-    <ListView />
+    <ListViewer />
   </div>
 
 export default TrainingPage

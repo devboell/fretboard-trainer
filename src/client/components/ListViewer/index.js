@@ -8,7 +8,7 @@ import QuizView from './QuizView'
 import Wrapper from './Wrapper'
 import { selectItem } from './reducer'
 
-const ListView = ({
+const ListViewer = ({
   quiz,
   runnerStatus,
   onSelectItem,
@@ -24,19 +24,19 @@ const ListView = ({
     }
   </Wrapper>
 
-ListView.propTypes = {
+ListViewer.propTypes = {
   quiz: quizShape,
   runnerStatus: pt.string.isRequired,
   onSelectItem: pt.func.isRequired,
   onInitRunner: pt.func.isRequired,
 }
 
-ListView.defaultProps = {
+ListViewer.defaultProps = {
   quiz: undefined,
 }
 
 const mapStateToProps = state => ({
-  quiz: state.listView.list.selectedItem,
+  quiz: state.listViewer.list.selectedItem,
   runnerStatus: state.runner.status,
 })
 
@@ -45,4 +45,4 @@ const mapDispatchToProps = dispatch => ({
   onInitRunner: qz => dispatch(initRunner(qz)),
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(ListView)
+export default connect(mapStateToProps, mapDispatchToProps)(ListViewer)
