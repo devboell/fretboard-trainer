@@ -15,6 +15,7 @@ const ReactModalAdapter = ({ className, ...props }) => {
     />
   )
 }
+ReactModal.setAppElement('#main')
 
 const StyledModal = styled(ReactModalAdapter)`
 
@@ -39,4 +40,6 @@ const StyledModal = styled(ReactModalAdapter)`
     outline: none;
   }
 `
+
+
 export default StyledModal
