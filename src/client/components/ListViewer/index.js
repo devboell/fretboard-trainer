@@ -17,10 +17,10 @@ const ListViewer = ({
   <Wrapper>
     <QuizList
       selectedItem={quiz}
-      {...{ onSelectItem, onInitRunner }}
+      {...{ onSelectItem }}
     />
     {quiz &&
-      <QuizView {...{ quiz, runnerStatus }} />
+      <QuizView {...{ quiz, runnerStatus, onInitRunner }} />
     }
   </Wrapper>
 
