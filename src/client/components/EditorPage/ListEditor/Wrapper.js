@@ -1,10 +1,8 @@
 import styled from 'styled-components'
+import { listDetail } from 'css/listDetail'
 
 const Wrapper = styled.div`
-  height: 600px;
-  padding: 2%;
-  border-radius: 10px;
-  border: 2px solid gray;
+  ${listDetail}
 `
 
 export default Wrapper
