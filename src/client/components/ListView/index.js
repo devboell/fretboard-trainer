@@ -8,19 +8,25 @@ import QuizView from './QuizView'
 import Wrapper from './Wrapper'
 import { selectItem } from './reducer'
 
-const ListView = ({ quiz, onSelectItem, onInitRunner }) =>
+const ListView = ({
+  quiz,
+  runnerStatus,
+  onSelectItem,
+  onInitRunner,
+}) =>
   <Wrapper>
     <QuizList
       selectedItem={quiz}
       {...{ onSelectItem, onInitRunner }}
     />
     {quiz &&
-      <QuizView {...{ quiz }} />
+      <QuizView {...{ quiz, runnerStatus }} />
     }
   </Wrapper>
 
 ListView.propTypes = {
   quiz: quizShape,
+  runnerStatus: pt.string.isRequired,
   onSelectItem: pt.func.isRequired,
   onInitRunner: pt.func.isRequired,
 }
@@ -31,6 +37,7 @@ ListView.defaultProps = {
 
 const mapStateToProps = state => ({
   quiz: state.listView.list.selectedItem,
+  runnerStatus: state.runner.status,
 })
 
 const mapDispatchToProps = dispatch => ({
