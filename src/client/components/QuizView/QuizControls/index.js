@@ -16,7 +16,7 @@ const QuizControls = ({
 }) => {
   const exitQuiz = () => {
     onResetRunner()
-    handleExitFullscreen()
+    isFullscreenEnabled && handleExitFullscreen()
   }
 
   return (
@@ -31,11 +31,9 @@ const QuizControls = ({
             Stop
           </StopButton>
       }
-      {isFullscreenEnabled &&
-        <StopButton onClick={exitQuiz}>
-            Exit
-        </StopButton>
-      }
+      <StopButton onClick={exitQuiz}>
+          Exit
+      </StopButton>
     </Wrapper>
   )
 }
@@ -46,9 +44,12 @@ QuizControls.propTypes = {
   onStopQuiz: pt.func.isRequired,
   onResetRunner: pt.func.isRequired,
   status: pt.string.isRequired,
-  handleExitFullscreen: pt.func.isRequired,
+  handleExitFullscreen: pt.func,
   isFullscreenEnabled: pt.bool.isRequired,
 }
 
+QuizControls.defaultProps = {
+  handleExitFullscreen: undefined,
+}
 
 export default QuizControls

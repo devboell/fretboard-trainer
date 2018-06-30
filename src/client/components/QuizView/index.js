@@ -63,13 +63,14 @@ QuizView.propTypes = {
   answers: pt.shape({}).isRequired,
   status: pt.string,
   elapsedTime: pt.number.isRequired,
-  handleExitFullscreen: pt.func.isRequired,
+  handleExitFullscreen: pt.func,
   isFullscreenEnabled: pt.bool,
 }
 
 QuizView.defaultProps = {
   question: undefined,
   status: undefined,
+  handleExitFullscreen: undefined,
   isFullscreenEnabled: false,
 }
 
