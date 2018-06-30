@@ -3,7 +3,8 @@ import { compose, contains, equals, intersection, isEmpty } from 'ramda'
 import getQuestion from 'lib/question'
 import { equalsIgnoreOrder } from 'lib/runner'
 import QuizView from 'components/QuizView'
-import QuizViewFullscreen from 'components/QuizViewFullscreen'
+import QuizViewMedia from 'components/QuizViewMedia'
+
 import {
   startRunner,
   stopRunner,
@@ -105,6 +106,6 @@ const mapDispatchToProps = dispatch => ({
 })
 
 export default compose(
-  QuizViewFullscreen,
+  QuizViewMedia,
   connect(mapStateToProps, mapDispatchToProps),
 )(QuizView)
