@@ -6,18 +6,16 @@ import QuizList from 'components/containers/QuizList'
 import { initRunner } from 'components/containers/Runner/reducer'
 import QuizInfo from 'components/presentational/QuizInfo'
 import Wrapper from './Wrapper'
-import { selectItem } from './reducer'
+
 
 const ListViewer = ({
   quiz,
   runnerStatus,
-  onSelectItem,
   onInitRunner,
 }) =>
   <Wrapper>
     <QuizList
-      selectedItem={quiz}
-      {...{ onSelectItem }}
+      stateSlice="listViewer"
     />
     {quiz &&
       <QuizInfo {...{ quiz, runnerStatus, onInitRunner }} />
@@ -27,7 +25,6 @@ const ListViewer = ({
 ListViewer.propTypes = {
   quiz: quizShape,
   runnerStatus: pt.string.isRequired,
-  onSelectItem: pt.func.isRequired,
   onInitRunner: pt.func.isRequired,
 }
 
@@ -41,7 +38,6 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  onSelectItem: qz => dispatch(selectItem(qz)),
   onInitRunner: qz => dispatch(initRunner(qz)),
 })
 
