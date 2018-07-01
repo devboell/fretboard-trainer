@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 import { ApolloProvider } from 'react-apollo'
 import { AppContainer } from 'react-hot-loader' // eslint-disable-line import/no-extraneous-dependencies
 import { BrowserRouter } from 'react-router-dom'
-import App from 'components/App'
+import App from 'components/presentational/App'
 import './globalStyles'
 
 
@@ -35,5 +35,5 @@ const render = (Component) => {
 render(App)
 
 if (module.hot) {
-  module.hot.accept('components/App', () => { render(App) })
+  module.hot.accept('components/presentational/App', () => { render(App) })
 }

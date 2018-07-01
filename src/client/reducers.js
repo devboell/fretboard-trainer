@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import list from 'components/QuizList/reducer'
-import listViewer from 'components/ListViewer/reducer'
-import editor from 'components/EditorPage/ListEditor/EditorContainer/reducer'
-import runner from 'components/Runner/reducer'
+import list from 'components/containers/QuizList/reducer'
+import listViewer from 'components/containers/ListViewer/reducer'
+import editor from 'components/presentational/EditorPage/ListEditor/EditorContainer/reducer'
+import runner from 'components/containers/Runner/reducer'
 
 export default () => combineReducers({
   listViewer,
