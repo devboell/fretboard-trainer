@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
 const FieldTitle = styled.div`
+  display: inline-block;
   font-weight: bold;
-  flex: 1;
+  width: 20%; 
   
 `
 
