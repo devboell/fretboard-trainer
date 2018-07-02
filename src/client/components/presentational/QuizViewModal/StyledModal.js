@@ -15,7 +15,9 @@ const ReactModalAdapter = ({ className, ...props }) => {
     />
   )
 }
-ReactModal.setAppElement('#main')
+
+// ReactModal.setAppElement('#main')
+if (process.env.NODE_ENV !== 'test') ReactModal.setAppElement('#main')
 
 const StyledModal = styled(ReactModalAdapter)`
 

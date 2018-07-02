@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import { button } from 'css/editor'
 
-const CloseButton = styled.button`
+const ExitButton = styled.button`
   ${button}
 `
 
-export default CloseButton
+export default ExitButton

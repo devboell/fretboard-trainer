@@ -55,5 +55,5 @@ export const clickPreview = wrapper =>
   wrapper.find('PreviewButton').simulate('click')
 
 export const clickClosePreview = wrapper =>
-  wrapper.find('CloseButton').simulate('click')
+  wrapper.find('ExitButton').simulate('click')
 

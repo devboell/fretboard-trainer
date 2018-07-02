@@ -1,7 +1,6 @@
 import {
   set,
   over,
-  prop,
   lensProp,
   lensPath,
   compose,
@@ -18,7 +17,6 @@ const NEW_ITEM_SELECTION = 'NEW_ITEM_SELECTION'
 const ITEM_UNSELECTION = 'ITEM_UNSELECTION'
 const ITEM_UPDATE = 'ITEM_UPDATE'
 const BUFFER_UPDATE = 'BUFFER_UPDATE'
-const PREVIEW_TOGGLE = 'PREVIEW_TOGGLE'
 
 export const initEditor = quiz => ({
   type: INIT_EDITOR,
@@ -46,9 +44,6 @@ export const updateBuffer = (key, value, updateType) => ({
   updateType,
 })
 
-export const togglePreview = () => ({
-  type: PREVIEW_TOGGLE,
-})
 
 export const modes = {
   UNSELECTED: 'UNSELECTED',
@@ -80,7 +75,6 @@ export const initialState = {
   original: undefined,
   buffer: undefined,
   mode: modes.UNSELECTED,
-  showPreview: false,
 }
 
 const convertPanelModes = (quiz) => {
@@ -140,9 +134,6 @@ export default (state = initialState, action) => {
           return state
       }
     }
-
-    case PREVIEW_TOGGLE:
-      return set(lensProp('showPreview'), !prop('showPreview', state), state)
 
     default:
       return state

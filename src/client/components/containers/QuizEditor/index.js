@@ -1,6 +1,7 @@
 import { compose, omit, assoc, dissoc, find, propEq } from 'ramda'
 import { connect } from 'react-redux'
 
+import { initRunner } from 'components/containers/Runner/reducer'
 import { selectItem } from 'components/containers/QuizList/reducer'
 import withLoading from 'components/reusable/Loading'
 import Editor from 'components/presentational/EditorPage/Editor'
@@ -12,7 +13,6 @@ import {
   unselectItem,
   updateItem,
   updateBuffer,
-  togglePreview,
 } from './reducer'
 
 
@@ -20,6 +20,7 @@ const mapStateToProps = state => ({
   original: state.listEditor.editor.original,
   buffer: state.listEditor.editor.buffer,
   mode: state.listEditor.editor.mode,
+  runnerStatus: state.runner.status,
 })
 
 const handleCreateMutation = (dispatch, mutation, item) => {
@@ -66,7 +67,6 @@ const convertPanelModeIds = (buffer, allPanelModes) => {
 
 const openPreview = (dispatch, buffer, panelModes) => {
   dispatch(initRunner(convertPanelModeIds(buffer, panelModes)))
-  dispatch(togglePreview())
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
@@ -82,15 +82,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }
 }
 
-const mergeProps = (stateProps, dispatchProps, ownProps) => ({
-  ...stateProps,
-  ...dispatchProps,
-  ...ownProps,
-  onOpenPreview: () => dispatchProps.onOpenPreview(stateProps.buffer, ownProps.panelModes),
-})
-
 export default compose(
   withData,
-  connect(mapStateToProps, mapDispatchToProps, mergeProps),
+  connect(mapStateToProps, mapDispatchToProps),
   withLoading,
 )(Editor)

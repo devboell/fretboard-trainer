@@ -4,7 +4,8 @@ import { equals, filter, contains } from 'ramda'
 import { quizShape } from 'propShapes/quiz'
 import { modes } from 'components/containers/QuizEditor/reducer'
 import { pcPanelModeIds } from 'components/containers/QuizEditor/constants'
-
+import { statusMap } from 'components/containers/Runner/reducer'
+import Runner from 'components/containers/Runner'
 import FormFields from 'components/presentational/EditorPage/FormFields'
 import FormControls from 'components/presentational/EditorPage/FormControls'
 import EditorControls from 'components/presentational/EditorPage/EditorControls'
@@ -18,6 +19,7 @@ const Editor = ({
   mode,
   original,
   buffer,
+  runnerStatus,
   panelModes,
   onSelectNewItem,
   onOpenPreview,
@@ -34,8 +36,9 @@ const Editor = ({
   return (
     <Wrapper>
       <EditorControls
+        onOpenPreview={() => onOpenPreview(buffer, panelModes)}
         {...{
-          onSelectNewItem, onOpenPreview, isNew, hasSelection,
+          onSelectNewItem, isNew, hasSelection,
         }}
       />
       {mode === modes.UNSELECTED
@@ -53,6 +56,9 @@ const Editor = ({
           <FormControls />
         </StyledForm>
       }
+      {runnerStatus !== statusMap.EMPTY &&
+        <Runner />
+      }
     </Wrapper>
   )
 }
@@ -62,6 +68,7 @@ Editor.propTypes = {
   mode: pt.string.isRequired,
   original: quizShape,
   buffer: quizShape,
+  runnerStatus: pt.string.isRequired,
   panelModes: pt.arrayOf(pt.shape({})).isRequired,
   onUpdateBuffer: pt.func.isRequired,
   onSelectNewItem: pt.func.isRequired,

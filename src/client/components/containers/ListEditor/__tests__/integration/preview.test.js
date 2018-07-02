@@ -16,7 +16,7 @@ beforeAll(async () => {
 
 describe('Preview quiz', () => {
   it('Preview component is displayed', () => {
-    expect(wrapper.find('Preview').exists()).toBe(true)
+    expect(wrapper.find('StyledModal').exists()).toBe(true)
   })
 
   it('Close preview unmounts Preview component', () => {

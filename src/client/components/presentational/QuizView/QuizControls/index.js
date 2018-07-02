@@ -5,6 +5,7 @@ import { statusMap } from 'components/containers/Runner/reducer'
 import Wrapper from './Wrapper'
 import StartButton from './StartButton'
 import StopButton from './StopButton'
+import ExitButton from './ExitButton'
 
 const QuizControls = ({
   onStartQuiz,
@@ -31,9 +32,9 @@ const QuizControls = ({
             Stop
           </StopButton>
       }
-      <StopButton onClick={exitQuiz}>
+      <ExitButton onClick={exitQuiz}>
           Exit
-      </StopButton>
+      </ExitButton>
     </Wrapper>
   )
 }
