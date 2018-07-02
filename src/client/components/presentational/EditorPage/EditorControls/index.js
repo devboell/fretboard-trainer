@@ -1,7 +1,7 @@
 import React from 'react'
 import pt from 'prop-types'
 
-import { quizTypes } from 'components/presentational/EditorPage/ListEditor/EditorContainer/constants'
+import { quizTypes } from 'components/containers/QuizEditor/constants'
 import NewButton from './NewButton'
 import PreviewButton from './PreviewButton'
 import Wrapper from './Wrapper'
