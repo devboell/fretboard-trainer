@@ -8,8 +8,6 @@
   },
   "collectCoverageFrom": [
     "src/{client,lib,data}/**/*.{js,jsx}",
-    "!src/client/**/actionTypes.js",
-    "!src/client/configureStore.js",
     "!src/client/globalStyles.js",
     "!src/client/main.js",
     "!src/client/initClient.js",
@@ -17,11 +15,11 @@
     "!src/client/reducers.js",
     "!src/client/themes/**",
     "!src/client/styleguide/**",
-    "!src/client/fixtures/**",
     "!src/client/propShapes/**",
     "!src/data/connector.js",
     "!src/data/schema.js",
-    "!src/data/resolvers/index.js"
+    "!src/data/resolvers/index.js",
+    "!src/fixtures/**"
   ],
   "moduleDirectories": [
     "node_modules",
