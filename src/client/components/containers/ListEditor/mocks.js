@@ -12,9 +12,10 @@ import DELETE_QUIZ from 'graphql/DeleteQuiz'
 import * as quizFxt from 'fixtures/graphql/quiz'
 import * as panelFxt from 'fixtures/graphql/panelMode'
 
+
+import listViewerReducer, { initialState as initialListViewerState } from 'components/containers/ListViewer/reducer'
+import listEditorReducer, { initialState as initialListEditorState } from 'components/containers/ListEditor/reducer'
 import runnerReducer, { initialState as initialRunnerState } from 'components/containers/Runner/reducer'
-import listReducer, { initialState as initialListState } from 'components/containers/QuizList/reducer'
-import editorReducer, { initialState as initialEditorState } from './EditorContainer/reducer'
 
 import ListEditor from './index'
 
@@ -62,15 +63,15 @@ export const dataMocks = [
 ]
 
 const initialState = {
-  list: initialListState,
-  editor: initialEditorState,
+  listViewer: initialListViewerState,
+  listEditor: initialListEditorState,
   runner: initialRunnerState,
 }
 
 export const store = createStore(
   combineReducers({
-    list: listReducer,
-    editor: editorReducer,
+    listViewer: listViewerReducer,
+    listEditor: listEditorReducer,
     runner: runnerReducer,
   }),
   initialState,
