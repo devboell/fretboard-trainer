@@ -27,21 +27,23 @@ const StyledModal = styled(ReactModalAdapter)`
     left: 0px;
     right: 0px;
     bottom: 0px;
+ 
     background-color: rgba(255, 255, 255, 0.75);
   }
 
   &__content {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
     border: 1px solid #ccc;
-    background: darkseagreen;
+    background-color: white;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     border-radius: 4px;
     outline: none;
   }
 `
-
 
 export default StyledModal
