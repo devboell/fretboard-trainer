@@ -3,15 +3,31 @@ import pt from 'prop-types'
 import { quizShape } from 'propShapes/quiz'
 import { statusMap } from 'components/containers/Runner/reducer'
 import Runner from 'components/containers/Runner'
+import Wrapper from './Wrapper'
+import FieldWrapper from './FieldWrapper'
+import FieldLabel from './FieldLabel'
+import FieldContent from './FieldContent'
+import TrainButton from './TrainButton'
 
 const QuizInfo = ({ quiz, onInitRunner, runnerStatus }) =>
-  <div>
-    <button onClick={() => onInitRunner(quiz)}>Train</button>
-    <div>{quiz.name}</div>
+  <Wrapper>
+    <TrainButton
+      onClick={() => onInitRunner(quiz)}
+    >
+      Train
+    </TrainButton>
+    <FieldWrapper>
+      <FieldLabel>name:</FieldLabel>
+      <FieldContent>{quiz.name}</FieldContent>
+    </FieldWrapper>
+    <FieldWrapper>
+      <FieldLabel>type:</FieldLabel>
+      <FieldContent>{quiz.type}</FieldContent>
+    </FieldWrapper>
     {runnerStatus !== statusMap.EMPTY &&
       <Runner />
     }
-  </div>
+  </Wrapper>
 
 
 QuizInfo.propTypes = {

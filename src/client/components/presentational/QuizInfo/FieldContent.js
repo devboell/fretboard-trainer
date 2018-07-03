@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import { fieldContent } from 'css/listDetail'
 
-const FieldInput = styled.div`
+const FieldContent = styled.div`
   ${fieldContent} 
 `
 
-export default FieldInput
+export default FieldContent
