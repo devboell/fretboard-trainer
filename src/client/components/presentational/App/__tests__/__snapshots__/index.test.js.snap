@@ -2,9 +2,16 @@
 
 exports[`App component, snapshot 1`] = `
 <Wrapper>
-  <h1>
-    Fretboard
-  </h1>
-  <EditorPage />
+  <Nav />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/editor"
+  />
 </Wrapper>
 `;

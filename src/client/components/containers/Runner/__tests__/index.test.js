@@ -70,8 +70,8 @@ describe('Runner', () => {
 
   describe('start, quiz two, panelModeIndex 1', () => {
     beforeEach(() => {
-      clickStart(wrapper)
       selectPanelMode(1, wrapper)
+      clickStart(wrapper)
     })
 
     it('matches snapshot', () => {
@@ -103,8 +103,8 @@ describe('Runner', () => {
 
   describe('start, quiz two, panelModeIndex 2', () => {
     beforeEach(() => {
-      clickStart(wrapper)
       selectPanelMode(2, wrapper)
+      clickStart(wrapper)
     })
 
     it('matches snapshot', () => {
@@ -136,8 +136,8 @@ describe('Runner', () => {
 
   describe('start, quiz two, panelModeIndex 3', () => {
     beforeEach(() => {
-      clickStart(wrapper)
       selectPanelMode(3, wrapper)
+      clickStart(wrapper)
     })
 
     it('matches snapshot', () => {

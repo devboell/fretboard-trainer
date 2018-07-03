@@ -2,7 +2,6 @@
 
 exports[`EditorPage component, snapshot 1`] = `
 <div>
-  Editor Page
   <Connect(ListEditor) />
 </div>
 `;
