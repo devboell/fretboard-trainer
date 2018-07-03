@@ -2,6 +2,7 @@ import { css } from 'styled-components'
 
 export const listDetail = css`
   height: 400px;
+  margin-top: 30px;
   padding: 2%;
   border-radius: 10px;
   border: 2px solid gray;

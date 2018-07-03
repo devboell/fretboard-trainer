@@ -3,7 +3,6 @@ import ListViewer from 'components/containers/ListViewer'
 
 const TrainingPage = () =>
   <div>
-    Training Page
     <ListViewer />
   </div>
 

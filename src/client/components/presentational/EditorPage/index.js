@@ -5,7 +5,6 @@ import ListEditor from 'components/containers/ListEditor'
 
 const EditorPage = () =>
   <div>
-    Editor Page
     <ListEditor />
   </div>
 
