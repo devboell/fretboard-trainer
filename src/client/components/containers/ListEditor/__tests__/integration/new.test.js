@@ -1,17 +1,34 @@
-import { clickNew, newButtonIsDisabled } from 'test-utils/enzyme-queries/listEditor'
+import { clickNew, newButtonIsDisabled, clickListButton } from 'test-utils/enzyme-queries/listEditor'
 
 import { getWrapper } from '../../mocks'
 
 let wrapper
 
-beforeAll(async () => {
-  wrapper = await getWrapper()
-  clickNew(0, wrapper)
-})
 
 describe('Select new quiz', () => {
-  it('List selectedQuizid is undefined', () => {
-    expect(wrapper.find('List').props().selectedQuizId).toBeUndefined()
+  beforeAll(async () => {
+    wrapper = await getWrapper()
+    clickNew(0, wrapper)
+  })
+
+  it('List selectedItem.id is undefined', () => {
+    expect(wrapper.find('List').props().selectedItem.id).toBeUndefined()
+  })
+
+  it('New button is disabled', () => {
+    expect(newButtonIsDisabled(wrapper)).toBe(true)
+  })
+})
+
+describe('Select new quiz, while other quiz is selected', () => {
+  beforeAll(async () => {
+    wrapper = await getWrapper()
+    clickListButton(0, wrapper)
+    clickNew(0, wrapper)
+  })
+
+  it('List selectedItem.id is undefined', () => {
+    expect(wrapper.find('List').props().selectedItem.id).toBeUndefined()
   })
 
   it('New button is disabled', () => {

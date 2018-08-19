@@ -73,7 +73,10 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   const { createMutation, updateMutation, deleteMutation } = ownProps
 
   return {
-    onSelectNewItem: type => dispatch(selectNewItem(type)),
+    onSelectNewItem: (type) => {
+      dispatch(selectItem('listEditor')(undefined))
+      dispatch(selectNewItem(type))
+    },
     onCreate: qz => handleCreateMutation(dispatch, createMutation, qz),
     onUpdate: qz => handleUpdateMutation(dispatch, updateMutation, qz),
     onDelete: id => handleDeleteMutation(dispatch, deleteMutation, id),
