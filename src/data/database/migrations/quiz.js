@@ -3,6 +3,7 @@ export function up(knex, Promise) {
     knex.schema.createTable('Quiz', (table) => {
       table.increments('id').notNullable()
       table.string('name').notNullable()
+      table.string('description').notNullable()
       table.enum('type', ['pc', 'pitch', 'interval']).notNullable()
       table.enum('tuning', ['standard']).notNullable()
       table.integer('width').notNullable()

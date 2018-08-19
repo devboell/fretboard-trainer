@@ -20,6 +20,7 @@ export const fieldWrapper = css`
 
 export const fieldLabel = css`
   display: inline-block;
+  vertical-align: top;
   font-weight: bold;
   width: 20%; 
 `

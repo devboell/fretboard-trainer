@@ -60,6 +60,7 @@ export const updateTypes = {
 const newQuiz = type => ({
   id: undefined,
   name: '',
+  description: '',
   type,
   tuning: 'standard',
   width: 13,

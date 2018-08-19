@@ -1,6 +1,7 @@
 import {
   clickNew,
   changeName,
+  changeDescription,
   checkPanelModeId,
   checkAllAnswers,
   checkAllowIncorrect,
@@ -19,6 +20,7 @@ describe('Create pc quiz', () => {
     wrapper = await getWrapper()
     clickNew(0, wrapper)
     changeName('new', wrapper)
+    changeDescription('no description', wrapper)
     checkPanelModeId('2', wrapper)
     checkAllAnswers(wrapper)
     checkAllowIncorrect(wrapper)

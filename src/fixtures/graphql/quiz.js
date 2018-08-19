@@ -5,7 +5,8 @@ const width = 13
 
 export const quiz1 = {
   id: '1',
-  name: 'quiz one',
+  name: 'Pitch Class',
+  description: 'Just notes, no octaves, no timer',
   type: 'pc',
   tuning,
   width,
@@ -20,6 +21,7 @@ export const quiz1 = {
 export const quiz2 = {
   id: '2',
   name: 'quiz two',
+  description: 'no description',
   type: 'pitch',
   tuning,
   width,
@@ -34,6 +36,7 @@ export const quiz2 = {
 export const quiz3 = {
   id: '3',
   name: 'quiz three',
+  description: 'no description',
   type: 'pitch',
   tuning,
   width,
@@ -48,6 +51,7 @@ export const quiz3 = {
 export const quiz4 = {
   id: '4',
   name: 'quiz four',
+  description: 'no description',
   type: 'pitch',
   tuning,
   width,
@@ -62,6 +66,7 @@ export const quiz4 = {
 export const quiz5 = {
   id: '5',
   name: 'quiz five',
+  description: 'no description',
   type: 'pitch',
   tuning,
   width,
@@ -76,6 +81,7 @@ export const quiz5 = {
 export const quiz6 = {
   id: '6',
   name: 'quiz six',
+  description: 'no description',
   type: 'pitch',
   tuning,
   width,
@@ -98,6 +104,7 @@ export const quizzes = [
 
 export const createValues = {
   name: 'new',
+  description: 'no description',
   type: 'pc',
   tuning,
   width,
@@ -124,6 +131,7 @@ export const createdQuiz = {
 
 export const updateValues = {
   name: 'updated',
+  description: 'no description',
   type: 'pitch',
   tuning,
   width,

@@ -188,6 +188,7 @@ exports[`Runner start, quiz two, panelModeIndex 0 matches snapshot 1`] = `
                           "__typename": "Quiz",
                           "allAnswers": true,
                           "allowIncorrect": true,
+                          "description": "no description",
                           "id": "2",
                           "name": "quiz two",
                           "panelModes": Array [
@@ -328,6 +329,7 @@ exports[`Runner start, quiz two, panelModeIndex 0 matches snapshot 1`] = `
                                 "__typename": "Quiz",
                                 "allAnswers": true,
                                 "allowIncorrect": true,
+                                "description": "no description",
                                 "id": "2",
                                 "name": "quiz two",
                                 "panelModes": Array [
@@ -7763,6 +7765,7 @@ exports[`Runner start, quiz two, panelModeIndex 1 matches snapshot 1`] = `
                           "__typename": "Quiz",
                           "allAnswers": true,
                           "allowIncorrect": true,
+                          "description": "no description",
                           "id": "2",
                           "name": "quiz two",
                           "panelModes": Array [
@@ -7903,6 +7906,7 @@ exports[`Runner start, quiz two, panelModeIndex 1 matches snapshot 1`] = `
                                 "__typename": "Quiz",
                                 "allAnswers": true,
                                 "allowIncorrect": true,
+                                "description": "no description",
                                 "id": "2",
                                 "name": "quiz two",
                                 "panelModes": Array [
@@ -15338,6 +15342,7 @@ exports[`Runner start, quiz two, panelModeIndex 2 matches snapshot 1`] = `
                           "__typename": "Quiz",
                           "allAnswers": true,
                           "allowIncorrect": true,
+                          "description": "no description",
                           "id": "2",
                           "name": "quiz two",
                           "panelModes": Array [
@@ -15478,6 +15483,7 @@ exports[`Runner start, quiz two, panelModeIndex 2 matches snapshot 1`] = `
                                 "__typename": "Quiz",
                                 "allAnswers": true,
                                 "allowIncorrect": true,
+                                "description": "no description",
                                 "id": "2",
                                 "name": "quiz two",
                                 "panelModes": Array [
@@ -22981,6 +22987,7 @@ exports[`Runner start, quiz two, panelModeIndex 3 matches snapshot 1`] = `
                           "__typename": "Quiz",
                           "allAnswers": true,
                           "allowIncorrect": true,
+                          "description": "no description",
                           "id": "2",
                           "name": "quiz two",
                           "panelModes": Array [
@@ -23121,6 +23128,7 @@ exports[`Runner start, quiz two, panelModeIndex 3 matches snapshot 1`] = `
                                 "__typename": "Quiz",
                                 "allAnswers": true,
                                 "allowIncorrect": true,
+                                "description": "no description",
                                 "id": "2",
                                 "name": "quiz two",
                                 "panelModes": Array [

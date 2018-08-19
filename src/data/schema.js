@@ -16,6 +16,7 @@ const typeDefs = `
     id: ID!
     name: String
     type: QuizTypeEnum
+    description: String
     tuning: TuningEnum
     width: Int
     panelModes: [PanelMode]
@@ -39,6 +40,7 @@ const typeDefs = `
   input QuizInput {
     name: String
     type: QuizTypeEnum
+    description: String
     tuning: TuningEnum
     width: Int
     allAnswers: Boolean

@@ -4,6 +4,7 @@ export default gql`
   fragment QuizFragment on Quiz {
     id
     name
+    description
     type
     tuning
     width

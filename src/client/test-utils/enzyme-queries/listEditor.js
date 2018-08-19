@@ -16,6 +16,10 @@ export const changeName = (name, wrapper) =>
   wrapper.find('Form input[name="name"]')
     .simulate('change', { target: { value: name, name: 'name' } })
 
+export const changeDescription = (name, wrapper) =>
+  wrapper.find('Form textarea[name="description"]')
+    .simulate('change', { target: { value: name, name: 'description' } })
+
 export const formIsPristine = wrapper =>
   wrapper.find('Form').props().isPristine
 
