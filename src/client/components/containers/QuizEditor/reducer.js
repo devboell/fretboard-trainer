@@ -11,26 +11,18 @@ import {
   dissoc,
 } from 'ramda'
 
+import { ITEM_SELECTION, CLEAR_SELECTION } from 'components/reusable/ListDetail'
 
-const INIT_EDITOR = 'INIT_EDITOR'
 const NEW_ITEM_SELECTION = 'NEW_ITEM_SELECTION'
-const ITEM_UNSELECTION = 'ITEM_UNSELECTION'
 const ITEM_UPDATE = 'ITEM_UPDATE'
 const BUFFER_UPDATE = 'BUFFER_UPDATE'
 
-export const initEditor = quiz => ({
-  type: INIT_EDITOR,
-  quiz,
-})
 
 export const selectNewItem = quizType => ({
   type: NEW_ITEM_SELECTION,
   quizType,
 })
 
-export const unselectItem = () => ({
-  type: ITEM_UNSELECTION,
-})
 
 export const updateItem = quiz => ({
   type: ITEM_UPDATE,
@@ -97,17 +89,23 @@ const handleSelection = (quiz, mode) => state => compose(
   set(lensProp('mode'), mode),
 )(state)
 
-export default (state = initialState, action) => {
+export default name => (state = initialState, action) => {
   switch (action.type) {
+    /*
     case INIT_EDITOR: {
       const editableQuiz = convertPanelModes(action.quiz)
+      return handleSelection(editableQuiz, modes.SELECTED)(state)
+    }
+    */
+    case ITEM_SELECTION + name: {
+      const editableQuiz = convertPanelModes(action.item)
       return handleSelection(editableQuiz, modes.SELECTED)(state)
     }
 
     case NEW_ITEM_SELECTION:
       return handleSelection(newQuiz(action.quizType), modes.NEW)(state)
 
-    case ITEM_UNSELECTION:
+    case CLEAR_SELECTION + name:
       return handleSelection(undefined, modes.UNSELECTED)(state)
 
     case ITEM_UPDATE: {

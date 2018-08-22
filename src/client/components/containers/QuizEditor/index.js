@@ -2,15 +2,12 @@ import { compose, omit, assoc, dissoc, find, propEq } from 'ramda'
 import { connect } from 'react-redux'
 
 import { initRunner } from 'components/containers/Runner/reducer'
-import { selectItem } from 'components/containers/QuizList/reducer'
 import withLoading from 'components/reusable/Loading'
 import Editor from 'components/presentational/EditorPage/Editor'
 import withData from './enhancers'
 
 import {
-  initEditor,
   selectNewItem,
-  unselectItem,
   updateItem,
   updateBuffer,
 } from './reducer'
@@ -23,7 +20,7 @@ const mapStateToProps = state => ({
   runnerStatus: state.runner.status,
 })
 
-const handleCreateMutation = (dispatch, mutation, item) => {
+const handleCreateMutation = (onSelectItem, mutation, item) => {
   const createInput = {
     input: {
       quiz: omit(['__typename', 'id', 'panelModeIds'], item),
@@ -32,8 +29,7 @@ const handleCreateMutation = (dispatch, mutation, item) => {
   }
 
   return mutation(createInput).then((res) => {
-    dispatch(initEditor(res.data.createQuiz))
-    dispatch(selectItem('listEditor')(res.data.createQuiz))
+    onSelectItem(res.data.createQuiz)
   })
 }
 
@@ -51,9 +47,8 @@ const handleUpdateMutation = (dispatch, mutation, item) => {
     dispatch(updateItem(res.data.updateQuiz)))
 }
 
-const handleDeleteMutation = (dispatch, mutation, id) =>
-  mutation(id).then(() =>
-    dispatch(unselectItem()))
+const handleDeleteMutation = (onClearSelection, mutation, id) =>
+  mutation(id).then(() => onClearSelection())
 
 const convertPanelModeIds = (buffer, allPanelModes) => {
   const panelModes = buffer.panelModeIds.map(id =>
@@ -70,16 +65,22 @@ const openPreview = (dispatch, buffer, panelModes) => {
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  const { createMutation, updateMutation, deleteMutation } = ownProps
+  const {
+    createMutation,
+    updateMutation,
+    deleteMutation,
+    onSelectItem,
+    onClearSelection,
+  } = ownProps
 
   return {
     onSelectNewItem: (type) => {
-      dispatch(selectItem('listEditor')(undefined))
+      onClearSelection()
       dispatch(selectNewItem(type))
     },
-    onCreate: qz => handleCreateMutation(dispatch, createMutation, qz),
+    onCreate: qz => handleCreateMutation(onSelectItem, createMutation, qz),
     onUpdate: qz => handleUpdateMutation(dispatch, updateMutation, qz),
-    onDelete: id => handleDeleteMutation(dispatch, deleteMutation, id),
+    onDelete: id => handleDeleteMutation(onClearSelection, deleteMutation, id),
     onUpdateBuffer: (k, v, t) => dispatch(updateBuffer(k, v, t)),
     onOpenPreview: (buffer, panelModes) => openPreview(dispatch, buffer, panelModes),
   }
