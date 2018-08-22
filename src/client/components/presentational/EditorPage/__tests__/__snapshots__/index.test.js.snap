@@ -2,6 +2,6 @@
 
 exports[`EditorPage component, snapshot 1`] = `
 <div>
-  <Connect(ListEditor) />
+  <ListEditor />
 </div>
 `;
