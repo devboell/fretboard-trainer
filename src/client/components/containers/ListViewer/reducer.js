@@ -1,4 +1,4 @@
-import listReducer from 'components/containers/QuizList/reducer'
+import { reducer as listReducer } from 'components/reusable/ListDetail'
 
 export const initialState = {}
 
