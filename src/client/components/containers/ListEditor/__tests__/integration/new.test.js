@@ -11,8 +11,8 @@ describe('Select new quiz', () => {
     clickNew(0, wrapper)
   })
 
-  it('List selectedItem.id is undefined', () => {
-    expect(wrapper.find('List').props().selectedItem.id).toBeUndefined()
+  it('List selectedItemId is 0', () => {
+    expect(wrapper.find('List').props().selectedItemId).toBe('no_selection')
   })
 
   it('New button is disabled', () => {
@@ -27,8 +27,8 @@ describe('Select new quiz, while other quiz is selected', () => {
     clickNew(0, wrapper)
   })
 
-  it('List selectedItem.id is undefined', () => {
-    expect(wrapper.find('List').props().selectedItem.id).toBeUndefined()
+  it('List selectedItemId is 0', () => {
+    expect(wrapper.find('List').props().selectedItemId).toBe('no_selection')
   })
 
   it('New button is disabled', () => {
