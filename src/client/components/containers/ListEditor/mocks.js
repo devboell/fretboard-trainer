@@ -89,6 +89,7 @@ export const getWrapper = async () => {
   ))
   // makes sure the loading is done
   await new Promise(resolve => setTimeout(resolve))
+  await new Promise(resolve => setTimeout(resolve))
   wrapper.update()
 
   return wrapper
