@@ -1,35 +1,18 @@
 import React from 'react'
-import pt from 'prop-types'
-import { connect } from 'react-redux'
-import QuizList from 'components/containers/QuizList'
+
+import ListDetail from 'components/reusable/ListDetail'
 import QuizEditor from 'components/containers/QuizEditor'
-import { initEditor } from 'components/containers/QuizEditor/reducer'
-import Wrapper from './Wrapper'
+import QUIZZES from 'graphql/Quizzes'
 
-const ListEditor = ({
-  onInitQuiz,
-}) =>
-  <Wrapper>
-    <QuizList
-      stateSlice="listEditor"
-      onSelectItem={onInitQuiz}
-    />
+
+const ListEditor = () =>
+  <ListDetail
+    query={QUIZZES}
+    name="quizzes"
+    stateSlice="listEditor"
+  >
     <QuizEditor />
-  </Wrapper>
+  </ListDetail>
 
-ListEditor.propTypes = {
-  onInitQuiz: pt.func.isRequired,
-}
 
-ListEditor.defaultProps = {
-}
-
-const mapStateToProps = state => ({
-
-})
-
-const mapDispatchToProps = dispatch => ({
-  onInitQuiz: q => dispatch(initEditor(q)),
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(ListEditor)
+export default ListEditor
