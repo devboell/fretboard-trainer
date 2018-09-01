@@ -1,5 +1,6 @@
 import React from 'react'
 import pt from 'prop-types'
+import { pick } from 'ramda'
 import { quizShape } from 'propShapes/quiz'
 
 import MultipleChoice from 'components/presentational/QuizView/MultipleChoice'
@@ -20,12 +21,12 @@ const modeComponents = {
   sound: SoundPanel,
 }
 
-const questionPanel = (info, panelMode) => {
+const questionPanel = (info, panelMode, fretboardSettings) => {
   const Component = modeComponents[panelMode.question]
 
   switch (panelMode.question) {
     case 'fretboard':
-      return <Component locs={info.locs} />
+      return <Component locs={info.locs} {...{ fretboardSettings }} />
     default:
       return (
         <QuestionPanel>
@@ -35,7 +36,7 @@ const questionPanel = (info, panelMode) => {
   }
 }
 
-const answerPanel = (info, panelMode, onSetAnswer, answers) => {
+const answerPanel = (info, panelMode, onSetAnswer, answers, fretboardSettings) => {
   const Component = modeComponents[panelMode.answer]
   switch (panelMode.answer) {
     case 'fretboard':
@@ -43,6 +44,7 @@ const answerPanel = (info, panelMode, onSetAnswer, answers) => {
         answers={answers}
         locs={info.locs}
         clickAction={onSetAnswer}
+        {...{ fretboardSettings }}
       />
     default:
       return (
@@ -63,21 +65,30 @@ const QuizPanels = ({
   onSetAnswer,
   answers,
   elapsedTime,
-}) =>
-  <Wrapper>
-    <PanelWrapper>
-      {questionPanel(questionInfo.question, panelMode)}
-    </PanelWrapper>
-    {quiz.useTimer &&
-      <Timer
-        time={quiz.time}
-        elapsedTime={elapsedTime}
-      />
-    }
-    <PanelWrapper>
-      {answerPanel(questionInfo.answer, panelMode, onSetAnswer, answers)}
-    </PanelWrapper>
-  </Wrapper>
+}) => {
+  const fretboardSettings = {
+    ...pick(['showNotes'], quiz),
+    noteType: quiz.type === 'pc' ? 'pc' : 'pitch',
+    showEnharmonics: true,
+  }
+
+  return (
+    <Wrapper>
+      <PanelWrapper>
+        {questionPanel(questionInfo.question, panelMode, fretboardSettings)}
+      </PanelWrapper>
+      {quiz.useTimer &&
+        <Timer
+          time={quiz.time}
+          elapsedTime={elapsedTime}
+        />
+      }
+      <PanelWrapper>
+        {answerPanel(questionInfo.answer, panelMode, onSetAnswer, answers, fretboardSettings)}
+      </PanelWrapper>
+    </Wrapper>
+  )
+}
 
 
 QuizPanels.propTypes = {

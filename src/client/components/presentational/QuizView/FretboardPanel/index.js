@@ -15,7 +15,12 @@ const locObj = status => answer => ({
   loc: answer, status,
 })
 
-const FretboardPanel = ({ locs, answers, clickAction }) => {
+const FretboardPanel = ({
+  locs,
+  fretboardSettings,
+  answers,
+  clickAction,
+}) => {
   const answerLocs = answers
     ? [
       ...answers.correct.map(locObj('correct')),
@@ -31,6 +36,7 @@ const FretboardPanel = ({ locs, answers, clickAction }) => {
         selectedLocations={selectedLocations}
         clickAction={fretboardClick}
         theme={theme}
+        {...fretboardSettings}
       />
     </Wrapper>
   )
@@ -39,11 +45,13 @@ const FretboardPanel = ({ locs, answers, clickAction }) => {
 
 FretboardPanel.propTypes = {
   locs: pt.arrayOf(pt.shape({})).isRequired,
+  fretboardSettings: pt.shape({}),
   answers: pt.shape({}),
   clickAction: pt.func,
 }
 
 FretboardPanel.defaultProps = {
+  fretboardSettings: undefined,
   answers: undefined,
   clickAction: undefined,
 }

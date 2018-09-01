@@ -12,6 +12,7 @@ export const quiz1 = {
   allowIncorrect: 1,
   useTimer: 0,
   time: 0,
+  showNotes: 1,
 }
 
 export const quiz2 = {
@@ -25,6 +26,7 @@ export const quiz2 = {
   allowIncorrect: 1,
   useTimer: 1,
   time: 5,
+  showNotes: 0,
 }
 
 export const quiz3 = {
@@ -38,6 +40,7 @@ export const quiz3 = {
   allowIncorrect: 1,
   useTimer: 1,
   time: 5,
+  showNotes: 0,
 }
 
 export const quiz4 = {
@@ -51,6 +54,7 @@ export const quiz4 = {
   allowIncorrect: 1,
   useTimer: 1,
   time: 5,
+  showNotes: 0,
 }
 
 export const quiz5 = {
@@ -64,6 +68,7 @@ export const quiz5 = {
   allowIncorrect: 1,
   useTimer: 1,
   time: 5,
+  showNotes: 0,
 }
 
 export const quiz6 = {
@@ -77,6 +82,7 @@ export const quiz6 = {
   allowIncorrect: 1,
   useTimer: 1,
   time: 5,
+  showNotes: 0,
 }
 
 export const quizzes = [
@@ -98,6 +104,7 @@ export const createValues = {
   allowIncorrect: 1,
   useTimer: 1,
   time: 5,
+  showNotes: 0,
 }
 
 export const updateValues = {
@@ -111,6 +118,7 @@ export const updateValues = {
   allowIncorrect: 1,
   useTimer: 1,
   time: 5,
+  showNotes: 0,
 }
 
 export { quiz2PanelModes } from './panelMode'

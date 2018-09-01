@@ -24,6 +24,7 @@ const typeDefs = `
     allowIncorrect: Boolean
     useTimer: Boolean
     time: Int
+    showNotes: Boolean
   }
 
   type PanelMode {
@@ -47,6 +48,7 @@ const typeDefs = `
     allowIncorrect: Boolean
     useTimer: Boolean
     time: Int
+    showNotes: Boolean
   }
 
   input CreateQuizInput {

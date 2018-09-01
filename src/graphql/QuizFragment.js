@@ -12,6 +12,7 @@ export default gql`
     allowIncorrect
     useTimer,
     time,
+    showNotes,
     __typename
     panelModes {
       id

@@ -11,6 +11,7 @@ export function up(knex, Promise) {
       table.integer('allowIncorrect').notNullable()
       table.integer('useTimer').notNullable()
       table.integer('time').notNullable()
+      table.integer('showNotes').notNullable()
     }),
   ])
 }
