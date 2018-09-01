@@ -27,6 +27,10 @@ const QuizInfo = ({ selectedItem, onInitRunner, runnerStatus }) =>
         <FieldLabel>type:</FieldLabel>
         <FieldContent>{selectedItem.type}</FieldContent>
       </FieldWrapper>
+      <FieldWrapper>
+        <FieldLabel>description:</FieldLabel>
+        <FieldContent>{selectedItem.description}</FieldContent>
+      </FieldWrapper>
       {runnerStatus !== statusMap.EMPTY &&
         <Runner />
       }
