@@ -1,6 +1,10 @@
 import React from 'react'
 import pt from 'prop-types'
+import { filter, contains } from 'ramda'
 
+import { pcPanelModeIds } from 'components/containers/QuizEditor/constants'
+
+import Wrapper from './Wrapper'
 
 import NameField from './NameField'
 import TypeField from './TypeField'
@@ -11,22 +15,35 @@ import AllowIncorrectField from './AllowIncorrectField'
 import TimerField from './TimerField'
 import ShowNotesField from './ShowNotesField'
 
-import Wrapper from './Wrapper'
 
-const FormFields = ({ panelModes }) =>
+const panelModesForType = (type, panelModes) => (
+  type === 'pc'
+    ? filter(pm => contains(pm.id, pcPanelModeIds), panelModes)
+    : panelModes)
+
+
+const fieldsByType = (panelModes, type) => [
+  <NameField key="nameField" />,
+  <TypeField key="typeField" />,
+  <DescriptionField key="descriptionField" />,
+  <PanelModeField
+    key="panelField"
+    panelModes={panelModesForType(type, panelModes)}
+  />,
+  <AllAnswersField key="allAnswersField" />,
+  <AllowIncorrectField key="allowIncorrectField" />,
+  <TimerField key="timerField" />,
+  <ShowNotesField key="showNotesField" />,
+]
+
+const FormFields = ({ panelModes, quizType }) =>
   <Wrapper>
-    <NameField />
-    <TypeField />
-    <DescriptionField />
-    <PanelModeField panelModes={panelModes} />
-    <AllAnswersField />
-    <AllowIncorrectField />
-    <TimerField />
-    <ShowNotesField />
+    {fieldsByType(panelModes, quizType)}
   </Wrapper>
 
 FormFields.propTypes = {
   panelModes: pt.arrayOf(pt.shape({})).isRequired,
+  quizType: pt.string.isRequired,
 }
 
 export default FormFields

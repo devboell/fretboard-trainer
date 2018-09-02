@@ -1,9 +1,8 @@
 import React from 'react'
 import pt from 'prop-types'
-import { equals, filter, contains } from 'ramda'
+import { equals } from 'ramda'
 import { quizShape } from 'propShapes/quiz'
 import { modes } from 'components/containers/QuizEditor/reducer'
-import { pcPanelModeIds } from 'components/containers/QuizEditor/constants'
 import { statusMap } from 'components/containers/Runner/reducer'
 import Runner from 'components/containers/Runner'
 import FormFields from 'components/presentational/EditorPage/FormFields'
@@ -28,10 +27,6 @@ const Editor = ({
   const isNew = mode === modes.NEW
   const isPristine = equals(original, buffer)
   const hasSelection = mode !== modes.UNSELECTED
-  const panelModesForType = type => (
-    type === 'pc'
-      ? filter(pm => contains(pm.id, pcPanelModeIds), panelModes)
-      : panelModes)
 
   return (
     <Wrapper>
@@ -52,7 +47,10 @@ const Editor = ({
             ...rest,
           }}
         >
-          <FormFields panelModes={panelModesForType(original.type)} />
+          <FormFields
+            panelModes={panelModes}
+            quizType={original.type}
+          />
           <FormControls />
         </StyledForm>
       }
