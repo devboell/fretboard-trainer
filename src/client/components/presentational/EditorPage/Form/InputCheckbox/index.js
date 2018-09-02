@@ -10,6 +10,7 @@ const InputCheckbox = ({
   <FormContext.Consumer>
     {context =>
       <input
+        id={name}
         {...{ name, ...rest }}
         type="checkbox"
         onChange={context.handleInputChange}
