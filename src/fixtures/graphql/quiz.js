@@ -5,8 +5,8 @@ const width = 13
 
 export const quiz1 = {
   id: '1',
-  name: 'Pitch Class',
-  description: 'Just notes, no octaves, no timer',
+  name: 'Notes I',
+  description: 'Very easy training to help memorize the notes on the fretboard. The fretboard displays all the note names, so they are easy to find. This is just a warm-up.',
   type: 'pc',
   tuning,
   width,
@@ -15,15 +15,16 @@ export const quiz1 = {
   useTimer: false,
   time: 0,
   showNotes: true,
+  highlightOctaves: false,
   __typename: 'Quiz',
   panelModes: [panel1],
 }
 
 export const quiz2 = {
   id: '2',
-  name: 'quiz two',
+  name: 'Notes II',
   description: 'no description',
-  type: 'pitch',
+  type: 'pc',
   tuning,
   width,
   allAnswers: true,
@@ -31,6 +32,7 @@ export const quiz2 = {
   useTimer: true,
   time: 5,
   showNotes: false,
+  highlightOctaves: false,
   __typename: 'Quiz',
   panelModes: [panel1, panel2, panel3, panel4],
 }
@@ -47,6 +49,7 @@ export const quiz3 = {
   useTimer: true,
   time: 5,
   showNotes: false,
+  highlightOctaves: true,
   __typename: 'Quiz',
   panelModes: [panel1],
 }
@@ -63,6 +66,7 @@ export const quiz4 = {
   useTimer: true,
   time: 5,
   showNotes: false,
+  highlightOctaves: false,
   __typename: 'Quiz',
   panelModes: [panel1],
 }
@@ -79,6 +83,7 @@ export const quiz5 = {
   useTimer: true,
   time: 5,
   showNotes: false,
+  highlightOctaves: false,
   __typename: 'Quiz',
   panelModes: [panel1],
 }
@@ -95,6 +100,7 @@ export const quiz6 = {
   useTimer: true,
   time: 5,
   showNotes: false,
+  highlightOctaves: false,
   __typename: 'Quiz',
   panelModes: [panel1],
 }
@@ -119,6 +125,7 @@ export const createValues = {
   useTimer: true,
   time: 5,
   showNotes: false,
+  highlightOctaves: false,
 }
 
 
@@ -147,6 +154,7 @@ export const updateValues = {
   useTimer: true,
   time: 5,
   showNotes: false,
+  highlightOctaves: true,
 }
 
 export const updateQuizInputValues = {

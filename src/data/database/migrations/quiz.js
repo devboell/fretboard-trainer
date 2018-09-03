@@ -12,6 +12,7 @@ export function up(knex, Promise) {
       table.integer('useTimer').notNullable()
       table.integer('time').notNullable()
       table.integer('showNotes').notNullable()
+      table.integer('highlightOctaves').notNullable()
     }),
   ])
 }

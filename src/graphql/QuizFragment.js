@@ -13,6 +13,7 @@ export default gql`
     useTimer,
     time,
     showNotes,
+    highlightOctaves,
     __typename
     panelModes {
       id

@@ -14,6 +14,7 @@ import AllAnswersField from './AllAnswersField'
 import AllowIncorrectField from './AllowIncorrectField'
 import TimerField from './TimerField'
 import ShowNotesField from './ShowNotesField'
+import HighlightOctavesField from './HighlightOctavesField'
 
 
 const panelModesForType = (type, panelModes) => (
@@ -21,8 +22,14 @@ const panelModesForType = (type, panelModes) => (
     ? filter(pm => contains(pm.id, pcPanelModeIds), panelModes)
     : panelModes)
 
+const fieldsByType = {
+  pc: [],
+  pitch: [
+    <HighlightOctavesField key="highlightOctavesField" />,
+  ],
+}
 
-const fieldsByType = (panelModes, type) => [
+const fields = (panelModes, type) => [
   <NameField key="nameField" />,
   <TypeField key="typeField" />,
   <DescriptionField key="descriptionField" />,
@@ -34,11 +41,12 @@ const fieldsByType = (panelModes, type) => [
   <AllowIncorrectField key="allowIncorrectField" />,
   <TimerField key="timerField" />,
   <ShowNotesField key="showNotesField" />,
+  ...fieldsByType[type],
 ]
 
 const FormFields = ({ panelModes, quizType }) =>
   <Wrapper>
-    {fieldsByType(panelModes, quizType)}
+    {fields(panelModes, quizType)}
   </Wrapper>
 
 FormFields.propTypes = {

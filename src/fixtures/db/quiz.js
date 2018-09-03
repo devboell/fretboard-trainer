@@ -4,8 +4,8 @@ const width = 13
 
 export const quiz1 = {
   id: 1,
-  name: 'Pitch Class',
-  description: 'Just notes, no octaves, no timer',
+  name: 'Notes I',
+  description: 'Very easy training to help memorize the notes on the fretboard. The fretboard displays all the note names, so they are easy to find. This is just a warm-up.',
   type: 'pc',
   tuning,
   width,
@@ -14,13 +14,14 @@ export const quiz1 = {
   useTimer: 0,
   time: 0,
   showNotes: 1,
+  highlightOctaves: 0,
 }
 
 export const quiz2 = {
   id: 2,
-  name: 'quiz two',
+  name: 'Notes II',
   description: 'no description',
-  type: 'pitch',
+  type: 'pc',
   tuning,
   width,
   allAnswers: 1,
@@ -28,6 +29,7 @@ export const quiz2 = {
   useTimer: 1,
   time: 5,
   showNotes: 0,
+  highlightOctaves: 0,
 }
 
 export const quiz3 = {
@@ -42,6 +44,7 @@ export const quiz3 = {
   useTimer: 1,
   time: 5,
   showNotes: 0,
+  highlightOctaves: 1,
 }
 
 export const quiz4 = {
@@ -56,6 +59,7 @@ export const quiz4 = {
   useTimer: 1,
   time: 5,
   showNotes: 0,
+  highlightOctaves: 0,
 }
 
 export const quiz5 = {
@@ -70,6 +74,7 @@ export const quiz5 = {
   useTimer: 1,
   time: 5,
   showNotes: 0,
+  highlightOctaves: 0,
 }
 
 export const quiz6 = {
@@ -84,6 +89,7 @@ export const quiz6 = {
   useTimer: 1,
   time: 5,
   showNotes: 0,
+  highlightOctaves: 0,
 }
 
 export const quizzes = [
@@ -106,6 +112,7 @@ export const createValues = {
   useTimer: 1,
   time: 5,
   showNotes: 0,
+  highlightOctaves: 0,
 }
 
 export const createQuizInput = {
@@ -133,6 +140,7 @@ export const updateValues = {
   useTimer: 1,
   time: 5,
   showNotes: 0,
+  highlightOctaves: 1,
 }
 
 export const updateQuizInput = {

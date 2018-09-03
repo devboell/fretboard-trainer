@@ -66,8 +66,9 @@ const QuizPanels = ({
   answers,
   elapsedTime,
 }) => {
+  console.log('pick fb', pick(['showNotes', 'highlightOctaves'], quiz))
   const fretboardSettings = {
-    ...pick(['showNotes'], quiz),
+    ...pick(['showNotes', 'highlightOctaves'], quiz),
     noteType: quiz.type === 'pc' ? 'pc' : 'pitch',
     showEnharmonics: true,
   }

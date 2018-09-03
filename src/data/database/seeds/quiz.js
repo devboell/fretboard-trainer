@@ -2,8 +2,8 @@ const quizzes = `
   INSERT INTO 'Quiz' VALUES
   (
     1,
-    'Pitch Class',
-    'Just notes, no octaves, no timer',
+    'Notes I',
+    'Very easy training to help memorize the notes on the fretboard. The fretboard displays all the note names, so they are easy to find. This is just a warm-up.',
     'pc',
     'standard',
     13,
@@ -11,19 +11,21 @@ const quizzes = `
     1,
     0,
     0,
-    1
+    1,
+    0
   ),
   (
     2,
-    'quiz two',
+    'Notes II',
     'no description',
-    'pitch',
+    'pc',
     'standard',
     13,
     1,
     1,
     1,
     5,
+    0,
     0
   ),
   (
@@ -37,7 +39,8 @@ const quizzes = `
     1,
     1,
     5,
-    0
+    0,
+    1
   ),
   (
     4,
@@ -50,6 +53,7 @@ const quizzes = `
     1,
     1,
     5,
+    0,
     0
   ),
   (
@@ -63,6 +67,7 @@ const quizzes = `
     1,
     1,
     5,
+    0,
     0
   ),
   (
@@ -76,6 +81,7 @@ const quizzes = `
     1,
     1,
     5,
+    0,
     0
   )
 `

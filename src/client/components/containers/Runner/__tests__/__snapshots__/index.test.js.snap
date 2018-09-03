@@ -189,8 +189,9 @@ exports[`Runner start, quiz two, panelModeIndex 0 matches snapshot 1`] = `
                           "allAnswers": true,
                           "allowIncorrect": true,
                           "description": "no description",
+                          "highlightOctaves": false,
                           "id": "2",
-                          "name": "quiz two",
+                          "name": "Notes II",
                           "panelModes": Array [
                             Object {
                               "answer": "name",
@@ -216,7 +217,7 @@ exports[`Runner start, quiz two, panelModeIndex 0 matches snapshot 1`] = `
                           "showNotes": false,
                           "time": 5,
                           "tuning": "standard",
-                          "type": "pitch",
+                          "type": "pc",
                           "useTimer": true,
                           "width": 13,
                         }
@@ -331,8 +332,9 @@ exports[`Runner start, quiz two, panelModeIndex 0 matches snapshot 1`] = `
                                 "allAnswers": true,
                                 "allowIncorrect": true,
                                 "description": "no description",
+                                "highlightOctaves": false,
                                 "id": "2",
-                                "name": "quiz two",
+                                "name": "Notes II",
                                 "panelModes": Array [
                                   Object {
                                     "answer": "name",
@@ -358,7 +360,7 @@ exports[`Runner start, quiz two, panelModeIndex 0 matches snapshot 1`] = `
                                 "showNotes": false,
                                 "time": 5,
                                 "tuning": "standard",
-                                "type": "pitch",
+                                "type": "pc",
                                 "useTimer": true,
                                 "width": 13,
                               }
@@ -375,7 +377,8 @@ exports[`Runner start, quiz two, panelModeIndex 0 matches snapshot 1`] = `
                                     <FretboardPanel
                                       fretboardSettings={
                                         Object {
-                                          "noteType": "pitch",
+                                          "highlightOctaves": false,
+                                          "noteType": "pc",
                                           "showEnharmonics": true,
                                           "showNotes": false,
                                         }
@@ -397,7 +400,7 @@ exports[`Runner start, quiz two, panelModeIndex 0 matches snapshot 1`] = `
                                             clickAction={[Function]}
                                             highlightOctaves={false}
                                             highlightSelections={true}
-                                            noteType="pitch"
+                                            noteType="pc"
                                             nrOfFrets={12}
                                             selectedLocations={
                                               Array [
@@ -7775,8 +7778,9 @@ exports[`Runner start, quiz two, panelModeIndex 1 matches snapshot 1`] = `
                           "allAnswers": true,
                           "allowIncorrect": true,
                           "description": "no description",
+                          "highlightOctaves": false,
                           "id": "2",
-                          "name": "quiz two",
+                          "name": "Notes II",
                           "panelModes": Array [
                             Object {
                               "answer": "name",
@@ -7802,7 +7806,7 @@ exports[`Runner start, quiz two, panelModeIndex 1 matches snapshot 1`] = `
                           "showNotes": false,
                           "time": 5,
                           "tuning": "standard",
-                          "type": "pitch",
+                          "type": "pc",
                           "useTimer": true,
                           "width": 13,
                         }
@@ -7917,8 +7921,9 @@ exports[`Runner start, quiz two, panelModeIndex 1 matches snapshot 1`] = `
                                 "allAnswers": true,
                                 "allowIncorrect": true,
                                 "description": "no description",
+                                "highlightOctaves": false,
                                 "id": "2",
-                                "name": "quiz two",
+                                "name": "Notes II",
                                 "panelModes": Array [
                                   Object {
                                     "answer": "name",
@@ -7944,7 +7949,7 @@ exports[`Runner start, quiz two, panelModeIndex 1 matches snapshot 1`] = `
                                 "showNotes": false,
                                 "time": 5,
                                 "tuning": "standard",
-                                "type": "pitch",
+                                "type": "pc",
                                 "useTimer": true,
                                 "width": 13,
                               }
@@ -7961,7 +7966,8 @@ exports[`Runner start, quiz two, panelModeIndex 1 matches snapshot 1`] = `
                                     <FretboardPanel
                                       fretboardSettings={
                                         Object {
-                                          "noteType": "pitch",
+                                          "highlightOctaves": false,
+                                          "noteType": "pc",
                                           "showEnharmonics": true,
                                           "showNotes": false,
                                         }
@@ -7983,7 +7989,7 @@ exports[`Runner start, quiz two, panelModeIndex 1 matches snapshot 1`] = `
                                             clickAction={[Function]}
                                             highlightOctaves={false}
                                             highlightSelections={true}
-                                            noteType="pitch"
+                                            noteType="pc"
                                             nrOfFrets={12}
                                             selectedLocations={
                                               Array [
@@ -15361,8 +15367,9 @@ exports[`Runner start, quiz two, panelModeIndex 2 matches snapshot 1`] = `
                           "allAnswers": true,
                           "allowIncorrect": true,
                           "description": "no description",
+                          "highlightOctaves": false,
                           "id": "2",
-                          "name": "quiz two",
+                          "name": "Notes II",
                           "panelModes": Array [
                             Object {
                               "answer": "name",
@@ -15388,7 +15395,7 @@ exports[`Runner start, quiz two, panelModeIndex 2 matches snapshot 1`] = `
                           "showNotes": false,
                           "time": 5,
                           "tuning": "standard",
-                          "type": "pitch",
+                          "type": "pc",
                           "useTimer": true,
                           "width": 13,
                         }
@@ -15503,8 +15510,9 @@ exports[`Runner start, quiz two, panelModeIndex 2 matches snapshot 1`] = `
                                 "allAnswers": true,
                                 "allowIncorrect": true,
                                 "description": "no description",
+                                "highlightOctaves": false,
                                 "id": "2",
-                                "name": "quiz two",
+                                "name": "Notes II",
                                 "panelModes": Array [
                                   Object {
                                     "answer": "name",
@@ -15530,7 +15538,7 @@ exports[`Runner start, quiz two, panelModeIndex 2 matches snapshot 1`] = `
                                 "showNotes": false,
                                 "time": 5,
                                 "tuning": "standard",
-                                "type": "pitch",
+                                "type": "pc",
                                 "useTimer": true,
                                 "width": 13,
                               }
@@ -15547,7 +15555,8 @@ exports[`Runner start, quiz two, panelModeIndex 2 matches snapshot 1`] = `
                                     <FretboardPanel
                                       fretboardSettings={
                                         Object {
-                                          "noteType": "pitch",
+                                          "highlightOctaves": false,
+                                          "noteType": "pc",
                                           "showEnharmonics": true,
                                           "showNotes": false,
                                         }
@@ -15569,7 +15578,7 @@ exports[`Runner start, quiz two, panelModeIndex 2 matches snapshot 1`] = `
                                             clickAction={[Function]}
                                             highlightOctaves={false}
                                             highlightSelections={true}
-                                            noteType="pitch"
+                                            noteType="pc"
                                             nrOfFrets={12}
                                             selectedLocations={
                                               Array [
@@ -23015,8 +23024,9 @@ exports[`Runner start, quiz two, panelModeIndex 3 matches snapshot 1`] = `
                           "allAnswers": true,
                           "allowIncorrect": true,
                           "description": "no description",
+                          "highlightOctaves": false,
                           "id": "2",
-                          "name": "quiz two",
+                          "name": "Notes II",
                           "panelModes": Array [
                             Object {
                               "answer": "name",
@@ -23042,7 +23052,7 @@ exports[`Runner start, quiz two, panelModeIndex 3 matches snapshot 1`] = `
                           "showNotes": false,
                           "time": 5,
                           "tuning": "standard",
-                          "type": "pitch",
+                          "type": "pc",
                           "useTimer": true,
                           "width": 13,
                         }
@@ -23157,8 +23167,9 @@ exports[`Runner start, quiz two, panelModeIndex 3 matches snapshot 1`] = `
                                 "allAnswers": true,
                                 "allowIncorrect": true,
                                 "description": "no description",
+                                "highlightOctaves": false,
                                 "id": "2",
-                                "name": "quiz two",
+                                "name": "Notes II",
                                 "panelModes": Array [
                                   Object {
                                     "answer": "name",
@@ -23184,7 +23195,7 @@ exports[`Runner start, quiz two, panelModeIndex 3 matches snapshot 1`] = `
                                 "showNotes": false,
                                 "time": 5,
                                 "tuning": "standard",
-                                "type": "pitch",
+                                "type": "pc",
                                 "useTimer": true,
                                 "width": 13,
                               }
@@ -23256,7 +23267,8 @@ exports[`Runner start, quiz two, panelModeIndex 3 matches snapshot 1`] = `
                                       clickAction={[Function]}
                                       fretboardSettings={
                                         Object {
-                                          "noteType": "pitch",
+                                          "highlightOctaves": false,
+                                          "noteType": "pc",
                                           "showEnharmonics": true,
                                           "showNotes": false,
                                         }
@@ -23271,7 +23283,7 @@ exports[`Runner start, quiz two, panelModeIndex 3 matches snapshot 1`] = `
                                             clickAction={[Function]}
                                             highlightOctaves={false}
                                             highlightSelections={true}
-                                            noteType="pitch"
+                                            noteType="pc"
                                             nrOfFrets={12}
                                             selectedLocations={Array []}
                                             selectedNotes={Array []}

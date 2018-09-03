@@ -25,6 +25,7 @@ const typeDefs = `
     useTimer: Boolean
     time: Int
     showNotes: Boolean
+    highlightOctaves: Boolean
   }
 
   type PanelMode {
@@ -49,6 +50,7 @@ const typeDefs = `
     useTimer: Boolean
     time: Int
     showNotes: Boolean
+    highlightOctaves: Boolean
   }
 
   input CreateQuizInput {

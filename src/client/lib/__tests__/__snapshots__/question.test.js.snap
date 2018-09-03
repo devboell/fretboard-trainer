@@ -84,10 +84,8 @@ exports[`pitch question 1`] = `
 Object {
   "evaluation": Object {
     "entity": Object {
-      "name": "E4",
-      "notes": Array [
-        "E4",
-      ],
+      "name": "E",
+      "notes": null,
     },
     "locs": Array [
       Object {
@@ -95,12 +93,32 @@ Object {
         "str": 0,
       },
       Object {
+        "pos": 0,
+        "str": 5,
+      },
+      Object {
+        "pos": 2,
+        "str": 3,
+      },
+      Object {
         "pos": 5,
         "str": 1,
       },
       Object {
+        "pos": 7,
+        "str": 4,
+      },
+      Object {
         "pos": 9,
         "str": 2,
+      },
+      Object {
+        "pos": 12,
+        "str": 0,
+      },
+      Object {
+        "pos": 12,
+        "str": 5,
       },
     ],
   },
@@ -108,38 +126,28 @@ Object {
     "answer": Object {
       "choices": Array [
         Object {
-          "name": "B3",
-          "notes": Array [
-            "B3",
-          ],
+          "name": "B",
+          "notes": null,
         },
         Object {
-          "name": "G3",
-          "notes": Array [
-            "G3",
-          ],
+          "name": "G",
+          "notes": null,
         },
         Object {
-          "name": "D3",
-          "notes": Array [
-            "D3",
-          ],
+          "name": "D",
+          "notes": null,
         },
         Object {
-          "name": "E4",
-          "notes": Array [
-            "E4",
-          ],
+          "name": "E",
+          "notes": null,
         },
       ],
       "locs": Array [],
     },
     "question": Object {
       "entity": Object {
-        "name": "E4",
-        "notes": Array [
-          "E4",
-        ],
+        "name": "E",
+        "notes": null,
       },
       "locs": Array [
         Object {
