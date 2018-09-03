@@ -4,12 +4,6 @@ import ListEditor from 'components/containers/ListEditor'
 
 
 const EditorPage = () =>
-  <div>
-    <ListEditor />
-  </div>
-
-EditorPage.propTypes = {}
-
-EditorPage.defaultProps = {}
+  <ListEditor />
 
 export default EditorPage
