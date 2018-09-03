@@ -9,7 +9,7 @@ import FormFields from 'components/presentational/EditorPage/FormFields'
 import FormControls from 'components/presentational/EditorPage/FormControls'
 import EditorControls from 'components/presentational/EditorPage/EditorControls'
 
-import UnselectedMessage from './UnselectedMessage'
+import EmptyListDetail from 'components/styled/EmptyListDetail'
 
 import Wrapper from './Wrapper'
 import StyledForm from './StyledForm'
@@ -37,22 +37,25 @@ const Editor = ({
         }}
       />
       {mode === modes.UNSELECTED
-        ? <UnselectedMessage />
+        ?
+          <EmptyListDetail>
+            Select a quiz, or create a new one.
+          </EmptyListDetail>
         :
-        <StyledForm
-          {...{
-            buffer,
-            isNew,
-            isPristine,
-            ...rest,
-          }}
-        >
-          <FormFields
-            panelModes={panelModes}
-            quizType={original.type}
-          />
-          <FormControls />
-        </StyledForm>
+          <StyledForm
+            {...{
+              buffer,
+              isNew,
+              isPristine,
+              ...rest,
+            }}
+          >
+            <FormFields
+              panelModes={panelModes}
+              quizType={original.type}
+            />
+            <FormControls />
+          </StyledForm>
       }
       {runnerStatus !== statusMap.EMPTY &&
         <Runner />
