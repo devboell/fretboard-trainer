@@ -1,9 +1,8 @@
 import React from 'react'
 import { FormContext } from 'components/presentational/EditorPage/Form'
-import TimeInput from './TimeInput'
-// import Label from '../Label'
 
-import FieldWrapper from '../FieldWrapper'
+import FieldWrapper from 'components/reusable/FieldWrapper'
+import TimeInput from './TimeInput'
 import UseTimerInput from './UseTimerInput'
 import FieldInputWrapper from './FieldInputWrapper'
 

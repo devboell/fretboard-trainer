@@ -1,6 +1,6 @@
 import React from 'react'
 
-import FieldWrapper from '../FieldWrapper'
+import FieldWrapper from 'components/reusable/FieldWrapper'
 import NameInput from './NameInput'
 
 const NameField = () =>

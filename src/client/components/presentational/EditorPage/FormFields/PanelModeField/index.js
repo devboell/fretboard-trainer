@@ -3,10 +3,10 @@ import pt from 'prop-types'
 
 import PanelMode from 'components/reusable/PanelMode'
 import InputCheckboxGroup from 'components/presentational/EditorPage/Form/InputCheckboxGroup'
+import FieldWrapper from 'components/reusable/FieldWrapper'
 
 import PanelModeWrapper from './PanelModeWrapper'
 import PanelModeLabel from './PanelModeLabel'
-import FieldWrapper from '../FieldWrapper'
 
 const PanelModeField = ({ panelModes }) =>
   <FieldWrapper label="panel modes">

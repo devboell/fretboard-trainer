@@ -2,7 +2,7 @@ import React from 'react'
 
 import InputCheckbox from 'components/presentational/EditorPage/Form/InputCheckbox'
 
-import FieldWrapper from '../FieldWrapper'
+import FieldWrapper from 'components/reusable/FieldWrapper'
 
 const HighlightOctavesField = () =>
   <FieldWrapper label="highlight octaves">

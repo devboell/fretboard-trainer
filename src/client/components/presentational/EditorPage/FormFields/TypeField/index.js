@@ -2,7 +2,7 @@ import React from 'react'
 
 import StaticString from 'components/presentational/EditorPage/Form/StaticString'
 
-import FieldWrapper from '../FieldWrapper'
+import FieldWrapper from 'components/reusable/FieldWrapper'
 
 const TypeField = () =>
   <FieldWrapper label="type">

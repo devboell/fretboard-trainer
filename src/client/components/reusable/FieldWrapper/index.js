@@ -2,18 +2,18 @@ import React from 'react'
 import pt from 'prop-types'
 
 
-import FieldTitle from './FieldTitle'
-import FieldInput from './FieldInput'
+import FieldLabel from './FieldLabel'
+import FieldContent from './FieldContent'
 import Wrapper from './Wrapper'
 
 const FieldWrapper = ({ label, children }) =>
   <Wrapper>
-    <FieldTitle>
+    <FieldLabel>
       {label}:
-    </FieldTitle>
-    <FieldInput>
+    </FieldLabel>
+    <FieldContent>
       {children}
-    </FieldInput>
+    </FieldContent>
   </Wrapper>
 
 FieldWrapper.propTypes = {
