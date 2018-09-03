@@ -6,10 +6,8 @@ import { statusMap } from 'components/containers/Runner/reducer'
 import Runner from 'components/containers/Runner'
 import TrainingControls from 'components/presentational/TrainingPage/TrainingControls'
 import EmptyListDetail from 'components/styled/EmptyListDetail'
+import Info from 'components/presentational/TrainingPage/Info'
 import Wrapper from './Wrapper'
-import FieldWrapper from './FieldWrapper'
-import FieldLabel from './FieldLabel'
-import FieldContent from './FieldContent'
 
 
 const InfoViewer = ({ selectedItem, onInitRunner, runnerStatus }) => {
@@ -22,28 +20,14 @@ const InfoViewer = ({ selectedItem, onInitRunner, runnerStatus }) => {
       />
       {hasSelection
         ?
-          <div>
-
-            <FieldWrapper>
-              <FieldLabel>name:</FieldLabel>
-              <FieldContent>{selectedItem.name}</FieldContent>
-            </FieldWrapper>
-            <FieldWrapper>
-              <FieldLabel>type:</FieldLabel>
-              <FieldContent>{selectedItem.type}</FieldContent>
-            </FieldWrapper>
-            <FieldWrapper>
-              <FieldLabel>description:</FieldLabel>
-              <FieldContent>{selectedItem.description}</FieldContent>
-            </FieldWrapper>
-            {runnerStatus !== statusMap.EMPTY &&
-              <Runner />
-            }
-          </div>
+          <Info {...{ selectedItem }} />
         :
           <EmptyListDetail>
             Select a quiz to start training
           </EmptyListDetail>
+      }
+      {runnerStatus !== statusMap.EMPTY &&
+        <Runner />
       }
     </Wrapper>
   )
