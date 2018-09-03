@@ -1,4 +1,4 @@
-import * as fxt from 'fixtures/db/resolvers/quiz'
+import * as fxt from 'fixtures/db/quiz'
 import knex from '../../connector'
 import {
   quizzes,

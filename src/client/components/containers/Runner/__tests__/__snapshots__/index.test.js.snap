@@ -213,6 +213,7 @@ exports[`Runner start, quiz two, panelModeIndex 0 matches snapshot 1`] = `
                               "question": "name",
                             },
                           ],
+                          "showNotes": false,
                           "time": 5,
                           "tuning": "standard",
                           "type": "pitch",
@@ -354,6 +355,7 @@ exports[`Runner start, quiz two, panelModeIndex 0 matches snapshot 1`] = `
                                     "question": "name",
                                   },
                                 ],
+                                "showNotes": false,
                                 "time": 5,
                                 "tuning": "standard",
                                 "type": "pitch",
@@ -371,6 +373,13 @@ exports[`Runner start, quiz two, panelModeIndex 0 matches snapshot 1`] = `
                                     className="PanelWrapper-gFSYoV lctjyA"
                                   >
                                     <FretboardPanel
+                                      fretboardSettings={
+                                        Object {
+                                          "noteType": "pitch",
+                                          "showEnharmonics": true,
+                                          "showNotes": false,
+                                        }
+                                      }
                                       locs={
                                         Array [
                                           Object {
@@ -399,7 +408,7 @@ exports[`Runner start, quiz two, panelModeIndex 0 matches snapshot 1`] = `
                                               ]
                                             }
                                             selectedNotes={Array []}
-                                            showEnharmonics={false}
+                                            showEnharmonics={true}
                                             showNotes={false}
                                             showPositionLabels={true}
                                             showSelectionLabels={true}
@@ -7790,6 +7799,7 @@ exports[`Runner start, quiz two, panelModeIndex 1 matches snapshot 1`] = `
                               "question": "name",
                             },
                           ],
+                          "showNotes": false,
                           "time": 5,
                           "tuning": "standard",
                           "type": "pitch",
@@ -7931,6 +7941,7 @@ exports[`Runner start, quiz two, panelModeIndex 1 matches snapshot 1`] = `
                                     "question": "name",
                                   },
                                 ],
+                                "showNotes": false,
                                 "time": 5,
                                 "tuning": "standard",
                                 "type": "pitch",
@@ -7948,6 +7959,13 @@ exports[`Runner start, quiz two, panelModeIndex 1 matches snapshot 1`] = `
                                     className="PanelWrapper-gFSYoV lctjyA"
                                   >
                                     <FretboardPanel
+                                      fretboardSettings={
+                                        Object {
+                                          "noteType": "pitch",
+                                          "showEnharmonics": true,
+                                          "showNotes": false,
+                                        }
+                                      }
                                       locs={
                                         Array [
                                           Object {
@@ -7976,7 +7994,7 @@ exports[`Runner start, quiz two, panelModeIndex 1 matches snapshot 1`] = `
                                               ]
                                             }
                                             selectedNotes={Array []}
-                                            showEnharmonics={false}
+                                            showEnharmonics={true}
                                             showNotes={false}
                                             showPositionLabels={true}
                                             showSelectionLabels={true}
@@ -15367,6 +15385,7 @@ exports[`Runner start, quiz two, panelModeIndex 2 matches snapshot 1`] = `
                               "question": "name",
                             },
                           ],
+                          "showNotes": false,
                           "time": 5,
                           "tuning": "standard",
                           "type": "pitch",
@@ -15508,6 +15527,7 @@ exports[`Runner start, quiz two, panelModeIndex 2 matches snapshot 1`] = `
                                     "question": "name",
                                   },
                                 ],
+                                "showNotes": false,
                                 "time": 5,
                                 "tuning": "standard",
                                 "type": "pitch",
@@ -15525,6 +15545,13 @@ exports[`Runner start, quiz two, panelModeIndex 2 matches snapshot 1`] = `
                                     className="PanelWrapper-gFSYoV lctjyA"
                                   >
                                     <FretboardPanel
+                                      fretboardSettings={
+                                        Object {
+                                          "noteType": "pitch",
+                                          "showEnharmonics": true,
+                                          "showNotes": false,
+                                        }
+                                      }
                                       locs={
                                         Array [
                                           Object {
@@ -15553,7 +15580,7 @@ exports[`Runner start, quiz two, panelModeIndex 2 matches snapshot 1`] = `
                                               ]
                                             }
                                             selectedNotes={Array []}
-                                            showEnharmonics={false}
+                                            showEnharmonics={true}
                                             showNotes={false}
                                             showPositionLabels={true}
                                             showSelectionLabels={true}
@@ -23012,6 +23039,7 @@ exports[`Runner start, quiz two, panelModeIndex 3 matches snapshot 1`] = `
                               "question": "name",
                             },
                           ],
+                          "showNotes": false,
                           "time": 5,
                           "tuning": "standard",
                           "type": "pitch",
@@ -23153,6 +23181,7 @@ exports[`Runner start, quiz two, panelModeIndex 3 matches snapshot 1`] = `
                                     "question": "name",
                                   },
                                 ],
+                                "showNotes": false,
                                 "time": 5,
                                 "tuning": "standard",
                                 "type": "pitch",
@@ -23225,6 +23254,13 @@ exports[`Runner start, quiz two, panelModeIndex 3 matches snapshot 1`] = `
                                         }
                                       }
                                       clickAction={[Function]}
+                                      fretboardSettings={
+                                        Object {
+                                          "noteType": "pitch",
+                                          "showEnharmonics": true,
+                                          "showNotes": false,
+                                        }
+                                      }
                                       locs={Array []}
                                     >
                                       <Wrapper>
@@ -23239,7 +23275,7 @@ exports[`Runner start, quiz two, panelModeIndex 3 matches snapshot 1`] = `
                                             nrOfFrets={12}
                                             selectedLocations={Array []}
                                             selectedNotes={Array []}
-                                            showEnharmonics={false}
+                                            showEnharmonics={true}
                                             showNotes={false}
                                             showPositionLabels={true}
                                             showSelectionLabels={true}

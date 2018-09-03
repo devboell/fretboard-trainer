@@ -61,7 +61,7 @@ const newQuiz = type => ({
   allowIncorrect: false,
   useTimer: true,
   time: 5,
-  showNotes: 0,
+  showNotes: false,
   __typename: 'Quiz',
 })
 

@@ -1,3 +1,4 @@
+
 const tuning = 'standard'
 const width = 13
 
@@ -119,7 +120,9 @@ export const createdQuiz = {
   ...createValues,
 }
 
+
 export const updateValues = {
+  id: 3,
   name: 'updated',
   description: 'no description',
   type: 'pitch',
