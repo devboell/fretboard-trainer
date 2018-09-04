@@ -33,9 +33,9 @@ const StyledModal = styled(ReactModalAdapter)`
 
   &__content {
     position: absolute;
-    top: 10%;
-    left: 10%;
-    right: 10%;
+    top: 40px;
+    left: 5%;
+    right: 5%;
     bottom: 10%;
     border: 1px solid #ccc;
     background-color: white;
