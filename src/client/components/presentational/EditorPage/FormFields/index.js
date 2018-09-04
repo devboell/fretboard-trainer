@@ -27,6 +27,7 @@ const fieldsByType = {
   pitch: [
     <HighlightOctavesField key="highlightOctavesField" />,
   ],
+  interval: [],
 }
 
 const fields = (panelModes, type) => [
